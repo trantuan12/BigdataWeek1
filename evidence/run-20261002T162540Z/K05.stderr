@@ -1,0 +1,1 @@
+Error from server (Forbidden): error when creating "C:\\Users\\letoan\\Documents\\GitHub\\BigdataWeek1\\evidence\\run-20261002T162540Z\\positive.yaml": pods is forbidden: User "system:serviceaccount:bd-g01:observer" cannot create resource "pods" in API group "" in the namespace "bd-g01"

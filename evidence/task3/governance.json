@@ -1,0 +1,50 @@
+[
+  {
+    "bucket": "research-raw",
+    "owner": null,
+    "steward": null,
+    "approved_by": null,
+    "cleanup_owner": null,
+    "classification": "synthetic-restricted",
+    "purpose": "synthetic lab ingestion",
+    "retention": "assessment completion + 7 days",
+    "retention_enforced": false,
+    "cleanup_date": null,
+    "access_policy": "bucket-scoped roles",
+    "verified_tests": [
+      "S01",
+      "S02",
+      "S03",
+      "S10",
+      "S11"
+    ],
+    "policy_revision": "3102faea175aca71b0426bc348c47d87c102450a",
+    "revision_note": "Recorded HEAD; uncommitted verification artifacts require a final commit.",
+    "status": "Pending student IDs and cleanup date"
+  },
+  {
+    "bucket": "research-release",
+    "owner": null,
+    "steward": null,
+    "approved_by": null,
+    "cleanup_owner": null,
+    "classification": "synthetic-restricted",
+    "purpose": "approved synthetic release",
+    "retention": "assessment completion + 7 days",
+    "retention_enforced": false,
+    "cleanup_date": null,
+    "access_policy": "bucket-scoped roles",
+    "verified_tests": [
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S12"
+    ],
+    "policy_revision": "3102faea175aca71b0426bc348c47d87c102450a",
+    "revision_note": "Recorded HEAD; uncommitted verification artifacts require a final commit.",
+    "status": "Pending student IDs and cleanup date"
+  }
+]

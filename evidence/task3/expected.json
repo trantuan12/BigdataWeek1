@@ -1,0 +1,90 @@
+[
+  {
+    "id": "S01",
+    "expected": "Allow"
+  },
+  {
+    "id": "S02",
+    "expected": "Allow"
+  },
+  {
+    "id": "S03",
+    "expected": "Allow"
+  },
+  {
+    "id": "S04",
+    "expected": "Deny"
+  },
+  {
+    "id": "S05",
+    "expected": "Deny"
+  },
+  {
+    "id": "S06",
+    "expected": "Allow"
+  },
+  {
+    "id": "S07",
+    "expected": "Allow"
+  },
+  {
+    "id": "S08",
+    "expected": "Deny"
+  },
+  {
+    "id": "S09",
+    "expected": "Deny"
+  },
+  {
+    "id": "S10",
+    "expected": "Deny"
+  },
+  {
+    "id": "S11",
+    "expected": "Deny"
+  },
+  {
+    "id": "S12",
+    "expected": "Deny"
+  },
+  {
+    "id": "K01",
+    "expected": "Allow"
+  },
+  {
+    "id": "K02",
+    "expected": "Allow"
+  },
+  {
+    "id": "K03",
+    "expected": "Allow"
+  },
+  {
+    "id": "K04",
+    "expected": "Deny"
+  },
+  {
+    "id": "K05",
+    "expected": "Deny"
+  },
+  {
+    "id": "K06",
+    "expected": "Deny"
+  },
+  {
+    "id": "N01",
+    "expected": "Connect"
+  },
+  {
+    "id": "N02",
+    "expected": "Blocked"
+  },
+  {
+    "id": "N03",
+    "expected": "Blocked"
+  },
+  {
+    "id": "N04",
+    "expected": "Blocked"
+  }
+]

@@ -1,1 +1,3 @@
-The aggregate tenant budget accommodates one SeaweedFS storage deployment and four client pods (owner, ingestor, analyst, blocked). Total requests require 900m CPU and 1024Mi memory, remaining strictly under the 2 CPU and 2Gi quota limits. Total limits consume 3 CPU and 3Gi memory against the 4 CPU and 4Gi thresholds. Storage requires one 4Gi PVC out of two permitted claims (8Gi budget). The deployment cleanly satisfies all declared ResourceQuota constraints without resource contention.
+Tổng ngân sách tài nguyên của nhóm đáp ứng vừa đủ cho một bản triển khai SeaweedFS và 4 pod khách (owner, ingestor, analyst, và pod bị chặn).
+Tổng tài nguyên yêu cầu là 900m CPU và 1024Mi bộ nhớ, nằm trong giới hạn 2 CPU và 2Gi của nhóm. Tổng giới hạn tài nguyên sử dụng hết 3 CPU và 3Gi trên hạn mức 4 CPU và 4Gi của nhóm. 
+Bộ nhớ lưu trữ yêu cầu 1 PVC 4Gi trong số 2 PVC cho phép (ngân sách 8Gi). Bản triển khai đáp ứng tốt tất cả các ràng buộc của ResourceQuota.

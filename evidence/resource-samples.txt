@@ -1,0 +1,1021 @@
+﻿2026-10-02T16:34:50Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   10m          37Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          9m26s   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          9m26s   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          9m26s   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          12m     10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          9m26s   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:34:55Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   10m          37Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          9m32s   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          9m32s   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          9m32s   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          12m     10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          9m32s   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:01Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   10m          37Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          9m37s   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          9m37s   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          9m37s   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          12m     10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          9m37s   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:06Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   9m           37Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          9m42s   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          9m42s   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          9m42s   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          12m     10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          9m42s   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:11Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   9m           37Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          9m48s   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          9m48s   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          9m48s   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          12m     10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          9m48s   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:17Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   9m           37Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          9m53s   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          9m53s   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          9m53s   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          12m     10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          9m53s   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:22Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   10m          37Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          9m58s   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          9m58s   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          9m58s   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m     10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          9m58s   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:27Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   10m          37Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:33Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   217m         242Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:38Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   217m         242Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:43Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           5Mi             
+objects-665bcd6bdc-fxrkj   217m         242Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:49Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   174m         23Mi            
+objects-665bcd6bdc-fxrkj   10m          242Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:54Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   174m         23Mi            
+objects-665bcd6bdc-fxrkj   10m          242Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:35:59Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   174m         23Mi            
+objects-665bcd6bdc-fxrkj   10m          242Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:05Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   164m         24Mi            
+objects-665bcd6bdc-fxrkj   187m         456Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:10Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   164m         24Mi            
+objects-665bcd6bdc-fxrkj   187m         456Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:15Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   164m         24Mi            
+objects-665bcd6bdc-fxrkj   187m         456Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          13m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:21Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   125m         208Mi           
+objects-665bcd6bdc-fxrkj   74m          463Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          10m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          10m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          10m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          10m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:26Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   125m         208Mi           
+objects-665bcd6bdc-fxrkj   74m          463Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:31Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   125m         208Mi           
+objects-665bcd6bdc-fxrkj   74m          463Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:37Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   65m          24Mi            
+objects-665bcd6bdc-fxrkj   138m         464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:42Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   65m          24Mi            
+objects-665bcd6bdc-fxrkj   138m         464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:48Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   65m          24Mi            
+objects-665bcd6bdc-fxrkj   138m         464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:53Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:36:58Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:04Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          465Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:09Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          465Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:14Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          465Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:20Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          11m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          11m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          11m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          14m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          11m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:25Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:30Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:36Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:41Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:46Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:52Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:37:57Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:02Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:08Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:13Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:18Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          12m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          12m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          12m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          15m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          12m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:24Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:29Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          464Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:34Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   16m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:40Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   16m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:45Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   16m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:50Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:38:56Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:01Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:06Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:12Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:17Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          16m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:22Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   9m           166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          13m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          13m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          13m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          13m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:28Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   9m           166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:33Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:38Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:44Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:49Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:39:54Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:00Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:05Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:10Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:16Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          166Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          17m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:21Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   13m          91Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          14m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          14m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          14m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          14m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:27Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   13m          91Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:32Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   13m          91Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:37Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          91Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:43Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   10m          91Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:48Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   11m          91Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:53Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   11m          91Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:40:59Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   11m          91Mi            
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:41:04Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   197m         198Mi           
+objects-665bcd6bdc-fxrkj   113m         187Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:41:09Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   197m         198Mi           
+objects-665bcd6bdc-fxrkj   113m         187Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:41:15Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   197m         198Mi           
+objects-665bcd6bdc-fxrkj   113m         187Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:41:20Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   139m         24Mi            
+objects-665bcd6bdc-fxrkj   120m         268Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          15m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          15m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          15m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          18m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          15m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:41:25Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   139m         24Mi            
+objects-665bcd6bdc-fxrkj   120m         268Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          16m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          16m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          16m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          19m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          16m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:41:31Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   139m         24Mi            
+objects-665bcd6bdc-fxrkj   120m         268Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          16m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          16m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          16m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          19m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          16m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:41:36Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   132m         353Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          16m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          16m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          16m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          19m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          16m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:41:41Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   132m         353Mi           
+owner                      0m           3Mi             
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+analyst                    1/1     Running   0          16m   10.42.0.14   laptopsieucapvippro   <none>           <none>
+blocked                    1/1     Running   0          16m   10.42.0.15   laptopsieucapvippro   <none>           <none>
+ingestor                   1/1     Running   0          16m   10.42.0.13   laptopsieucapvippro   <none>           <none>
+objects-665bcd6bdc-fxrkj   1/1     Running   0          19m   10.42.0.11   laptopsieucapvippro   <none>           <none>
+owner                      1/1     Running   0          16m   10.42.0.12   laptopsieucapvippro   <none>           <none>
+2026-10-02T16:41:47Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+analyst                    0m           2Mi             
+blocked                    0m           0Mi             
+ingestor                   0m           24Mi            
+objects-665bcd6bdc-fxrkj   132m         353Mi           
+owner                      0m           3Mi             

@@ -12,9 +12,9 @@ __pycache__/
 # OS files
 Thumbs.db
 .DS_Store
-
 # Task 2 (Storage & Fixtures - exclude from Task 4)
 evidence/provenance.json
 evidence/seed.jsonl
 evidence/topology.txt
 manifests/
+*.tar

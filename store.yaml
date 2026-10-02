@@ -55,6 +55,8 @@ spec:
       - name: store
 
         image: ${STORAGE_IMAGE}
+        
+        imagePullPolicy: Never
 
         command: [weed]
 

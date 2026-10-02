@@ -1,0 +1,8 @@
+﻿kubectl : Error from server (Forbidden): error when creating "negative.yaml": pods "quota-negative" is forbidden: 
+exceeded quota: team-budget, requested: requests.cpu=3, used: requests.cpu=0, limited: requests.cpu=2
+At line:1 char:1
++ kubectl -n $env:NS create -f negative.yaml 2>&1 | Out-File -FilePath  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error from serv... requests.cpu=2:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

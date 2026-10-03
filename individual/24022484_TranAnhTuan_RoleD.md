@@ -1,129 +1,124 @@
-# BÁO CÁO ĐÁNH GIÁ NĂNG LỰC CÁ NHÂN (INDIVIDUAL ASSESSMENT)
-### Học phần: Cloud-Native Big Data Infrastructure & Governance
+# BÁO CÁO CÁ NHÂN — INDIVIDUAL ASSESSMENT
+**Học phần:** Cloud-Native Big Data Infrastructure & Governance
 
-* **Họ và tên:** Trần Anh Tuấn
-* **Mã số sinh viên (MSSV):** 24022484
-* **Vai trò kỹ thuật:** Role D — Performance Engineer
-* **Nhiệm vụ chính:** Task 4 — Measure the data path (Đo lường & Phân tích hiệu năng đường truyền)
-* **Nhóm:** bd-g10 / Group 10
-* **Commit cá nhân:** `7a68817` (Commit message: `"task 4"`)
-
----
-
-## PHẦN 1: ĐÓNG GÓP KỸ THUẬT (TECHNICAL CONTRIBUTION) — 10 ĐIỂM
-
-### 1. Hiện trạng trước khi thực hiện (Before Behaviour)
-* Namespace `bd-g10` sau khi triển khai Task 1 và Task 2 chỉ có dịch vụ lưu trữ SeaweedFS cơ bản và các file fixture kiểm thử nhỏ (25 bytes).
-* Chưa hề có pipeline đo kiểm tải, chưa có dữ liệu đánh giá thông lượng (goodput) hay độ trễ đuôi (tail latency / p95) trong điều kiện truyền tải dữ liệu lớn thực tế.
-
-### 2. Đóng góp kỹ thuật đã thực hiện (Attributable Change)
-* Thiết kế và triển khai quy trình đo kiểm hiệu năng 6 lượt có kiểm soát theo mô hình xen kẽ **A - B - B - A - A - B**:
-  * 3 lượt tại concurrency $c=1$ (`r1-c1`, `r2-c1`, `r3-c1`).
-  * 3 lượt tại concurrency $c=4$ (`r1-c4`, `r2-c4`, `r3-c4`).
-  * Mỗi lượt truyền 32 objects $\times$ 4 MiB = 128 MiB (tổng cộng 192 requests PUT và 192 requests GET).
-* Viết script phân tích, trích xuất số liệu thống kê: [parse_benchmark.py](file:///d:/BigData/BigdataWeek1/parse_benchmark.py).
-* Vận hành tiến trình nền lấy mẫu tài nguyên CPU/RAM (`kubectl top pod`) định kỳ 5 giây/lần trong suốt quá trình tải: [evidence/resource-samples.txt](file:///d:/BigData/BigdataWeek1/evidence/resource-samples.txt).
-* Tổng hợp bảng kết quả chuẩn hóa: [benchmark-summary.csv](file:///d:/BigData/BigdataWeek1/benchmark-summary.csv).
-
-### 3. Hiện trạng sau khi thực hiện (After Behaviour)
-* 100% các request đạt tỷ lệ thành công tuyệt đối: **192/192 PUT thành công** và **192/192 GET được xác thực toàn vẹn mã băm SHA-256** (0 lỗi hash).
-* Cung cấp bằng chứng số liệu máy đọc được (`.jsonl`, `.csv`, `.txt`), bác bỏ giả thuyết ban đầu một cách khoa học: Concurrency 4 không làm tăng Goodput (tỷ lệ trung vị $c4/c1$ đạt $0.96\times$ với PUT và $0.90\times$ với GET), đồng thời làm tăng mạnh độ trễ đuôi p95 từ $\sim 110\text{ ms}$ lên $\sim 686\text{ ms}$.
-
-### 4. Artifacts định danh
-* **Mã commit:** `7a6881740439fcafc32416bad25c1abab23ba8c1`
-* **File kết quả:**
-  * [benchmark-summary.csv](file:///d:/BigData/BigdataWeek1/benchmark-summary.csv)
-  * [parse_benchmark.py](file:///d:/BigData/BigdataWeek1/parse_benchmark.py)
-  * [evidence/r1-c1.jsonl](file:///d:/BigData/BigdataWeek1/evidence/r1-c1.jsonl), `r1-c4.jsonl`, `r2-c1.jsonl`, `r2-c4.jsonl`, `r3-c1.jsonl`, `r3-c4.jsonl`
-  * [evidence/resource-samples.txt](file:///d:/BigData/BigdataWeek1/evidence/resource-samples.txt)
+| Thông tin | |
+|---|---|
+| Họ và tên | Trần Anh Tuấn |
+| MSSV | 24022484 |
+| Vai trò | Role D — Performance Engineer |
+| Nhiệm vụ | Task 4 — Measure the data path |
+| Nhóm | bd-g10 |
+| Commit | `7a6881740439fcafc32416bad25c1abab23ba8c1` (message: `task 4`) |
 
 ---
 
-## PHẦN 2: BÀI KIỂM TRA THỰC HÀNH ĐỘC LẬP (INDEPENDENT PRACTICAL CHECK) — 10 ĐIỂM
+## Phần 1: Đóng góp kỹ thuật (10 điểm)
 
-* **Nhiệm vụ:** Tự tay tính toán lại Goodput và Nearest-rank p95 từ log thô của 1 trial.
-* **Trial tính toán:** Trial 1 (Prefix: `bench/r1-c1`, Concurrency: 1)
-* **File dữ liệu thô:** [evidence/r1-c1.jsonl](file:///d:/BigData/BigdataWeek1/evidence/r1-c1.jsonl)
+**Trước khi thực hiện:**
+Namespace `bd-g10` lúc này đã có SeaweedFS và các fixture nhỏ (25 bytes) từ Task 1–2, nhưng chưa có số liệu nào về thông lượng hay độ trễ thực tế của đường truyền dữ liệu.
 
-### 1. Tính toán lại Application Goodput (MiB/s)
-Công thức chuẩn:
-$$\text{Goodput} = \frac{\text{Tổng dung lượng bytes hợp lệ}}{2^{20} \times \text{wall\_s}}$$
-*(Trong đó: $2^{20} = 1,048,576\text{ bytes} = 1\text{ MiB}$ theo chuẩn nhị phân IEC).*
+**Công việc đã làm:**
 
-* **Pha PUT (Ghi dữ liệu):**
-  * Số object thành công: $32 / 32$ objects (mỗi object $4,194,304\text{ bytes}$).
-  * Tổng bytes = $32 \times 4,194,304 = 134,217,728\text{ bytes} = 128.00\text{ MiB}$.
-  * Thời gian đo (`wall_s`): $3.0335\text{ giây}$.
-  * **Tính toán:** $\text{Goodput}_{\text{PUT}} = \frac{128}{3.0335} = \mathbf{42.20\text{ MiB/s}}$.
-  * *(Khớp chính xác với dòng summary trong `r1-c1.jsonl` và `benchmark-summary.csv`)*.
+Chạy 6 trial đo kiểm theo thứ tự xen kẽ A-B-B-A-A-B để tránh ảnh hưởng warm-up:
+- 3 trial tại concurrency `c=1`: `r1-c1`, `r2-c1`, `r3-c1`
+- 3 trial tại concurrency `c=4`: `r1-c4`, `r2-c4`, `r3-c4`
+- Mỗi trial: 32 objects × 4 MiB = 128 MiB, gồm 32 PUT và 32 GET có kiểm tra SHA-256
 
-* **Pha GET (Đọc và xác thực hash):**
-  * Số object đọc và kiểm tra hash thành công: $32 / 32$ objects.
-  * Tổng bytes = $128.00\text{ MiB}$.
-  * Thời gian đo (`wall_s`): $0.6212\text{ giây}$.
-  * **Tính toán:** $\text{Goodput}_{\text{GET}} = \frac{128}{0.6212} = \mathbf{206.04\text{ MiB/s}}$.
+Các file tạo ra:
+- [`parse_benchmark.py`](file:///d:/BigData/BigdataWeek1/parse_benchmark.py) — script đọc JSONL, tính goodput và p95
+- [`evidence/r1-c1.jsonl`](file:///d:/BigData/BigdataWeek1/evidence/r1-c1.jsonl) đến `r3-c4.jsonl` — log thô từng request
+- [`evidence/resource-samples.txt`](file:///d:/BigData/BigdataWeek1/evidence/resource-samples.txt) — mẫu CPU/RAM mỗi 5 giây trong khi chạy tải
+- [`benchmark-summary.csv`](file:///d:/BigData/BigdataWeek1/benchmark-summary.csv) — bảng tổng hợp kết quả
 
----
+**Kết quả:**
 
-### 2. Tính toán lại Nearest-Rank p95 Latency (ms)
-* **Phương pháp:** Nearest-Rank Percentile (không nội suy).
-* **Chỉ số rank:**
-  $$k = \lceil 0.95 \times n \rceil = \lceil 0.95 \times 32 \rceil = \lceil 30.4 \rceil = 31$$
-  *(Lấy giá trị phần tử thứ 31 trong mảng 32 giá trị độ trễ ms đã sắp xếp tăng dần).*
+192/192 PUT thành công, 192/192 GET xác thực hash SHA-256 không có lỗi. Số liệu tổng hợp:
 
-* **Pha PUT:**
-  * Sắp xếp 32 giá trị ms tăng dần: phần tử thứ 31 là **`109.34 ms`**.
-  * $\Rightarrow \mathbf{p95_{\text{PUT}} = 109.34\text{ ms}}$.
-* **Pha GET:**
-  * Sắp xếp 32 giá trị ms tăng dần: phần tử thứ 31 là **`23.81 ms`**.
-  * $\Rightarrow \mathbf{p95_{\text{GET}} = 23.81\text{ ms}}$.
+| Phase | Metric | c=1 (median) | c=4 (median) | Tỷ lệ |
+|---|---|---|---|---|
+| PUT | Goodput (MiB/s) | 43.33 | 41.44 | 0.96× |
+| GET | Goodput (MiB/s) | 206.04 | 184.65 | 0.90× |
+| PUT | p95 latency (ms) | ~110 | ~686 | 6.2× tệ hơn |
+
+Concurrency 4 không làm tăng thông lượng mà còn làm xấu đáng kể độ trễ đuôi.
 
 ---
 
-### 3. Kết quả kiểm tra chéo (Cross-Check với Role C)
-* **Nhiệm vụ:** *"Re-run two of C’s expected denials"*.
-* Thực thi trực tiếp 2 lệnh cấm từ client `ingestor` và `analyst`:
-  1. **Lệnh 1 (S04):** `ingestor` PUT `research-release/auth-probe.txt`
-     * Kết quả: **HTTP 403 Forbidden, Code: AccessDenied** (Đạt).
-  2. **Lệnh 2 (S10):** `analyst` GET `research-raw/fixture.txt`
-     * Kết quả: **HTTP 403 Forbidden, Code: AccessDenied** (Đạt).
-* Xác nhận: Quyền bucket-scoped của Role C được thực thi chính xác.
+## Phần 2: Kiểm tra thực hành độc lập
+
+**Trial được chọn:** `bench/r1-c1` — file [`evidence/r1-c1.jsonl`](file:///d:/BigData/BigdataWeek1/evidence/r1-c1.jsonl)
+
+### Tính lại Goodput (MiB/s)
+
+Công thức: `Goodput = tổng_bytes / (1 048 576 × wall_s)`
+
+**PUT:**
+- 32 object × 4 194 304 bytes = 134 217 728 bytes = 128 MiB
+- wall_s = 3.0335 s (lấy từ dòng `kind: summary` trong JSONL)
+- 128 / 3.0335 = **42.20 MiB/s** ← khớp CSV
+
+**GET:**
+- 128 MiB, wall_s = 0.6212 s
+- 128 / 0.6212 = **206.04 MiB/s** ← khớp CSV
+
+### Tính lại p95 Nearest-rank (ms)
+
+`k = ceil(0.95 × 32) = ceil(30.4) = 31` → lấy giá trị thứ 31 trong mảng ms sắp xếp tăng dần.
+
+**PUT:** phần tử thứ 31 = **109.34 ms** *(khớp `p95_success_ms: 109.33575...` trong JSONL)*
+
+**GET:** phần tử thứ 31 = **23.81 ms** *(khớp `p95_success_ms: 23.81283...`)*
+
+### Kiểm tra chéo với Role C
+
+Nhiệm vụ: *re-run two of C's expected denials*
+
+| # | Client | Thao tác | Kết quả |
+|---|---|---|---|
+| S04 | `ingestor` | PUT `research-release/auth-probe.txt` | HTTP 403 AccessDenied ✓ |
+| S10 | `analyst` | GET `research-raw/fixture.txt` | HTTP 403 AccessDenied ✓ |
 
 ---
 
-## PHẦN 3: TRẢ LỜI CÂU HỎI VẤN ĐÁP (EXIT QUESTIONS) — 10 ĐIỂM (4 + 3 + 3)
+## Phần 3: Câu hỏi vấn đáp
 
-### Câu 1 (4 điểm):
+### Câu 1
 **Why are Kubernetes observer permissions separate from S3 reader permissions, and why is a namespace operator outside the claimed isolation boundary?**
 
-* **Trả lời:**
-  1. *Tách biệt quyền:* Kubernetes observer và S3 reader thuộc hai mặt phẳng độc lập:
-     * Observer thuộc **Mặt phẳng quản trị (Control Plane)**: Sử dụng Kubernetes RBAC để truy vấn API Server (`get`, `list`, `watch` pods, logs, events) nhằm giám sát hạ tầng.
-     * S3 reader thuộc **Mặt phẳng dữ liệu (Data Plane)**: Sử dụng S3 AccessKey/SecretKey gửi qua cổng TCP 8333 do tiến trình SeaweedFS xác thực và ủy quyền trực tiếp. Có quyền quan sát Kubernetes API không hàm ý quyền đọc các object trong bucket S3 và ngược lại.
-  2. *Namespace operator nằm ngoài biên giới cách ly:* Người có quyền quản trị namespace (namespace operator) có thể tạo Pod tùy ý và mount bất kỳ Secret nào trong namespace (kể cả `s3-config` hay `s3-owner`). Hơn nữa, NetworkPolicy chỉ dùng nhãn pod (`access: s3`) làm selector chứ không phải danh tính mã hóa (cryptographic identity), nên namespace operator có thể dễ dàng gắn nhãn này cho bất kỳ Pod nào để vượt rào mạng. Vì vậy, hệ thống không thể tự cô lập khỏi chính người quản trị namespace.
+Kubernetes observer và S3 reader thuộc hai mặt phẳng hoàn toàn khác nhau:
+
+- **Control plane (K8s RBAC):** `observer` ServiceAccount được cấp quyền `get/list/watch` pods, logs, events qua Kubernetes API — chỉ đọc trạng thái cụm.
+- **Data plane (SeaweedFS S3 API):** truy cập qua AccessKey/SecretKey riêng, xác thực bởi chính tiến trình SeaweedFS trên cổng 8333. Hai hệ thống không liên thông — có quyền xem pods không đồng nghĩa đọc được object S3.
+
+Namespace operator nằm ngoài biên giới cách ly vì:
+1. Operator có thể tạo Pod bất kỳ và mount Secret `s3-config` hoặc `s3-owner` để lấy credentials — không có cơ chế nào ngăn điều này ở tầng namespace.
+2. NetworkPolicy dùng label `access: s3` làm selector, không phải danh tính mã hóa. Operator có thể gắn label này lên Pod bất kỳ để bypass network rule.
 
 ---
 
-### Câu 2 (3 điểm - Trọng tâm của Role D):
+### Câu 2
 **Why might concurrency four be slower or have higher latency than concurrency one? Connect your answer to evidence or a plausible bottleneck.**
 
-* **Trả lời:**
-  Dựa trên bằng chứng từ 6 trials và file `resource-samples.txt`:
-  1. **Nghẽn tài nguyên CPU (CPU Throttling & Context Switching):** Trong `store.yaml`, container SeaweedFS bị giới hạn cứng `limits: {cpu: "1", memory: 1Gi}`. Server chỉ có 1 core CPU. Khi 4 luồng client đồng thời đẩy các file 4 MiB, 1 core CPU này phải liên tục chia nhỏ thời gian xử lý phân luồng và giải mã HTTP socket. Chi phí chuyển đổi ngữ cảnh (context switching) làm giảm hiệu suất thực tế của CPU.
-  2. **Tranh chấp khóa và nghẽn I/O đĩa cục bộ (Disk Lock Contention):** Toàn bộ dữ liệu ghi vào một volume PVC duy nhất (`object-data`, StorageClass `local-path`). Khi 4 luồng cùng ghi đồng thời 4 khối 4 MiB vào cùng một filesystem, cơ chế khóa hệ thống file và hoạt động `fsync` buộc các tiến trình ghi phải xếp hàng (serialization), khiến request phải chờ đợi nhau, đẩy độ trễ p95 tăng vọt từ $\sim 110\text{ ms}$ lên $\sim 686\text{ ms}$.
-  3. **Môi trường mạng nội bộ (Zero RTT benefit):** Client và Storage Pod chạy trên cùng một node máy ảo, độ trễ mạng cực nhỏ ($< 1\text{ ms}$). Concurrency cao chỉ phát huy tác dụng trên mạng WAN để che giấu độ trễ truyền gói tin (hide RTT). Trong môi trường local, 1 luồng đã tận dụng tối đa băng thông, việc tăng lên 4 luồng chỉ tạo thêm hàng đợi tranh chấp.
+Dựa trên số liệu 6 trial và `resource-samples.txt`:
+
+1. **CPU bị giới hạn cứng:** `store.yaml` đặt `limits: {cpu: "1"}`. SeaweedFS chỉ có 1 core. Khi 4 thread cùng gửi file 4 MiB, core đó liên tục chuyển ngữ cảnh giữa các kết nối HTTP — chi phí context switch ăn vào thời gian xử lý thực.
+
+2. **Nghẽn I/O đĩa:** Tất cả dữ liệu ghi vào một PVC (`local-path`). Bốn thread cùng ghi song song dẫn đến tranh chấp lock filesystem và serialization tại `fsync`. Đây là nguyên nhân trực tiếp khiến p95 PUT tăng từ ~110 ms lên ~686 ms (gấp hơn 6 lần).
+
+3. **Không có RTT để che giấu:** Trên WAN, tăng concurrency giúp pipeline hóa request trong thời gian chờ gói tin. Ở đây client và storage cùng node, RTT < 1 ms. Một thread đơn đã gần đạt băng thông tối đa; thêm thread chỉ tạo thêm hàng đợi tranh chấp.
 
 ---
 
-### Câu 3 (3 điểm):
+### Câu 3
 **Why does Pod recovery not establish backup, high availability or enforced retention?**
 
-* **Trả lời:**
-  1. *Không phải High Availability (HA):* Deployment dùng 1 replica với chiến lược `Recreate`. Khi xóa Pod, hệ thống bị gián đoạn hoàn toàn ($T_{observed} = 10.05\text{s}$) trước khi Pod mới Ready. Hệ thống HA thực thụ yêu cầu nhiều replica phân tán (multi-replica active-active/active-passive) với thời gian downtime bằng 0.
-  2. *Không phải Sao lưu (Backup):* Thực nghiệm chỉ chứng minh dữ liệu sống sót qua vòng đời của container trên CÙNG MỘT persistent volume (PVC UID giữ nguyên). Nếu hỏng ổ đĩa vật lý của máy chủ, toàn bộ dữ liệu sẽ mất. Backup đòi hỏi bản sao độc lập, đặt ở vị trí địa lý khác (off-site) và hỗ trợ khôi phục theo thời điểm (point-in-time recovery).
-  3. *Không phải Enforced Retention:* Cam kết lưu trữ trong `governance.json` chỉ là siêu dữ liệu (metadata), không có cơ chế kỹ thuật WORM (Write Once, Read Many) hay S3 Object Lock ngăn chặn xóa. Người dùng có quyền ghi (như `owner`) vẫn có thể xóa hoặc sửa đổi dữ liệu bất cứ lúc nào.
+1. **Không phải HA:** Deployment dùng 1 replica, `strategy: Recreate`. Khi Pod bị xóa có downtime (~10 giây canary ghi nhận) trước khi Pod mới sẵn sàng. HA thực sự cần nhiều replica với failover tự động và zero downtime.
+
+2. **Không phải backup:** Thực nghiệm chỉ chứng minh dữ liệu tồn tại qua vòng đời container nhờ PVC được giữ lại (UID `9484778c...`). Nếu ổ đĩa vật lý hỏng hoặc dữ liệu bị xóa nhầm thì không có bản sao nào. Backup đòi hỏi bản sao độc lập ở vị trí vật lý khác và khả năng khôi phục theo thời điểm.
+
+3. **Không phải enforced retention:** Trường `retention` trong `governance.json` là metadata chính sách, không có cơ chế kỹ thuật nào ngăn xóa object. Không có S3 Object Lock hay WORM — người dùng có quyền ghi vẫn xóa được bất cứ lúc nào.
 
 ---
 
-**XÁC NHẬN:**  
-**Trần Anh Tuấn — MSSV: 24022484 — Role D (Performance Engineer)**
+
+**Trần Anh Tuấn — MSSV: 24022484 — Role D**

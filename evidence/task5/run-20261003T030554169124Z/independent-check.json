@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "operator": "E",
+  "utc": "2026-10-03T03:09:27.814760+00:00",
+  "method": "Independent streak counter and per-object deterministic payload hashes; no primary analyzer imported.",
+  "first_failure_start_s": 5.066702851000173,
+  "stable_read_end_s": 15.116033958000116,
+  "observed_interruption_s": 10.049331106999944,
+  "samples": 179,
+  "failed_reads": 10,
+  "objects_verified_before": 32,
+  "objects_verified_after": 32,
+  "pod_uid_changed": true,
+  "pvc_uid_unchanged": true,
+  "policy_retests": [
+    "S06",
+    "S08",
+    "S10"
+  ],
+  "human_practical_completion_not_attested": true
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "test_id": "S06",
+    "principal": "analyst",
+    "op": "get",
+    "bucket": "research-release",
+    "expected": "ALLOW 200 + SHA-256",
+    "actual_http": 200,
+    "actual_error": null,
+    "pass": true,
+    "operator": "E",
+    "reviewer": "PENDING",
+    "utc": "2026-10-03T03:06:48.048580+00:00"
+  },
+  {
+    "test_id": "S08",
+    "principal": "analyst",
+    "op": "put",
+    "bucket": "research-release",
+    "expected": "DENY 403 AccessDenied",
+    "actual_http": 403,
+    "actual_error": "AccessDenied",
+    "pass": true,
+    "operator": "E",
+    "reviewer": "PENDING",
+    "utc": "2026-10-03T03:06:48.858217+00:00"
+  },
+  {
+    "test_id": "S10",
+    "principal": "analyst",
+    "op": "get",
+    "bucket": "research-raw",
+    "expected": "DENY 403 AccessDenied",
+    "actual_http": 403,
+    "actual_error": "AccessDenied",
+    "pass": true,
+    "operator": "E",
+    "reviewer": "PENDING",
+    "utc": "2026-10-03T03:06:50.072041+00:00"
+  }
+]

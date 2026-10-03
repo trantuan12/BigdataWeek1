@@ -1,0 +1,15 @@
+{
+  "operator": "E",
+  "source_revision": "1ab91883f55af083e29bb6bae38cd15f6c591470",
+  "source_hashes": {
+    "s3lab.py": "0f015d46dc337a019f2b92636b0595d728de3c5957294851f7dcc7f820fe05f7",
+    "store.yaml": "9ee389f3cbd32ce80ef12586d67fb2e4e56efdba11a402116814c2625956795f",
+    "clients.yaml": "8bc989c19bae3696e121e42bd9ee754fb722b512241acee0787e697828991a3c",
+    "guardrails.yaml": "4f213b0d16e9408fca72ce6809fe7cf43a78b6a4bc59d7deb65662be5bf861ce",
+    "scripts/run_recovery.py": "3bc3366e58aa22a1afdffbd8aaa253a9ba9811a90e486363f47075fe39c115d3",
+    "scripts/analyze_recovery.py": "b4f2054996680e5d571b6f27f350fae976cc762c4bba1296af8e289cca90449c"
+  },
+  "privacy": "No Secret data, kubeconfig, email, personal path, address or actual node hostname exported.",
+  "local_configuration": "Snapshot and hashes are authoritative; working tree has uncommitted changes.",
+  "run_scope": "Local lab. Not evidence that another group machine has the same deployment."
+}

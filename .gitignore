@@ -17,4 +17,6 @@ evidence/provenance.json
 evidence/seed.jsonl
 evidence/topology.txt
 manifests/
+!task_e/manifests/
+!task_e/manifests/*.yaml
 *.tar

@@ -1,0 +1,62 @@
+================================================================================
+INDIVIDUAL PRACTICAL CHECK - ROLE D: PERFORMANCE ENGINEER
+================================================================================
+Student ID: student-D
+Task: Recalculate one trial's goodput and nearest-rank p95 from raw records.
+Assigned Trial: Trial 1 (run: bench/r1-c1, concurrency: 1)
+Raw Artifact Path: evidence/r1-c1.jsonl
+
+1. GOODPUT RECALCULATION
+--------------------------------------------------------------------------------
+Phase: PUT
+- Total objects: 32
+- Object payload size: 4 MiB = 4,194,304 bytes
+- Total successful payload bytes: 32 * 4,194,304 = 134,217,728 bytes = 128.00 MiB
+- Wall clock duration (wall_s): 3.0335 seconds
+- Formula: Goodput = (Total Successful Bytes) / (2^20 * wall_s)
+  Calculation: 134,217,728 / (1,048,576 * 3.0335) = 128 / 3.0335
+  => PUT Goodput = 42.20 MiB/s (Matches summary record exactly)
+
+Phase: GET
+- Total objects: 32
+- Total successful verified bytes: 32 * 4,194,304 = 134,217,728 bytes = 128.00 MiB
+- Wall clock duration (wall_s): 0.6212 seconds
+- Formula: Goodput = 128 / 0.6212
+  => GET Goodput = 206.04 MiB/s (Matches summary record exactly)
+
+2. NEAREST-RANK P95 LATENCY RECALCULATION
+--------------------------------------------------------------------------------
+Phase: PUT (32 requests, ms values sorted ascending):
+Raw latencies (ms):
+[10.21, 10.38, 10.74, 11.23, 11.45, 11.89, 12.11, 12.54, 13.02, 13.41,
+ 13.88, 14.12, 14.56, 14.99, 15.34, 15.82, 16.21, 16.75, 17.10, 17.65,
+ 18.23, 19.01, 19.85, 21.32, 23.41, 26.89, 31.42, 45.12, 68.34, 92.15,
+ 109.34, 115.62]
+
+Nearest-rank index formula:
+k = ceil(0.95 * n) = ceil(0.95 * 32) = ceil(30.4) = 31 (1-indexed)
+The 31st element in the sorted array is: 109.34 ms
+=> PUT p95 Latency = 109.34 ms (Matches summary record exactly)
+
+Phase: GET (32 requests, ms values sorted ascending):
+Sorted 31st element (rank 31 of 32): 23.81 ms
+=> GET p95 Latency = 23.81 ms (Matches summary record exactly)
+
+3. EXIT QUESTION 2 RESPONSE
+--------------------------------------------------------------------------------
+Question: Why might concurrency four be slower or have higher latency than concurrency one?
+Connect your answer to evidence or a plausible bottleneck.
+
+Answer:
+1. CPU Throttling and Contention: In store.yaml, the SeaweedFS deployment has limits:
+   cpu: "1" (single CPU core). When 4 concurrent client threads send requests simultaneously,
+   they contend for the single core on the single-replica storage backend, inducing heavy
+   context switching and request queuing overhead rather than parallel acceleration.
+2. Disk I/O Lock Contention: All concurrent 4 MiB object payloads are written to a single
+   local-path volume mounted at /data. File system locks and fsync operations serialize disk
+   writes, causing queue formation and dramatically increasing tail latency (p95 latency
+   jumped from ~110 ms at c=1 to ~686 ms at c=4).
+3. Absence of Network RTT Penalty: The client and storage pod execute on the same local cluster
+   network where RTT is under 1 ms. Concurrency pipelining benefits WAN workloads by hiding
+   network latency, but in a local-node environment with zero latency penalty, concurrency
+   merely introduces lock and queuing contention.

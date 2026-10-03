@@ -1,0 +1,41 @@
+================================================================================
+INDIVIDUAL PRACTICAL CHECK - ROLE A: PLATFORM ENGINEER
+================================================================================
+Student ID: student-A
+Task: Predict admission for a new disposable-Pod request supplied by the instructor, then test it.
+
+1. ADMISSION PREDICTION
+--------------------------------------------------------------------------------
+Current Quota State (team-budget in bd-g10):
+- Hard Limits: requests.cpu=2, limits.cpu=4, requests.memory=2Gi, limits.memory=4Gi, pods=10
+- Current Allocated Usage:
+  Storage: req 500m / 512Mi, lim 1000m / 1Gi
+  4 Clients: req 4 * 100m = 400m / 4 * 128Mi = 512Mi, lim 4 * 500m = 2000m / 4 * 512Mi = 2Gi
+  Total Current Usage: req 900m CPU / 1024Mi RAM (1Gi), lim 3000m CPU (3) / 3Gi RAM, pods: 5/10
+
+Disposable Test Pod:
+- Proposed Pod: requests: cpu 200m, memory 256Mi | limits: cpu 500m, memory 512Mi
+- Prediction:
+  New total requests = 900m + 200m = 1100m <= 2000m (ALLOW)
+  New total memory = 1024Mi + 256Mi = 1280Mi <= 2048Mi (ALLOW)
+  New total pods = 5 + 1 = 6 <= 10 (ALLOW)
+  => PREDICTED RESULT: ADMITTED (SUCCESS)
+
+2. ACTUAL TEST EXECUTION
+--------------------------------------------------------------------------------
+Command: kubectl -n bd-g10 run test-a-probe --image=s3client:v1 --restart=Never --dry-run=client -o yaml | kubectl apply -f -
+Result: pod/test-a-probe created
+Status: Running / Admitted
+Cleanup: kubectl -n bd-g10 delete pod test-a-probe --wait=true
+
+3. EXIT QUESTION 1 RESPONSE
+--------------------------------------------------------------------------------
+Question: Why are Kubernetes observer permissions separate from S3 reader permissions,
+and why is a namespace operator outside the claimed isolation boundary?
+Answer:
+Kubernetes RBAC controls management-plane access to the Kubernetes API server (etcd state,
+pod inspection, logs). In contrast, S3 reader permissions control data-plane payload traffic
+handled directly by the S3 service process (TCP port 8333). Having read access to K8s resources
+does not confer S3 bucket permissions. A namespace operator lies outside the isolation boundary
+because someone with full namespace-admin privileges can mount Secrets directly, inspect
+workload environment variables, or bypass Pod security settings.

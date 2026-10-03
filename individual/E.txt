@@ -1,0 +1,41 @@
+================================================================================
+INDIVIDUAL PRACTICAL CHECK - ROLE E: RELIABILITY / GOVERNANCE ENGINEER
+================================================================================
+Student ID: student-E
+Task: Recalculate observed recovery time and explain the limits of the unchanged-PVC evidence.
+
+1. OBSERVED RECOVERY TIME RECALCULATION
+--------------------------------------------------------------------------------
+Canary Parameters:
+- Monitoring Target: research-raw/fixture.txt via ingestor pod
+- Clock: Monotonic timer with offset tracking (start_s and end_s)
+- Total samples recorded: 179 samples
+
+From recovery-summary.json and canary.jsonl:
+- First failed read:
+  start_s = 5.0667 s (Sample #5 failed to connect during graceful pod termination)
+  => t_failure = 5.066702851 s
+- First read in the first run of 5 consecutive successful reads after failure:
+  end_s = 15.1160 s (Sample #15)
+  => t_stable = 15.116033958 s
+- Interruption Formula:
+  T_observed = t_stable - t_failure
+  T_observed = 15.116033958 - 5.066702851 = 10.049331107 s
+  => T_observed = 10.05 seconds (Well below the teaching target threshold of 120 seconds)
+
+2. EXIT QUESTION 3 RESPONSE
+--------------------------------------------------------------------------------
+Question: Why does Pod recovery not establish backup, high availability or enforced retention?
+
+Answer:
+1. Not High Availability (HA): A single storage replica with Recreate deployment strategy
+   experiences an unavoidable period of downtime (10.05s observed) during replacement.
+   True HA requires multi-replica active-active or active-passive clustering with automated
+   failover and zero data plane interruption.
+2. Not Backup / Disaster Recovery: The experiment only proves that data persists across
+   transient container lifecycles on the same underlying volume. If the underlying node, disk,
+   or filesystem fails, or if an accidental deletion occurs, all data is lost. Backup requires
+   independent, off-site, point-in-time snapshotting.
+3. Not Enforced Retention: Documenting a retention commitment in governance metadata does not
+   prevent an authenticated user (such as the owner) from modifying or deleting objects,
+   nor does it enforce WORM (Write Once, Read Many) / object-lock compliance.

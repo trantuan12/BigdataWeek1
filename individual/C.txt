@@ -1,0 +1,32 @@
+================================================================================
+INDIVIDUAL PRACTICAL CHECK - ROLE C: ACCESS ENGINEER
+================================================================================
+Student ID: student-C
+Task: Execute one allowed and one forbidden analyst request and explain their different results.
+
+1. TEST EXECUTION
+--------------------------------------------------------------------------------
+Probe 1: Permitted Analyst Request (S06)
+- Command: kubectl -n bd-g10 exec analyst -- python /opt/s3lab.py probe get research-release fixture.txt
+- Output:
+  {"bucket": "research-release", "bytes": 25, "error": null, "http": 200, "key": "fixture.txt",
+   "ok": true, "op": "get", "principal": "analyst", "sha256": "9ce4c8bb96c85122c3b386653fbe9150cb2f4df03f25c83408fe11c29b87d6f8"}
+- Observed Result: HTTP 200 OK, ok: true.
+
+Probe 2: Forbidden Analyst Request (S10)
+- Command: kubectl -n bd-g10 exec analyst -- python /opt/s3lab.py probe get research-raw fixture.txt
+- Output:
+  {"bucket": "research-raw", "bytes": 0, "error": "AccessDenied", "http": 403, "key": "fixture.txt",
+   "ok": false, "op": "get", "principal": "analyst"}
+- Observed Result: HTTP 403 Forbidden, error: AccessDenied.
+
+2. TECHNICAL EXPLANATION
+--------------------------------------------------------------------------------
+In make_identities.py (and private/s3.json), the analyst identity is assigned the policy:
+  "analyst": ["Read:research-release", "List:research-release"]
+- For Probe 1 (research-release): The action Read is explicitly scoped to the research-release
+  bucket. The SeaweedFS S3 authorizer evaluates the caller's credentials, matches the target
+  bucket and action, and authorizes the read request.
+- For Probe 2 (research-raw): The analyst role has no grant on the research-raw bucket.
+  SeaweedFS denies access with an explicit HTTP 403 AccessDenied response, demonstrating
+  effective bucket-level access governance.

@@ -1,0 +1,6 @@
+role,human_operator,reviewer,artifact,commit_id,description
+A,student-A,student-D,guardrails.yaml,d4ab4fe,Applied ResourceQuota and NetworkPolicy; demonstrated admission and rejection
+B,student-B,student-E,store.yaml,79a6c7c,Deployed SeaweedFS with 4Gi PVC and seeded fixtures; verified SHA-256 reads
+C,student-C,student-D,security-results.csv,a370771,Executed 22 security tests (12 S3; 6 RBAC; 4 Network) and established governance record
+D,student-D,student-A,benchmark-summary.csv,7a68817,Conducted 6-trial transfer benchmark across concurrency 1 and 4 with resource sampling
+E,student-E,student-B,recovery-summary.json,bec5860,Performed pod deletion; canary interruption measurement and data integrity verification

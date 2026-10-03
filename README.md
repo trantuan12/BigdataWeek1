@@ -1,22 +1,27 @@
-# Cloud-Native Big Data Infrastructure & Governance
-## Governed Research-Data Landing Zone
+# Báo cáo nhóm Lab 1 Cluster Configuration
 
-### 1. System Design
-This laboratory implements an isolated, governed, multi-tenant research data landing zone on Kubernetes using single-node SeaweedFS (`weed mini`) as the S3-compatible object store. 
+## Phương pháp và các bước thực hiện
 
-Tenant boundaries are enforced through a strict `team-budget` ResourceQuota restricting the aggregate footprint to 2 CPU requests / 4 CPU limits, 2Gi memory requests / 4Gi limits, and one 4Gi PersistentVolumeClaim (`object-data`). Network ingress to the private ClusterIP storage Service on port 8333 is tightly constrained via a Kubernetes `NetworkPolicy` (`private-object-store`), allowing traffic solely from Pods carrying the label `access: s3`.
+Nhóm triển khai SeaweedFS một replica để xây dựng vùng lưu trữ dữ liệu tổng hợp có kiểm soát. Client truyền object qua Service ClusterIP ở cổng 8333; dữ liệu và metadata được lưu trên PVC 4Gi. Nhóm kiểm chứng bằng request thực tế, log và SHA-256, thay vì chỉ dựa vào trạng thái Pod.
 
-The object store hosts two segregated data zones: an unapproved landing zone (`research-raw`) and an approved release zone (`research-release`). Access governance is enforced at the S3 API layer using bucket-scoped action policies across three workloads: `owner` (full administrative rights), `ingestor` (read/write/list restricted to `research-raw`), and `analyst` (read/list restricted to `research-release`). A distinct unauthenticated client (`blocked`) and a read-only Kubernetes ServiceAccount (`observer`) validate network and control-plane isolation boundaries.
+**Task 1:** áp dụng ResourceQuota và NetworkPolicy, tạo Pod nhỏ hợp lệ rồi thử Pod yêu cầu 3 CPU. Log ghi `exceeded quota`, giới hạn requests.cpu là 2. Storage cùng bốn client yêu cầu tổng 900m CPU, 1024Mi RAM; tổng limits là 3 CPU, 3Gi RAM.
 
-### 2. Experimental Results
-1. **Tenant Guardrails (Task 1):** Admission control cleanly admitted a compliant probe (`quota-positive`) and explicitly rejected an oversized request (`quota-negative`, requesting 3 CPUs) with HTTP 403 Forbidden due to quota exhaustion, preserving the 900m CPU / 1024Mi memory operational budget.
-2. **Persistent Storage & Data Seeding (Task 2):** Bound a 4Gi PVC mounted at `/data`, seeded four fixtures across both buckets, and verified role-based reads matching the expected SHA-256 digest (`9ce4c8bb...`).
-3. **Access Governance (Task 3):** Successfully demonstrated all 22 security controls (12 S3, 6 RBAC, 4 Network). All unauthorized S3 requests returned explicit HTTP 403 `AccessDenied` responses. Observer permissions verified read-only API access without secret extraction or pod deletion privileges.
-4. **Data Path Measurement (Task 4):** Completed six controlled trials (192 PUTs and 192 GETs, 100% verified integrity). Increasing concurrency from 1 to 4 yielded median Goodput ratios of 0.96x for PUT and 0.90x for GET, while p95 latency increased dramatically (from ~110 ms to ~686 ms for PUT) due to single-core CPU throttling and disk lock serialization.
-5. **Fault Recovery (Task 5):** Replaced the storage Pod under graceful termination. A replacement Pod became Ready within 31.28 seconds, with an observed canary interruption $T_{observed} = 10.05\text{ s}$ ($\le 120\text{ s}$). All 32 benchmark object hashes remained unchanged on the retained PVC UID (`9484778c...`).
+**Task 2:** cấu hình ba S3 identities, Secret riêng cho từng vai trò, một Deployment và PVC. Owner seed bốn fixture trong hai bucket. Ingestor đọc raw, analyst đọc release; SHA-256 khớp fixture chuẩn. Topology và image/PVC provenance được lưu kèm.
 
-### 3. Limitations & Production Gaps
-While functional for education, this deployment possesses explicit architectural limitations:
-- **No High Availability:** The single storage replica experiences transient downtime ($10.05\text{ s}$) during container replacement.
-- **No Backup or Node-Loss Durability:** Volume retention on a single hostPath StorageClass ties durability to a single physical node without point-in-time recovery.
-- **Transport Security & Workload Identity:** Payloads transmit over plaintext HTTP without TLS or encryption at rest. Static Secret environment variables are used in place of federated OpenID Connect workload identities.
+**Task 3:** thực hiện 12 S3, 6 RBAC và 4 network tests. Hồ sơ hiện có 20 PASS; N03 INCONCLUSIVE vì thiếu output local listener 8888; N04 PENDING-INSTRUCTOR vì chưa xác nhận outsider fixture. Request S3 bị cấm trả 403/AccessDenied; observer bị từ chối đọc Secret và thay đổi Pod. Hai request thay đổi Pod dùng server dry-run.
+
+**Task 4:** chạy sáu trial xen kẽ concurrency 1 và 4, mỗi trial 32 object × 4MiB với PUT và GET xác minh hash. Kết quả có 192 PUT thành công, 192 GET nguyên vẹn. Median goodput c4/c1 đạt 0,96 với PUT và 0,90 với GET. CPU, I/O, cache và tải cluster là các yếu tố có thể ảnh hưởng; chưa đo được nguyên nhân duy nhất.
+
+**Task 5:** dừng tải, kiểm tra object trước/sau, thay storage Pod bằng normal deletion và theo dõi canary. Pod UID đổi, PVC UID giữ nguyên; 32 object có hash không đổi. Pod Ready sau 31,28 giây; gián đoạn quan sát là 10,05 giây. Dữ liệu recovery được E chuẩn bị riêng, không phải lần chạy benchmark của D.
+
+## Đóng góp thành viên
+
+[contribution.csv](contribution.csv) ghi năm thành viên, MSSV, vai trò, artifact, commit và reviewer. A phụ trách guardrails; B lưu trữ; C phân quyền; D hiệu năng; E recovery. Báo cáo cá nhân hiện có C và D trong `individual/`.
+
+## Kết quả và minh chứng
+
+`manifests/` chứa cấu hình triển khai. Các bảng kết quả là `security-results.csv`, `benchmark-summary.csv` và `recovery-summary.json`. `governance.json` và `policies-redacted.json` mô tả quản trị, phân quyền. [evidence/README.md](evidence/README.md) chỉ dẫn log và output của năm task. Các helper phục vụ tái lập thí nghiệm được giữ tại thư mục gốc.
+
+## Giới hạn và phần còn thiếu
+
+Các lần chạy dùng môi trường khác nhau; topology/provenance của từng lần phải được đọc cùng log tương ứng. Một replica không chứng minh HA, backup hoặc node-loss durability. HTTP chưa có TLS; retention chưa thực thi tự động. N03/N04 còn chưa chốt; xác nhận thực hành độc lập còn thiếu. Chưa có ảnh chụp minh họa riêng và logs/events sau recovery được xuất riêng. Chưa đóng ZIP.

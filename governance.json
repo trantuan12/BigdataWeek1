@@ -19,7 +19,7 @@
       "S11"
     ],
     "policy_revision": "6044ab0",
-    "revision_note": "Approved by Access Engineer (24022466) after complete 22 security controls verification.",
+    "revision_note": "Bucket policy record approved in existing submission; security review currently has 20 PASS, N03 INCONCLUSIVE and N04 PENDING-INSTRUCTOR. See evidence/task3/README.md.",
     "status": "approved"
   },
   {
@@ -44,7 +44,7 @@
       "S12"
     ],
     "policy_revision": "6044ab0",
-    "revision_note": "Approved by Access Engineer (24022466) after complete 22 security controls verification.",
+    "revision_note": "Bucket policy record approved in existing submission; security review currently has 20 PASS, N03 INCONCLUSIVE and N04 PENDING-INSTRUCTOR. See evidence/task3/README.md.",
     "status": "approved"
   }
 ]

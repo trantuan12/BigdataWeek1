@@ -1,9 +1,9 @@
 [
   {
     "bucket": "research-raw",
-    "owner": "student-A",
-    "steward": "student-E",
-    "approved_by": "student-C",
+    "owner": "24022306",
+    "steward": "24022463",
+    "approved_by": "24022466",
     "cleanup_owner": "instructor",
     "classification": "synthetic-restricted",
     "purpose": "synthetic lab ingestion",
@@ -18,15 +18,15 @@
       "S10",
       "S11"
     ],
-    "policy_revision": "bec5860",
-    "revision_note": "Recorded HEAD after full deployment and verification.",
+    "policy_revision": "6044ab0",
+    "revision_note": "Approved by Access Engineer (24022466) after complete 22 security controls verification.",
     "status": "approved"
   },
   {
     "bucket": "research-release",
-    "owner": "student-A",
-    "steward": "student-E",
-    "approved_by": "student-C",
+    "owner": "24022306",
+    "steward": "24022463",
+    "approved_by": "24022466",
     "cleanup_owner": "instructor",
     "classification": "synthetic-restricted",
     "purpose": "approved synthetic release",
@@ -43,8 +43,8 @@
       "S09",
       "S12"
     ],
-    "policy_revision": "bec5860",
-    "revision_note": "Recorded HEAD after full deployment and verification.",
+    "policy_revision": "6044ab0",
+    "revision_note": "Approved by Access Engineer (24022466) after complete 22 security controls verification.",
     "status": "approved"
   }
 ]

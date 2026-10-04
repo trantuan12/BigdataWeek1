@@ -16,7 +16,7 @@
 
 ## Phần 1: Đóng góp kỹ thuật (10 điểm)
 
-### 1.1 Trước khi thực hiện (Before State)
+### 1.1 Trước khi thực hiện
 
 Tại thời điểm kết thúc Task 1, namespace `bd-g01` đã được thiết lập guardrails bao gồm `ResourceQuota` (để giới hạn tiêu thụ tài nguyên tổng thể) và `NetworkPolicy` (để kiểm soát luồng traffic Ingress vào cụm). Tuy nhiên, môi trường hiện tại hoàn toàn trống rỗng về mặt lưu trữ:
 - Chưa có khối lượng lưu trữ bền vững (Persistent Volume/PVC) nào được yêu cầu hay cấp phát.
@@ -66,7 +66,7 @@ Mục đích của việc kiểm tra này là đảm bảo Pod mới (sau sự c
 Tôi đối chiếu hai tệp snapshot trạng thái trước và sau khi xóa Pod (do Role E cung cấp trong `evidence/task5/run-20261003T030554169124Z/`):
 - Từ `pvc-before.json` (trước khi Pod bị xóa): UID của `object-data` là `9484778c-7330-45f9-82f0-cd8e14972a01`.
 - Từ `pvc-after.json` (sau khi Pod mới khởi động): UID vẫn giữ nguyên là `9484778c-7330-45f9-82f0-cd8e14972a01`, trạng thái là `Bound`.
-**Giải thích:** Điều này là bằng chứng không thể chối cãi rằng Storage Class đã giữ lại Volume cũ nhờ vào tính chất ràng buộc vòng đời của PersistentVolumeClaim, bất chấp việc thực thể tiêu thụ (Pod) bị xóa bỏ.
+**Giải thích:** Điều này là bằng chứng không thể chối cãi rằng Storage Class đã giữ lại Volume cũ nhờ vào tính chất ràng buộc vòng đời của PersistentVolumeClaim, bất chấp việc Pod bị xóa bỏ.
 
 ### 2.2 Truy vết sự thay thế của Compute
 
@@ -95,7 +95,7 @@ Khi một Client S3 gửi một yêu cầu GET để đọc lại `fixture.txt` 
   "utc": "2026-10-03T03:05:57.238348+00:00"
 }
 ```
-**Giải thích kết luận:** File báo mã HTTP 200 và SHA-256 trả về tuyệt đối trùng khớp với digest gốc (`9ce4c8bb...d6f8`). Object 32/32 trong tập benchmark (`verify-after.jsonl`) cũng bảo toàn nguyên vẹn mã băm. Qua quá trình truy vết (Volume không đổi -> Pod tạo mới -> Định tuyến API trơn tru -> Hash trùng khớp), tôi chính thức độc lập xác nhận rằng cơ chế gắn kết bộ nhớ liên tục (Persistent Storage Binding) hoạt động đúng thiết kế và dữ liệu đã được bảo toàn sau thảm họa ở tầng Compute.
+**Giải thích kết luận:** File báo mã HTTP 200 và SHA-256 trả về tuyệt đối trùng khớp với digest gốc (`9ce4c8bb...d6f8`). Object 32/32 trong tập benchmark (`verify-after.jsonl`) cũng bảo toàn nguyên vẹn mã băm. Qua quá trình truy vết (Volume không đổi -> Pod tạo mới -> Định tuyến API trơn tru -> Hash trùng khớp), tôi chính thức độc lập xác nhận rằng cơ chế gắn kết bộ nhớ liên tục hoạt động đúng thiết kế và dữ liệu đã được bảo toàn sau thảm họa ở tầng Compute.
 
 ---
 
@@ -118,20 +118,20 @@ Theo kết quả trích xuất từ báo cáo hiệu năng `benchmark-summary.cs
 - Ở cấu hình thử nghiệm `concurrency = 4` (Đồng thời 4 luồng): Mặc dù kỳ vọng hệ thống sẽ xử lý lượng lớn dữ liệu nhanh hơn, nhưng thực tế Median Goodput của PUT bị kéo lùi nhẹ xuống `41.44 MiB/s` (tỷ lệ khoảng 0.96 so với c=1), và quan trọng nhất, p95 Latency tăng vọt lên tới `686.02 ms` (tăng gấp hơn 6 lần). Độ trễ của quá trình GET cũng chịu tình trạng tương tự.
 
 Có một số điểm nghẽn kìm hãm lợi ích của đa luồng trong kiến trúc bài lab này:
-1. **CPU Throttling tại Storage Server:** Pod lưu trữ SeaweedFS đã bị giới hạn phần cứng cứng ngắc tại `limits.cpu: "1"`. Việc đổ 4 yêu cầu I/O cường độ cao đồng thời vào một CPU core duy nhất sẽ gây ra chi phí chuyển đổi ngữ cảnh (Context Switching) đáng kể. Các tiến trình xử lý request phải tranh giành thời gian CPU, xếp hàng đợi dài hơn, từ đó tăng độ trễ tổng thể thay vì giải quyết công việc song song.
-2. **I/O Serialization tại Volume:** Khối lượng lưu trữ sử dụng là `ReadWriteOnce` nằm cục bộ trên một ổ đĩa Node (`local-path`). Khác với các hệ thống phân tán, hệ thống tệp cục bộ có thể xảy ra tình trạng "file locking" (khóa tệp) hoặc I/O Queue khi có nhiều luồng cố gắng flush (ghi) các đoạn buffer 4 MiB xuống đĩa cùng một lúc.
+1. **CPU Throttling tại Storage Server:** Pod lưu trữ SeaweedFS đã bị giới hạn phần cứng cứng ngắc tại `limits.cpu: "1"`. Việc đổ 4 yêu cầu I/O cường độ cao đồng thời vào một CPU core duy nhất sẽ gây ra chi phí chuyển đổi ngữ cảnh đáng kể. Các tiến trình xử lý request phải tranh giành thời gian CPU, xếp hàng đợi dài hơn, từ đó tăng độ trễ tổng thể thay vì giải quyết công việc song song.
+2. **I/O Serialization tại Volume:** Khối lượng lưu trữ sử dụng là `ReadWriteOnce` nằm cục bộ trên một ổ đĩa Node (`local-path`). Khác với các hệ thống phân tán, hệ thống tệp cục bộ có thể xảy ra tình trạng "file locking" hoặc I/O Queue khi có nhiều luồng cố gắng flush (ghi) các đoạn buffer 4 MiB xuống đĩa cùng một lúc.
 3. **Overhead Kết Nối:** Tại tầng Network, việc duy trì 4 kết nối TCP đồng thời sinh ra các chi phí overhead xử lý gói tin và phân bổ bộ nhớ mà với chỉ một giới hạn CPU=1, server phải gồng gánh xử lý.
 
-Tóm lại, hiện tượng c=4 chậm hơn hoặc có độ trễ cao hơn c=1 trong môi trường này chứng minh rằng việc tăng cường luồng (Concurrency) chỉ đem lại lợi ích hiệu năng (Throughput) khi hệ thống Storage Backend (bao gồm CPU, Network và I/O đĩa) chưa đạt điểm bão hòa (Saturation Point).
+Tóm lại, hiện tượng c=4 chậm hơn hoặc có độ trễ cao hơn c=1 trong môi trường này chứng minh rằng việc tăng cường luồng chỉ đem lại lợi ích hiệu năng khi hệ thống Storage Backend (bao gồm CPU, Network và I/O đĩa) chưa đạt điểm bão hòa.
 
 ### Câu 3 (3 điểm)
 **Why does Pod recovery not establish backup, high availability or enforced retention?**
 
 Mặc dù thử nghiệm mô phỏng sự cố (Task 5) cho thấy Pod có thể tự phục hồi và dữ liệu vẫn nguyên vẹn sau thời gian đứt quãng khoảng ~10.05 giây, kết quả này hoàn toàn không đồng nghĩa với ba đặc tính cấp độ doanh nghiệp sau:
 
-1. **Sẵn sàng cao:** Kiến trúc HA đòi hỏi hệ thống phải duy trì khả năng phục vụ liên tục ngay cả khi có thành phần bị lỗi (vd: luôn có 2-3 replicas chạy song song qua Load Balancer). Trong mô hình lab, chúng ta chỉ triển khai `replicas: 1` cùng chiến lược `Recreate`. Trong 10 giây thời gian Pod bị hủy và Pod mới đang khởi động, dịch vụ bị rớt hoàn toàn (downtime). Canary watch đã ghi nhận 10 lỗi GET liên tiếp. Một hệ thống gián đoạn dịch vụ rõ ràng như vậy không thể gọi là High Availability.
-2. **Sao lưu dự phòng:** Sự phục hồi trong lab chỉ là việc thay thế lớp Compute (Pod) và cắm nó lại vào lớp Storage vật lý CŨ (`PVC object-data`). Dữ liệu tồn tại được là do đĩa ảo trên host vẫn còn. Nếu thảm họa xảy ra ở cấp độ phần cứng (Node sập, ổ cứng vật lý hỏng cháy) hoặc có ai đó lỡ tay xóa mất Persistent Volume, toàn bộ dữ liệu sẽ bốc hơi vĩnh viễn. Một hệ thống Backup đúng nghĩa đòi hỏi phải có các bản sao (Snapshot/Replication) được sao chép đến một khu vực lưu trữ hoàn toàn độc lập khác.
-3. **Cưỡng chế lưu giữ vòng đời:** Tập tin quản trị `governance.json` có ghi một dòng `retention: assessment completion + 7 days`. Tuy nhiên đây chỉ là văn bản cam kết bằng lời (Documentation). Trên thực tế, cờ `"retention_enforced": false` đã được ghi nhận. Không có một cơ chế tự động nào (vd: AWS S3 Object Lock, hay cronjob tự động cleanup) chạy trong nền để bảo vệ tập tin khỏi việc bị thao tác xóa bằng tay trước hạn hay tự dọn dẹp sau hạn. Sự phục hồi của một Pod không chứng minh được tính minh bạch và tính thực thi của vòng đời tài liệu.
+1. **Sẵn sàng cao:** Kiến trúc HA đòi hỏi hệ thống phải duy trì khả năng phục vụ liên tục ngay cả khi có thành phần bị lỗi (vd: luôn có 2-3 replicas chạy song song qua Load Balancer). Trong mô hình lab, chúng ta chỉ triển khai `replicas: 1` cùng chiến lược `Recreate`. Trong 10 giây thời gian Pod bị hủy và Pod mới đang khởi động, dịch vụ bị rớt hoàn toàn. Canary watch đã ghi nhận 10 lỗi GET liên tiếp. Một hệ thống gián đoạn dịch vụ rõ ràng như vậy không thể gọi là sẵn sàng cao.
+2. **Sao lưu dự phòng:** Sự phục hồi trong lab chỉ là việc thay thế lớp Compute (Pod) và cắm nó lại vào lớp Storage vật lý CŨ (`PVC object-data`). Dữ liệu tồn tại được là do đĩa ảo trên host vẫn còn. Nếu thảm họa xảy ra ở cấp độ phần cứng (Node sập, ổ cứng vật lý hỏng cháy) hoặc có ai đó lỡ tay xóa mất Persistent Volume, toàn bộ dữ liệu sẽ bốc hơi vĩnh viễn. Một hệ thống Backup đúng nghĩa đòi hỏi phải có các bản sao được sao chép đến một khu vực lưu trữ hoàn toàn độc lập khác.
+3. **Cưỡng chế lưu giữ vòng đời:** Tập tin quản trị `governance.json` có ghi một dòng `retention: assessment completion + 7 days`. Tuy nhiên đây chỉ là văn bản cam kết bằng lời. Trên thực tế, cờ `"retention_enforced": false` đã được ghi nhận. Không có một cơ chế tự động nào (vd: AWS S3 Object Lock, hay cronjob tự động cleanup) chạy trong nền để bảo vệ tập tin khỏi việc bị thao tác xóa bằng tay trước hạn hay tự dọn dẹp sau hạn. Sự phục hồi của một Pod không chứng minh được tính minh bạch và tính thực thi của vòng đời tài liệu.
 
 ---
 

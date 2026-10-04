@@ -25,10 +25,10 @@ Chạy 6 trial đo kiểm theo thứ tự xen kẽ A-B-B-A-A-B để tránh ản
 - Mỗi trial: 32 objects × 4 MiB = 128 MiB, gồm 32 PUT và 32 GET có kiểm tra SHA-256
 
 Các file tạo ra:
-- [`parse_benchmark.py`](file:///d:/BigData/BigdataWeek1/parse_benchmark.py) — script đọc JSONL, tính goodput và p95
-- [`evidence/r1-c1.jsonl`](file:///d:/BigData/BigdataWeek1/evidence/r1-c1.jsonl) đến `r3-c4.jsonl` — log thô từng request
-- [`evidence/resource-samples.txt`](file:///d:/BigData/BigdataWeek1/evidence/resource-samples.txt) — mẫu CPU/RAM mỗi 5 giây trong khi chạy tải
-- [`benchmark-summary.csv`](file:///d:/BigData/BigdataWeek1/benchmark-summary.csv) — bảng tổng hợp kết quả
+- [`parse_benchmark.py`](../parse_benchmark.py) — script đọc JSONL, tính goodput và p95
+- [`evidence/r1-c1.jsonl`](../evidence/r1-c1.jsonl) đến `r3-c4.jsonl` — log thô từng request
+- [`evidence/resource-samples.txt`](../evidence/resource-samples.txt) — mẫu CPU/RAM mỗi 5 giây trong khi chạy tải
+- [`benchmark-summary.csv`](../benchmark-summary.csv) — bảng tổng hợp kết quả
 
 **Kết quả:**
 
@@ -46,7 +46,7 @@ Concurrency 4 không làm tăng thông lượng mà còn làm xấu đáng kể 
 
 ## Phần 2: Kiểm tra thực hành độc lập
 
-**Trial được chọn:** `bench/r1-c1` — file [`evidence/r1-c1.jsonl`](file:///d:/BigData/BigdataWeek1/evidence/r1-c1.jsonl)
+**Trial được chọn:** `bench/r1-c1` — file [`evidence/r1-c1.jsonl`](../evidence/r1-c1.jsonl)
 
 ### Tính lại Goodput (MiB/s)
 

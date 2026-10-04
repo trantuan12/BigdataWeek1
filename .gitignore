@@ -12,3 +12,7 @@ __pycache__/
 # OS files
 Thumbs.db
 .DS_Store
+
+# Build and submission bundles
+dist/
+*.zip

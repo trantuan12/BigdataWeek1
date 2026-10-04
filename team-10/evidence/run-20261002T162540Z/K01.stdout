@@ -1,0 +1,6 @@
+NAME                       READY   STATUS    RESTARTS      AGE
+analyst                    1/1     Running   1 (81m ago)   30h
+blocked                    1/1     Running   1 (81m ago)   30h
+ingestor                   1/1     Running   1 (81m ago)   30h
+objects-74bd94c8cb-gvntk   1/1     Running   0             45m
+owner                      1/1     Running   1 (81m ago)   30h

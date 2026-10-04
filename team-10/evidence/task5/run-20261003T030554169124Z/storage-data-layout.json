@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "operator": "E",
+  "automation_assisted_by": "Codex",
+  "utc": "2026-10-03T03:17:41.684681+00:00",
+  "pod_uid": "589b3bdd-e667-4d9a-94b6-762d7626d267",
+  "pvc_uid": "9484778c-7330-45f9-82f0-cd8e14972a01",
+  "checks": {
+    "filer_metadata_directory_on_data_mount": true,
+    "master_metadata_directory_on_data_mount": true
+  },
+  "read_only_command": [
+    "sh",
+    "-c",
+    "test -d /data/filerldb2 && test -d /data/m9333 && echo DATA_AND_METADATA_ON_DATA_MOUNT"
+  ],
+  "stdout": "DATA_AND_METADATA_ON_DATA_MOUNT",
+  "scope": "Directory presence plus PVC mount snapshot; full object reads and hashes are separate evidence."
+}

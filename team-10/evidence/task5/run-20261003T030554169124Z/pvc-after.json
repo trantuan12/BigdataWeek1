@@ -1,0 +1,36 @@
+{
+  "apiVersion": "v1",
+  "kind": "PersistentVolumeClaim",
+  "metadata": {
+    "creationTimestamp": "2026-10-03T01:51:04Z",
+    "finalizers": [
+      "kubernetes.io/pvc-protection"
+    ],
+    "name": "object-data",
+    "namespace": "bd-g01",
+    "resourceVersion": "850",
+    "uid": "9484778c-7330-45f9-82f0-cd8e14972a01"
+  },
+  "spec": {
+    "accessModes": [
+      "ReadWriteOnce"
+    ],
+    "resources": {
+      "requests": {
+        "storage": "4Gi"
+      }
+    },
+    "storageClassName": "standard",
+    "volumeMode": "Filesystem",
+    "volumeName": "pvc-9484778c-7330-45f9-82f0-cd8e14972a01"
+  },
+  "status": {
+    "accessModes": [
+      "ReadWriteOnce"
+    ],
+    "capacity": {
+      "storage": "4Gi"
+    },
+    "phase": "Bound"
+  }
+}

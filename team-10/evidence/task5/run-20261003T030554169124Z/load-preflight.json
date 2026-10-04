@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-03T03:05:58.257973+00:00",
+  "known_client_benchmark_processes": {
+    "owner": [],
+    "ingestor": [],
+    "analyst": [],
+    "blocked": []
+  },
+  "scope": "Known lab client Pods only; external concurrent load cannot be excluded."
+}

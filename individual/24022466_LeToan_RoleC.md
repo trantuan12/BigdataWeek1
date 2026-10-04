@@ -52,7 +52,7 @@ Trạng thái dưới đây phản ánh hồ sơ hiện tại sau khi rà soát 
 | N04 | PENDING-INSTRUCTOR | Local routing control thành công nhưng chưa có xác nhận outsider fixture được giảng viên chỉ định/chấp nhận |
 | Tổng | 21 PASS và 1 mục chưa chốt | Cần hoàn thiện điều kiện bằng chứng trước khi tuyên bố đủ 22 PASS |
 
-Lần chạy N03 ban đầu chưa đủ bằng chứng listener. Retest do Codex chạy ngày 04/10/2026 đã bổ sung listener và local TCP controls, đạt PASS; xem evidence/task3/README.md. Retest chưa được review độc lập. N04 đã có bằng chứng outsider kết nối được khi thêm ingress allowance tạm thời, rồi bị chặn sau khi gỡ allowance; phần còn thiếu là xác nhận fixture và môi trường theo yêu cầu đề bài. Lần chạy ban đầu và trạng thái sau rà soát phải được giữ để người đánh giá theo dõi được thay đổi.
+Lần chạy N03 ban đầu chưa đủ bằng chứng listener. Retest chạy đã bổ sung listener và local TCP controls, đạt PASS; xem evidence/task3/README.md. Retest chưa được review độc lập. N04 đã có bằng chứng outsider kết nối được khi thêm ingress allowance tạm thời, rồi bị chặn sau khi gỡ allowance; phần còn thiếu là xác nhận fixture và môi trường theo yêu cầu đề bài. Lần chạy ban đầu và trạng thái sau rà soát phải được giữ để người đánh giá theo dõi được thay đổi.
 
 ---
 

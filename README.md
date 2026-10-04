@@ -16,7 +16,7 @@ Nhóm triển khai SeaweedFS một replica để xây dựng vùng lưu trữ d�
 
 ## Đóng góp thành viên
 
-[contribution.csv](contribution.csv) ghi năm thành viên, MSSV, vai trò, artifact, commit và reviewer. A phụ trách guardrails; B lưu trữ; C phân quyền; D hiệu năng; E recovery. Báo cáo cá nhân hiện có C và D trong `individual/`.
+[contribution.csv](contribution.csv) ghi năm thành viên, MSSV, vai trò, artifact, commit và reviewer. A phụ trách guardrails; B lưu trữ; C phân quyền; D hiệu năng; E recovery. Báo cáo cá nhân đầy đủ năm vai trò A–E trong `individual/`.
 
 ## Kết quả và minh chứng
 
@@ -24,4 +24,4 @@ Nhóm triển khai SeaweedFS một replica để xây dựng vùng lưu trữ d�
 
 ## Giới hạn và phần còn thiếu
 
-Các lần chạy dùng môi trường khác nhau; topology/provenance của từng lần phải được đọc cùng log tương ứng. Một replica không chứng minh HA, backup hoặc node-loss durability. HTTP chưa có TLS; retention chưa thực thi tự động. N03/N04 còn chưa chốt; xác nhận thực hành độc lập còn thiếu. Chưa có ảnh chụp minh họa riêng và logs/events sau recovery được xuất riêng. Chưa đóng ZIP.
+Các lần chạy dùng môi trường khác nhau; topology/provenance của từng lần phải được đọc cùng log tương ứng. Một replica không chứng minh HA, backup hoặc node-loss durability. HTTP chưa có TLS; retention chưa thực thi tự động. N03/N04 còn chưa chốt.

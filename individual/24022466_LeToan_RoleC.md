@@ -10,7 +10,6 @@
 | Nhiệm vụ | Task 3 — Prove access governance |
 | Namespace kiểm thử trong bằng chứng | `bd-g01` |
 | Context kiểm thử trong bảng kết quả | `minikube` |
-| Commit đóng góp Task 3 | `a37077117febac495b5bd76c905390e98cf77a93` (message: `add task 3`) |
 
 ---
 
@@ -24,12 +23,12 @@ Vai trò của tôi là kiểm chứng ba lớp kiểm soát: quyền S3 đối 
 
 ### Công việc đã làm
 
-Commit `a370771` bổ sung bằng chứng kiểm thử Task 3, bảng kết quả và governance record. Trong [security-results.csv](../security-results.csv), người vận hành được ghi bằng MSSV `24022466`.
+Đóng góp của tôi được thể hiện qua các log kiểm thử Task 3, [bảng kết quả](../security-results.csv) và [hồ sơ governance](../governance.json) trong bộ bài nộp. Bảng kết quả ghi người vận hành bằng MSSV `24022466` và dẫn đường đến log của từng test để giảng viên đối chiếu trực tiếp sau khi giải nén.
 
 - **12 test S3:** kiểm tra PUT, GET, LIST và DELETE của `ingestor`, `analyst`, cùng request anonymous. Các test sử dụng fixture đã tồn tại và object dùng riêng cho thử nghiệm.
 - **6 test Kubernetes RBAC:** dùng kubeconfig token riêng của `observer` để gửi request thật: đọc Pods, events và storage Pod logs; thử đọc Secret, tạo Pod và xóa storage Pod. Hai request thay đổi Pod dùng `--dry-run=server`.
 - **4 test mạng:** kiểm tra client được gắn label, client không được gắn label, cổng quản trị của storage và nguồn outsider. Lưu DNS checks, permitted controls và kết quả kết nối TCP.
-- **Governance:** ghi trách nhiệm, mục đích sử dụng, phân loại, retention, ngày cleanup dự kiến và policy revision cho hai bucket. Không coi retention metadata là cơ chế tự động được thực thi.
+- **Governance:** ghi trách nhiệm, mục đích sử dụng, phân loại, retention, ngày cleanup dự kiến và chính sách truy cập cho hai bucket. Không coi retention metadata là cơ chế tự động được thực thi.
 
 Các artifact chính:
 

@@ -8,7 +8,7 @@ Nhóm triển khai SeaweedFS một replica để xây dựng vùng lưu trữ d�
 
 **Task 2:** cấu hình ba S3 identities, Secret riêng cho từng vai trò, một Deployment và PVC. Owner seed bốn fixture trong hai bucket. Ingestor đọc raw, analyst đọc release; SHA-256 khớp fixture chuẩn. Topology và image/PVC provenance được lưu kèm.
 
-**Task 3:** thực hiện 12 S3, 6 RBAC và 4 network tests. Hồ sơ hiện có 20 PASS; N03 INCONCLUSIVE vì thiếu output local listener 8888; N04 PENDING-INSTRUCTOR vì chưa xác nhận outsider fixture. Request S3 bị cấm trả 403/AccessDenied; observer bị từ chối đọc Secret và thay đổi Pod. Hai request thay đổi Pod dùng server dry-run.
+**Task 3:** thực hiện 12 S3, 6 RBAC và 4 network tests. Hồ sơ hiện có 21 PASS; N03 PASS sau retest có listener 8888 và local TCP controls; N04 PENDING-INSTRUCTOR vì chưa xác nhận outsider fixture. Request S3 bị cấm trả 403/AccessDenied; observer bị từ chối đọc Secret và thay đổi Pod. Hai request thay đổi Pod dùng server dry-run.
 
 **Task 4:** chạy sáu trial xen kẽ concurrency 1 và 4, mỗi trial 32 object × 4MiB với PUT và GET xác minh hash. Kết quả có 192 PUT thành công, 192 GET nguyên vẹn. Median goodput c4/c1 đạt 0,96 với PUT và 0,90 với GET. CPU, I/O, cache và tải cluster là các yếu tố có thể ảnh hưởng; chưa đo được nguyên nhân duy nhất.
 
@@ -24,4 +24,4 @@ Nhóm triển khai SeaweedFS một replica để xây dựng vùng lưu trữ d�
 
 ## Giới hạn và phần còn thiếu
 
-Các lần chạy dùng môi trường khác nhau; topology/provenance của từng lần phải được đọc cùng log tương ứng. Một replica không chứng minh HA, backup hoặc node-loss durability. HTTP chưa có TLS; retention chưa thực thi tự động. N03/N04 còn chưa chốt.
+Các lần chạy dùng môi trường khác nhau; topology/provenance của từng lần phải được đọc cùng log tương ứng. Một replica không chứng minh HA, backup hoặc node-loss durability. HTTP chưa có TLS; retention chưa thực thi tự động. N04 còn chưa chốt.

@@ -32,7 +32,7 @@ Vai trò của tôi là kiểm chứng ba lớp kiểm soát: quyền S3 đối 
 
 Các artifact chính:
 
-- [Bằng chứng request S3 và RBAC](../evidence/run-20261002T162540Z/) — stdout, stderr và exit codes được lưu theo ID.
+- [Bằng chứng request S3 và RBAC](../evidence/task3/run-20261002T162540Z/) — stdout, stderr và exit codes được lưu theo ID.
 - [Bằng chứng network và outsider](../evidence/task3/) — DNS, routing control, kết quả N04 và snapshot policy cuối cùng.
 - [security-results.csv](../security-results.csv) — ma trận 22 test cùng principal, expected, observed, operator, reviewer và đường dẫn bằng chứng.
 - [governance.json](../governance.json) — record của `research-raw` và `research-release`.
@@ -48,11 +48,11 @@ Trạng thái dưới đây phản ánh hồ sơ hiện tại sau khi rà soát 
 | S01–S12 | 12 PASS | Request được phép thành công; request bị cấm trả HTTP 403 với `AccessDenied` |
 | K01–K06 | 6 PASS | Request đọc được cho phép; request bị cấm trả `Forbidden` đúng principal observer |
 | N01–N02 | 2 PASS | Owner kết nối được; blocked timeout với DNS và permitted controls |
-| N03 | INCONCLUSIVE | Có remote timeout nhưng chưa có bằng chứng rõ ràng rằng local port 8888 đang LISTEN |
+| N03 | PASS | Retest có listener 8888, local TCP trước/sau thành công; owner 8333 kết nối được, 8888 timeout; xem evidence/task3/run-20261004T150608Z-N03/summary.json |
 | N04 | PENDING-INSTRUCTOR | Local routing control thành công nhưng chưa có xác nhận outsider fixture được giảng viên chỉ định/chấp nhận |
-| Tổng | 20 PASS và 2 mục chưa chốt | Cần hoàn thiện điều kiện bằng chứng trước khi tuyên bố đủ 22 PASS |
+| Tổng | 21 PASS và 1 mục chưa chốt | Cần hoàn thiện điều kiện bằng chứng trước khi tuyên bố đủ 22 PASS |
 
-N03 chưa thể kết luận chỉ từ timeout, vì một cổng không lắng nghe cũng khiến kết nối thất bại. N04 đã có bằng chứng outsider kết nối được khi thêm ingress allowance tạm thời, rồi bị chặn sau khi gỡ allowance; phần còn thiếu là xác nhận fixture và môi trường theo yêu cầu đề bài. Lần chạy ban đầu và trạng thái sau rà soát phải được giữ để người đánh giá theo dõi được thay đổi.
+Lần chạy N03 ban đầu chưa đủ bằng chứng listener. Retest do Codex chạy ngày 04/10/2026 đã bổ sung listener và local TCP controls, đạt PASS; xem evidence/task3/README.md. Retest chưa được review độc lập. N04 đã có bằng chứng outsider kết nối được khi thêm ingress allowance tạm thời, rồi bị chặn sau khi gỡ allowance; phần còn thiếu là xác nhận fixture và môi trường theo yêu cầu đề bài. Lần chạy ban đầu và trạng thái sau rà soát phải được giữ để người đánh giá theo dõi được thay đổi.
 
 ---
 
@@ -72,7 +72,7 @@ kubectl -n $env:NS exec analyst -- python /opt/s3lab.py `
 
 Lệnh chạy helper trong Pod `analyst`, dùng S3 credentials của analyst để đọc object `fixture.txt` trong bucket `research-release`. Quyền khai báo của analyst là `Read:research-release` và `List:research-release`, nên GET này phải được cho phép.
 
-Kết quả quan sát trong [S06.stdout](../evidence/run-20261002T162540Z/S06.stdout):
+Kết quả quan sát trong [S06.stdout](../evidence/task3/run-20261002T162540Z/S06.stdout):
 
 | Trường | Giá trị |
 |---|---|
@@ -96,7 +96,7 @@ kubectl -n $env:NS exec analyst -- python /opt/s3lab.py `
 
 Lệnh thử ghi một object tổng hợp vào cùng bucket release. Analyst chỉ có Read/List, không có Write, nên PUT này phải bị từ chối.
 
-Kết quả quan sát trong [S08.stdout](../evidence/run-20261002T162540Z/S08.stdout):
+Kết quả quan sát trong [S08.stdout](../evidence/task3/run-20261002T162540Z/S08.stdout):
 
 | Trường | Giá trị |
 |---|---|
@@ -154,7 +154,7 @@ Request CPU 3 vượt quota requests.cpu 2 ngay cả khi chưa có CPU requests 
 
 Kubernetes observer và S3 reader được xác thực và phân quyền bởi hai hệ thống riêng.
 
-- **Kubernetes API:** ServiceAccount `observer` dùng token Kubernetes. RBAC cho phép đọc Pods, logs và events để quan sát hạ tầng. Trong [K04.stderr](../evidence/run-20261002T162540Z/K04.stderr), API server từ chối đọc `s3-config` và ghi đúng principal `system:serviceaccount:bd-g01:observer`.
+- **Kubernetes API:** ServiceAccount `observer` dùng token Kubernetes. RBAC cho phép đọc Pods, logs và events để quan sát hạ tầng. Trong [K04.stderr](../evidence/task3/run-20261002T162540Z/K04.stderr), API server từ chối đọc `s3-config` và ghi đúng principal `system:serviceaccount:bd-g01:observer`.
 - **S3 API:** analyst dùng S3 credentials để gửi request đến Service `objects` trên TCP 8333. SeaweedFS áp dụng bucket-scoped action policy. S06 được phép GET release, trong khi S08 bị cấm PUT vào cùng bucket.
 
 Object payload đi từ client qua Service đến storage Pod, không đi qua Kubernetes API server. Có quyền xem Pod không đồng nghĩa có quyền đọc object; có S3 credentials cũng không tự tạo quyền quản trị Kubernetes.
@@ -189,4 +189,4 @@ Graceful Pod replacement cũng chưa chứng minh crash consistency, audit immut
 
 **Lê Toàn — MSSV: 24022466 — Role C**
 
-**Trạng thái hoàn thiện:** nội dung đóng góp, phân tích bằng chứng và câu trả lời vấn đáp đã được soạn theo hồ sơ hiện có. Log của phiên thực hành cá nhân độc lập và xác nhận của người thực hiện cần được bổ sung sau khi thực sự chạy; N03 và N04 giữ nguyên trạng thái chưa chốt của Task 3.
+**Trạng thái hoàn thiện:** nội dung đóng góp, phân tích bằng chứng và câu trả lời vấn đáp đã được soạn theo hồ sơ hiện có. Log của phiên thực hành cá nhân độc lập và xác nhận của người thực hiện cần được bổ sung sau khi thực sự chạy; N03 đã PASS qua retest; N04 vẫn chưa chốt của Task 3.

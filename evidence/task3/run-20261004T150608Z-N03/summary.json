@@ -1,0 +1,14 @@
+{
+    "storage_pod":  "objects-74bd94c8cb-gvntk",
+    "id":  "N03",
+    "verdict":  "PASS",
+    "source_pod":  "owner",
+    "local_8888":  "Connected before and after remote probe",
+    "remote_8888":  "TimeoutError",
+    "scope":  "Local lab retest; no NetworkPolicy or workload changes",
+    "storage_ip":  "10.244.120.85",
+    "namespace":  "bd-g01",
+    "utc":  "2026-10-04T15:06:12.7277560Z",
+    "context":  "minikube",
+    "remote_8333":  "Connected"
+}

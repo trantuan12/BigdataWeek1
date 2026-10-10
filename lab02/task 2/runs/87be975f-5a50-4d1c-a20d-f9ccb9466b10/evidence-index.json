@@ -1,0 +1,32 @@
+{
+  "run_id": "87be975f-5a50-4d1c-a20d-f9ccb9466b10",
+  "operator": "automated-quality-run",
+  "reviewer": null,
+  "input_version": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "checks": [
+    {
+      "id": "INPUT",
+      "status": "PASS",
+      "evidence": "input_inventory.json",
+      "command": "verify supplied bytes against trusted manifest"
+    },
+    {
+      "id": "PHYSICAL_KEYS",
+      "status": "PASS",
+      "evidence": "envelope-check.json",
+      "command": "count physical records and check repeated physical keys"
+    },
+    {
+      "id": "QUALITY",
+      "status": "COMPUTED",
+      "evidence": "quality_before.json",
+      "command": "execute code/typed.sql then code/quality.sql"
+    },
+    {
+      "id": "COUNTEREXAMPLES",
+      "status": "PASS",
+      "evidence": "quality-tests.json",
+      "command": "python code/test_quality.py"
+    }
+  ]
+}

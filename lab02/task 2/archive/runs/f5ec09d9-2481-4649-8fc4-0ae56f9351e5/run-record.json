@@ -1,0 +1,159 @@
+{
+  "run_id": "f5ec09d9-2481-4649-8fc4-0ae56f9351e5",
+  "as_of": "2026-02-09T00:00:00Z",
+  "measured_at": "2026-10-10T13:51:30.899364+00:00",
+  "source_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "181a4bec7c0a5579fe2be583d89e9c116845e970da0d241e4ef42bd8d43cc7a8",
+  "code_sha256": "f476d42b4058f6cfd5e2400c773a52a1d418210c4ba1ed986026319b5b119091",
+  "input_counts": {
+    "raw_count": 10205,
+    "parse_failures": 5,
+    "invalid_key_count": 20,
+    "ingest_parse_failure_count": 20,
+    "key_rejected_count": 40,
+    "key_eligible_count": 10160,
+    "duplicate_excess": 200,
+    "winner_count": 9960,
+    "parsed_intake_required_failures": 130,
+    "parsed_intake_count": 10200,
+    "diagnostic_retained_count": 9610,
+    "diagnostic_late_count": 200
+  },
+  "release_approved": false,
+  "started_at": "2026-10-10T13:51:29.721186+00:00",
+  "ended_at": "2026-10-10T13:51:37.702374+00:00",
+  "mode": "local",
+  "store_id": "LOCAL-FIXTURE-NO-S3-STORE",
+  "operator": "Codex automated local executor",
+  "reviewer": null,
+  "status": "COMPLETED_LOCAL_WITH_PLATFORM_BLOCKERS",
+  "independent_contract_review": "PENDING",
+  "access_check": "BLOCKED",
+  "runtime": {
+    "python": "3.14.7",
+    "packages": {
+      "duckdb": "1.4.4",
+      "boto3": "1.43.111",
+      "jsonschema": "4.26.0",
+      "matplotlib": "3.11.2"
+    },
+    "image_digest": null,
+    "image_digest_status": "UNAVAILABLE_LOCAL_EXECUTION",
+    "prepared_environment_match": false,
+    "platform": "Windows"
+  },
+  "outputs": [
+    {
+      "file": "access-test.json",
+      "sha256": "6d3198bd9ea025dcb279846087adc223e7beb6b2b1bd00b000ae1e8ccc66574c"
+    },
+    {
+      "file": "code/quality.sql",
+      "sha256": "bfea778d7720b61cf47edcb3818f2ddd0681a196af8acb97612e6dda1c3d3adb"
+    },
+    {
+      "file": "code/requirements.txt",
+      "sha256": "347cc23dfebf822b4709b764566b7ecdd23c645d96458a821e14cc85b4a1d021"
+    },
+    {
+      "file": "code/run_tasks.py",
+      "sha256": "59068732b3c85f0ce19aed6c57869153456004564adede16e5c55beb2b4c0ceb"
+    },
+    {
+      "file": "code/stage_inputs.py",
+      "sha256": "a7d05c54fd7bc4266fdb93e58bd6cb713026c520ff05338f8863efaccc1b1ea4"
+    },
+    {
+      "file": "code/test_quality.py",
+      "sha256": "9aa7e7eb17cc18a5d304c31c302abc5b51fe96c4a9d7b93635a1f88e70291103"
+    },
+    {
+      "file": "code/typed.sql",
+      "sha256": "d5d2e4d76d24d78aff49b4531564b43972d377712f6bff4001ef148a95d71951"
+    },
+    {
+      "file": "code-hashes.json",
+      "sha256": "d4e9b4e2f49c00f04005ff5f562d3f5ef986bcd885eb9138d134b01f2f922e10"
+    },
+    {
+      "file": "contract.json",
+      "sha256": "181a4bec7c0a5579fe2be583d89e9c116845e970da0d241e4ef42bd8d43cc7a8"
+    },
+    {
+      "file": "defect_investigation.json",
+      "sha256": "e05c62795ca02e02bebd2c0f823ebb234d3a6f666caec5039d68eec9238e23c5"
+    },
+    {
+      "file": "envelope-check.json",
+      "sha256": "b69ea4d653d32b110bad3df2f7e31a56a3b94f2e9ade1886819f8005a871ea3d"
+    },
+    {
+      "file": "field_mapping.json",
+      "sha256": "e4ef447a106d935fac9b0bdbc3eb273c6f449669278495176621a5ab6ed6e574"
+    },
+    {
+      "file": "input_inventory.json",
+      "sha256": "264da7206aa950c2e502525a240e99d75130403cb8e57e798b0db92719040b94"
+    },
+    {
+      "file": "intake_profile.json",
+      "sha256": "e31e30b5817156850085e6b3b7587adffb59f150629116398e05431b1c943c75"
+    },
+    {
+      "file": "integrity-test.json",
+      "sha256": "0796122b92f441accaba645f944b8f05404c087e20011caa2ef870960ae04577"
+    },
+    {
+      "file": "metric_records.json",
+      "sha256": "d1e5c3bd796d3765668164f9aa5331d28098221d9d16bcb6fc5b3b0603275f04"
+    },
+    {
+      "file": "quality_after_diagnostic.json",
+      "sha256": "bd0958a282363a1388da55627041f0b08a70db1409900f319b5ce8761b17b2dc"
+    },
+    {
+      "file": "quality_before.json",
+      "sha256": "17f1dd8f58c7c8c017b087382268afe9bacc2984fe47646c082dc815fe560f00"
+    },
+    {
+      "file": "quality_comparison.png",
+      "sha256": "90e8b78b8bc272087289161870abce6d5a463880bff556802f55c743481ea00e"
+    },
+    {
+      "file": "REPORT.md",
+      "sha256": "4f4aca6c779068fd38ed90fd0bcf5e3d4f4a852f8a89ef144385e3519a9acfba"
+    },
+    {
+      "file": "restricted/envelopes.csv",
+      "sha256": "28d633f05801d9c4e4a4de02a6a71d8227152a26df4e22151f2b29cda9f50cc7"
+    },
+    {
+      "file": "restricted/work.duckdb",
+      "sha256": "a5c96ea477847b961f074269d86159cb6776a5418c22c40c9da82e440738b1aa"
+    },
+    {
+      "file": "runtime-versions.json",
+      "sha256": "c0e108754e0b829dfb71f9fe5a24f858d1eba164a0251f1f820d63ccd169ee21"
+    },
+    {
+      "file": "snapshot/observations_a.csv",
+      "sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+    },
+    {
+      "file": "snapshot/observations_b.jsonl",
+      "sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70"
+    },
+    {
+      "file": "snapshot/qa_reference.csv",
+      "sha256": "129463c2a4e63f2dabfa2a5dd31b92e4fe4858d2415d3c7ef495cc6c6d7b65c2"
+    },
+    {
+      "file": "snapshot/sensors.csv",
+      "sha256": "02c390e127c37b9d12e9ca156eae23a450ad1ae037001cddd9651bb6516b9bde"
+    },
+    {
+      "file": "trusted_manifest.json",
+      "sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331"
+    }
+  ]
+}

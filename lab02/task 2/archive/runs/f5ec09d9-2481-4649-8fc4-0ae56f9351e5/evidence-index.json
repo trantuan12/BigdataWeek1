@@ -1,0 +1,38 @@
+{
+  "run_id": "f5ec09d9-2481-4649-8fc4-0ae56f9351e5",
+  "operator": "Codex automated local executor",
+  "reviewer": null,
+  "input_version": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "checks": [
+    {
+      "id": "I01",
+      "status": "PASS",
+      "evidence": "input_inventory.json",
+      "command": "stage_inputs.acquire: verify four objects against trusted manifest"
+    },
+    {
+      "id": "I02",
+      "status": "PASS",
+      "evidence": "envelope-check.json",
+      "command": "SQL: count by source and physical-key GROUP BY HAVING count(*) > 1"
+    },
+    {
+      "id": "I03",
+      "status": "PASS",
+      "evidence": "integrity-test.json",
+      "command": "stage_inputs.tamper_test: flip one byte and verify"
+    },
+    {
+      "id": "I04",
+      "status": "BLOCKED",
+      "evidence": "access-test.json",
+      "command": "stage_inputs.access_test: curator raw GET and release PUT"
+    },
+    {
+      "id": "T2",
+      "status": "COMPUTED",
+      "evidence": "quality_before.json",
+      "command": "execute code/typed.sql then code/quality.sql"
+    }
+  ]
+}

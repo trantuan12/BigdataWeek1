@@ -1,0 +1,4 @@
+duckdb==1.4.4
+boto3==1.43.111
+jsonschema==4.26.0
+matplotlib==3.11.2

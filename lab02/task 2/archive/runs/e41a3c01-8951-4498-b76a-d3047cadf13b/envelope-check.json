@@ -1,0 +1,19 @@
+{
+  "check_id": "I02",
+  "status": "PASS",
+  "count": 10205,
+  "repeated_physical_keys": 0,
+  "by_source": [
+    {
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "envelopes": 5000,
+      "parse_failures": 0
+    },
+    {
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+      "envelopes": 5205,
+      "parse_failures": 5
+    }
+  ],
+  "parse_failures_preserved": true
+}

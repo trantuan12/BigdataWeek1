@@ -1,0 +1,10 @@
+{
+  "check_id": "I04",
+  "executed_at": "2026-10-10T13:59:25.748851+00:00",
+  "workload_identity_expected": "s3-ingestor",
+  "independent_identity_verification": "NOT_PERFORMED",
+  "status": "BLOCKED",
+  "raw_get": "NOT_EXECUTED",
+  "release_put": "NOT_EXECUTED",
+  "reason": "Local mode does not execute S3 requests or verify curator identity. Check the separately recorded platform diagnostics. Local reads cannot establish S3 governance."
+}

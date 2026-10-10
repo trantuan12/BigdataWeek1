@@ -1,0 +1,7 @@
+{
+  "executed_at": "2026-10-10T13:53:05.345783+00:00",
+  "command": "python code/test_quality.py",
+  "exit_code": 0,
+  "status": "PASS",
+  "output": "test_conversion_finiteness_units_privacy_and_unrounded_range (__main__.QualityTests.test_conversion_finiteness_units_privacy_and_unrounded_range) ... ok\ntest_latest_invalid_never_falls_back_and_ties_are_stable (__main__.QualityTests.test_latest_invalid_never_falls_back_and_ties_are_stable) ... ok\ntest_null_is_failure_and_zero_denominators_stay_zero (__main__.QualityTests.test_null_is_failure_and_zero_denominators_stay_zero) ... ok\ntest_prekey_exclusions_chronology_and_timeliness_cohort (__main__.QualityTests.test_prekey_exclusions_chronology_and_timeliness_cohort) ... ok\ntest_reference_coverage_separate_from_agreement (__main__.QualityTests.test_reference_coverage_separate_from_agreement) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 1.293s\n\nOK\n"
+}

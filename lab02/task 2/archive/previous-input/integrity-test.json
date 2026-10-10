@@ -1,0 +1,8 @@
+{
+  "check_id": "I03",
+  "status": "PASS",
+  "observed_error": "INPUT_INTEGRITY: lab2/inputs/batch-01/observations_a.csv",
+  "original_unchanged": true,
+  "tampered_bytes": 1,
+  "executed_at": "2026-10-10T13:59:25.747843+00:00"
+}

@@ -1,0 +1,72 @@
+{
+  "run_id": "5b78555d-0a32-49d5-b8f1-efe12e5c1478",
+  "mode": "s3",
+  "store_id": "bd-g01-objects",
+  "trusted_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "objects": [
+    {
+      "store_id": "bd-g01-objects",
+      "bucket": "research-raw",
+      "key": "lab2/inputs/batch-01/observations_a.csv",
+      "source_uri": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "retrieval_mode": "s3",
+      "retrieved_at": "2026-10-10T14:02:55.616148+00:00",
+      "local_source": null,
+      "format": "csv",
+      "bytes": 421028,
+      "sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+      "expected_records": 5000,
+      "records": 5000,
+      "integrity_status": "PASS"
+    },
+    {
+      "store_id": "bd-g01-objects",
+      "bucket": "research-raw",
+      "key": "lab2/inputs/batch-01/observations_b.jsonl",
+      "source_uri": "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+      "retrieval_mode": "s3",
+      "retrieved_at": "2026-10-10T14:02:55.622411+00:00",
+      "local_source": null,
+      "format": "jsonl",
+      "bytes": 1037439,
+      "sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70",
+      "expected_records": 5205,
+      "records": 5205,
+      "integrity_status": "PASS"
+    },
+    {
+      "store_id": "bd-g01-objects",
+      "bucket": "research-raw",
+      "key": "lab2/inputs/batch-01/qa_reference.csv",
+      "source_uri": "s3://research-raw/lab2/inputs/batch-01/qa_reference.csv",
+      "retrieval_mode": "s3",
+      "retrieved_at": "2026-10-10T14:02:55.624879+00:00",
+      "local_source": null,
+      "format": "csv",
+      "bytes": 1423,
+      "sha256": "129463c2a4e63f2dabfa2a5dd31b92e4fe4858d2415d3c7ef495cc6c6d7b65c2",
+      "expected_records": 100,
+      "records": 100,
+      "integrity_status": "PASS"
+    },
+    {
+      "store_id": "bd-g01-objects",
+      "bucket": "research-raw",
+      "key": "lab2/inputs/batch-01/sensors.csv",
+      "source_uri": "s3://research-raw/lab2/inputs/batch-01/sensors.csv",
+      "retrieval_mode": "s3",
+      "retrieved_at": "2026-10-10T14:02:55.627077+00:00",
+      "local_source": null,
+      "format": "csv",
+      "bytes": 256,
+      "sha256": "02c390e127c37b9d12e9ca156eae23a450ad1ae037001cddd9651bb6516b9bde",
+      "expected_records": 20,
+      "records": 20,
+      "integrity_status": "PASS"
+    }
+  ],
+  "observation_rows": 10205,
+  "parse_failures_retained": 5,
+  "integrity_status": "PASS",
+  "s3_governance_demonstrated": true
+}

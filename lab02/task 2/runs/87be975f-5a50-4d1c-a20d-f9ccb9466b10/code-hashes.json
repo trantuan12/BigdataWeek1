@@ -1,0 +1,30 @@
+{
+  "canonicalization": "UTF-8 JSON, filename-sorted entries, sorted keys, compact separators",
+  "files": [
+    {
+      "file": "code/prepare_inputs.py",
+      "sha256": "c1a1c3b43f4b04e9afca524f7a45fec6549497c8802520ba06fb5921c3a800ea"
+    },
+    {
+      "file": "code/quality.sql",
+      "sha256": "bfea778d7720b61cf47edcb3818f2ddd0681a196af8acb97612e6dda1c3d3adb"
+    },
+    {
+      "file": "code/run_tasks.py",
+      "sha256": "e8e84dcce4581080df6af3cd8da6cf845aff31e699308016bc79d4933fbd52db"
+    },
+    {
+      "file": "code/test_quality.py",
+      "sha256": "b22b37756a36357c3e25f14826fe8ee9644d0c8d4a65d0ee77c9f7fc161626aa"
+    },
+    {
+      "file": "code/typed.sql",
+      "sha256": "d5d2e4d76d24d78aff49b4531564b43972d377712f6bff4001ef148a95d71951"
+    },
+    {
+      "file": "requirements.txt",
+      "sha256": "ffeed573f4a61081b8b7189b19a04714e2027f54e563660642385ea5e446eb8e"
+    }
+  ],
+  "code_sha256": "0291717e113d98b1fa99bff114cbf5f6ab021626e01a6f95528d3b9c70835252"
+}

@@ -1,0 +1,47 @@
+{
+  "run_id": "87be975f-5a50-4d1c-a20d-f9ccb9466b10",
+  "mode": "provided-local-input",
+  "trusted_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "objects": [
+    {
+      "key": "observations_a.csv",
+      "bytes": 421028,
+      "records": 5000,
+      "sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "verification_status": "PASS",
+      "verified_at": "2026-10-10T14:32:54.262944+00:00"
+    },
+    {
+      "key": "observations_b.jsonl",
+      "bytes": 1037439,
+      "records": 5205,
+      "sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+      "verification_status": "PASS",
+      "verified_at": "2026-10-10T14:32:54.265112+00:00"
+    },
+    {
+      "key": "qa_reference.csv",
+      "bytes": 1423,
+      "records": 100,
+      "sha256": "129463c2a4e63f2dabfa2a5dd31b92e4fe4858d2415d3c7ef495cc6c6d7b65c2",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/qa_reference.csv",
+      "verification_status": "PASS",
+      "verified_at": "2026-10-10T14:32:54.265985+00:00"
+    },
+    {
+      "key": "sensors.csv",
+      "bytes": 256,
+      "records": 20,
+      "sha256": "02c390e127c37b9d12e9ca156eae23a450ad1ae037001cddd9651bb6516b9bde",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/sensors.csv",
+      "verification_status": "PASS",
+      "verified_at": "2026-10-10T14:32:54.266708+00:00"
+    }
+  ],
+  "observation_rows": 10205,
+  "parse_failures_retained": 5,
+  "integrity_status": "PASS",
+  "note": "Source URIs identify original objects; no S3 requests are executed by Task 2."
+}

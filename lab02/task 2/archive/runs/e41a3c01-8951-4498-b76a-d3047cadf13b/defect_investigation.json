@@ -1,0 +1,214 @@
+{
+  "categories_overlap": true,
+  "categories": [
+    {
+      "category": "INGEST_PARSE",
+      "cohort": "parsed intake before dedup",
+      "count": 20,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 361
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 362
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 363
+        }
+      ]
+    },
+    {
+      "category": "KEY",
+      "cohort": "parsed intake before dedup",
+      "count": 20,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 341
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 342
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 343
+        }
+      ]
+    },
+    {
+      "category": "LATE",
+      "cohort": "chronologically valid W",
+      "count": 200,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 381
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 382
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 383
+        }
+      ]
+    },
+    {
+      "category": "NUMERIC",
+      "cohort": "W",
+      "count": 170,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 1
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 2
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 3
+        }
+      ]
+    },
+    {
+      "category": "PARSE",
+      "cohort": "raw intake",
+      "count": 5,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+          "source_row": 5201
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+          "source_row": 5202
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+          "source_row": 5203
+        }
+      ]
+    },
+    {
+      "category": "REFERENCE",
+      "cohort": "W sensor registry check",
+      "count": 30,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 311
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 312
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 313
+        }
+      ]
+    },
+    {
+      "category": "REQUIRED",
+      "cohort": "W",
+      "count": 110,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 1
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 2
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 3
+        }
+      ]
+    },
+    {
+      "category": "SUPERSEDED",
+      "cohort": "key_eligible",
+      "count": 200,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 1001
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 1002
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 1003
+        }
+      ]
+    },
+    {
+      "category": "TIME",
+      "cohort": "W",
+      "count": 70,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 241
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 242
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 243
+        }
+      ]
+    },
+    {
+      "category": "UNIT",
+      "cohort": "W",
+      "count": 40,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 161
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 162
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 163
+        }
+      ]
+    },
+    {
+      "category": "VALUE",
+      "cohort": "W",
+      "count": 250,
+      "sample_source_references": [
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 1
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 2
+        },
+        {
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 3
+        }
+      ]
+    }
+  ]
+}

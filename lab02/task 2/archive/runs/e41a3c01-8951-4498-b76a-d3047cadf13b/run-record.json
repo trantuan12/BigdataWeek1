@@ -1,0 +1,192 @@
+{
+  "run_id": "e41a3c01-8951-4498-b76a-d3047cadf13b",
+  "as_of": "2026-02-09T00:00:00Z",
+  "measured_at": "2026-10-10T13:53:00.255188+00:00",
+  "source_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "181a4bec7c0a5579fe2be583d89e9c116845e970da0d241e4ef42bd8d43cc7a8",
+  "code_sha256": "e2e1b1434236e6a66ab99494c86d9aa458915fcbb153eee50396fd2cbbde539f",
+  "input_counts": {
+    "raw_count": 10205,
+    "parse_failures": 5,
+    "invalid_key_count": 20,
+    "ingest_parse_failure_count": 20,
+    "key_rejected_count": 40,
+    "key_eligible_count": 10160,
+    "duplicate_excess": 200,
+    "winner_count": 9960,
+    "parsed_intake_required_failures": 130,
+    "parsed_intake_count": 10200,
+    "diagnostic_retained_count": 9610,
+    "diagnostic_late_count": 200
+  },
+  "release_approved": false,
+  "started_at": "2026-10-10T13:52:59.079338+00:00",
+  "ended_at": "2026-10-10T13:53:05.347155+00:00",
+  "mode": "local",
+  "store_id": "LOCAL-FIXTURE-NO-S3-STORE",
+  "operator": "Codex automated local executor",
+  "reviewer": null,
+  "status": "COMPLETED_LOCAL_WITH_PLATFORM_BLOCKERS",
+  "independent_contract_review": "PENDING",
+  "access_check": "BLOCKED",
+  "runtime": {
+    "python": "3.14.7",
+    "packages": {
+      "duckdb": "1.4.4",
+      "boto3": "1.43.111",
+      "jsonschema": "4.26.0",
+      "matplotlib": "3.11.2"
+    },
+    "installed_packages": {
+      "attrs": "26.1.0",
+      "boto3": "1.43.111",
+      "botocore": "1.43.111",
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "duckdb": "1.4.4",
+      "fonttools": "4.66.1",
+      "jmespath": "1.1.0",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "kiwisolver": "1.5.1",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pip": "26.2.1",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.9.1",
+      "s3transfer": "0.19.2",
+      "six": "1.17.0",
+      "urllib3": "2.8.0"
+    },
+    "image_digest": null,
+    "image_digest_status": "UNAVAILABLE_LOCAL_EXECUTION",
+    "prepared_environment_match": false,
+    "platform": "Windows"
+  },
+  "outputs": [
+    {
+      "file": "access-test.json",
+      "sha256": "bef2235c9df21236cee7f2e16fb3637c7fbd46a3e8b68d7dc94a9fe8cd842a6f"
+    },
+    {
+      "file": "code/quality.sql",
+      "sha256": "bfea778d7720b61cf47edcb3818f2ddd0681a196af8acb97612e6dda1c3d3adb"
+    },
+    {
+      "file": "code/requirements.txt",
+      "sha256": "347cc23dfebf822b4709b764566b7ecdd23c645d96458a821e14cc85b4a1d021"
+    },
+    {
+      "file": "code/run_tasks.py",
+      "sha256": "8341e7223cce2fd32554247548f0dabfadaf173b92a07983af2426016485be6d"
+    },
+    {
+      "file": "code/stage_inputs.py",
+      "sha256": "a7d05c54fd7bc4266fdb93e58bd6cb713026c520ff05338f8863efaccc1b1ea4"
+    },
+    {
+      "file": "code/test_quality.py",
+      "sha256": "9aa7e7eb17cc18a5d304c31c302abc5b51fe96c4a9d7b93635a1f88e70291103"
+    },
+    {
+      "file": "code/typed.sql",
+      "sha256": "d5d2e4d76d24d78aff49b4531564b43972d377712f6bff4001ef148a95d71951"
+    },
+    {
+      "file": "code-hashes.json",
+      "sha256": "6948861e21ae249eb780c49e186c53f8fb21358488f3e36939be217adbbb72d8"
+    },
+    {
+      "file": "contract-freeze.json",
+      "sha256": "7268ba4a9744e91680c3974ac6c3b51c3273f5f63fef71fd13f33398f37819a2"
+    },
+    {
+      "file": "contract.json",
+      "sha256": "181a4bec7c0a5579fe2be583d89e9c116845e970da0d241e4ef42bd8d43cc7a8"
+    },
+    {
+      "file": "defect_investigation.json",
+      "sha256": "e05c62795ca02e02bebd2c0f823ebb234d3a6f666caec5039d68eec9238e23c5"
+    },
+    {
+      "file": "envelope-check.json",
+      "sha256": "b69ea4d653d32b110bad3df2f7e31a56a3b94f2e9ade1886819f8005a871ea3d"
+    },
+    {
+      "file": "field_mapping.json",
+      "sha256": "e4ef447a106d935fac9b0bdbc3eb273c6f449669278495176621a5ab6ed6e574"
+    },
+    {
+      "file": "input_inventory.json",
+      "sha256": "da62b5139f0ba34e7342e7d12532c2078ec3c957445f84f3295257b04739f2c4"
+    },
+    {
+      "file": "intake_profile.json",
+      "sha256": "e31e30b5817156850085e6b3b7587adffb59f150629116398e05431b1c943c75"
+    },
+    {
+      "file": "integrity-test.json",
+      "sha256": "96bf92779be007f1b17359790e35be2034a7ab92edd06e654adeff12977af7ce"
+    },
+    {
+      "file": "metric_records.json",
+      "sha256": "56f4a9e58bf1b255212bb812e01665508c7e05745cc332b6c1a038087d9a1f39"
+    },
+    {
+      "file": "quality-tests.json",
+      "sha256": "cc063b0bf231c412aa44b8e961d8358713a9a02999784e2d686d7b145ee32a00"
+    },
+    {
+      "file": "quality_after_diagnostic.json",
+      "sha256": "ff677af0f5607cf3df966770df8ab4632962411497e2bbecae719071de8b0e7a"
+    },
+    {
+      "file": "quality_before.json",
+      "sha256": "c4a87867c1b65294076a0ff36e8c6e7f63341d1dab4742f7bd52665f0dcaaaef"
+    },
+    {
+      "file": "quality_comparison.png",
+      "sha256": "90e8b78b8bc272087289161870abce6d5a463880bff556802f55c743481ea00e"
+    },
+    {
+      "file": "REPORT.md",
+      "sha256": "2651c8a2793a59ceace08270c1ca753f21e92662e0b9d63acea53f35be5ed85c"
+    },
+    {
+      "file": "restricted/envelopes.csv",
+      "sha256": "28d633f05801d9c4e4a4de02a6a71d8227152a26df4e22151f2b29cda9f50cc7"
+    },
+    {
+      "file": "restricted/work.duckdb",
+      "sha256": "65ffff3d564cba1174867fa995b7df32cf864f713e11cba2aca50beac5dcd455"
+    },
+    {
+      "file": "runtime-versions.json",
+      "sha256": "df7ac68fe57dc32a8f6364e3e224949a480348c5f37979ecc966b1bc5c5cf8eb"
+    },
+    {
+      "file": "snapshot/observations_a.csv",
+      "sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+    },
+    {
+      "file": "snapshot/observations_b.jsonl",
+      "sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70"
+    },
+    {
+      "file": "snapshot/qa_reference.csv",
+      "sha256": "129463c2a4e63f2dabfa2a5dd31b92e4fe4858d2415d3c7ef495cc6c6d7b65c2"
+    },
+    {
+      "file": "snapshot/sensors.csv",
+      "sha256": "02c390e127c37b9d12e9ca156eae23a450ad1ae037001cddd9651bb6516b9bde"
+    },
+    {
+      "file": "trusted_manifest.json",
+      "sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331"
+    }
+  ]
+}

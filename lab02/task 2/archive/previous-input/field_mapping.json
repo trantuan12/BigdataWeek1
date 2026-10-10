@@ -1,0 +1,22 @@
+{
+  "status": "CHECKED_AGAINST_DATASET_README",
+  "csv": {
+    "record_id": "record_id",
+    "sensor_id": "sensor_id",
+    "event_time": "event_time",
+    "ingest_time": "ingest_time",
+    "reading": "reading",
+    "unit": "unit",
+    "operator_email": "operator_email"
+  },
+  "jsonl": {
+    "record_id": "id",
+    "sensor_id": "sensor",
+    "event_time": "timestamp",
+    "ingest_time": "arrived_at",
+    "reading": "temperature",
+    "unit": "temperature_unit",
+    "operator_email": "operator"
+  },
+  "source_sha256_meaning": "SHA-256 of whole object"
+}

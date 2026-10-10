@@ -1,0 +1,14 @@
+{
+  "raw_count": 10205,
+  "parse_failures": 5,
+  "invalid_key_count": 20,
+  "ingest_parse_failure_count": 20,
+  "key_rejected_count": 40,
+  "key_eligible_count": 10160,
+  "duplicate_excess": 200,
+  "winner_count": 9960,
+  "parsed_intake_required_failures": 130,
+  "parsed_intake_count": 10200,
+  "diagnostic_retained_count": 9610,
+  "diagnostic_late_count": 200
+}

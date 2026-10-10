@@ -1,0 +1,181 @@
+{
+  "run_id": "87be975f-5a50-4d1c-a20d-f9ccb9466b10",
+  "as_of": "2026-02-09T00:00:00Z",
+  "measured_at": "2026-10-10T14:32:55.455105+00:00",
+  "source_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "181a4bec7c0a5579fe2be583d89e9c116845e970da0d241e4ef42bd8d43cc7a8",
+  "code_sha256": "0291717e113d98b1fa99bff114cbf5f6ab021626e01a6f95528d3b9c70835252",
+  "input_counts": {
+    "raw_count": 10205,
+    "parse_failures": 5,
+    "invalid_key_count": 20,
+    "ingest_parse_failure_count": 20,
+    "key_rejected_count": 40,
+    "key_eligible_count": 10160,
+    "duplicate_excess": 200,
+    "winner_count": 9960,
+    "parsed_intake_required_failures": 130,
+    "parsed_intake_count": 10200,
+    "diagnostic_retained_count": 9610,
+    "diagnostic_late_count": 200
+  },
+  "release_approved": false,
+  "started_at": "2026-10-10T14:32:54.249222+00:00",
+  "ended_at": "2026-10-10T14:33:00.950440+00:00",
+  "mode": "provided-local-input",
+  "operator": "automated-quality-run",
+  "reviewer": null,
+  "status": "COMPLETED",
+  "independent_contract_review": "PENDING",
+  "runtime": {
+    "python": "3.14.7",
+    "packages": {
+      "duckdb": "1.4.4",
+      "jsonschema": "4.26.0",
+      "matplotlib": "3.11.2"
+    },
+    "installed_packages": {
+      "attrs": "26.1.0",
+      "boto3": "1.43.111",
+      "botocore": "1.43.111",
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "duckdb": "1.4.4",
+      "fonttools": "4.66.1",
+      "jmespath": "1.1.0",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "kiwisolver": "1.5.1",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pip": "26.2.1",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.9.1",
+      "s3transfer": "0.19.2",
+      "six": "1.17.0",
+      "urllib3": "2.8.0"
+    },
+    "image_digest": null,
+    "image_digest_status": "UNAVAILABLE_LOCAL_EXECUTION",
+    "prepared_environment_match": false,
+    "platform": "Windows"
+  },
+  "outputs": [
+    {
+      "file": "code/prepare_inputs.py",
+      "sha256": "c1a1c3b43f4b04e9afca524f7a45fec6549497c8802520ba06fb5921c3a800ea"
+    },
+    {
+      "file": "code/quality.sql",
+      "sha256": "bfea778d7720b61cf47edcb3818f2ddd0681a196af8acb97612e6dda1c3d3adb"
+    },
+    {
+      "file": "code/requirements.txt",
+      "sha256": "ffeed573f4a61081b8b7189b19a04714e2027f54e563660642385ea5e446eb8e"
+    },
+    {
+      "file": "code/run_tasks.py",
+      "sha256": "e8e84dcce4581080df6af3cd8da6cf845aff31e699308016bc79d4933fbd52db"
+    },
+    {
+      "file": "code/test_quality.py",
+      "sha256": "b22b37756a36357c3e25f14826fe8ee9644d0c8d4a65d0ee77c9f7fc161626aa"
+    },
+    {
+      "file": "code/typed.sql",
+      "sha256": "d5d2e4d76d24d78aff49b4531564b43972d377712f6bff4001ef148a95d71951"
+    },
+    {
+      "file": "code-hashes.json",
+      "sha256": "16c90090930f4acae9c00715978739104f7b53fe71e7c99d85f235cb9a444057"
+    },
+    {
+      "file": "contract-freeze.json",
+      "sha256": "8e54d7fa45378811a1b127eeddb07ec870b84ceef865fb75a367cdb774d26cd0"
+    },
+    {
+      "file": "contract.json",
+      "sha256": "181a4bec7c0a5579fe2be583d89e9c116845e970da0d241e4ef42bd8d43cc7a8"
+    },
+    {
+      "file": "defect_investigation.json",
+      "sha256": "e05c62795ca02e02bebd2c0f823ebb234d3a6f666caec5039d68eec9238e23c5"
+    },
+    {
+      "file": "envelope-check.json",
+      "sha256": "1eb3d32d041bf821151af42c39a40cb0e4d9f26dd8d12906e93d83bcb4f9a084"
+    },
+    {
+      "file": "evidence-index.json",
+      "sha256": "aa968fba089d96a0a87d6718634b3f743257dd0800222eef364774d87ed73593"
+    },
+    {
+      "file": "input_inventory.json",
+      "sha256": "979ddc895b5871585fe21ae68afcb9150398623e2967c53ce9090ee330efe2cc"
+    },
+    {
+      "file": "intake_profile.json",
+      "sha256": "e31e30b5817156850085e6b3b7587adffb59f150629116398e05431b1c943c75"
+    },
+    {
+      "file": "metric_records.json",
+      "sha256": "70cadb733d0879da22a49816836e8509a2265e079da9c71361477101d513e3c1"
+    },
+    {
+      "file": "quality-tests.json",
+      "sha256": "f35c7a6baee8c8c383de683685677712515e62e3995ddcf6f9985dd72e333dd8"
+    },
+    {
+      "file": "quality_after_diagnostic.json",
+      "sha256": "d53289a5c0594a95d3355663dad2ea568081cf06a9b63e61204482720cfdabaa"
+    },
+    {
+      "file": "quality_before.json",
+      "sha256": "c3f6ac8ffea1825973745e0713bc10e21298a5040eb274308bf432d83afbfba3"
+    },
+    {
+      "file": "quality_comparison.png",
+      "sha256": "90e8b78b8bc272087289161870abce6d5a463880bff556802f55c743481ea00e"
+    },
+    {
+      "file": "REPORT.md",
+      "sha256": "a246b2a6839dc111fcd83e306d556e84a8e95e61a700f9cf879ce58a67c2f5cf"
+    },
+    {
+      "file": "restricted/envelopes.csv",
+      "sha256": "28d633f05801d9c4e4a4de02a6a71d8227152a26df4e22151f2b29cda9f50cc7"
+    },
+    {
+      "file": "restricted/work.duckdb",
+      "sha256": "4865b953c6e5628813e286b4b988d50c6bf0cd998b8fb87574dda8703d8f7a4e"
+    },
+    {
+      "file": "runtime-versions.json",
+      "sha256": "25f6a6e22a6e50b049a890af6d304eb56b3d825b26d29a2c89ff04049c2e53dd"
+    },
+    {
+      "file": "snapshot/observations_a.csv",
+      "sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+    },
+    {
+      "file": "snapshot/observations_b.jsonl",
+      "sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70"
+    },
+    {
+      "file": "snapshot/qa_reference.csv",
+      "sha256": "129463c2a4e63f2dabfa2a5dd31b92e4fe4858d2415d3c7ef495cc6c6d7b65c2"
+    },
+    {
+      "file": "snapshot/sensors.csv",
+      "sha256": "02c390e127c37b9d12e9ca156eae23a450ad1ae037001cddd9651bb6516b9bde"
+    },
+    {
+      "file": "trusted_manifest.json",
+      "sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331"
+    }
+  ]
+}

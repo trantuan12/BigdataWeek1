@@ -1,0 +1,13 @@
+{
+  "python": "3.14.7",
+  "packages": {
+    "duckdb": "1.4.4",
+    "boto3": "1.43.111",
+    "jsonschema": "4.26.0",
+    "matplotlib": "3.11.2"
+  },
+  "image_digest": null,
+  "image_digest_status": "UNAVAILABLE_LOCAL_EXECUTION",
+  "prepared_environment_match": false,
+  "platform": "Windows"
+}

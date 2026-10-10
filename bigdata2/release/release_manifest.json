@@ -1,0 +1,33 @@
+{
+  "release_id": "rel-20260209-v1",
+  "approved_run_uuid": "f89623d8-7343-40d0-87f9-5be87f4ecc75",
+  "publish_run_uuid": "779b4361-1d59-41de-8cbb-cb5e9a2523a4",
+  "reviewer": "Role E \u2014 Release Engineer & Owner Reviewer",
+  "approval_status": "APPROVED",
+  "approval_time": "2026-10-10T17:32:06.758871+00:00",
+  "store_id": "bd-g10-objects",
+  "schema_version": "research-telemetry-v1",
+  "curated_row_count": 9610,
+  "gate_status": "PASS",
+  "artifacts": [
+    {
+      "key": "releases/rel-20260209-v1/curated.parquet",
+      "bytes": 209310,
+      "sha256": "f60a2d695caeb083b4f4697162b3bf83ef8bddbc4d24736ce3a203e88cdb6620",
+      "format": "PARQUET",
+      "row_count": 9610
+    },
+    {
+      "key": "releases/rel-20260209-v1/catalog.json",
+      "bytes": 8611,
+      "sha256": "8d9d6c60d3767dee0597979af0c3553d9452ffb53104bdd7cdf94b260c37a5c9",
+      "format": "JSON"
+    },
+    {
+      "key": "releases/rel-20260209-v1/quality_after.json",
+      "bytes": 3175,
+      "sha256": "e9ad71f6f8fee413bc7d7f9aca051856a19e91a8820f67d941c253e424748ba5",
+      "format": "JSON"
+    }
+  ]
+}

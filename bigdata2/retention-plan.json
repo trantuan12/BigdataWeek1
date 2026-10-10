@@ -1,0 +1,85 @@
+{
+  "policy": {
+    "raw": {
+      "days": 30,
+      "start_basis": "retrieval_time"
+    },
+    "quarantine": {
+      "days": 7,
+      "start_basis": "run_completion_time"
+    },
+    "approved_release": {
+      "days": 90,
+      "start_basis": "publication_time"
+    },
+    "audit": {
+      "minimum_days": 90,
+      "retain_through_dependent_release_expiry": true
+    }
+  },
+  "precedence": [
+    "HOLD",
+    "ACTIVE_DEPENDENCY",
+    "NOT_EXPIRED",
+    "ELIGIBLE"
+  ],
+  "mode": "dry-run only",
+  "decisions": [
+    {
+      "object": "expired-scratch",
+      "clock_start": "2026-10-07T15:41:39.163231+00:00",
+      "evaluation_time": "2026-10-10T15:41:39.163231+00:00",
+      "days": 1,
+      "hold": false,
+      "active_dependent_release_ids": [],
+      "decision": "ELIGIBLE",
+      "reason": "EXPIRED",
+      "expected": "ELIGIBLE/EXPIRED",
+      "passed": true,
+      "deleted": false
+    },
+    {
+      "object": "held-quarantine",
+      "clock_start": "2026-09-30T15:41:39.163231+00:00",
+      "evaluation_time": "2026-10-10T15:41:39.163231+00:00",
+      "days": 7,
+      "hold": true,
+      "active_dependent_release_ids": [],
+      "decision": "KEEP",
+      "reason": "HOLD",
+      "expected": "KEEP/HOLD",
+      "passed": true,
+      "deleted": false
+    },
+    {
+      "object": "dependent-raw",
+      "clock_start": "2026-08-31T15:41:39.163231+00:00",
+      "evaluation_time": "2026-10-10T15:41:39.163231+00:00",
+      "days": 30,
+      "hold": false,
+      "active_dependent_release_ids": [
+        "active-approved-release"
+      ],
+      "decision": "KEEP",
+      "reason": "ACTIVE_DEPENDENCY",
+      "expected": "KEEP/ACTIVE_DEPENDENCY",
+      "passed": true,
+      "deleted": false
+    },
+    {
+      "object": "unexpired",
+      "clock_start": "2026-10-09T15:41:39.163231+00:00",
+      "evaluation_time": "2026-10-10T15:41:39.163231+00:00",
+      "days": 90,
+      "hold": false,
+      "active_dependent_release_ids": [],
+      "decision": "KEEP",
+      "reason": "NOT_EXPIRED",
+      "expected": "KEEP/NOT_EXPIRED",
+      "passed": true,
+      "deleted": false
+    }
+  ],
+  "operator": "Automated pipeline execution",
+  "executed_at": "2026-10-10T15:41:39.163279+00:00"
+}

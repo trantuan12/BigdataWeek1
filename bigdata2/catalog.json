@@ -1,0 +1,391 @@
+{
+  "profile": "lab2-catalog-v1",
+  "datasets": [
+    {
+      "purpose": "Curated synthetic research telemetry for the Big Data Lab 2 teaching exercise",
+      "owner": "24022484 - Trần Anh Tuấn / Role E (designated release owner)",
+      "steward": "24022277 - Lê Ngọc Minh Cường / Role D (designated metadata steward)",
+      "allowed_use": "Synthetic teaching use only; no real-world sensor accuracy claim.",
+      "schema_version": "research-telemetry-v1",
+      "as_of": "2026-02-09T00:00:00Z",
+      "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+      "contract_sha256": "c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520",
+      "code_sha256": "0c16c3f44e823009422b8b26e05de0c25c6822d216cf2820f5465e71c57398b3",
+      "quality_report": "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/quality_after.json",
+      "provenance": {
+        "store_id": "bd-g10-objects",
+        "job": "curate",
+        "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+        "run_record": "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/run-record.json",
+        "duplicate_ledger": "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/duplicates.csv",
+        "retrieval_times": {
+          "observations_a.csv": "2026-10-10T15:41:12.463399+00:00",
+          "observations_b.jsonl": "2026-10-10T15:41:12.470463+00:00",
+          "qa_reference.csv": "2026-10-10T15:41:12.473390+00:00",
+          "sensors.csv": "2026-10-10T15:41:12.475664+00:00"
+        }
+      },
+      "dataset_id": "raw-observations",
+      "title": "Raw observation collection",
+      "classification": "RESTRICTED",
+      "location": [
+        "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+        "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl"
+      ],
+      "columns": [
+        {
+          "name": "record_id",
+          "type": "VARCHAR",
+          "meaning": "Normalized business observation identifier",
+          "unit": null,
+          "nullable": true
+        },
+        {
+          "name": "sensor_id",
+          "type": "VARCHAR",
+          "meaning": "Normalized sensor identifier used to join the registry",
+          "unit": null,
+          "nullable": true
+        },
+        {
+          "name": "event_time",
+          "type": "VARCHAR",
+          "meaning": "Original source measurement timestamp",
+          "unit": "UTC",
+          "nullable": true
+        },
+        {
+          "name": "ingest_time",
+          "type": "VARCHAR",
+          "meaning": "Original source arrival timestamp",
+          "unit": "UTC",
+          "nullable": true
+        },
+        {
+          "name": "reading",
+          "type": "VARCHAR",
+          "meaning": "Original source measured value",
+          "unit": "source unit",
+          "nullable": true
+        },
+        {
+          "name": "unit",
+          "type": "VARCHAR",
+          "meaning": "Original source C or F unit",
+          "unit": null,
+          "nullable": true
+        },
+        {
+          "name": "operator_email",
+          "type": "VARCHAR",
+          "meaning": "Optional restricted synthetic operator attribute",
+          "unit": null,
+          "nullable": true
+        },
+        {
+          "name": "source_object",
+          "type": "VARCHAR",
+          "meaning": "Restricted input object identifier; does not grant access",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "source_row",
+          "type": "VARCHAR",
+          "meaning": "One-based physical data-record ordinal; CSV header excluded",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "source_sha256",
+          "type": "VARCHAR",
+          "meaning": "SHA-256 of the complete original source object",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "parse_ok",
+          "type": "VARCHAR",
+          "meaning": "Whether the physical record could be decoded into an object",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "raw_payload",
+          "type": "VARCHAR",
+          "meaning": "Restricted original physical record payload",
+          "unit": null,
+          "nullable": false
+        }
+      ],
+      "row_count": 10205,
+      "retention": {
+        "days": 30,
+        "start_basis": "retrieval_time",
+        "hold": false,
+        "dependent_release_ids": [],
+        "hold_rule": "Hold overrides expiry",
+        "dependency_rule": "Active approved release overrides expiry",
+        "audit_min_days": 90,
+        "action": "dry-run only"
+      },
+      "source_aliases": {
+        "observations_a.csv": {
+          "record_id": "record_id",
+          "sensor_id": "sensor_id",
+          "event_time": "event_time",
+          "ingest_time": "ingest_time",
+          "reading": "reading",
+          "unit": "unit",
+          "operator_email": "operator_email"
+        },
+        "observations_b.jsonl": {
+          "record_id": "id",
+          "sensor_id": "sensor",
+          "event_time": "timestamp",
+          "ingest_time": "arrived_at",
+          "reading": "temperature",
+          "unit": "temperature_unit",
+          "operator_email": "operator"
+        }
+      }
+    },
+    {
+      "purpose": "Curated synthetic research telemetry for the Big Data Lab 2 teaching exercise",
+      "owner": "24022484 - Trần Anh Tuấn / Role E (designated release owner)",
+      "steward": "24022277 - Lê Ngọc Minh Cường / Role D (designated metadata steward)",
+      "allowed_use": "Synthetic teaching use only; no real-world sensor accuracy claim.",
+      "schema_version": "research-telemetry-v1",
+      "as_of": "2026-02-09T00:00:00Z",
+      "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+      "contract_sha256": "c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520",
+      "code_sha256": "0c16c3f44e823009422b8b26e05de0c25c6822d216cf2820f5465e71c57398b3",
+      "quality_report": "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/quality_after.json",
+      "provenance": {
+        "store_id": "bd-g10-objects",
+        "job": "curate",
+        "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+        "run_record": "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/run-record.json",
+        "duplicate_ledger": "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/duplicates.csv"
+      },
+      "dataset_id": "quarantine",
+      "title": "Rejected physical observations",
+      "classification": "RESTRICTED",
+      "location": [
+        "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/quarantine.csv"
+      ],
+      "columns": [
+        {
+          "name": "source_object",
+          "type": "VARCHAR",
+          "meaning": "Restricted input object identifier; does not grant access",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "source_row",
+          "type": "BIGINT",
+          "meaning": "One-based physical data-record ordinal; CSV header excluded",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "source_sha256",
+          "type": "VARCHAR",
+          "meaning": "SHA-256 of the complete original source object",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "record_id",
+          "type": "VARCHAR",
+          "meaning": "Normalized business observation identifier",
+          "unit": null,
+          "nullable": true
+        },
+        {
+          "name": "sensor_id",
+          "type": "VARCHAR",
+          "meaning": "Normalized sensor identifier used to join the registry",
+          "unit": null,
+          "nullable": true
+        },
+        {
+          "name": "event_time",
+          "type": "VARCHAR",
+          "meaning": "Original source measurement timestamp",
+          "unit": "UTC",
+          "nullable": true
+        },
+        {
+          "name": "ingest_time",
+          "type": "VARCHAR",
+          "meaning": "Original source arrival timestamp",
+          "unit": "UTC",
+          "nullable": true
+        },
+        {
+          "name": "reading",
+          "type": "VARCHAR",
+          "meaning": "Original source measured value",
+          "unit": "source unit",
+          "nullable": true
+        },
+        {
+          "name": "unit",
+          "type": "VARCHAR",
+          "meaning": "Original source C or F unit",
+          "unit": null,
+          "nullable": true
+        },
+        {
+          "name": "parse_ok",
+          "type": "BOOLEAN",
+          "meaning": "Whether the physical record could be decoded into an object",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "raw_payload",
+          "type": "VARCHAR",
+          "meaning": "Restricted original physical record payload",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "primary_reason",
+          "type": "VARCHAR",
+          "meaning": "First failing reason in the frozen contract precedence",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "all_reasons",
+          "type": "VARCHAR",
+          "meaning": "All failing reasons joined by a vertical bar",
+          "unit": null,
+          "nullable": false
+        }
+      ],
+      "row_count": 395,
+      "retention": {
+        "days": 7,
+        "start_basis": "run_completion_time",
+        "hold": false,
+        "dependent_release_ids": [],
+        "hold_rule": "Hold overrides expiry",
+        "dependency_rule": "Active approved release overrides expiry",
+        "audit_min_days": 90,
+        "action": "dry-run only"
+      }
+    },
+    {
+      "purpose": "Curated synthetic research telemetry for the Big Data Lab 2 teaching exercise",
+      "owner": "24022484 - Trần Anh Tuấn / Role E (designated release owner)",
+      "steward": "24022277 - Lê Ngọc Minh Cường / Role D (designated metadata steward)",
+      "allowed_use": "Synthetic teaching use only; no real-world sensor accuracy claim.",
+      "schema_version": "research-telemetry-v1",
+      "as_of": "2026-02-09T00:00:00Z",
+      "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+      "contract_sha256": "c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520",
+      "code_sha256": "0c16c3f44e823009422b8b26e05de0c25c6822d216cf2820f5465e71c57398b3",
+      "quality_report": "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/quality_after.json",
+      "provenance": {
+        "store_id": "bd-g10-objects",
+        "job": "curate",
+        "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+        "run_record": "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/run-record.json",
+        "duplicate_ledger": "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/duplicates.csv"
+      },
+      "dataset_id": "curated-candidate",
+      "title": "Curated telemetry candidate",
+      "classification": "INTERNAL_APPROVED_ON_PUBLICATION",
+      "location": [
+        "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/candidate/curated.parquet"
+      ],
+      "columns": [
+        {
+          "name": "record_id",
+          "type": "VARCHAR",
+          "meaning": "Normalized business observation identifier",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "sensor_id",
+          "type": "VARCHAR",
+          "meaning": "Normalized sensor identifier used to join the registry",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "site",
+          "type": "VARCHAR",
+          "meaning": "Site derived exclusively from sensors.csv",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "event_time_utc",
+          "type": "TIMESTAMP",
+          "meaning": "Measurement time, interpreted in UTC",
+          "unit": "UTC",
+          "nullable": false
+        },
+        {
+          "name": "ingest_time_utc",
+          "type": "TIMESTAMP",
+          "meaning": "Recorded arrival time, interpreted in UTC",
+          "unit": "UTC",
+          "nullable": false
+        },
+        {
+          "name": "temperature_c",
+          "type": "DECIMAL(8,2)",
+          "meaning": "Selected observation converted to Celsius; validated before rounding",
+          "unit": "Celsius",
+          "nullable": false
+        },
+        {
+          "name": "is_late",
+          "type": "BOOLEAN",
+          "meaning": "True when recorded arrival lag exceeds 900 seconds",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "source_object",
+          "type": "VARCHAR",
+          "meaning": "Restricted input object identifier; does not grant access",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "source_row",
+          "type": "BIGINT",
+          "meaning": "One-based physical data-record ordinal; CSV header excluded",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "source_sha256",
+          "type": "VARCHAR",
+          "meaning": "SHA-256 of the complete original source object",
+          "unit": null,
+          "nullable": false
+        }
+      ],
+      "row_count": 9610,
+      "retention": {
+        "days": 90,
+        "start_basis": "publication_time",
+        "hold": false,
+        "dependent_release_ids": [],
+        "hold_rule": "Hold overrides expiry",
+        "dependency_rule": "Active approved release overrides expiry",
+        "audit_min_days": 90,
+        "action": "dry-run only"
+      }
+    }
+  ]
+}

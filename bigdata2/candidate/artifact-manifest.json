@@ -1,0 +1,27 @@
+{
+  "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+  "store_id": "bd-g10-objects",
+  "artifacts": [
+    {
+      "path": "candidate/curated.parquet",
+      "key": "lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/candidate/curated.parquet",
+      "sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+      "bytes": 209278,
+      "row_count": 9610
+    },
+    {
+      "path": "restricted/quarantine.csv",
+      "key": "lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/quarantine.csv",
+      "sha256": "58a8a7ec03eb550b276d9741c0f95222ef70171e061127a992c23aefee185339",
+      "bytes": 171635,
+      "row_count": 395
+    },
+    {
+      "path": "restricted/duplicates.csv",
+      "key": "lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/duplicates.csv",
+      "sha256": "55b05296c74cfabd274007d671b93b77204632c51fa8f7af361e389c89e4f185",
+      "bytes": 43206,
+      "row_count": 200
+    }
+  ]
+}

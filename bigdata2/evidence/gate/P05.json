@@ -1,0 +1,230 @@
+{
+  "case_id": "P05",
+  "changed_artifact": "curated metadata steward removed",
+  "expected_result": "REJECT",
+  "probe_run_id": "40c050a8-5320-4d8c-b66f-c1e598dd7f41",
+  "actual_result": "REJECT",
+  "correctly_interpreted": true,
+  "measured_failures": [
+    "METADATA"
+  ],
+  "gate": {
+    "result": "REJECT",
+    "candidate_sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+    "candidate_rows": 9610,
+    "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+    "store_id": "bd-g10-objects",
+    "checks": [
+      {
+        "check_id": "G01",
+        "status": "PASS",
+        "observed": {
+          "sources": [
+            {
+              "key": "observations_a.csv",
+              "matches": true
+            },
+            {
+              "key": "observations_b.jsonl",
+              "matches": true
+            },
+            {
+              "key": "qa_reference.csv",
+              "matches": true
+            },
+            {
+              "key": "sensors.csv",
+              "matches": true
+            }
+          ],
+          "staged_artifacts": [
+            {
+              "path": "candidate/curated.parquet",
+              "matches": true
+            },
+            {
+              "path": "restricted/quarantine.csv",
+              "matches": true
+            },
+            {
+              "path": "restricted/duplicates.csv",
+              "matches": true
+            }
+          ],
+          "provenance_mismatches": 0,
+          "run_bindings_match": true
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G02",
+        "status": "PASS",
+        "observed": {
+          "status": "PASS",
+          "counts": {
+            "raw_envelopes": 10205,
+            "submitted": 9610,
+            "quarantine": 395,
+            "duplicates": 200
+          },
+          "missing_physical_ids": 0,
+          "invented_physical_ids": 0,
+          "overlapping_or_repeated_physical_ids": 0,
+          "duplicate_physical_ids_per_output": {
+            "submitted": 0,
+            "quarantine": 0,
+            "duplicates": 0
+          },
+          "duplicate_business_keys": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G03",
+        "status": "PASS",
+        "observed": {
+          "columns": [
+            [
+              "record_id",
+              "VARCHAR"
+            ],
+            [
+              "sensor_id",
+              "VARCHAR"
+            ],
+            [
+              "site",
+              "VARCHAR"
+            ],
+            [
+              "event_time_utc",
+              "TIMESTAMP"
+            ],
+            [
+              "ingest_time_utc",
+              "TIMESTAMP"
+            ],
+            [
+              "temperature_c",
+              "DECIMAL(8,2)"
+            ],
+            [
+              "is_late",
+              "BOOLEAN"
+            ],
+            [
+              "source_object",
+              "VARCHAR"
+            ],
+            [
+              "source_row",
+              "BIGINT"
+            ],
+            [
+              "source_sha256",
+              "VARCHAR"
+            ]
+          ],
+          "rows": 9610,
+          "allowlist_equal": true
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G04",
+        "status": "PASS",
+        "observed": {
+          "nulls": {
+            "record_id": 0,
+            "sensor_id": 0,
+            "site": 0,
+            "event_time_utc": 0,
+            "ingest_time_utc": 0,
+            "temperature_c": 0,
+            "is_late": 0,
+            "source_object": 0,
+            "source_row": 0,
+            "source_sha256": 0
+          },
+          "blank_required_strings": 0,
+          "original_required_failures": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G05",
+        "status": "PASS",
+        "observed": {
+          "invalid_values": 0,
+          "duplicate_business_keys": 0,
+          "unknown_sensor_or_wrong_site": 0,
+          "source_conversion_mismatches": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G06",
+        "status": "PASS",
+        "observed": {
+          "valid": 9610,
+          "rows": 9610,
+          "timely": 9410,
+          "denominator": 9610,
+          "value": 0.9791883454734651,
+          "late_flag_errors": 0,
+          "source_timestamp_mismatches": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G07",
+        "status": "PASS",
+        "observed": {
+          "matched": 100,
+          "reference_population": 100,
+          "coverage": 1.0,
+          "agree": 95,
+          "agreement_denominator": 100,
+          "agreement": 0.95,
+          "tolerance_c": "0.05"
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G08",
+        "status": "REJECT",
+        "observed": {
+          "error_type": "ValidationError",
+          "message": "'steward' is a required property\n\nFailed validating 'required' in schema:\n    {'$schema': 'https://json-schema.org/draft/2020-12/schema',\n     '$id': 'urn:vnu-uet:bigdata:lab2:metadata-catalog-v1',\n     'title': 'Lab 2 Dataset Catalog Entry',\n     'type': 'object',\n     'required': ['dataset_id',\n                  'title',\n                  'purpose',\n                  'owner',\n                  'steward',\n                  'classification',\n                  'allowed_use',\n                  'location',\n                  'schema_version',\n                  'columns',\n                  'as_of',\n                  'row_count',\n                  'input_manifest_sha256',\n                  'contract_sha256',\n                  'code_sha256',\n                  'quality_report',\n                  'retention',\n                  'provenance'],\n     'properties': {'dataset_id': {'type': 'string', 'minLength': 1},\n                    'title': {'type': 'string', 'minLength': 1},\n                    'purpose': {'type': 'string', 'minLength': 1},\n                    'owner': {'type': 'string', 'minLength': 1},\n                    'steward': {'type': 'string', 'minLength': 1},\n                    'classification': {'type': 'string', 'minLength': 1},\n                    'allowed_use': {'type': 'string', 'minLength': 1},\n                    'location': {'type': 'array',\n                                 'minItems': 1,\n                                 'uniqueItems': True,\n                                 'items': {'type': 'string',\n                                           'minLength': 1,\n                                           'pattern': '^s3://[^/]+/.+'}},\n                    'schema_version': {'type': 'string', 'minLength': 1},\n                    'as_of': {'type': 'string', 'format': 'date-time'},\n                    'row_count': {'type': 'integer', 'minimum': 0},\n                    'columns': {'type': 'array',\n                                'minItems': 1,\n                                'items': {'type': 'object',\n                                          'required': ['name',\n                                                       'type',\n                                                       'meaning',\n                                                       'unit',\n                                                       'nullable'],\n                                          'properties': {'name': {'type': 'string',\n                                                                  'minLength': 1},\n                                                         'type': {'type': 'string',\n                                                                  'minLength': 1},\n                                                         'meaning': {'type': 'string',\n                                                                     'minLength': 1},\n                                                         'unit': {'type': ['string',\n                                                                           'null']},\n                                                         'nullable': {'type': 'boolean'}},\n                                          'additionalProperties': False}},\n                    'input_manifest_sha256': {'type': 'string',\n                                              'pattern': '^[0-9a-f]{64}$'},\n                    'contract_sha256': {'type': 'string',\n                                        'pattern': '^[0-9a-f]{64}$'},\n                    'code_sha256': {'type': 'string',\n                                    'pattern': '^[0-9a-f]{64}$'},\n                    'quality_report': {'type': 'string', 'minLength': 1},\n                    'retention': {'type': 'object',\n                                  'required': ['days',\n                                               'start_basis',\n                                               'hold',\n                                               'dependent_release_ids',\n                                               'action',\n                                               'hold_rule',\n                                               'dependency_rule'],\n                                  'properties': {'days': {'type': 'integer',\n                                                          'minimum': 1},\n                                                 'start_basis': {'type': 'string',\n                                                                 'minLength': 1},\n                                                 'hold': {'type': 'boolean'},\n                                                 'dependent_release_ids': {'type': 'array',\n                                                                           'items': {'type': 'string'}},\n                                                 'action': {'const': 'dry-run '\n                                                                     'only'},\n                                                 'hold_rule': {'type': 'string',\n                                                               'minLength': 1},\n                                                 'dependency_rule': {'type': 'string',\n                                                                     'minLength': 1}}},\n                    'provenance': {'type': 'object',\n                                   'required': ['store_id'],\n                                   'properties': {'store_id': {'type': 'string',\n                                                               'minLength': 1}}}},\n     'additionalProperties': True,\n     'description': 'Supplied profile strengthened to the handout Appendix '\n                    'E2: array locations and five required column '\n                    'properties.'}\n\nOn instance:\n    {'purpose': 'Curated synthetic research telemetry for the Big Data Lab '\n                '2 teaching exercise',\n     'owner': '24022484 - Trần Anh Tuấn / Role E (designated release '\n              'owner)',\n     'allowed_use': 'Synthetic teaching use only; no real-world sensor '\n                    'accuracy claim.',\n     'schema_version': 'research-telemetry-v1',\n     'as_of': '2026-02-09T00:00:00Z',\n     'input_manifest_sha256': '77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331',\n     'contract_sha256': 'c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520',\n     'code_sha256': '0c16c3f44e823009422b8b26e05de0c25c6822d216cf2820f5465e71c57398b3',\n     'quality_report': 's3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/quality_after.json',\n     'provenance': {'store_id': 'bd-g10-objects',\n                    'job': 'curate',\n                    'run_id': 'ebf648b9-1e3f-47a5-87f1-e0e8924005b4',\n                    'run_record': 's3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/run-record.json',\n                    'duplicate_ledger': 's3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/duplicates.csv'},\n     'dataset_id': 'curated-candidate',\n     'title': 'Curated telemetry candidate',\n     'classification': 'INTERNAL_APPROVED_ON_PUBLICATION',\n     'location': ['s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/candidate/curated.parquet'],\n     'columns': [{'name': 'record_id',\n                  'type': 'VARCHAR',\n                  'meaning': 'Normalized business observation identifier',\n                  'unit': None,\n                  'nullable': False},\n                 {'name': 'sensor_id',\n                  'type': 'VARCHAR',\n                  'meaning': 'Normalized sensor identifier used to join '\n                             'the registry',\n                  'unit': None,\n                  'nullable': False},\n                 {'name': 'site',\n                  'type': 'VARCHAR',\n                  'meaning': 'Site derived exclusively from sensors.csv',\n                  'unit': None,\n                  'nullable': False},\n                 {'name': 'event_time_utc',\n                  'type': 'TIMESTAMP',\n                  'meaning': 'Measurement time, interpreted in UTC',\n                  'unit': 'UTC',\n                  'nullable': False},\n                 {'name': 'ingest_time_utc',\n                  'type': 'TIMESTAMP',\n                  'meaning': 'Recorded arrival time, interpreted in UTC',\n                  'unit': 'UTC',\n                  'nullable': False},\n                 {'name': 'temperature_c',\n                  'type': 'DECIMAL(8,2)',\n                  'meaning': 'Selected observation converted to Celsius; '\n                             'validated before rounding',\n                  'unit': 'Celsius',\n                  'nullable': False},\n                 {'name': 'is_late',\n                  'type': 'BOOLEAN',\n                  'meaning': 'True when recorded arrival lag exceeds 900 '\n                             'seconds',\n                  'unit': None,\n                  'nullable': False},\n                 {'name': 'source_object',\n                  'type': 'VARCHAR',\n                  'meaning': 'Restricted input object identifier; does not '\n                             'grant access',\n                  'unit': None,\n                  'nullable': False},\n                 {'name': 'source_row',\n                  'type': 'BIGINT',\n                  'meaning': 'One-based physical data-record ordinal; CSV '\n                             'header excluded',\n                  'unit': None,\n                  'nullable': False},\n                 {'name': 'source_sha256',\n                  'type': 'VARCHAR',\n                  'meaning': 'SHA-256 of the complete original source '\n                             'object',\n                  'unit': None,\n                  'nullable': False}],\n     'row_count': 9610,\n     'retention': {'days': 90,\n                   'start_basis': 'publication_time',\n                   'hold': False,\n                   'dependent_release_ids': [],\n                   'hold_rule': 'Hold overrides expiry',\n                   'dependency_rule': 'Active approved release overrides '\n                                      'expiry',\n                   'audit_min_days': 90,\n                   'action': 'dry-run only'}}"
+        },
+        "reasons": [
+          "METADATA"
+        ]
+      },
+      {
+        "check_id": "G09",
+        "status": "PASS",
+        "observed": {
+          "curation_events": 2,
+          "required_outputs": [
+            "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/candidate/curated.parquet",
+            "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/duplicates.csv",
+            "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/quarantine.csv"
+          ],
+          "publisher_replay": "PASS",
+          "semantic_errors": []
+        },
+        "reasons": []
+      }
+    ],
+    "reasons": [
+      "METADATA"
+    ],
+    "operator": "Automated pipeline execution",
+    "workload_identity": "s3-owner",
+    "evaluated_at": "2026-10-10T15:42:54.759917+00:00"
+  },
+  "approved_manifest_created": false,
+  "operator": "Automated pipeline execution",
+  "executed_at": "2026-10-10T15:42:54.760828+00:00"
+}

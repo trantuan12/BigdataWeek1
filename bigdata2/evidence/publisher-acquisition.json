@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "staged_objects": 53,
+  "trusted_sources_rechecked": 4,
+  "independent_hash_source": "Host-captured curator upload evidence copied separately from S3",
+  "operator": "Automated pipeline execution",
+  "workload_identity": "s3-owner",
+  "executed_at": "2026-10-10T15:41:47.576986+00:00"
+}

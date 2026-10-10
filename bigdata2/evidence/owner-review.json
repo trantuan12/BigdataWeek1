@@ -1,0 +1,15 @@
+{
+  "review_id": "79395df6-c4a4-47f2-8114-66be961fb795",
+  "reviewer": "Independent publisher validation process",
+  "designated_human_owner": "24022484 - Trần Anh Tuấn / Role E",
+  "human_signature_attested": false,
+  "review_kind": "Automated owner-context technical review",
+  "authorization_basis": "Requester instructed completion and execution of the assignment",
+  "curation_run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+  "publish_run_id": "32ce3332-6804-4e66-b2e9-19899af64171",
+  "candidate_sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+  "decision": "APPROVE_TECHNICAL_RELEASE",
+  "reason": "Owner-context G01-G09 recomputation, 8/8 mutation cases and five independent formulas passed.",
+  "approved_at": "2026-10-10T15:43:49.023207+00:00",
+  "operator": "Automated pipeline execution"
+}

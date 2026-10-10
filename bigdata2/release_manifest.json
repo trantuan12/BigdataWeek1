@@ -1,0 +1,45 @@
+{
+  "release_id": "bd-g10-lab2-20261010T154147Z-32ce3332",
+  "store_id": "bd-g10-objects",
+  "approved_run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+  "publish_run_id": "32ce3332-6804-4e66-b2e9-19899af64171",
+  "reviewer": "Independent publisher validation process",
+  "designated_human_owner": "24022484 - Trần Anh Tuấn / Role E",
+  "human_signature_attested": false,
+  "review_kind": "Automated owner-context technical review",
+  "approval_time": "2026-10-10T15:43:49.023207+00:00",
+  "row_count": 9610,
+  "schema_version": "research-telemetry-v1",
+  "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520",
+  "code_sha256": "0c16c3f44e823009422b8b26e05de0c25c6822d216cf2820f5465e71c57398b3",
+  "artifacts": [
+    {
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/curated.parquet",
+      "sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+      "bytes": 209278,
+      "row_count": 9610,
+      "schema_version": "research-telemetry-v1"
+    },
+    {
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/catalog.json",
+      "sha256": "4c1fe3c7675f311a46100bc0dc28b4aff4d9c2b656d3642912a32278fe7f6c01",
+      "bytes": 4270
+    },
+    {
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/quality_after.json",
+      "sha256": "4d4d84979042cb9ae034695716f2834744f31e7fa9d67e367959b50bfa737bbd",
+      "bytes": 12200
+    },
+    {
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/lineage-summary.json",
+      "sha256": "bee836cda2601fda0648478a206232c3759f722c4fe532830e9d56af8846a3ba",
+      "bytes": 819
+    },
+    {
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/README.md",
+      "sha256": "9566a445e4ffc4d0d9181fd2967563311ddfaec97e81e84fbcea7e8d99a9d5c3",
+      "bytes": 776
+    }
+  ]
+}

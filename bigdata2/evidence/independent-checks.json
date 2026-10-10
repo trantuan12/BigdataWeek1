@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "role": "A",
+      "reviewed_role": "D",
+      "check": "Reproduce both stored traces from original source ordinals",
+      "status": "PASS",
+      "observed": [
+        {
+          "trace": "accepted",
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 381,
+          "source_hash_match": true,
+          "normalized_record_id": "R000381",
+          "record_id_matches": true
+        },
+        {
+          "trace": "quarantined",
+          "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+          "source_row": 1,
+          "source_hash_match": true,
+          "normalized_record_id": "R000001",
+          "record_id_matches": true
+        }
+      ]
+    },
+    {
+      "role": "B",
+      "reviewed_role": "C",
+      "check": "Independent Python physical-set conservation and SQL business uniqueness",
+      "status": "PASS",
+      "observed": {
+        "raw": 10205,
+        "curated": 9610,
+        "quarantine": 395,
+        "duplicates": 200,
+        "union_equal": true,
+        "disjoint_and_unique": true,
+        "business_rows": 9610,
+        "distinct_business_ids": 9610
+      }
+    },
+    {
+      "role": "C",
+      "reviewed_role": "A",
+      "check": "Independently compare a tampered byte array against trusted SHA-256",
+      "status": "PASS",
+      "observed": {
+        "tampered_matches": false,
+        "original_matches": true
+      }
+    },
+    {
+      "role": "D",
+      "reviewed_role": "E",
+      "check": "Inspect missing-steward gate case independently",
+      "status": "PASS",
+      "observed": {
+        "P05": "REJECT",
+        "reasons": [
+          "METADATA"
+        ]
+      }
+    },
+    {
+      "role": "E",
+      "reviewed_role": "B",
+      "check": "Independent Decimal reference coverage/agreement",
+      "status": "PASS",
+      "observed": {
+        "coverage_n": 100,
+        "coverage_d": 100,
+        "agreement_n": 95,
+        "agreement_d": 100
+      }
+    }
+  ],
+  "status": "PASS",
+  "operator": "Automated pipeline execution",
+  "student_hands_on_execution_attested": false,
+  "executed_at": "2026-10-10T15:43:34.730222+00:00"
+}

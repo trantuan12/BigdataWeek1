@@ -1,0 +1,15 @@
+{
+  "store_id": "bd-g10-objects",
+  "curation_run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+  "publish_run_id": "32ce3332-6804-4e66-b2e9-19899af64171",
+  "transformation_inputs": [
+    "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+    "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+    "s3://research-raw/lab2/inputs/batch-01/sensors.csv"
+  ],
+  "validation_reference": "s3://research-raw/lab2/inputs/batch-01/qa_reference.csv",
+  "output": "s3://research-release/lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/curated.parquet",
+  "contract_sha256": "c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520",
+  "code_sha256": "0c16c3f44e823009422b8b26e05de0c25c6822d216cf2820f5465e71c57398b3",
+  "access_note": "Source names are identifiers; no raw access is granted."
+}

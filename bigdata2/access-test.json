@@ -1,20 +1,14 @@
 {
-  "test_id": "I04",
-  "timestamp": "2026-10-10T15:36:06.836765+00:00",
-  "store_id": "bd-g10-objects",
-  "role": "curator",
-  "allowed_operation": {
-    "action": "s3:GetObject",
-    "bucket": "research-raw",
-    "http_status": 200,
-    "status": "AUTHORIZED"
-  },
-  "denied_operation": {
-    "action": "s3:PutObject",
-    "bucket": "research-release",
+  "check_id": "I04",
+  "status": "PASS",
+  "workload_identity": "s3-ingestor",
+  "raw_get": "PASS: all four objects fetched through S3",
+  "release_put_denial": {
     "http_status": 403,
-    "error_code": "AccessDenied",
-    "status": "DENIED"
+    "code": "AccessDenied",
+    "bucket": "research-release",
+    "key": "lab2/forbidden-curator/953ba79d-8bb8-42c5-b2d7-9d1372bc8148.txt"
   },
-  "status": "PASS"
+  "operator": "Automated pipeline execution",
+  "executed_at": "2026-10-10T15:41:12.595684+00:00"
 }

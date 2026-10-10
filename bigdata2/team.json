@@ -1,0 +1,7 @@
+[
+  {"student_id":"24022306","name":"Nguyễn Tùng Dương","role":"A","responsibility":"Ingestion","review_role":"D"},
+  {"student_id":"24022466","name":"Lê Toàn","role":"B","responsibility":"Quality","review_role":"C"},
+  {"student_id":"24022463","name":"Đàm Quang Tiến","role":"C","responsibility":"Curation","review_role":"A"},
+  {"student_id":"24022277","name":"Lê Ngọc Minh Cường","role":"D","responsibility":"Metadata","review_role":"E"},
+  {"student_id":"24022484","name":"Trần Anh Tuấn","role":"E","responsibility":"Release","review_role":"B"}
+]

@@ -1,0 +1,48 @@
+{
+  "M01": [
+    {
+      "dataset_id": "curated-candidate",
+      "owner": "24022484 - Trần Anh Tuấn / Role E (designated release owner)",
+      "steward": "24022277 - Lê Ngọc Minh Cường / Role D (designated metadata steward)",
+      "row_count": 9610,
+      "location": [
+        "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/candidate/curated.parquet"
+      ],
+      "schema_version": "research-telemetry-v1"
+    }
+  ],
+  "M02": [
+    {
+      "dataset_id": "raw-observations",
+      "classification": "RESTRICTED",
+      "retention": {
+        "days": 30,
+        "start_basis": "retrieval_time",
+        "hold": false,
+        "dependent_release_ids": [],
+        "hold_rule": "Hold overrides expiry",
+        "dependency_rule": "Active approved release overrides expiry",
+        "audit_min_days": 90,
+        "action": "dry-run only"
+      }
+    },
+    {
+      "dataset_id": "quarantine",
+      "classification": "RESTRICTED",
+      "retention": {
+        "days": 7,
+        "start_basis": "run_completion_time",
+        "hold": false,
+        "dependent_release_ids": [],
+        "hold_rule": "Hold overrides expiry",
+        "dependency_rule": "Active approved release overrides expiry",
+        "audit_min_days": 90,
+        "action": "dry-run only"
+      }
+    }
+  ],
+  "release_has_email": false,
+  "semantic_counts_and_hashes": "Recomputed separately by publisher gate G08",
+  "operator": "Automated pipeline execution",
+  "executed_at": "2026-10-10T15:41:37.869195+00:00"
+}

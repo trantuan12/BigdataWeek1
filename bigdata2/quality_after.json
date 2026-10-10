@@ -1,0 +1,405 @@
+{
+  "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+  "store_id": "bd-g10-objects",
+  "as_of": "2026-02-09T00:00:00Z",
+  "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520",
+  "code_sha256": "0c16c3f44e823009422b8b26e05de0c25c6822d216cf2820f5465e71c57398b3",
+  "counts": {
+    "raw_envelopes": 10205,
+    "key_eligible": 10160,
+    "winners": 9960,
+    "curated": 9610,
+    "quarantine": 395,
+    "duplicates": 200
+  },
+  "exclusions": {
+    "parse_failures": 5,
+    "required_field_failures_in_parsed_intake": 130,
+    "prekey_rejected": 45,
+    "duplicate_excess": 200,
+    "timeliness_before_excluded": 70,
+    "retained_late_rows": 200
+  },
+  "primary_reason_counts": [
+    {
+      "primary_reason": "REQUIRED",
+      "records": 110
+    },
+    {
+      "primary_reason": "NUMERIC",
+      "records": 60
+    },
+    {
+      "primary_reason": "RANGE",
+      "records": 40
+    },
+    {
+      "primary_reason": "TIME_PARSE",
+      "records": 40
+    },
+    {
+      "primary_reason": "UNIT",
+      "records": 40
+    },
+    {
+      "primary_reason": "REFERENCE",
+      "records": 30
+    },
+    {
+      "primary_reason": "TIME_ORDER",
+      "records": 30
+    },
+    {
+      "primary_reason": "INGEST_PARSE",
+      "records": 20
+    },
+    {
+      "primary_reason": "KEY",
+      "records": 20
+    },
+    {
+      "primary_reason": "PARSE",
+      "records": 5
+    }
+  ],
+  "defect_samples": [
+    {
+      "primary_reason": "INGEST_PARSE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 361,
+      "record_id": "R000361",
+      "all_reasons": "INGEST_PARSE"
+    },
+    {
+      "primary_reason": "INGEST_PARSE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 362,
+      "record_id": "R000362",
+      "all_reasons": "INGEST_PARSE"
+    },
+    {
+      "primary_reason": "INGEST_PARSE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 363,
+      "record_id": "R000363",
+      "all_reasons": "INGEST_PARSE"
+    },
+    {
+      "primary_reason": "KEY",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 341,
+      "record_id": null,
+      "all_reasons": "KEY"
+    },
+    {
+      "primary_reason": "KEY",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 342,
+      "record_id": null,
+      "all_reasons": "KEY"
+    },
+    {
+      "primary_reason": "KEY",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 343,
+      "record_id": null,
+      "all_reasons": "KEY"
+    },
+    {
+      "primary_reason": "NUMERIC",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 101,
+      "record_id": "R000101",
+      "all_reasons": "NUMERIC"
+    },
+    {
+      "primary_reason": "NUMERIC",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 102,
+      "record_id": "R000102",
+      "all_reasons": "NUMERIC"
+    },
+    {
+      "primary_reason": "NUMERIC",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 103,
+      "record_id": "R000103",
+      "all_reasons": "NUMERIC"
+    },
+    {
+      "primary_reason": "PARSE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+      "source_row": 5201,
+      "record_id": null,
+      "all_reasons": "PARSE"
+    },
+    {
+      "primary_reason": "PARSE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+      "source_row": 5202,
+      "record_id": null,
+      "all_reasons": "PARSE"
+    },
+    {
+      "primary_reason": "PARSE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+      "source_row": 5203,
+      "record_id": null,
+      "all_reasons": "PARSE"
+    },
+    {
+      "primary_reason": "RANGE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 201,
+      "record_id": "R000201",
+      "all_reasons": "RANGE"
+    },
+    {
+      "primary_reason": "RANGE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 202,
+      "record_id": "R000202",
+      "all_reasons": "RANGE"
+    },
+    {
+      "primary_reason": "RANGE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 203,
+      "record_id": "R000203",
+      "all_reasons": "RANGE"
+    },
+    {
+      "primary_reason": "REFERENCE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 311,
+      "record_id": "R000311",
+      "all_reasons": "REFERENCE"
+    },
+    {
+      "primary_reason": "REFERENCE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 312,
+      "record_id": "R000312",
+      "all_reasons": "REFERENCE"
+    },
+    {
+      "primary_reason": "REFERENCE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 313,
+      "record_id": "R000313",
+      "all_reasons": "REFERENCE"
+    },
+    {
+      "primary_reason": "REQUIRED",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 1,
+      "record_id": "R000001",
+      "all_reasons": "REQUIRED|NUMERIC"
+    },
+    {
+      "primary_reason": "REQUIRED",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 2,
+      "record_id": "R000002",
+      "all_reasons": "REQUIRED|NUMERIC"
+    },
+    {
+      "primary_reason": "REQUIRED",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 3,
+      "record_id": "R000003",
+      "all_reasons": "REQUIRED|NUMERIC"
+    },
+    {
+      "primary_reason": "TIME_ORDER",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 281,
+      "record_id": "R000281",
+      "all_reasons": "TIME_ORDER"
+    },
+    {
+      "primary_reason": "TIME_ORDER",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 282,
+      "record_id": "R000282",
+      "all_reasons": "TIME_ORDER"
+    },
+    {
+      "primary_reason": "TIME_ORDER",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 283,
+      "record_id": "R000283",
+      "all_reasons": "TIME_ORDER"
+    },
+    {
+      "primary_reason": "TIME_PARSE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 241,
+      "record_id": "R000241",
+      "all_reasons": "TIME_PARSE"
+    },
+    {
+      "primary_reason": "TIME_PARSE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 242,
+      "record_id": "R000242",
+      "all_reasons": "TIME_PARSE"
+    },
+    {
+      "primary_reason": "TIME_PARSE",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 243,
+      "record_id": "R000243",
+      "all_reasons": "TIME_PARSE"
+    },
+    {
+      "primary_reason": "UNIT",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 161,
+      "record_id": "R000161",
+      "all_reasons": "UNIT"
+    },
+    {
+      "primary_reason": "UNIT",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 162,
+      "record_id": "R000162",
+      "all_reasons": "UNIT"
+    },
+    {
+      "primary_reason": "UNIT",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 163,
+      "record_id": "R000163",
+      "all_reasons": "UNIT"
+    }
+  ],
+  "interpretation": "Completeness increases because invalid winners are rejected, not imputed. Timeliness excludes invalid chronology. QA agreement concerns only the supplied 100-reference sample.",
+  "retained_fraction": 0.9416952474277315,
+  "quarantined_fraction": 0.03870651641352278,
+  "superseded_fraction": 0.019598236158745713,
+  "phase": "after",
+  "metrics": [
+    {
+      "phase": "after",
+      "rule_id": "Q_QA_AGREEMENT",
+      "cohort": "Matched supplied reference IDs only",
+      "numerator": 95,
+      "denominator": 100,
+      "dataset_id": "curated-candidate",
+      "dataset_version": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "contract_version": "research-telemetry-v1",
+      "value": 0.95,
+      "threshold": 0.95,
+      "severity": "BLOCK",
+      "status": "PASS"
+    },
+    {
+      "phase": "after",
+      "rule_id": "Q_QA_COVERAGE",
+      "cohort": "All supplied reference IDs",
+      "numerator": 100,
+      "denominator": 100,
+      "dataset_id": "curated-candidate",
+      "dataset_version": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "contract_version": "research-telemetry-v1",
+      "value": 1.0,
+      "threshold": 1,
+      "severity": "BLOCK",
+      "status": "PASS"
+    },
+    {
+      "phase": "after",
+      "rule_id": "Q_REQUIRED",
+      "cohort": "All curated rows",
+      "numerator": 9610,
+      "denominator": 9610,
+      "dataset_id": "curated-candidate",
+      "dataset_version": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "contract_version": "research-telemetry-v1",
+      "value": 1.0,
+      "threshold": 1,
+      "severity": "BLOCK",
+      "status": "PASS"
+    },
+    {
+      "phase": "after",
+      "rule_id": "Q_SENSOR",
+      "cohort": "All curated rows",
+      "numerator": 9610,
+      "denominator": 9610,
+      "dataset_id": "curated-candidate",
+      "dataset_version": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "contract_version": "research-telemetry-v1",
+      "value": 1.0,
+      "threshold": 1,
+      "severity": "BLOCK",
+      "status": "PASS"
+    },
+    {
+      "phase": "after",
+      "rule_id": "Q_TIME",
+      "cohort": "All curated rows",
+      "numerator": 9610,
+      "denominator": 9610,
+      "dataset_id": "curated-candidate",
+      "dataset_version": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "contract_version": "research-telemetry-v1",
+      "value": 1.0,
+      "threshold": 1,
+      "severity": "BLOCK",
+      "status": "PASS"
+    },
+    {
+      "phase": "after",
+      "rule_id": "Q_TIMELY",
+      "cohort": "Chronologically valid curated rows only",
+      "numerator": 9410,
+      "denominator": 9610,
+      "dataset_id": "curated-candidate",
+      "dataset_version": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "contract_version": "research-telemetry-v1",
+      "value": 0.9791883454734651,
+      "threshold": 0.95,
+      "severity": "BLOCK",
+      "status": "PASS"
+    },
+    {
+      "phase": "after",
+      "rule_id": "Q_UNIQUE",
+      "cohort": "All curated rows",
+      "numerator": 9610,
+      "denominator": 9610,
+      "dataset_id": "curated-candidate",
+      "dataset_version": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "contract_version": "research-telemetry-v1",
+      "value": 1.0,
+      "threshold": 1,
+      "severity": "BLOCK",
+      "status": "PASS"
+    },
+    {
+      "phase": "after",
+      "rule_id": "Q_VALUE",
+      "cohort": "All curated rows",
+      "numerator": 9610,
+      "denominator": 9610,
+      "dataset_id": "curated-candidate",
+      "dataset_version": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "contract_version": "research-telemetry-v1",
+      "value": 1.0,
+      "threshold": 1,
+      "severity": "BLOCK",
+      "status": "PASS"
+    }
+  ]
+}

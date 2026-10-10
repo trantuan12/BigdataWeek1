@@ -1,0 +1,17 @@
+{
+  "check_id": "I02",
+  "status": "PASS",
+  "rows": 10205,
+  "physical_key_duplicates": 0,
+  "parse_failures_retained": 5,
+  "by_source": [
+    {
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "records": 5000
+    },
+    {
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_b.jsonl",
+      "records": 5205
+    }
+  ]
+}

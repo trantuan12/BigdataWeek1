@@ -1,0 +1,31 @@
+{
+  "check_id": "C02",
+  "status": "PASS",
+  "seed": 24022463,
+  "reversed_source_enumeration": true,
+  "shuffled_envelopes": true,
+  "physical_source_ordinals_preserved": true,
+  "comparisons": [
+    {
+      "relation": "curated",
+      "original_logical_sha256": "cf74a598b5ef8e0b29fbd04bd1bd47662a1525b76856e17138cd03225580c298",
+      "reversed_and_shuffled_logical_sha256": "cf74a598b5ef8e0b29fbd04bd1bd47662a1525b76856e17138cd03225580c298",
+      "equal": true
+    },
+    {
+      "relation": "quarantine",
+      "original_logical_sha256": "0fb1a7273bdd590e8856125d343b5ec3d7be7ab40d8dde6ffd3ea36ce76613e1",
+      "reversed_and_shuffled_logical_sha256": "0fb1a7273bdd590e8856125d343b5ec3d7be7ab40d8dde6ffd3ea36ce76613e1",
+      "equal": true
+    },
+    {
+      "relation": "duplicates",
+      "original_logical_sha256": "e1ace6467073fe6175bd1fcf2f36775ede8ae048ba6295501ae93319ffa29b17",
+      "reversed_and_shuffled_logical_sha256": "e1ace6467073fe6175bd1fcf2f36775ede8ae048ba6295501ae93319ffa29b17",
+      "equal": true
+    }
+  ],
+  "parquet_byte_equality_claimed": false,
+  "operator": "Automated pipeline execution",
+  "executed_at": "2026-10-10T15:41:21.617921+00:00"
+}

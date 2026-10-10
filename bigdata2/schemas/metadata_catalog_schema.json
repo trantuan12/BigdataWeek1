@@ -1,45 +1,188 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.edu/bigdata/lab2/metadata-catalog.schema.json",
+  "$id": "urn:vnu-uet:bigdata:lab2:metadata-catalog-v1",
   "title": "Lab 2 Dataset Catalog Entry",
   "type": "object",
   "required": [
-    "dataset_id", "title", "purpose", "owner", "steward", "classification",
-    "allowed_use", "location", "schema_version", "columns", "as_of", "row_count",
-    "input_manifest_sha256", "contract_sha256", "code_sha256",
-    "quality_report", "retention", "provenance"
+    "dataset_id",
+    "title",
+    "purpose",
+    "owner",
+    "steward",
+    "classification",
+    "allowed_use",
+    "location",
+    "schema_version",
+    "columns",
+    "as_of",
+    "row_count",
+    "input_manifest_sha256",
+    "contract_sha256",
+    "code_sha256",
+    "quality_report",
+    "retention",
+    "provenance"
   ],
   "properties": {
-    "dataset_id": {"type": "string", "minLength": 1},
-    "title": {"type": "string", "minLength": 1},
-    "purpose": {"type": "string", "minLength": 1},
-    "owner": {"type": "string", "minLength": 1},
-    "steward": {"type": "string", "minLength": 1},
-    "classification": {"type": "string", "minLength": 1},
-    "allowed_use": {"type": "string", "minLength": 1},
-    "location": {"type": "string", "minLength": 1},
-    "schema_version": {"type": "string", "minLength": 1},
-    "as_of": {"type": "string", "format": "date-time"},
-    "row_count": {"type": "integer", "minimum": 0},
+    "dataset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "steward": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allowed_use": {
+      "type": "string",
+      "minLength": 1
+    },
+    "location": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^s3://[^/]+/.+"
+      }
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "row_count": {
+      "type": "integer",
+      "minimum": 0
+    },
     "columns": {
-      "type": "array", "minItems": 1,
+      "type": "array",
+      "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["name", "type", "meaning", "nullable"],
+        "required": [
+          "name",
+          "type",
+          "meaning",
+          "unit",
+          "nullable"
+        ],
         "properties": {
-          "name": {"type": "string"}, "type": {"type": "string"},
-          "meaning": {"type": "string"}, "unit": {"type": ["string", "null"]},
-          "nullable": {"type": "boolean"}
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "meaning": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "nullable": {
+            "type": "boolean"
+          }
         },
         "additionalProperties": false
       }
     },
-    "input_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-    "contract_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-    "code_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-    "quality_report": {"type": "string", "minLength": 1},
-    "retention": {"type": "object"},
-    "provenance": {"type": "object"}
+    "input_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "contract_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "code_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "quality_report": {
+      "type": "string",
+      "minLength": 1
+    },
+    "retention": {
+      "type": "object",
+      "required": [
+        "days",
+        "start_basis",
+        "hold",
+        "dependent_release_ids",
+        "action",
+        "hold_rule",
+        "dependency_rule"
+      ],
+      "properties": {
+        "days": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "start_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hold": {
+          "type": "boolean"
+        },
+        "dependent_release_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "action": {
+          "const": "dry-run only"
+        },
+        "hold_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dependency_rule": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "store_id"
+      ],
+      "properties": {
+        "store_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "description": "Supplied profile strengthened to the handout Appendix E2: array locations and five required column properties."
 }

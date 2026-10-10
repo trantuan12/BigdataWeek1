@@ -1,0 +1,25 @@
+import sys,json
+sys.path.insert(0,'/work/code')
+from common import *
+c=s3();tests=read_json(ROOT/'gate-tests.json')
+rejected={x['probe_run_id']:x['case_id'] for x in tests['cases'] if x['actual_result']=='REJECT'}
+keys=[]
+for page in c.get_paginator('list_objects_v2').paginate(Bucket='research-release',Prefix='lab2/releases/'):
+    keys.extend(o['Key'] for o in page.get('Contents',[]))
+manifests=[json.loads(get_bytes(c,'research-release',k)) for k in keys if k.endswith('/release_manifest.json')]
+probe_results=[]
+for rid,cid in rejected.items():
+    found=[m['release_id'] for m in manifests if m.get('publish_run_id')==rid or m.get('approved_run_id')==rid or rid in m['release_id']]
+    probe_results.append({'case_id':cid,'probe_run_id':rid,'approved_release_matches':found,'status':'PASS' if not found else 'FAIL'})
+current=read_json(ROOT/'release_manifest.json');prefix=current['artifacts'][0]['key'].rsplit('/',1)[0]+'/'
+actual=sorted(k for k in keys if k.startswith(prefix))
+expected=sorted([a['key'] for a in current['artifacts']]+[prefix+'release_manifest.json'])
+types=[]
+for p in ['curate','publisher','analyst']: pass
+result={'status':'PASS' if all(x['status']=='PASS' for x in probe_results) and actual==expected else 'FAIL',
+    'current_release_id':current['release_id'],'release_manifest_count':len(manifests),
+    'rejected_probe_checks':probe_results,'exact_release_inventory':actual==expected,'release_object_keys':actual,
+    'operator':OPERATOR,'workload_identity':'s3-owner','executed_at':now()}
+assert result['status']=='PASS'
+write_json(ROOT/'evidence/rejected-probes-no-release.json',result)
+print(json.dumps(result))

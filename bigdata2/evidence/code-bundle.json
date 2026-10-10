@@ -1,0 +1,73 @@
+{
+  "files": [
+    {
+      "file": "code/bootstrap.py",
+      "sha256": "8a64f0ae238bbd15da9f3ecc99ec372c2b7d894947ca72e53400b7121f9c1d70"
+    },
+    {
+      "file": "code/catalog_queries.py",
+      "sha256": "2c31f4ea45c31f21a11a9c2860c8dc3ab501d0deab0857b5c1ec4d2d530bbbcd"
+    },
+    {
+      "file": "code/checks.py",
+      "sha256": "2bface9af14eb517076a906c59f10b7dffa6f7246f82677f95320ccfbc590469"
+    },
+    {
+      "file": "code/common.py",
+      "sha256": "504c4bfc17821f7e3a6e353e0b59be5900508ce98b9ddcf61fe0129ed7f62db3"
+    },
+    {
+      "file": "code/consumer.py",
+      "sha256": "44aa2a6035180008cb376f2bdb5fa4ccaab512f5974014bb8cdcc06ef4e9f8c2"
+    },
+    {
+      "file": "code/curate.sql",
+      "sha256": "825d2c681766b62b7a082f89f3836b800aba401d1b28c9dca80abeb85feddab6"
+    },
+    {
+      "file": "code/driver.py",
+      "sha256": "d70b2283d32e3e5a721f5d9be5738dbf077acb7f6fba12bce8ac196a95f9681a"
+    },
+    {
+      "file": "code/gate.py",
+      "sha256": "d237f2d083e425fb03be1d89ad1cf721fae7d305b78e0a358673572d923cbd1a"
+    },
+    {
+      "file": "code/gate_tests.py",
+      "sha256": "33bb873ea96b90d0659e23fac0e7d8147d9370906b07e9029e952c6999511678"
+    },
+    {
+      "file": "code/independent_checks.py",
+      "sha256": "0318b00b6b3e67fe533bfca98e3996cbf3be145d05f46a09936e373ecf28b551"
+    },
+    {
+      "file": "code/metadata.py",
+      "sha256": "ea7185a288f0bfedcdaa627f694a021ae22f77e7fa3bedb60456bdd16ac09d5a"
+    },
+    {
+      "file": "code/publisher.py",
+      "sha256": "19da9c5162bc5b88bd7d7675337205a079b7fe6310e4b6dcfd31710ddc1bee1f"
+    },
+    {
+      "file": "code/quality.sql",
+      "sha256": "bf09dd21525821ccaa2acf8a165532a63212d3a1ffb184652547fd53121e1d8d"
+    },
+    {
+      "file": "code/quality_report.py",
+      "sha256": "6699c721010e4d0bf9d7785c16d7bc99e99f8f279b0aa8055dfff8ed706885c0"
+    },
+    {
+      "file": "code/stage_inputs.py",
+      "sha256": "57bf233bfc1f607fc68263dee340a026284be19837247e46f0659aa9ff128219"
+    },
+    {
+      "file": "code/trace_queries.sql",
+      "sha256": "4486da2e73a3d3e7a2ea279de8900c8c2232bb721e83dcee5df0b4b15df6e092"
+    },
+    {
+      "file": "code/typed.sql",
+      "sha256": "ca253ad80f61209132913afeacbb33f8d89caeef08fd379a47833b1fe536a63b"
+    }
+  ],
+  "sha256": "0c16c3f44e823009422b8b26e05de0c25c6822d216cf2820f5465e71c57398b3"
+}

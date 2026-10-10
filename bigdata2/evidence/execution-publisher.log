@@ -1,0 +1,9 @@
+{"case_id": "P01", "result": "PASS", "reasons": [], "correct": true}
+{"case_id": "P02", "result": "REJECT", "reasons": ["LINEAGE", "METADATA", "STAGED_INTEGRITY", "VALUE"], "correct": true}
+{"case_id": "P03", "result": "REJECT", "reasons": ["LINEAGE", "METADATA", "REQUIRED", "STAGED_INTEGRITY", "VALUE"], "correct": true}
+{"case_id": "P04", "result": "REJECT", "reasons": ["LINEAGE", "METADATA", "RECONCILIATION", "STAGED_INTEGRITY", "UNIQUENESS"], "correct": true}
+{"case_id": "P05", "result": "REJECT", "reasons": ["METADATA"], "correct": true}
+{"case_id": "P06", "result": "REJECT", "reasons": ["INPUT_INTEGRITY"], "correct": true}
+{"case_id": "P07", "result": "REJECT", "reasons": ["LINEAGE"], "correct": true}
+{"case_id": "P08", "result": "REJECT", "reasons": ["COVERAGE", "LINEAGE", "METADATA", "RECONCILIATION", "STAGED_INTEGRITY"], "correct": true}
+{"status": "COMPLETE", "release_id": "bd-g10-lab2-20261010T154147Z-32ce3332", "manifest_key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/release_manifest.json", "manifest_sha256": "718e61042112ef5da76b5d1f5281e50bf32c71f0923359b075a4428cf721ae2a"}

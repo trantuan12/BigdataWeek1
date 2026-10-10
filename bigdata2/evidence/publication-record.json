@@ -1,0 +1,49 @@
+{
+  "status": "COMPLETE",
+  "release_id": "bd-g10-lab2-20261010T154147Z-32ce3332",
+  "publish_run_id": "32ce3332-6804-4e66-b2e9-19899af64171",
+  "uploads": [
+    {
+      "ordinal": 1,
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/curated.parquet",
+      "verified_at": "2026-10-10T15:43:49.066864+00:00",
+      "sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca"
+    },
+    {
+      "ordinal": 2,
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/catalog.json",
+      "verified_at": "2026-10-10T15:43:49.076678+00:00",
+      "sha256": "4c1fe3c7675f311a46100bc0dc28b4aff4d9c2b656d3642912a32278fe7f6c01"
+    },
+    {
+      "ordinal": 3,
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/quality_after.json",
+      "verified_at": "2026-10-10T15:43:49.088065+00:00",
+      "sha256": "4d4d84979042cb9ae034695716f2834744f31e7fa9d67e367959b50bfa737bbd"
+    },
+    {
+      "ordinal": 4,
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/lineage-summary.json",
+      "verified_at": "2026-10-10T15:43:49.097815+00:00",
+      "sha256": "bee836cda2601fda0648478a206232c3759f722c4fe532830e9d56af8846a3ba"
+    },
+    {
+      "ordinal": 5,
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/README.md",
+      "verified_at": "2026-10-10T15:43:49.105710+00:00",
+      "sha256": "9566a445e4ffc4d0d9181fd2967563311ddfaec97e81e84fbcea7e8d99a9d5c3"
+    },
+    {
+      "ordinal": 6,
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/release_manifest.json",
+      "verified_at": "2026-10-10T15:43:49.113241+00:00",
+      "sha256": "718e61042112ef5da76b5d1f5281e50bf32c71f0923359b075a4428cf721ae2a",
+      "manifest_last": true
+    }
+  ],
+  "manifest_last": true,
+  "multi_object_transaction": false,
+  "manifest_sha256": "718e61042112ef5da76b5d1f5281e50bf32c71f0923359b075a4428cf721ae2a",
+  "operator": "Automated pipeline execution",
+  "workload_identity": "s3-owner"
+}

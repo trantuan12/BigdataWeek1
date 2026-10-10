@@ -1,0 +1,21 @@
+{
+  "check_id": "C01",
+  "status": "PASS",
+  "counts": {
+    "raw_envelopes": 10205,
+    "curated": 9610,
+    "quarantine": 395,
+    "duplicates": 200
+  },
+  "missing_physical_ids": 0,
+  "invented_physical_ids": 0,
+  "overlapping_or_repeated_physical_ids": 0,
+  "duplicate_physical_ids_per_output": {
+    "curated": 0,
+    "quarantine": 0,
+    "duplicates": 0
+  },
+  "duplicate_business_keys": 0,
+  "operator": "Automated pipeline execution",
+  "executed_at": "2026-10-10T15:41:17.819832+00:00"
+}

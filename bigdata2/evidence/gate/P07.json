@@ -1,0 +1,233 @@
+{
+  "case_id": "P07",
+  "changed_artifact": "required curation output removed",
+  "expected_result": "REJECT",
+  "probe_run_id": "3bc20ddf-8f34-4b37-af32-ca1c9163f8d8",
+  "actual_result": "REJECT",
+  "correctly_interpreted": true,
+  "measured_failures": [
+    "LINEAGE"
+  ],
+  "gate": {
+    "result": "REJECT",
+    "candidate_sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+    "candidate_rows": 9610,
+    "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+    "store_id": "bd-g10-objects",
+    "checks": [
+      {
+        "check_id": "G01",
+        "status": "PASS",
+        "observed": {
+          "sources": [
+            {
+              "key": "observations_a.csv",
+              "matches": true
+            },
+            {
+              "key": "observations_b.jsonl",
+              "matches": true
+            },
+            {
+              "key": "qa_reference.csv",
+              "matches": true
+            },
+            {
+              "key": "sensors.csv",
+              "matches": true
+            }
+          ],
+          "staged_artifacts": [
+            {
+              "path": "candidate/curated.parquet",
+              "matches": true
+            },
+            {
+              "path": "restricted/quarantine.csv",
+              "matches": true
+            },
+            {
+              "path": "restricted/duplicates.csv",
+              "matches": true
+            }
+          ],
+          "provenance_mismatches": 0,
+          "run_bindings_match": true
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G02",
+        "status": "PASS",
+        "observed": {
+          "status": "PASS",
+          "counts": {
+            "raw_envelopes": 10205,
+            "submitted": 9610,
+            "quarantine": 395,
+            "duplicates": 200
+          },
+          "missing_physical_ids": 0,
+          "invented_physical_ids": 0,
+          "overlapping_or_repeated_physical_ids": 0,
+          "duplicate_physical_ids_per_output": {
+            "submitted": 0,
+            "quarantine": 0,
+            "duplicates": 0
+          },
+          "duplicate_business_keys": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G03",
+        "status": "PASS",
+        "observed": {
+          "columns": [
+            [
+              "record_id",
+              "VARCHAR"
+            ],
+            [
+              "sensor_id",
+              "VARCHAR"
+            ],
+            [
+              "site",
+              "VARCHAR"
+            ],
+            [
+              "event_time_utc",
+              "TIMESTAMP"
+            ],
+            [
+              "ingest_time_utc",
+              "TIMESTAMP"
+            ],
+            [
+              "temperature_c",
+              "DECIMAL(8,2)"
+            ],
+            [
+              "is_late",
+              "BOOLEAN"
+            ],
+            [
+              "source_object",
+              "VARCHAR"
+            ],
+            [
+              "source_row",
+              "BIGINT"
+            ],
+            [
+              "source_sha256",
+              "VARCHAR"
+            ]
+          ],
+          "rows": 9610,
+          "allowlist_equal": true
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G04",
+        "status": "PASS",
+        "observed": {
+          "nulls": {
+            "record_id": 0,
+            "sensor_id": 0,
+            "site": 0,
+            "event_time_utc": 0,
+            "ingest_time_utc": 0,
+            "temperature_c": 0,
+            "is_late": 0,
+            "source_object": 0,
+            "source_row": 0,
+            "source_sha256": 0
+          },
+          "blank_required_strings": 0,
+          "original_required_failures": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G05",
+        "status": "PASS",
+        "observed": {
+          "invalid_values": 0,
+          "duplicate_business_keys": 0,
+          "unknown_sensor_or_wrong_site": 0,
+          "source_conversion_mismatches": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G06",
+        "status": "PASS",
+        "observed": {
+          "valid": 9610,
+          "rows": 9610,
+          "timely": 9410,
+          "denominator": 9610,
+          "value": 0.9791883454734651,
+          "late_flag_errors": 0,
+          "source_timestamp_mismatches": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G07",
+        "status": "PASS",
+        "observed": {
+          "matched": 100,
+          "reference_population": 100,
+          "coverage": 1.0,
+          "agree": 95,
+          "agreement_denominator": 100,
+          "agreement": 0.95,
+          "tolerance_c": "0.05"
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G08",
+        "status": "PASS",
+        "observed": {
+          "dataset_records": 3,
+          "semantic_errors": [],
+          "measured_rows": 9610
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G09",
+        "status": "REJECT",
+        "observed": {
+          "curation_events": 2,
+          "required_outputs": [
+            "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/candidate/curated.parquet",
+            "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/duplicates.csv",
+            "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/quarantine.csv"
+          ],
+          "publisher_replay": "PASS",
+          "semantic_errors": [
+            "curation outputs"
+          ]
+        },
+        "reasons": [
+          "LINEAGE"
+        ]
+      }
+    ],
+    "reasons": [
+      "LINEAGE"
+    ],
+    "operator": "Automated pipeline execution",
+    "workload_identity": "s3-owner",
+    "evaluated_at": "2026-10-10T15:43:21.408368+00:00"
+  },
+  "approved_manifest_created": false,
+  "operator": "Automated pipeline execution",
+  "executed_at": "2026-10-10T15:43:21.410885+00:00"
+}

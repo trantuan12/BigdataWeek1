@@ -1,14 +1,56 @@
-[
-  {
-    "store_id": "bd-g10-objects",
-    "key": "lab2/inputs/batch-01/observations_a.csv",
-    "records": 5000,
-    "sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
-  },
-  {
-    "store_id": "bd-g10-objects",
-    "key": "lab2/inputs/batch-01/observations_b.jsonl",
-    "records": 5205,
-    "sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70"
-  }
-]
+{
+  "status": "VERIFIED",
+  "store_id": "bd-g10-objects",
+  "objects": [
+    {
+      "key": "observations_a.csv",
+      "bytes": 421028,
+      "records": 5000,
+      "sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+      "bucket": "research-raw",
+      "s3_key": "lab2/inputs/batch-01/observations_a.csv",
+      "store_id": "bd-g10-objects",
+      "format": "CSV",
+      "retrieved_at": "2026-10-10T15:41:12.463399+00:00",
+      "verification": "PASS"
+    },
+    {
+      "key": "observations_b.jsonl",
+      "bytes": 1037439,
+      "records": 5205,
+      "sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70",
+      "bucket": "research-raw",
+      "s3_key": "lab2/inputs/batch-01/observations_b.jsonl",
+      "store_id": "bd-g10-objects",
+      "format": "JSONL",
+      "retrieved_at": "2026-10-10T15:41:12.470463+00:00",
+      "verification": "PASS"
+    },
+    {
+      "key": "qa_reference.csv",
+      "bytes": 1423,
+      "records": 100,
+      "sha256": "129463c2a4e63f2dabfa2a5dd31b92e4fe4858d2415d3c7ef495cc6c6d7b65c2",
+      "bucket": "research-raw",
+      "s3_key": "lab2/inputs/batch-01/qa_reference.csv",
+      "store_id": "bd-g10-objects",
+      "format": "CSV",
+      "retrieved_at": "2026-10-10T15:41:12.473390+00:00",
+      "verification": "PASS"
+    },
+    {
+      "key": "sensors.csv",
+      "bytes": 256,
+      "records": 20,
+      "sha256": "02c390e127c37b9d12e9ca156eae23a450ad1ae037001cddd9651bb6516b9bde",
+      "bucket": "research-raw",
+      "s3_key": "lab2/inputs/batch-01/sensors.csv",
+      "store_id": "bd-g10-objects",
+      "format": "CSV",
+      "retrieved_at": "2026-10-10T15:41:12.475664+00:00",
+      "verification": "PASS"
+    }
+  ],
+  "trusted_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "observation_rows": 10205
+}

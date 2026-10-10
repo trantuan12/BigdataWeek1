@@ -1,0 +1,115 @@
+{
+  "profile": "lab2-approved-catalog-v1",
+  "datasets": [
+    {
+      "purpose": "Curated synthetic research telemetry for the Big Data Lab 2 teaching exercise",
+      "owner": "24022484 - Trần Anh Tuấn / Role E (designated release owner)",
+      "steward": "24022277 - Lê Ngọc Minh Cường / Role D (designated metadata steward)",
+      "allowed_use": "Synthetic teaching use only; no real-world sensor accuracy claim.",
+      "schema_version": "research-telemetry-v1",
+      "as_of": "2026-02-09T00:00:00Z",
+      "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+      "contract_sha256": "c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520",
+      "code_sha256": "0c16c3f44e823009422b8b26e05de0c25c6822d216cf2820f5465e71c57398b3",
+      "quality_report": "s3://research-release/lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/quality_after.json",
+      "provenance": {
+        "store_id": "bd-g10-objects",
+        "curate_run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+        "publish_run_id": "32ce3332-6804-4e66-b2e9-19899af64171",
+        "lineage_summary": "s3://research-release/lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/lineage-summary.json",
+        "source_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+        "reference_role": "QA validation only; not measurement computation"
+      },
+      "dataset_id": "approved-telemetry",
+      "title": "Approved synthetic telemetry release",
+      "classification": "APPROVED_SYNTHETIC_TEACHING",
+      "location": [
+        "s3://research-release/lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/curated.parquet"
+      ],
+      "columns": [
+        {
+          "name": "record_id",
+          "type": "VARCHAR",
+          "meaning": "Normalized business observation identifier",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "sensor_id",
+          "type": "VARCHAR",
+          "meaning": "Normalized sensor identifier used to join the registry",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "site",
+          "type": "VARCHAR",
+          "meaning": "Site derived exclusively from sensors.csv",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "event_time_utc",
+          "type": "TIMESTAMP",
+          "meaning": "Measurement time, interpreted in UTC",
+          "unit": "UTC",
+          "nullable": false
+        },
+        {
+          "name": "ingest_time_utc",
+          "type": "TIMESTAMP",
+          "meaning": "Recorded arrival time, interpreted in UTC",
+          "unit": "UTC",
+          "nullable": false
+        },
+        {
+          "name": "temperature_c",
+          "type": "DECIMAL(8,2)",
+          "meaning": "Selected observation converted to Celsius; validated before rounding",
+          "unit": "Celsius",
+          "nullable": false
+        },
+        {
+          "name": "is_late",
+          "type": "BOOLEAN",
+          "meaning": "True when recorded arrival lag exceeds 900 seconds",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "source_object",
+          "type": "VARCHAR",
+          "meaning": "Restricted input object identifier; does not grant access",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "source_row",
+          "type": "BIGINT",
+          "meaning": "One-based physical data-record ordinal; CSV header excluded",
+          "unit": null,
+          "nullable": false
+        },
+        {
+          "name": "source_sha256",
+          "type": "VARCHAR",
+          "meaning": "SHA-256 of the complete original source object",
+          "unit": null,
+          "nullable": false
+        }
+      ],
+      "row_count": 9610,
+      "retention": {
+        "days": 90,
+        "start_basis": "publication_time",
+        "hold": false,
+        "dependent_release_ids": [],
+        "hold_rule": "Hold overrides expiry",
+        "dependency_rule": "Active approved release overrides expiry",
+        "audit_min_days": 90,
+        "action": "dry-run only",
+        "publication_time": "2026-10-10T15:43:49.023207+00:00"
+      }
+    }
+  ]
+}

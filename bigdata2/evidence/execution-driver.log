@@ -1,0 +1,1 @@
+{"status": "COMPLETE", "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4", "stage_prefix": "lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/", "counts": {"raw_envelopes": 10205, "curated": 9610, "quarantine": 395, "duplicates": 200}}

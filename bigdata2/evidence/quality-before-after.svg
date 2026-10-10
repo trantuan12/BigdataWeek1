@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="690" viewBox="0 0 1250 690">
+<rect width="1250" height="690" fill="#f8fafc"/>
+<g font-family="Arial, sans-serif" fill="#0f172a">
+<text x="40" y="48" font-size="25" font-weight="bold">Quality before and after curation</text>
+<text x="40" y="80" font-size="15">Each bar is its own numerator / denominator; populations differ as specified below.</text>
+<text x="40" y="148" font-size="16">Required completeness</text>
+<rect x="275" y="130" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="130" width="593.37" height="18" fill="#64748b"/>
+<text x="890" y="145" font-size="14">before: 9850/9960 (98.90%)</text>
+<rect x="275" y="156" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="156" width="600.00" height="18" fill="#0d9488"/>
+<text x="890" y="171" font-size="14">after: 9610/9610 (100.00%)</text>
+<text x="40" y="228" font-size="16">Business-key uniqueness</text>
+<rect x="275" y="210" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="210" width="588.19" height="18" fill="#64748b"/>
+<text x="890" y="225" font-size="14">before: 9960/10160 (98.03%)</text>
+<rect x="275" y="236" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="236" width="600.00" height="18" fill="#0d9488"/>
+<text x="890" y="251" font-size="14">after: 9610/9610 (100.00%)</text>
+<text x="40" y="308" font-size="16">Value validity</text>
+<rect x="275" y="290" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="290" width="584.94" height="18" fill="#64748b"/>
+<text x="890" y="305" font-size="14">before: 9710/9960 (97.49%)</text>
+<rect x="275" y="316" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="316" width="600.00" height="18" fill="#0d9488"/>
+<text x="890" y="331" font-size="14">after: 9610/9610 (100.00%)</text>
+<text x="40" y="388" font-size="16">Sensor consistency</text>
+<rect x="275" y="370" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="370" width="598.19" height="18" fill="#64748b"/>
+<text x="890" y="385" font-size="14">before: 9930/9960 (99.70%)</text>
+<rect x="275" y="396" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="396" width="600.00" height="18" fill="#0d9488"/>
+<text x="890" y="411" font-size="14">after: 9610/9610 (100.00%)</text>
+<text x="40" y="468" font-size="16">Temporal consistency</text>
+<rect x="275" y="450" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="450" width="595.78" height="18" fill="#64748b"/>
+<text x="890" y="465" font-size="14">before: 9890/9960 (99.30%)</text>
+<rect x="275" y="476" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="476" width="600.00" height="18" fill="#0d9488"/>
+<text x="890" y="491" font-size="14">after: 9610/9610 (100.00%)</text>
+<text x="40" y="548" font-size="16">Timeliness</text>
+<rect x="275" y="530" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="530" width="587.87" height="18" fill="#64748b"/>
+<text x="890" y="545" font-size="14">before: 9690/9890 (97.98%)</text>
+<rect x="275" y="556" width="600" height="18" fill="#e2e8f0"/>
+<rect x="275" y="556" width="587.51" height="18" fill="#0d9488"/>
+<text x="890" y="571" font-size="14">after: 9410/9610 (97.92%)</text>
+<text x="40" y="638" font-size="14">Before: W for required/value/sensor/time; key-eligible intake for uniqueness; chronological W for timeliness.</text>
+<text x="40" y="664" font-size="14">After: curated rows; chronological curated rows for timeliness. No combined quality score is computed.</text>
+</g></svg>

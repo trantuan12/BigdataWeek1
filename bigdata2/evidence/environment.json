@@ -1,0 +1,79 @@
+{
+  "namespace": "bd-g10",
+  "dependency": "Existing Lab 1 tenant and SeaweedFS store reused; a locally prepared Python 3.11 image supplies the Lab 2 runtime.",
+  "pods": [
+    {
+      "name": "analyst",
+      "namespace": "bd-g10",
+      "image": "bd-g10-lab2-runtime:1.0",
+      "image_id": "sha256:0d2077607f92370a680c2db8d4363cc7dc7b89c83f2f0210f321ec1e4f79337c",
+      "phase": "Running",
+      "token_automount": false,
+      "resources": {
+        "limits": {
+          "cpu": "500m",
+          "memory": "512Mi"
+        },
+        "requests": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        }
+      }
+    },
+    {
+      "name": "curate",
+      "namespace": "bd-g10",
+      "image": "bd-g10-lab2-runtime:1.0",
+      "image_id": "sha256:0d2077607f92370a680c2db8d4363cc7dc7b89c83f2f0210f321ec1e4f79337c",
+      "phase": "Running",
+      "token_automount": false,
+      "resources": {
+        "limits": {
+          "cpu": "1",
+          "memory": "1Gi"
+        },
+        "requests": {
+          "cpu": "500m",
+          "memory": "512Mi"
+        }
+      }
+    },
+    {
+      "name": "objects-6d89676b98-jx88m",
+      "namespace": "bd-g10",
+      "image": "docker.io/chrislusf/seaweedfs@sha256:c3894f26b8028ac0985c2db03d8d294fa31b4b5c1b0317a3ea433c0f114b705e",
+      "image_id": "docker.io/chrislusf/seaweedfs@sha256:c3894f26b8028ac0985c2db03d8d294fa31b4b5c1b0317a3ea433c0f114b705e",
+      "phase": "Running",
+      "token_automount": false,
+      "resources": {
+        "limits": {
+          "cpu": "1",
+          "memory": "1Gi"
+        },
+        "requests": {
+          "cpu": "500m",
+          "memory": "512Mi"
+        }
+      }
+    },
+    {
+      "name": "publisher",
+      "namespace": "bd-g10",
+      "image": "bd-g10-lab2-runtime:1.0",
+      "image_id": "sha256:0d2077607f92370a680c2db8d4363cc7dc7b89c83f2f0210f321ec1e4f79337c",
+      "phase": "Running",
+      "token_automount": false,
+      "resources": {
+        "limits": {
+          "cpu": "1",
+          "memory": "1Gi"
+        },
+        "requests": {
+          "cpu": "500m",
+          "memory": "512Mi"
+        }
+      }
+    }
+  ],
+  "trusted_manifest_mount": "/trusted/trusted_manifest.json (read-only ConfigMap)"
+}

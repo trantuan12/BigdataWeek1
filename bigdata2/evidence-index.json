@@ -1,0 +1,1137 @@
+{
+  "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+  "release_manifest_sha256": "718e61042112ef5da76b5d1f5281e50bf32c71f0923359b075a4428cf721ae2a",
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 127,
+      "sha256": "3b2bca7bf8c3c3613ed5bfbc9ed8839e6d65fe38a798af0c2f8c71846ad4a0f0",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "access-test.json",
+      "bytes": 433,
+      "sha256": "e878d2594a8dd527e1857ab6df7f4a7705d6e7e7a5258d70f284aad480530023",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "BAO_CAO_LAB2.md",
+      "bytes": 16361,
+      "sha256": "d47e3086f5bad8bf2c0a714c97fa7b43178acc1ad296c86b287d0ae44f5d599d",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "candidate/approved-catalog.json",
+      "bytes": 4270,
+      "sha256": "4c1fe3c7675f311a46100bc0dc28b4aff4d9c2b656d3642912a32278fe7f6c01",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "candidate/artifact-manifest.json",
+      "bytes": 942,
+      "sha256": "e5650f901263dd3dec22766b5cef4ae3fa63eba67b26d827c453504f1e98b4f8",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "candidate/consumer-README.md",
+      "bytes": 776,
+      "sha256": "9566a445e4ffc4d0d9181fd2967563311ddfaec97e81e84fbcea7e8d99a9d5c3",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "candidate/curated.parquet",
+      "bytes": 209278,
+      "sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "candidate/lineage-summary.json",
+      "bytes": 819,
+      "sha256": "bee836cda2601fda0648478a206232c3759f722c4fe532830e9d56af8846a3ba",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "catalog.json",
+      "bytes": 13911,
+      "sha256": "d4cca32da73b0eac03f792b87f59083d6821f01a5391460a61d173a287ccf643",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/bootstrap.py",
+      "bytes": 1139,
+      "sha256": "8a64f0ae238bbd15da9f3ecc99ec372c2b7d894947ca72e53400b7121f9c1d70",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/catalog_queries.py",
+      "bytes": 802,
+      "sha256": "2c31f4ea45c31f21a11a9c2860c8dc3ab501d0deab0857b5c1ec4d2d530bbbcd",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/checks.py",
+      "bytes": 5717,
+      "sha256": "2bface9af14eb517076a906c59f10b7dffa6f7246f82677f95320ccfbc590469",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/common.py",
+      "bytes": 6442,
+      "sha256": "504c4bfc17821f7e3a6e353e0b59be5900508ce98b9ddcf61fe0129ed7f62db3",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/consumer.py",
+      "bytes": 3253,
+      "sha256": "44aa2a6035180008cb376f2bdb5fa4ccaab512f5974014bb8cdcc06ef4e9f8c2",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/curate.sql",
+      "bytes": 3945,
+      "sha256": "825d2c681766b62b7a082f89f3836b800aba401d1b28c9dca80abeb85feddab6",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/driver.py",
+      "bytes": 6172,
+      "sha256": "d70b2283d32e3e5a721f5d9be5738dbf077acb7f6fba12bce8ac196a95f9681a",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/gate.py",
+      "bytes": 14569,
+      "sha256": "d237f2d083e425fb03be1d89ad1cf721fae7d305b78e0a358673572d923cbd1a",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/gate_tests.py",
+      "bytes": 4326,
+      "sha256": "33bb873ea96b90d0659e23fac0e7d8147d9370906b07e9029e952c6999511678",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/independent_checks.py",
+      "bytes": 4805,
+      "sha256": "0318b00b6b3e67fe533bfca98e3996cbf3be145d05f46a09936e373ecf28b551",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/metadata.py",
+      "bytes": 7776,
+      "sha256": "ea7185a288f0bfedcdaa627f694a021ae22f77e7fa3bedb60456bdd16ac09d5a",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/publisher.py",
+      "bytes": 10747,
+      "sha256": "19da9c5162bc5b88bd7d7675337205a079b7fe6310e4b6dcfd31710ddc1bee1f",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/quality.sql",
+      "bytes": 2998,
+      "sha256": "bf09dd21525821ccaa2acf8a165532a63212d3a1ffb184652547fd53121e1d8d",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/quality_report.py",
+      "bytes": 5098,
+      "sha256": "6699c721010e4d0bf9d7785c16d7bc99e99f8f279b0aa8055dfff8ed706885c0",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/stage_inputs.py",
+      "bytes": 4711,
+      "sha256": "57bf233bfc1f607fc68263dee340a026284be19837247e46f0659aa9ff128219",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/trace_queries.sql",
+      "bytes": 628,
+      "sha256": "4486da2e73a3d3e7a2ea279de8900c8c2232bb721e83dcee5df0b4b15df6e092",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "code/typed.sql",
+      "bytes": 921,
+      "sha256": "ca253ad80f61209132913afeacbb33f8d89caeef08fd379a47833b1fe536a63b",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "consumer-check.json",
+      "bytes": 2063,
+      "sha256": "57364553cfe9219df583aeade62e4a37a006026ee8ab8a50a51ab9fde65c997d",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "contract.json",
+      "bytes": 1338,
+      "sha256": "c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "contributions.csv",
+      "bytes": 1505,
+      "sha256": "1ab1b701fff70d431c1c0932de521ee833836b8a3a7bfccf41986e7a5bdc74ed",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "environment/Dockerfile",
+      "bytes": 464,
+      "sha256": "4b8bd1f6da40b95a57360d570d31a7183c3db47fc8f6114233e8aaba0b092241",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "environment/pods.json",
+      "bytes": 8449,
+      "sha256": "f405e256a4f87d27f19215050eb5231d220147c5f5dfd4e4cb8df5566fac37e2",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "environment/trusted-manifest-configmap.yaml",
+      "bytes": 1079,
+      "sha256": "e5f7726981f9b4d26f7701285c2452297c33d52773315f5da8e1fcb13150d6e4",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/bootstrap.json",
+      "bytes": 929,
+      "sha256": "36d5e7969bc9e2295eefdc071f67c2af2fbaba6d647dc784ef906252cedf1cf9",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/catalog-queries.json",
+      "bytes": 1519,
+      "sha256": "120938b4faf769ffd669412374307093b26d30cf78fdae93cc33306e5c181498",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/code-bundle.json",
+      "bytes": 2334,
+      "sha256": "1cc99b09bac217ed40a5b059d0f3dda760988c853bcb7d05700206d0d063f086",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/conservation.json",
+      "bytes": 497,
+      "sha256": "9c4409fa9b398ecb791128bc7dbfa4da2160e3902304c6b9ed9db0452128bb27",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/edge-cases.json",
+      "bytes": 1906,
+      "sha256": "71a71768bf2a34a808f1c84a17748358f9138ae33968616f5acb03cc0754533c",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/envelope-check.json",
+      "bytes": 386,
+      "sha256": "7b5c1533bd602131c81fa3e9cb0c72d6f609cfc1c18e92e89d3843b73f4fe6c7",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/environment.json",
+      "bytes": 2284,
+      "sha256": "9950ec15811bc551cbc36b9d5a6b8c7916a0804a50cf50759f36bc70904934a2",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/execution-bootstrap.log",
+      "bytes": 34,
+      "sha256": "6371d5166e483868e689812095c77decb0cdecd020f2ddda16c0945d5eafc080",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/execution-consumer.log",
+      "bytes": 55,
+      "sha256": "fc19f65a779405f4bdf1a8a66fd7a8947fce2fe5e072dfbc87341c8537d145b6",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/execution-driver.log",
+      "bytes": 235,
+      "sha256": "c5fe9085042e783dc8728df3d77e5320d0398e50e4698527c0fa6f2cc79b010f",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/execution-publisher.log",
+      "bytes": 1125,
+      "sha256": "249caad291dd9d0fb4cee94923a90328814d9541f7bff9856e9d04ffb3766a1a",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/gate/P01.json",
+      "bytes": 5803,
+      "sha256": "c72a01fba34024346601ba15b923908fbe883af26bafb7967488b230e8ab337c",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/gate/P02.json",
+      "bytes": 6214,
+      "sha256": "c1989588562618a95fe0af5dce8a3e331ee7f734f535e2f282fe4de1fc660e42",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/gate/P03.json",
+      "bytes": 6382,
+      "sha256": "0f31edcf4c8f9b43a88383be6572bfc2d4c1a0291ef43890af3da3810be5878a",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/gate/P04.json",
+      "bytes": 6632,
+      "sha256": "c6c1ecd4a1d225f32d51d4640de910cd73f8fa77dd4cd861b20ead8e0c8af7ec",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/gate/P05.json",
+      "bytes": 16247,
+      "sha256": "090ff2aa7e1bf3caaa9de0fcb062d98dbc78c326e7fec29b9fd61102988f27c8",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/gate/P06.json",
+      "bytes": 5935,
+      "sha256": "2eb513c33a17f31b3bee3db62374738bcaa97bdb3d20f6ace3e80d9893514ceb",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/gate/P07.json",
+      "bytes": 5948,
+      "sha256": "3f68d6d192b37322dbe2d774adcbec3be96d995321e1e2ea96114e07f192a5c2",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/gate/P08.json",
+      "bytes": 6727,
+      "sha256": "f096a7541d66836ace7d8f73e280423861eb0081559a2e8b345810ce0fb27664",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/gate-lineage.jsonl",
+      "bytes": 7219,
+      "sha256": "ad5e933d7ae935b2687202b099e120525d8210e18f7b2beb5695cee0f86dc9dd",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/incidents/curation-attempt-01/failure.json",
+      "bytes": 202,
+      "sha256": "cab7c07a908b2cb1863ee6efe162ee5327a44419ca5d07b5ba75cebc72f51e05",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/incidents/curation-attempt-01/lineage.jsonl",
+      "bytes": 1665,
+      "sha256": "17503b042d439ac493d05f724c03037d0a8414ef9dbf0b5417bab6c4f9db7c0b",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/independent-checks.json",
+      "bytes": 2198,
+      "sha256": "e579f9cbacd4d2f1b41c6b12d631af0be5448ed458452841ea6de8d91bcb95b0",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/independently-captured-staging-hashes.json",
+      "bytes": 11370,
+      "sha256": "551bc63af059372901e01d4c9740c55aaa836cd196fa8c42c9dc37caf8c8191f",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/owner-gate.json",
+      "bytes": 5004,
+      "sha256": "9e66fbdc4a1e6f285c4d79f8c689b3f680b4ecbb8169217cbbe160b9419d6805",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/owner-review.json",
+      "bytes": 837,
+      "sha256": "7e7514fc1e64a3e5e4d6a80dc413ca3526f18b7d1031cff35ec8855efe883d15",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/publication-record.json",
+      "bytes": 1971,
+      "sha256": "204ef93b0dfd77e4ced713ffe403fb062e38da5d14edd07ad0b93046fc1d5e9f",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/publisher-acquisition.json",
+      "bytes": 311,
+      "sha256": "ee6d12b1bb9d37aa21cd7063e1422f2b24ced4eef9829202c0d6ff290992c840",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/quality-before-after.svg",
+      "bytes": 3490,
+      "sha256": "d5a756266fe9dcc2809decc02068b327eccefdf0697c1742795629eafab5f4ca",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/rejected-probes-no-release.json",
+      "bytes": 1637,
+      "sha256": "2debd60a8feec442bde12aaaf3e9699267ba34a2aaed5a16eb8d5c393ed5c72c",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/release-audit-command.txt",
+      "bytes": 1672,
+      "sha256": "95986a4fc22922833eccf5c847e34ca1aa2666069d5655baa1770feca7795611",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/replay-check.json",
+      "bytes": 1180,
+      "sha256": "ca6d03bd73fb79d56c5bc201abecc1506e1f4aee0c979eafec21aa9d92ec903d",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/schema-check.json",
+      "bytes": 864,
+      "sha256": "16d7c3b573ad9065ef5db44a3390d98f51904e85de57940422a4b8474fb9c5c3",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/staging-upload.json",
+      "bytes": 11098,
+      "sha256": "2d90c7392cf9e25f990dab6201859b76d5ad0b8f14630be3fd557b1fcaaf1041",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/traces.json",
+      "bytes": 1298,
+      "sha256": "c424843c5e3de38ad6b62f439321fbad8ee8d8c7f7f0110f80d55f008a84b35a",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "gate-tests.json",
+      "bytes": 67857,
+      "sha256": "f1327f98233a9a4fb0e1e68221bd3677388551b87dd497e9e42e7ac439400866",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "individual/Role-A-24022306.md",
+      "bytes": 4261,
+      "sha256": "9a651d355401e653b0940a7f01cf30c286085764b75c20ea53cae6f98396d1ae",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "individual/Role-B-24022466.md",
+      "bytes": 4052,
+      "sha256": "5b206d05e126af6b25ef4715ebcba115676419330ec36be1730a58eaeaa3830e",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "individual/Role-C-24022463.md",
+      "bytes": 3930,
+      "sha256": "5d6bb75dc1ac4e94a40ab9f71538d27892a210fe01ae37f5b53caa19fae4a247",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "individual/Role-D-24022277.md",
+      "bytes": 3911,
+      "sha256": "7b3562cf309e073471480c65c8bff5d6bc9e8ee65c52ff22c7022d232607c938",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "individual/Role-E-24022484.md",
+      "bytes": 4116,
+      "sha256": "60987036db4f1cb315f942afc25d184539165a4470f394f5d0382197fb2d72cc",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "input_inventory.json",
+      "bytes": 1845,
+      "sha256": "e5a34a51e6b029e2602856af006cb2efed0848175c6d4eba267fc547f021e17c",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "integrity-test.json",
+      "bytes": 283,
+      "sha256": "3ce6a15409cb93930e650ae6bc5ff83e76fab4b0c8a02536e1bf200a6be84959",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "lineage.jsonl",
+      "bytes": 6037,
+      "sha256": "6566b8fefda32bbf56130a7052342d626bc3bd0278f2bdd9e9b258bcd5bc071e",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "publish-run-record.json",
+      "bytes": 2343,
+      "sha256": "9362a9409af6fc069ad0b0dcfba87f56b891039697b0b40d9d11ddfc30613601",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "quality_after.json",
+      "bytes": 12200,
+      "sha256": "4d4d84979042cb9ae034695716f2834744f31e7fa9d67e367959b50bfa737bbd",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "quality_before.json",
+      "bytes": 11512,
+      "sha256": "c1e1a302f5b018af835f8d1f81cd97048613d1b95f424f236e1e49726f7ddc04",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2787,
+      "sha256": "99498e4c30982a6c61c91ca37e662867889179fd908d1fe182ca0f5a9dba9689",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "release_manifest.json",
+      "bytes": 1928,
+      "sha256": "718e61042112ef5da76b5d1f5281e50bf32c71f0923359b075a4428cf721ae2a",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/duplicates.csv",
+      "bytes": 43206,
+      "sha256": "55b05296c74cfabd274007d671b93b77204632c51fa8f7af361e389c89e4f185",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/edge-envelopes.csv",
+      "bytes": 1534,
+      "sha256": "1b7980e2ceea490a03f5d49f8d6e01b7da1f0c5834d2395abcbab5b703eca030",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/envelopes.csv",
+      "bytes": 4581398,
+      "sha256": "28d633f05801d9c4e4a4de02a6a71d8227152a26df4e22151f2b29cda9f50cc7",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P01/curated.parquet",
+      "bytes": 209278,
+      "sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P02/curated.parquet",
+      "bytes": 209285,
+      "sha256": "47195b375f6e021b931e6eeaf4e24d5235082b6c6bc75ea9c5ce5177829b0897",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P03/curated.parquet",
+      "bytes": 209287,
+      "sha256": "18df6345714197b2843b35176340491d4d7d8a78eac17a3533144743dd83b7e8",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P04/curated.parquet",
+      "bytes": 209305,
+      "sha256": "289c7de5e6c9dc1a6582100498af29ac5a7bfd86feaf6f00b71ab35389e49285",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P05/curated.parquet",
+      "bytes": 209278,
+      "sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P06/curated.parquet",
+      "bytes": 209278,
+      "sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P06/source/observations_a.csv",
+      "bytes": 421028,
+      "sha256": "1c9a36e96ded54d62f2943247e431b5050ef59ed0d7416bd27525a5802d551f0",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P06/source/observations_b.jsonl",
+      "bytes": 1037439,
+      "sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P06/source/qa_reference.csv",
+      "bytes": 1423,
+      "sha256": "129463c2a4e63f2dabfa2a5dd31b92e4fe4858d2415d3c7ef495cc6c6d7b65c2",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P06/source/sensors.csv",
+      "bytes": 256,
+      "sha256": "02c390e127c37b9d12e9ca156eae23a450ad1ae037001cddd9651bb6516b9bde",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P07/curated.parquet",
+      "bytes": 209278,
+      "sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/probes/P08/curated.parquet",
+      "bytes": 209457,
+      "sha256": "f256b0cf78520f42c29807f2edd5b9b282a431c293d136133ac9530045098bbd",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/quarantine.csv",
+      "bytes": 171635,
+      "sha256": "58a8a7ec03eb550b276d9741c0f95222ef70171e061127a992c23aefee185339",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/replay-envelopes.csv",
+      "bytes": 4581398,
+      "sha256": "5916c4a96d4c9767206da0b815b1311436ba1d6c2581453b7235ada22ea0cfe9",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/snapshot/observations_a.csv",
+      "bytes": 421028,
+      "sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/snapshot/observations_b.jsonl",
+      "bytes": 1037439,
+      "sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/snapshot/qa_reference.csv",
+      "bytes": 1423,
+      "sha256": "129463c2a4e63f2dabfa2a5dd31b92e4fe4858d2415d3c7ef495cc6c6d7b65c2",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "restricted/snapshot/sensors.csv",
+      "bytes": 256,
+      "sha256": "02c390e127c37b9d12e9ca156eae23a450ad1ae037001cddd9651bb6516b9bde",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "retention-plan.json",
+      "bytes": 2193,
+      "sha256": "2a3fea9115b8cf140b9b1f27256391c0f32f1fad3bfbbb1fe1e4fc42ec454e75",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "run-record.json",
+      "bytes": 2169,
+      "sha256": "91672de6aaf74e9a28acc8172c2896520cb6a3daaceeded8db08ac00fcd43f18",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "schemas/metadata_catalog_schema.json",
+      "bytes": 4026,
+      "sha256": "e1233c4855e847ecae8f8a9a00d3aedd49a5e16414ef933ab2820e5e74f2f39a",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "schemas/metadata_catalog_supplied.json",
+      "bytes": 1914,
+      "sha256": "c91da54af65860dc801ad5916cb1be5fe3d4b25ccf459d416101e1943235f34d",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "schemas/observation_contract_schema.json",
+      "bytes": 2338,
+      "sha256": "50aa42e0df6a558e53e0874814f32458ebce1e0551568f31b46310eb5f9a4cec",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "schemas/OpenLineage-2-0-2.json",
+      "bytes": 9155,
+      "sha256": "69f68bee00b9beac88a87059c0102410e7bb05f3f43c46d02a0409831eceb0d2",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "SUBMISSION_CONTENTS.md",
+      "bytes": 802,
+      "sha256": "26aa3c41124c5a355e3a64c2dfb3dd941bdd7f64ccee30d3498cecb4af14bf37",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "team.json",
+      "bytes": 572,
+      "sha256": "82d6c322d1dda7516b069b6f3b777d23d3ef00ba9259231a433615f058265f0f",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "trusted-manifest.sha256",
+      "bytes": 88,
+      "sha256": "c45c667b6da09d4bcd35147dd7bfd67fabdefac459022f8089a6a0fa80031e1e",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "trusted_manifest.json",
+      "bytes": 796,
+      "sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Independent publisher process; human signature not attested",
+      "verification_command_or_query": "Stored source code and execution/evidence records"
+    },
+    {
+      "file": "evidence/final-verification.json",
+      "bytes": 708,
+      "sha256": "d6b817a5f6dd546cb31356dd081916d33e35e1cb813113856d5e94d32672cc02",
+      "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+      "input_version": "research-telemetry-v1",
+      "operator": "Automated pipeline execution",
+      "reviewer": "Automated final verification; human signature not attested",
+      "verification_command_or_query": "environment-setup/verify_submission.py"
+    }
+  ],
+  "self_hash_excluded": true
+}

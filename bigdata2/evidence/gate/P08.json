@@ -1,0 +1,260 @@
+{
+  "case_id": "P08",
+  "changed_artifact": "removed mismatching QA ID R000810",
+  "expected_result": "REJECT",
+  "probe_run_id": "eee5e49c-2a19-411c-bc68-a5d1e5d2b6e3",
+  "actual_result": "REJECT",
+  "correctly_interpreted": true,
+  "measured_failures": [
+    "COVERAGE",
+    "LINEAGE",
+    "METADATA",
+    "RECONCILIATION",
+    "STAGED_INTEGRITY"
+  ],
+  "gate": {
+    "result": "REJECT",
+    "candidate_sha256": "f256b0cf78520f42c29807f2edd5b9b282a431c293d136133ac9530045098bbd",
+    "candidate_rows": 9609,
+    "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+    "store_id": "bd-g10-objects",
+    "checks": [
+      {
+        "check_id": "G01",
+        "status": "REJECT",
+        "observed": {
+          "sources": [
+            {
+              "key": "observations_a.csv",
+              "matches": true
+            },
+            {
+              "key": "observations_b.jsonl",
+              "matches": true
+            },
+            {
+              "key": "qa_reference.csv",
+              "matches": true
+            },
+            {
+              "key": "sensors.csv",
+              "matches": true
+            }
+          ],
+          "staged_artifacts": [
+            {
+              "path": "candidate/curated.parquet",
+              "matches": false
+            },
+            {
+              "path": "restricted/quarantine.csv",
+              "matches": true
+            },
+            {
+              "path": "restricted/duplicates.csv",
+              "matches": true
+            }
+          ],
+          "provenance_mismatches": 0,
+          "run_bindings_match": true
+        },
+        "reasons": [
+          "STAGED_INTEGRITY"
+        ]
+      },
+      {
+        "check_id": "G02",
+        "status": "REJECT",
+        "observed": {
+          "status": "FAIL",
+          "counts": {
+            "raw_envelopes": 10205,
+            "submitted": 9609,
+            "quarantine": 395,
+            "duplicates": 200
+          },
+          "missing_physical_ids": 1,
+          "invented_physical_ids": 0,
+          "overlapping_or_repeated_physical_ids": 0,
+          "duplicate_physical_ids_per_output": {
+            "submitted": 0,
+            "quarantine": 0,
+            "duplicates": 0
+          },
+          "duplicate_business_keys": 0
+        },
+        "reasons": [
+          "RECONCILIATION"
+        ]
+      },
+      {
+        "check_id": "G03",
+        "status": "PASS",
+        "observed": {
+          "columns": [
+            [
+              "record_id",
+              "VARCHAR"
+            ],
+            [
+              "sensor_id",
+              "VARCHAR"
+            ],
+            [
+              "site",
+              "VARCHAR"
+            ],
+            [
+              "event_time_utc",
+              "TIMESTAMP"
+            ],
+            [
+              "ingest_time_utc",
+              "TIMESTAMP"
+            ],
+            [
+              "temperature_c",
+              "DECIMAL(8,2)"
+            ],
+            [
+              "is_late",
+              "BOOLEAN"
+            ],
+            [
+              "source_object",
+              "VARCHAR"
+            ],
+            [
+              "source_row",
+              "BIGINT"
+            ],
+            [
+              "source_sha256",
+              "VARCHAR"
+            ]
+          ],
+          "rows": 9609,
+          "allowlist_equal": true
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G04",
+        "status": "PASS",
+        "observed": {
+          "nulls": {
+            "record_id": 0,
+            "sensor_id": 0,
+            "site": 0,
+            "event_time_utc": 0,
+            "ingest_time_utc": 0,
+            "temperature_c": 0,
+            "is_late": 0,
+            "source_object": 0,
+            "source_row": 0,
+            "source_sha256": 0
+          },
+          "blank_required_strings": 0,
+          "original_required_failures": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G05",
+        "status": "PASS",
+        "observed": {
+          "invalid_values": 0,
+          "duplicate_business_keys": 0,
+          "unknown_sensor_or_wrong_site": 0,
+          "source_conversion_mismatches": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G06",
+        "status": "PASS",
+        "observed": {
+          "valid": 9609,
+          "rows": 9609,
+          "timely": 9409,
+          "denominator": 9609,
+          "value": 0.9791861796232698,
+          "late_flag_errors": 0,
+          "source_timestamp_mismatches": 0
+        },
+        "reasons": []
+      },
+      {
+        "check_id": "G07",
+        "status": "REJECT",
+        "observed": {
+          "matched": 99,
+          "reference_population": 100,
+          "coverage": 0.99,
+          "agree": 95,
+          "agreement_denominator": 99,
+          "agreement": 0.9595959595959596,
+          "tolerance_c": "0.05"
+        },
+        "reasons": [
+          "COVERAGE"
+        ]
+      },
+      {
+        "check_id": "G08",
+        "status": "REJECT",
+        "observed": {
+          "dataset_records": 3,
+          "semantic_errors": [
+            "curated-candidate: row count",
+            "quality report identity/count",
+            "Q_QA_AGREEMENT: quality counters",
+            "Q_QA_COVERAGE: quality counters",
+            "Q_REQUIRED: quality counters",
+            "Q_SENSOR: quality counters",
+            "Q_TIME: quality counters",
+            "Q_TIMELY: quality counters",
+            "Q_UNIQUE: quality counters",
+            "Q_VALUE: quality counters"
+          ],
+          "measured_rows": 9609
+        },
+        "reasons": [
+          "METADATA"
+        ]
+      },
+      {
+        "check_id": "G09",
+        "status": "REJECT",
+        "observed": {
+          "curation_events": 2,
+          "required_outputs": [
+            "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/candidate/curated.parquet",
+            "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/duplicates.csv",
+            "s3://research-raw/lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/quarantine.csv"
+          ],
+          "publisher_replay": "PASS",
+          "semantic_errors": [
+            "submitted logical equivalence"
+          ]
+        },
+        "reasons": [
+          "LINEAGE"
+        ]
+      }
+    ],
+    "reasons": [
+      "COVERAGE",
+      "LINEAGE",
+      "METADATA",
+      "RECONCILIATION",
+      "STAGED_INTEGRITY"
+    ],
+    "operator": "Automated pipeline execution",
+    "workload_identity": "s3-owner",
+    "evaluated_at": "2026-10-10T15:43:34.597798+00:00"
+  },
+  "approved_manifest_created": false,
+  "operator": "Automated pipeline execution",
+  "executed_at": "2026-10-10T15:43:34.598719+00:00"
+}

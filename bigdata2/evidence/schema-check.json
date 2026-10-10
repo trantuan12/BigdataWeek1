@@ -1,0 +1,49 @@
+{
+  "check_id": "C03",
+  "status": "PASS",
+  "columns": [
+    {
+      "name": "record_id",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sensor_id",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "site",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "event_time_utc",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "ingest_time_utc",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "temperature_c",
+      "type": "DECIMAL(8,2)"
+    },
+    {
+      "name": "is_late",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "source_object",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "source_row",
+      "type": "BIGINT"
+    },
+    {
+      "name": "source_sha256",
+      "type": "VARCHAR"
+    }
+  ],
+  "restricted_columns_absent": true,
+  "operator": "Automated pipeline execution",
+  "executed_at": "2026-10-10T15:41:19.108672+00:00"
+}

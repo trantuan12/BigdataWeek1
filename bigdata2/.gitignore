@@ -1,0 +1,11 @@
+restricted/
+input-upload/
+consumer-download/
+__pycache__/
+*.pyc
+*.duckdb
+*.duckdb.wal
+*.zip
+.env
+*.pem
+*kubeconfig*

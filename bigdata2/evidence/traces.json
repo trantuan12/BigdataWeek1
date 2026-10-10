@@ -1,0 +1,36 @@
+{
+  "accepted": {
+    "output": {
+      "record_id": "R000381",
+      "sensor_id": "S01",
+      "site": "zone-1",
+      "event_time_utc": "2026-02-02 03:10:30",
+      "ingest_time_utc": "2026-02-02 03:40:30",
+      "temperature_c": "26.10",
+      "is_late": true,
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 381,
+      "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+    },
+    "selected_version": {
+      "record_id": "R000381",
+      "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+      "source_row": 381,
+      "version_rank": 1,
+      "unit": "C",
+      "value_num": 26.1,
+      "temperature_unrounded": 26.1
+    },
+    "rule": "Trim/uppercase identifiers; exact UTC parsing; C/F conversion; registry-derived site; DECIMAL(8,2) after validation"
+  },
+  "quarantined": {
+    "record_id": "R000001",
+    "source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+    "source_row": 1,
+    "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+    "primary_reason": "REQUIRED",
+    "all_reasons": "REQUIRED|NUMERIC"
+  },
+  "operator": "Automated pipeline execution",
+  "executed_at": "2026-10-10T15:41:39.162616+00:00"
+}

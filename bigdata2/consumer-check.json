@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "release_id": "bd-g10-lab2-20261010T154147Z-32ce3332",
+  "manifest_key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/release_manifest.json",
+  "manifest_sha256": "718e61042112ef5da76b5d1f5281e50bf32c71f0923359b075a4428cf721ae2a",
+  "artifact_checks": [
+    {
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/curated.parquet",
+      "sha256_matches": true,
+      "bytes": 209278
+    },
+    {
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/catalog.json",
+      "sha256_matches": true,
+      "bytes": 4270
+    },
+    {
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/quality_after.json",
+      "sha256_matches": true,
+      "bytes": 12200
+    },
+    {
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/lineage-summary.json",
+      "sha256_matches": true,
+      "bytes": 819
+    },
+    {
+      "key": "lab2/releases/bd-g10-lab2-20261010T154147Z-32ce3332/README.md",
+      "sha256_matches": true,
+      "bytes": 776
+    }
+  ],
+  "observed_row_count": 9610,
+  "schema_equal": true,
+  "raw_get_denial": {
+    "bucket": "research-raw",
+    "key": "lab2/inputs/batch-01/observations_a.csv",
+    "http_status": 403,
+    "code": "AccessDenied"
+  },
+  "release_put_denial": {
+    "http_status": 403,
+    "code": "AccessDenied"
+  },
+  "M03": {
+    "answers": {
+      "temperature_unit": "Celsius",
+      "reference_population": "100 supplied QA-reference IDs",
+      "evaluation_cutoff": "2026-02-09T00:00:00Z",
+      "known_limitations": "Synthetic bounded single-node fixture; QA sample agreement cannot prove accuracy of every observation; retained valid late records remain flagged.",
+      "contact_role": "24022277 - Lê Ngọc Minh Cường / Role D (designated metadata steward)"
+    },
+    "correct_answers": 5,
+    "execution": "Automated consumer handover verification",
+    "student_peer_demonstration_attested": false
+  },
+  "operator": "Automated pipeline execution",
+  "workload_identity": "s3-analyst",
+  "executed_at": "2026-10-10T15:44:21.438677+00:00"
+}

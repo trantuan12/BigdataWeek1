@@ -1,0 +1,3 @@
+# Nội dung bản nộp
+
+`BAO_CAO_LAB2.md` là báo cáo kết quả; `README.md` là mô tả bộ dữ liệu. `code/` chứa toàn bộ implementation; `individual/` chứa năm bài phân tích theo vai trò. `restricted/` chứa snapshot/envelopes/quarantine/duplicate ledger và probe fixtures thuộc bản nộp học phần hạn chế. Năm thư mục cá nhân phân chia toàn bộ file theo vai trò, cùng một số tài liệu và schema dùng chung có nội dung giống hệt nhau. Hợp nhất nội dung năm phần theo đúng đường dẫn khôi phục đầy đủ bản chung, không phụ thuộc thứ tự upload. Các phần chứa dữ liệu hạn chế được lưu trong repository riêng tư. Folder đầy đủ vẫn được giữ tại vị trí ban đầu.

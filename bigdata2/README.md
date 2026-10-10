@@ -1,0 +1,13 @@
+# Lab 2 — Data Curation, Quality & Metadata Governance
+
+This submission curates synthetic teaching telemetry from two laboratories into a versioned, traceable research-data release. The CSV source contains 5,000 physical records and the JSON Lines source contains 5,205; the sensor registry has 20 entries and the independent QA sample has 100 reference IDs. The separately supplied trusted manifest fixes the original object bytes and checksums.
+
+The verified snapshot and physical-row envelopes are in `restricted/`. `candidate/curated.parquet` contains 9,610 observations, while the restricted quarantine records 395 rejected observations and the duplicate ledger accounts for 200 superseded versions. Every physical input appears exactly once among these outputs. Source object identifiers and one-based row ordinals preserve provenance; they grant no permission to retrieve raw data.
+
+Timestamps use UTC. The data-evaluation cutoff is 2026-02-09T00:00:00Z, independent of execution time. Celsius and Fahrenheit readings are supported, converted before range validation and exported as DECIMAL(8,2) Celsius. The newest parsed arrival wins; source object and source ordinal break ties. Invalid newest winners are quarantined without substituting older versions. Optional operator attributes are excluded from released columns.
+
+Before metrics use deterministic winners, except uniqueness uses key-eligible intake and timeliness uses chronological winners. After metrics describe retained observations. There are 200 retained late records. Reference coverage is 100/100 and agreement is 95/100 within 0.05 Celsius. Agreement concerns the supplied sample; it does not demonstrate accuracy of every sensor. Increased completeness reflects rejection rather than recovery.
+
+`contract.json`, `catalog.json`, `quality_before.json`, `quality_after.json`, `lineage.jsonl` and the run records bind measured results to code and input hashes. The SQL pipeline's reproduction entry points are `code/driver.py`, `code/publisher.py` and `code/consumer.py`, executed in separate curator, owner and analyst Kubernetes credential contexts. Each run requires a fresh scratch directory and the original versioned inputs. Exact Python, DuckDB, boto3, jsonschema versions and image digest appear in `run-record.json`.
+
+Use is limited to synthetic coursework. Retention follows retrieval, run-completion or publication clocks with hold/dependency overrides. The approved release uses manifest-last publication. Results are generated and verified through the automated pipeline; technical review and checks are recorded accurately, while human signatures and student live demonstrations are not attested. Designated owner: Trần Anh Tuấn, Role E; steward: Lê Ngọc Minh Cường, Role D.

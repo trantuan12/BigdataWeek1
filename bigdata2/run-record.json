@@ -1,0 +1,57 @@
+{
+  "run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+  "job": "curate",
+  "start_time": "2026-10-10T15:41:12.268034+00:00",
+  "end_time": "2026-10-10T15:41:39.944333+00:00",
+  "as_of": "2026-02-09T00:00:00Z",
+  "store_id": "bd-g10-objects",
+  "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520",
+  "code_sha256": "0c16c3f44e823009422b8b26e05de0c25c6822d216cf2820f5465e71c57398b3",
+  "software": {
+    "python": "3.11.17",
+    "packages": {
+      "duckdb": "1.4.5",
+      "boto3": "1.34.131",
+      "jsonschema": "4.26.0"
+    },
+    "image_reference": "bd-g10-lab2-runtime:1.0",
+    "image_digest": "sha256:327d3e54adaa286c64ac3e793c6ad3d35b497e6c4b7a46bc417808cd9b037e67",
+    "platform": "linux",
+    "threads": 2,
+    "memory_limit": "512MB"
+  },
+  "outputs": [
+    {
+      "path": "candidate/curated.parquet",
+      "key": "lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/candidate/curated.parquet",
+      "sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+      "bytes": 209278,
+      "row_count": 9610
+    },
+    {
+      "path": "restricted/quarantine.csv",
+      "key": "lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/quarantine.csv",
+      "sha256": "58a8a7ec03eb550b276d9741c0f95222ef70171e061127a992c23aefee185339",
+      "bytes": 171635,
+      "row_count": 395
+    },
+    {
+      "path": "restricted/duplicates.csv",
+      "key": "lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/restricted/duplicates.csv",
+      "sha256": "55b05296c74cfabd274007d671b93b77204632c51fa8f7af361e389c89e4f185",
+      "bytes": 43206,
+      "row_count": 200
+    }
+  ],
+  "operator": "Automated pipeline execution",
+  "human_role_assignment": "24022463 - Đàm Quang Tiến / Role C",
+  "reviewer": "Separate publisher process; human review is not attested by this record",
+  "status": "COMPLETE",
+  "reason_codes": [],
+  "stage_prefix": "lab2/staging/ebf648b9-1e3f-47a5-87f1-e0e8924005b4/",
+  "execution_evidence": {
+    "automated_execution": true,
+    "student_live_demonstrations_attested": false
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "reason": "Parser Error: syntax error at or near \"(\"\n\nLINE 1: DESCRIBE read_parquet('candidate/curated.parquet')\n                             ^",
+  "time": "2026-10-10T14:31:29.960099+00:00"
+}

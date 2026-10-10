@@ -1,0 +1,324 @@
+{
+  "apiVersion": "v1",
+  "kind": "List",
+  "items": [
+    {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "name": "curate",
+        "namespace": "bd-g10",
+        "labels": {
+          "access": "s3",
+          "lab": "lab2",
+          "role": "ingestor"
+        }
+      },
+      "spec": {
+        "automountServiceAccountToken": false,
+        "securityContext": {
+          "runAsNonRoot": true,
+          "runAsUser": 1000,
+          "runAsGroup": 1000,
+          "fsGroup": 1000
+        },
+        "containers": [
+          {
+            "name": "client",
+            "image": "bd-g10-lab2-runtime:1.0",
+            "imagePullPolicy": "Never",
+            "command": [
+              "sleep",
+              "infinity"
+            ],
+            "workingDir": "/work",
+            "envFrom": [
+              {
+                "secretRef": {
+                  "name": "s3-ingestor"
+                }
+              }
+            ],
+            "env": [
+              {
+                "name": "S3_ENDPOINT",
+                "value": "http://objects:8333"
+              },
+              {
+                "name": "STORE_ID",
+                "value": "bd-g10-objects"
+              },
+              {
+                "name": "RUNTIME_IMAGE",
+                "value": "bd-g10-lab2-runtime:1.0"
+              },
+              {
+                "name": "RUNTIME_DIGEST",
+                "value": "sha256:327d3e54adaa286c64ac3e793c6ad3d35b497e6c4b7a46bc417808cd9b037e67"
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "500m",
+                "memory": "512Mi"
+              },
+              "limits": {
+                "cpu": "1",
+                "memory": "1Gi"
+              }
+            },
+            "securityContext": {
+              "allowPrivilegeEscalation": false,
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "work",
+                "mountPath": "/work"
+              },
+              {
+                "name": "trusted",
+                "mountPath": "/trusted",
+                "readOnly": true
+              }
+            ]
+          }
+        ],
+        "volumes": [
+          {
+            "name": "work",
+            "emptyDir": {
+              "sizeLimit": "2Gi"
+            }
+          },
+          {
+            "name": "trusted",
+            "configMap": {
+              "name": "lab2-trusted-manifest",
+              "defaultMode": 292
+            }
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "name": "publisher",
+        "namespace": "bd-g10",
+        "labels": {
+          "access": "s3",
+          "lab": "lab2",
+          "role": "owner"
+        }
+      },
+      "spec": {
+        "automountServiceAccountToken": false,
+        "securityContext": {
+          "runAsNonRoot": true,
+          "runAsUser": 1000,
+          "runAsGroup": 1000,
+          "fsGroup": 1000
+        },
+        "containers": [
+          {
+            "name": "client",
+            "image": "bd-g10-lab2-runtime:1.0",
+            "imagePullPolicy": "Never",
+            "command": [
+              "sleep",
+              "infinity"
+            ],
+            "workingDir": "/work",
+            "envFrom": [
+              {
+                "secretRef": {
+                  "name": "s3-owner"
+                }
+              }
+            ],
+            "env": [
+              {
+                "name": "S3_ENDPOINT",
+                "value": "http://objects:8333"
+              },
+              {
+                "name": "STORE_ID",
+                "value": "bd-g10-objects"
+              },
+              {
+                "name": "RUNTIME_IMAGE",
+                "value": "bd-g10-lab2-runtime:1.0"
+              },
+              {
+                "name": "RUNTIME_DIGEST",
+                "value": "sha256:327d3e54adaa286c64ac3e793c6ad3d35b497e6c4b7a46bc417808cd9b037e67"
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "500m",
+                "memory": "512Mi"
+              },
+              "limits": {
+                "cpu": "1",
+                "memory": "1Gi"
+              }
+            },
+            "securityContext": {
+              "allowPrivilegeEscalation": false,
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "work",
+                "mountPath": "/work"
+              },
+              {
+                "name": "trusted",
+                "mountPath": "/trusted",
+                "readOnly": true
+              }
+            ]
+          }
+        ],
+        "volumes": [
+          {
+            "name": "work",
+            "emptyDir": {
+              "sizeLimit": "2Gi"
+            }
+          },
+          {
+            "name": "trusted",
+            "configMap": {
+              "name": "lab2-trusted-manifest",
+              "defaultMode": 292
+            }
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "name": "analyst",
+        "namespace": "bd-g10",
+        "labels": {
+          "access": "s3",
+          "lab": "lab2",
+          "role": "analyst"
+        }
+      },
+      "spec": {
+        "automountServiceAccountToken": false,
+        "securityContext": {
+          "runAsNonRoot": true,
+          "runAsUser": 1000,
+          "runAsGroup": 1000,
+          "fsGroup": 1000
+        },
+        "containers": [
+          {
+            "name": "client",
+            "image": "bd-g10-lab2-runtime:1.0",
+            "imagePullPolicy": "Never",
+            "command": [
+              "sleep",
+              "infinity"
+            ],
+            "workingDir": "/work",
+            "envFrom": [
+              {
+                "secretRef": {
+                  "name": "s3-analyst"
+                }
+              }
+            ],
+            "env": [
+              {
+                "name": "S3_ENDPOINT",
+                "value": "http://objects:8333"
+              },
+              {
+                "name": "STORE_ID",
+                "value": "bd-g10-objects"
+              },
+              {
+                "name": "RUNTIME_IMAGE",
+                "value": "bd-g10-lab2-runtime:1.0"
+              },
+              {
+                "name": "RUNTIME_DIGEST",
+                "value": "sha256:327d3e54adaa286c64ac3e793c6ad3d35b497e6c4b7a46bc417808cd9b037e67"
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "100m",
+                "memory": "128Mi"
+              },
+              "limits": {
+                "cpu": "500m",
+                "memory": "512Mi"
+              }
+            },
+            "securityContext": {
+              "allowPrivilegeEscalation": false,
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "work",
+                "mountPath": "/work"
+              },
+              {
+                "name": "trusted",
+                "mountPath": "/trusted",
+                "readOnly": true
+              }
+            ]
+          }
+        ],
+        "volumes": [
+          {
+            "name": "work",
+            "emptyDir": {
+              "sizeLimit": "2Gi"
+            }
+          },
+          {
+            "name": "trusted",
+            "configMap": {
+              "name": "lab2-trusted-manifest",
+              "defaultMode": 292
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

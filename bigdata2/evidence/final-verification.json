@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "code_bundle_verified": true,
+  "official_lineage_schema_valid": true,
+  "main_lineage_events": 4,
+  "gate_cases_correct": 8,
+  "analyst_consumer_verified": true,
+  "seven_rejected_probes_without_approved_manifest": true,
+  "role_folders": 5,
+  "identical_exercise_folder_names": true,
+  "all_code_copies_match_executed_source": true,
+  "full_course_submission_is_restricted": true,
+  "role_parts_include_all_restricted_files": true,
+  "reassembly": {
+    "status": "PASS",
+    "files": 114,
+    "orders_verified": [
+      "forward",
+      "reverse",
+      "shuffled"
+    ],
+    "all_bytes_match_original": true
+  },
+  "github_upload_order_required": false
+}

@@ -1,3 +1,0 @@
-{"exit_code":0,"name":"pods","stdin":"","arguments":["--context","minikube","--namespace","bd-g01","--request-timeout=15s","get","pods","-o","json"],"utc":"2026-10-04T15:05:34.8311450Z","executable":"kubectl"}
-{"exit_code":0,"name":"networkpolicies-before","stdin":"","arguments":["--context","minikube","--namespace","bd-g01","--request-timeout=15s","get","networkpolicy","-o","json"],"utc":"2026-10-04T15:05:35.0384562Z","executable":"kubectl"}
-{"exit_code":0,"name":"N03-listener-before","stdin":"","arguments":["--context","minikube","--namespace","bd-g01","--request-timeout=15s","exec","objects-74bd94c8cb-gvntk","--","netstat","-lnt"],"utc":"2026-10-04T15:05:35.2072299Z","executable":"kubectl"}

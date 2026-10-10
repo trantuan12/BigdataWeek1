@@ -1,1 +1,0 @@
-{"bucket": "research-release", "bytes": 0, "error": "AccessDenied", "http": 403, "key": "auth-probe.txt", "ms": 6.959211999856052, "ok": false, "op": "put", "principal": "ingestor", "request_id": "18DAC3242001703123250267", "utc": "2026-10-02T16:26:01.758876+00:00"}

@@ -1,9 +1,0 @@
-﻿{
-    "pvc_name":  "object-data",
-    "storage_pod_name":  "objects-665bcd6bdc-fxrkj",
-    "storage_class":  "local-path",
-    "pvc_uid":  "96d63bea-4624-43a0-bfb9-face3a02fc53",
-    "fixture_sha256":  "9ce4c8bb96c85122c3b386653fbe9150cb2f4df03f25c83408fe11c29b87d6f8",
-    "storage_image_id":  "sha256:7b5ca1f11aa4c91593612d2d4a9e253ec9152a4bd13a19e551290a042a4c52f5",
-    "storage_pod_uid":  "9b4e3d2e-7e9f-4b58-bf3b-cd646d0410b2"
-}

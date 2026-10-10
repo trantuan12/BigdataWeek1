@@ -1,1 +1,0 @@
-Error from server (Forbidden): secrets "s3-config" is forbidden: User "system:serviceaccount:bd-g01:observer" cannot get resource "secrets" in API group "" in the namespace "bd-g01"

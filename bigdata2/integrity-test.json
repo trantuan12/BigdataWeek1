@@ -1,0 +1,11 @@
+{
+  "test_id": "I03",
+  "timestamp": "2026-10-10T15:36:06.836018+00:00",
+  "store_id": "bd-g10-objects",
+  "target_object": "observations_a.csv",
+  "original_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+  "tampered_sha256": "718638be58a37844b9fb6ebeeccf62eeef2443eee376f32b53fc9322ff09bf66",
+  "observed_exception": "INPUT_INTEGRITY: observations_a.csv",
+  "original_unmodified": true,
+  "status": "PASS"
+}

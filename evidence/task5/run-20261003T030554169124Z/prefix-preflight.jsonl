@@ -1,1 +1,0 @@
-{"bucket": "research-raw", "bytes": 0, "error": null, "http": 200, "key": "bench/r1-c1/", "keys": [], "ms": 13.233347000095819, "ok": true, "op": "list", "principal": "ingestor", "request_id": "18DAE6103395209FCCDB58CE", "utc": "2026-10-03T03:05:59.096980+00:00"}

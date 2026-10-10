@@ -1,4 +1,0 @@
-test_id,principal,op,bucket,expected,actual_http,actual_error,pass,operator,reviewer,utc
-S06,analyst,get,research-release,ALLOW 200 + SHA-256,200,,True,E,PENDING,2026-10-03T03:06:48.048580+00:00
-S08,analyst,put,research-release,DENY 403 AccessDenied,403,AccessDenied,True,E,PENDING,2026-10-03T03:06:48.858217+00:00
-S10,analyst,get,research-raw,DENY 403 AccessDenied,403,AccessDenied,True,E,PENDING,2026-10-03T03:06:50.072041+00:00

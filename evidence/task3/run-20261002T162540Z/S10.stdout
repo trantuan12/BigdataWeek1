@@ -1,1 +1,0 @@
-{"bucket": "research-raw", "bytes": 0, "error": "AccessDenied", "http": 403, "key": "fixture.txt", "ms": 7.474537999769382, "ok": false, "op": "get", "principal": "analyst", "request_id": "18DAC32514F4AE4B074898AA", "utc": "2026-10-02T16:26:05.868694+00:00"}

@@ -1,0 +1,5 @@
+# Preserve exact bytes used by integrity checks and restricted submissions.
+/snapshot/** -text
+/trusted_manifest.json -text
+/contract.json -text
+/restricted/** -text

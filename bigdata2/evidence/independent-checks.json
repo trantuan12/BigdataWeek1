@@ -38,7 +38,10 @@
         "disjoint_and_unique": true,
         "business_rows": 9610,
         "distinct_business_ids": 9610
-      }
+      },
+      "current_artifact_check_record": "evidence/task2-check.json",
+      "current_artifact_check_command": "python -X utf8 code/check_task2.py",
+      "human_demo_attested": false
     },
     {
       "role": "C",

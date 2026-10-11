@@ -1,0 +1,239 @@
+{
+  "check_id": "ROLE_B_TASK2_CROSS_CHECK",
+  "check_run_id": "f5c21695-42d2-426a-af1c-28425542c37e",
+  "executed_at": "2026-10-11T17:42:23.666145+00:00",
+  "source_run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+  "operator": "Automated local verification",
+  "assigned_student": "24022466 - Lê Toàn",
+  "reviewer": null,
+  "human_demo_attested": false,
+  "exit_response_attested": false,
+  "runtime": {
+    "python": "3.14.7",
+    "duckdb": "1.4.4",
+    "platform": "win32"
+  },
+  "script_sha256": "7ff4c9d3845ce961d7e737e0548858860e716aed0c4f3a6cb711374fe0b0e4f7",
+  "command": "python -X utf8 code/check_task2.py",
+  "method": "Read actual Parquet with DuckDB; recompute after metrics with Python/Decimal and physical conservation with Counter/set; no production SQL imported",
+  "task2_artifact_check_status": "PASS",
+  "overall_status": "PASS_TASK2_ARTIFACT_CHECKS_ONLY",
+  "checks": {
+    "candidate_historical_hash": true,
+    "business_key_uniqueness": true,
+    "all_after_counts_match_saved_report": true,
+    "all_after_thresholds_pass": true,
+    "registry_derived_site": true,
+    "late_flag_consistency": true,
+    "count_reconciliation": true,
+    "physical_set_conservation": true,
+    "source_integrity": true
+  },
+  "after_metrics": [
+    {
+      "rule_id": "Q_REQUIRED",
+      "numerator": 9610,
+      "denominator": 9610,
+      "value": 1.0,
+      "threshold": 1,
+      "status": "PASS",
+      "matches_saved_counts": true
+    },
+    {
+      "rule_id": "Q_UNIQUE",
+      "numerator": 9610,
+      "denominator": 9610,
+      "value": 1.0,
+      "threshold": 1,
+      "status": "PASS",
+      "matches_saved_counts": true
+    },
+    {
+      "rule_id": "Q_VALUE",
+      "numerator": 9610,
+      "denominator": 9610,
+      "value": 1.0,
+      "threshold": 1,
+      "status": "PASS",
+      "matches_saved_counts": true
+    },
+    {
+      "rule_id": "Q_SENSOR",
+      "numerator": 9610,
+      "denominator": 9610,
+      "value": 1.0,
+      "threshold": 1,
+      "status": "PASS",
+      "matches_saved_counts": true
+    },
+    {
+      "rule_id": "Q_TIME",
+      "numerator": 9610,
+      "denominator": 9610,
+      "value": 1.0,
+      "threshold": 1,
+      "status": "PASS",
+      "matches_saved_counts": true
+    },
+    {
+      "rule_id": "Q_TIMELY",
+      "numerator": 9410,
+      "denominator": 9610,
+      "value": 0.9791883454734651,
+      "threshold": 0.95,
+      "status": "PASS",
+      "matches_saved_counts": true
+    },
+    {
+      "rule_id": "Q_QA_COVERAGE",
+      "numerator": 100,
+      "denominator": 100,
+      "value": 1.0,
+      "threshold": 1,
+      "status": "PASS",
+      "matches_saved_counts": true
+    },
+    {
+      "rule_id": "Q_QA_AGREEMENT",
+      "numerator": 95,
+      "denominator": 100,
+      "value": 0.95,
+      "threshold": 0.95,
+      "status": "PASS",
+      "matches_saved_counts": true
+    }
+  ],
+  "conservation": {
+    "counts": {
+      "raw": 10205,
+      "curated": 9610,
+      "quarantine": 395,
+      "duplicates": 200
+    },
+    "missing_physical_ids": 0,
+    "invented_physical_ids": 0,
+    "overlaps": {
+      "curated/quarantine": 0,
+      "curated/duplicates": 0,
+      "quarantine/duplicates": 0
+    },
+    "repeated_physical_ids": {
+      "raw": 0,
+      "curated": 0,
+      "quarantine": 0,
+      "duplicates": 0
+    }
+  },
+  "source_integrity": [
+    {
+      "key": "observations_a.csv",
+      "bytes": 421028,
+      "expected_bytes": 421028,
+      "matches_trusted_bytes": true
+    },
+    {
+      "key": "observations_b.jsonl",
+      "bytes": 1037439,
+      "expected_bytes": 1037439,
+      "matches_trusted_bytes": true
+    },
+    {
+      "key": "qa_reference.csv",
+      "bytes": 1423,
+      "expected_bytes": 1423,
+      "matches_trusted_bytes": true
+    },
+    {
+      "key": "sensors.csv",
+      "bytes": 256,
+      "expected_bytes": 256,
+      "matches_trusted_bytes": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "run-record.json",
+      "sha256": "9ea5fa0a0d732078d523d1660d8d4a294a8a1a7082f86a5037df940948c4badb",
+      "bytes": 2226
+    },
+    {
+      "path": "quality_before.json",
+      "sha256": "7f283029a7048ac19a1d8083b0abab006eb9eeb4eabbcf39089a9342c43faa84",
+      "bytes": 11887
+    },
+    {
+      "path": "quality_after.json",
+      "sha256": "a9bf9707837c6fb715ac17975ad10babbe832b8dd8ec92c3315d788e7dd5d683",
+      "bytes": 12605
+    },
+    {
+      "path": "candidate/curated.parquet",
+      "sha256": "70bf2ea29c04949e0084cbcb4ce006910e3cdee9e22771d3ae3763aa4f1134ca",
+      "bytes": 209278
+    },
+    {
+      "path": "contract.json",
+      "sha256": "c5be4371036fc51d0688fd676e6d85b463404536f3ee11c10ec0838626862520",
+      "bytes": 1338
+    },
+    {
+      "path": "trusted_manifest.json",
+      "sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+      "bytes": 796
+    },
+    {
+      "path": "envelopes.csv",
+      "sha256": "08097e70bdd801e7f9505d116316ec114c35d4e1641d03bf65d64105383a347c",
+      "bytes": 4586603
+    },
+    {
+      "path": "snapshot/sensors.csv",
+      "sha256": "02c390e127c37b9d12e9ca156eae23a450ad1ae037001cddd9651bb6516b9bde",
+      "bytes": 256
+    },
+    {
+      "path": "snapshot/qa_reference.csv",
+      "sha256": "129463c2a4e63f2dabfa2a5dd31b92e4fe4858d2415d3c7ef495cc6c6d7b65c2",
+      "bytes": 1423
+    },
+    {
+      "path": "restricted/quarantine.csv",
+      "sha256": "99be22aedad6f86ef64ac469892b224b9ae1e4089ae7e301e4be1a00e4889816",
+      "bytes": 171650
+    },
+    {
+      "path": "restricted/duplicates.csv",
+      "sha256": "55b05296c74cfabd274007d671b93b77204632c51fa8f7af361e389c89e4f185",
+      "bytes": 43206
+    }
+  ],
+  "ledger_provenance": {
+    "method": "Supplemental SQL reconstruction from current envelopes; not original historical artifacts",
+    "executed_at": "2026-10-11T17:17:43.747811+00:00",
+    "source_run_id": "ebf648b9-1e3f-47a5-87f1-e0e8924005b4",
+    "candidate_symmetric_difference": 0,
+    "artifacts": [
+      {
+        "path": "restricted/quarantine.csv",
+        "sha256": "99be22aedad6f86ef64ac469892b224b9ae1e4089ae7e301e4be1a00e4889816",
+        "bytes": 171650,
+        "historical_sha256": "58a8a7ec03eb550b276d9741c0f95222ef70171e061127a992c23aefee185339",
+        "matches_historical_bytes": false,
+        "row_count": 395
+      },
+      {
+        "path": "restricted/duplicates.csv",
+        "sha256": "55b05296c74cfabd274007d671b93b77204632c51fa8f7af361e389c89e4f185",
+        "bytes": 43206,
+        "historical_sha256": "55b05296c74cfabd274007d671b93b77204632c51fa8f7af361e389c89e4f185",
+        "matches_historical_bytes": true,
+        "row_count": 200
+      }
+    ]
+  },
+  "limitations": [
+    "Reconstructed ledgers are not asserted to be original historical files.",
+    "After-value checks concern exported DECIMAL values; original pre-rounding validity is not independently proved here.",
+    "No human demonstration, contract review, owner approval or publication is attested by this check."
+  ]
+}

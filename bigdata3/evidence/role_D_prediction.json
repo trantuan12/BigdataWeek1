@@ -1,0 +1,8 @@
+{
+  "member_id": "24022463",
+  "member_name": "Đàm Quang Tiến",
+  "role": "D",
+  "recorded_at_utc": "2026-11-01T18:18:51.251949+00:00",
+  "prediction": "Gold count/sum match retained Silver; daily mean uses total observation count. The date-partitioned layout prunes to the selected date and all six answers agree.",
+  "execution_mode": "AUTOMATED_READ_ONLY"
+}

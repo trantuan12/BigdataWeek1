@@ -1,0 +1,230 @@
+{
+  "passed": true,
+  "member_id": "24022463",
+  "member_name": "Đàm Quang Tiến",
+  "role": "D",
+  "execution_mode": "AUTOMATED_READ_ONLY",
+  "completed_at_utc": "2026-11-01T18:18:51.404752+00:00",
+  "silver_version": 1,
+  "gold_version": 1,
+  "checks": [
+    {
+      "check_id": "D_B_conservation",
+      "passed": true,
+      "observed": {
+        "silver_rows": 9710,
+        "gold_observations": 9710,
+        "silver_temperature_sum_c": "222930.50",
+        "gold_groups": 20
+      }
+    },
+    {
+      "check_id": "D_B_weighted_2026-02-02",
+      "passed": true,
+      "observed": {
+        "sum_temperature_c": "57283.50",
+        "denominator_observations": 2489,
+        "weighted_mean_c": "23.014665",
+        "naive_mean_of_means_c": "23.016459",
+        "site_counts": {
+          "zone-1": 625,
+          "zone-2": 625,
+          "zone-3": 620,
+          "zone-4": 619
+        }
+      }
+    },
+    {
+      "check_id": "D_B_weighted_2026-02-03",
+      "passed": true,
+      "observed": {
+        "sum_temperature_c": "66056.00",
+        "denominator_observations": 2880,
+        "weighted_mean_c": "22.936111",
+        "naive_mean_of_means_c": "22.936111",
+        "site_counts": {
+          "zone-1": 720,
+          "zone-2": 720,
+          "zone-3": 720,
+          "zone-4": 720
+        }
+      }
+    },
+    {
+      "check_id": "D_B_weighted_2026-02-04",
+      "passed": true,
+      "observed": {
+        "sum_temperature_c": "66096.00",
+        "denominator_observations": 2880,
+        "weighted_mean_c": "22.950000",
+        "naive_mean_of_means_c": "22.950000",
+        "site_counts": {
+          "zone-1": 720,
+          "zone-2": 720,
+          "zone-3": 720,
+          "zone-4": 720
+        }
+      }
+    },
+    {
+      "check_id": "D_B_weighted_2026-02-05",
+      "passed": true,
+      "observed": {
+        "sum_temperature_c": "31350.00",
+        "denominator_observations": 1361,
+        "weighted_mean_c": "23.034533",
+        "naive_mean_of_means_c": "23.034212",
+        "site_counts": {
+          "zone-1": 340,
+          "zone-2": 340,
+          "zone-3": 340,
+          "zone-4": 341
+        }
+      }
+    },
+    {
+      "check_id": "D_B_weighted_2026-02-06",
+      "passed": true,
+      "observed": {
+        "sum_temperature_c": "2145.00",
+        "denominator_observations": 100,
+        "weighted_mean_c": "21.450000",
+        "naive_mean_of_means_c": "21.450000",
+        "site_counts": {
+          "zone-1": 25,
+          "zone-2": 25,
+          "zone-3": 25,
+          "zone-4": 25
+        }
+      }
+    },
+    {
+      "check_id": "D_Q3_strict_threshold_denominator",
+      "passed": true,
+      "observed": {
+        "groups": 20,
+        "predicate": "temperature_c > 25",
+        "denominator": "all retained observations in the same site/day"
+      }
+    },
+    {
+      "check_id": "D_A_B_results",
+      "passed": true,
+      "observed": {
+        "expected_from_operational_gold": [
+          {
+            "site": "zone-1",
+            "n_observations": 2500,
+            "sum_temperature_c": "53250.00",
+            "n_late": 500
+          },
+          {
+            "site": "zone-2",
+            "n_observations": 2500,
+            "sum_temperature_c": "54000.00",
+            "n_late": 500
+          },
+          {
+            "site": "zone-3",
+            "n_observations": 2500,
+            "sum_temperature_c": "53250.00",
+            "n_late": 500
+          },
+          {
+            "site": "zone-4",
+            "n_observations": 2500,
+            "sum_temperature_c": "54000.00",
+            "n_late": 500
+          }
+        ],
+        "six_equivalent_evaluations": true
+      }
+    },
+    {
+      "check_id": "D_partition_filters_and_scan_metrics",
+      "passed": true,
+      "observed": {
+        "actual_scan_file_counts": {
+          "A": [
+            [
+              "32"
+            ],
+            [
+              "32"
+            ],
+            [
+              "32"
+            ],
+            [
+              "32"
+            ]
+          ],
+          "B": [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ]
+        },
+        "total_table_files": {
+          "A": 32,
+          "B": 5
+        },
+        "metrics_source": "Spark History Server SQL REST API backed by completed Spark event logs."
+      }
+    },
+    {
+      "check_id": "D_no_operational_replica_inflation",
+      "passed": true,
+      "observed": {
+        "operational_observations": 9710,
+        "benchmark_rows": 971000
+      }
+    }
+  ],
+  "daily_denominators": [
+    {
+      "event_date": "2026-02-02",
+      "sum_temperature_c": "57283.50",
+      "n_observations": 2489,
+      "weighted_mean_c": "23.014665",
+      "naive_mean_of_means_c": "23.016459"
+    },
+    {
+      "event_date": "2026-02-03",
+      "sum_temperature_c": "66056.00",
+      "n_observations": 2880,
+      "weighted_mean_c": "22.936111",
+      "naive_mean_of_means_c": "22.936111"
+    },
+    {
+      "event_date": "2026-02-04",
+      "sum_temperature_c": "66096.00",
+      "n_observations": 2880,
+      "weighted_mean_c": "22.950000",
+      "naive_mean_of_means_c": "22.950000"
+    },
+    {
+      "event_date": "2026-02-05",
+      "sum_temperature_c": "31350.00",
+      "n_observations": 1361,
+      "weighted_mean_c": "23.034533",
+      "naive_mean_of_means_c": "23.034212"
+    },
+    {
+      "event_date": "2026-02-06",
+      "sum_temperature_c": "2145.00",
+      "n_observations": 100,
+      "weighted_mean_c": "21.450000",
+      "naive_mean_of_means_c": "21.450000"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+data/** -text
+manifests/*.json -text
+schemas/** -text
+trusted_lab3_inputs.json -text
+trusted_lab3_inputs.sha256 -text

@@ -1,0 +1,207 @@
+{
+  "ordinal_rule": "One-based physical CSV record ordinal excluding header.",
+  "examples": [
+    {
+      "record_id": "R010001",
+      "decision": "inserted",
+      "incoming_physical_rows": 2,
+      "incoming_candidates": [
+        {
+          "record_id": "R010001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-06T00:01:00Z",
+          "ingest_time_utc": "2026-02-06T00:31:00Z",
+          "temperature_c": "19.10",
+          "is_late": true,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 1,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        },
+        {
+          "record_id": "R010001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-06T00:01:00Z",
+          "ingest_time_utc": "2026-02-06T00:31:00Z",
+          "temperature_c": "20.10",
+          "is_late": true,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 131,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "previous": null,
+      "incoming_winner": {
+        "record_id": "R010001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-06T00:01:00Z",
+        "ingest_time_utc": "2026-02-06T00:31:00Z",
+        "temperature_c": "19.10",
+        "is_late": true,
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 1,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+      },
+      "selected": {
+        "record_id": "R010001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-06T00:01:00Z",
+        "ingest_time_utc": "2026-02-06T00:31:00Z",
+        "temperature_c": "19.10",
+        "is_late": true,
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 1,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+      },
+      "original_source_projection": {
+        "record_id": "R010001",
+        "sensor_id": "S01",
+        "event_time": "2026-02-06T00:01:00Z",
+        "ingest_time": "2026-02-06T00:31:00Z",
+        "reading": "19.10",
+        "unit": "C"
+      }
+    },
+    {
+      "record_id": "R003001",
+      "decision": "unchanged_stale",
+      "incoming_physical_rows": 1,
+      "incoming_candidates": [
+        {
+          "record_id": "R003001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-03T01:00:30Z",
+          "ingest_time_utc": "2026-02-03T01:01:00Z",
+          "temperature_c": "17.10",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 121,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "previous": {
+        "record_id": "R003001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T01:00:30Z",
+        "ingest_time_utc": "2026-02-03T01:01:30Z",
+        "temperature_c": "18.10",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3001,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_winner": {
+        "record_id": "R003001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T01:00:30Z",
+        "ingest_time_utc": "2026-02-03T01:01:00Z",
+        "temperature_c": "17.10",
+        "is_late": false,
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 121,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+      },
+      "selected": {
+        "record_id": "R003001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T01:00:30Z",
+        "ingest_time_utc": "2026-02-03T01:01:30Z",
+        "temperature_c": "18.10",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3001,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "original_source_projection": {
+        "record_id": "R003001",
+        "sensor_id": "S01",
+        "event_time": "2026-02-03T01:00:30Z",
+        "ingest_time": "2026-02-03T01:01:00Z",
+        "reading": "17.10",
+        "unit": "C"
+      }
+    },
+    {
+      "record_id": "R002001",
+      "decision": "updated_newer",
+      "incoming_physical_rows": 2,
+      "incoming_candidates": [
+        {
+          "record_id": "R002001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-02T16:40:30Z",
+          "ingest_time_utc": "2026-02-02T16:50:30Z",
+          "temperature_c": "20.10",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 101,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        },
+        {
+          "record_id": "R002001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-02T16:40:30Z",
+          "ingest_time_utc": "2026-02-02T16:50:30Z",
+          "temperature_c": "21.10",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 136,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "previous": {
+        "record_id": "R002001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-02T16:40:30Z",
+        "ingest_time_utc": "2026-02-02T16:41:30Z",
+        "temperature_c": "18.10",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 2001,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_winner": {
+        "record_id": "R002001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-02T16:40:30Z",
+        "ingest_time_utc": "2026-02-02T16:50:30Z",
+        "temperature_c": "20.10",
+        "is_late": false,
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 101,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+      },
+      "selected": {
+        "record_id": "R002001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-02T16:40:30Z",
+        "ingest_time_utc": "2026-02-02T16:50:30Z",
+        "temperature_c": "20.10",
+        "is_late": false,
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 101,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+      },
+      "original_source_projection": {
+        "record_id": "R002001",
+        "sensor_id": "S01",
+        "event_time": "2026-02-02T16:40:30Z",
+        "ingest_time": "2026-02-02T16:50:30Z",
+        "reading": "20.10",
+        "unit": "C"
+      }
+    }
+  ]
+}

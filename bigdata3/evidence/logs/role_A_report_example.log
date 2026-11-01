@@ -1,0 +1,25 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/01 17:34:28 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/11/01 17:34:34 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+26/11/01 17:34:39 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+
+[Stage 0:>                                                          (0 + 2) / 2]
+
+[Stage 2:>                                                          (0 + 2) / 2]
+
+[Stage 2:=============================>                             (1 + 1) / 2]
+
+                                                                                
+
+[Stage 3:>                                                          (0 + 1) / 1]
+
+                                                                                
+R000381 Silver v1 {'record_id': 'R000381', 'sensor_id': 'S01', 'site': 'zone-1', 'event_time_utc': '2026-02-02T03:10:30Z', 'ingest_time_utc': '2026-02-02T03:40:30Z', 'temperature_c': '26.10', 'is_late': True, 'source_object': 'observations_a.csv', 'source_row': 381, 'source_sha256': '5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea'}
+R005001 Silver v1 {'record_id': 'R005001', 'sensor_id': 'S01', 'site': 'zone-1', 'event_time_utc': '2026-02-03T17:40:30Z', 'ingest_time_utc': '2026-02-03T17:41:30Z', 'temperature_c': '18.10', 'is_late': False, 'source_object': 'observations_b.jsonl', 'source_row': 1, 'source_sha256': '3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70'}
+R010001 Silver v1 {'record_id': 'R010001', 'sensor_id': 'S01', 'site': 'zone-1', 'event_time_utc': '2026-02-06T00:01:00Z', 'ingest_time_utc': '2026-02-06T00:31:00Z', 'temperature_c': '19.10', 'is_late': True, 'source_object': 'lab3/source_batch02.csv', 'source_row': 1, 'source_sha256': '9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb'}

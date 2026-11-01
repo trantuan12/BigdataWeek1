@@ -1,0 +1,126 @@
+{
+  "partition_tasks": [
+    {
+      "host": "spark-worker-1",
+      "pid": 2200,
+      "partition": 0
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2191,
+      "partition": 1
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2199,
+      "partition": 2
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2193,
+      "partition": 3
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2191,
+      "partition": 4
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2193,
+      "partition": 5
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2200,
+      "partition": 6
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2199,
+      "partition": 7
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2199,
+      "partition": 8
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2193,
+      "partition": 9
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2191,
+      "partition": 10
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2200,
+      "partition": 11
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2191,
+      "partition": 12
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2193,
+      "partition": 13
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2199,
+      "partition": 14
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2200,
+      "partition": 15
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2199,
+      "partition": 16
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2200,
+      "partition": 17
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2193,
+      "partition": 18
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2191,
+      "partition": 19
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2199,
+      "partition": 20
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2193,
+      "partition": 21
+    },
+    {
+      "host": "spark-worker-2",
+      "pid": 2191,
+      "partition": 22
+    },
+    {
+      "host": "spark-worker-1",
+      "pid": 2200,
+      "partition": 23
+    }
+  ],
+  "distinct_hosts": 2,
+  "interpretation": "Distinct hosts demonstrate placements, not distinct physical servers. Keep Spark UI/event-log evidence too."
+}

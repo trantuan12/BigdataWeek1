@@ -1,17 +1,5 @@
 """Create a classic SparkSession. Prepare/cache all JARs BEFORE class."""
 import os
-import sys
-
-os.environ['PYSPARK_PYTHON'] = sys.executable
-os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
-
-if 'HADOOP_HOME' not in os.environ:
-    os.environ['HADOOP_HOME'] = r'd:\BigData\hadoop'
-    os.environ['PATH'] = r'd:\BigData\hadoop\bin;' + os.environ.get('PATH', '')
-if 'JAVA_HOME' not in os.environ or 'jdk' not in os.environ.get('JAVA_HOME', '').lower():
-    os.environ['JAVA_HOME'] = r'C:\Program Files\Java\jdk-23'
-if '_JAVA_OPTIONS' not in os.environ:
-    os.environ['_JAVA_OPTIONS'] = '-Djava.security.manager=allow'
 
 def make_spark(config):
     import time
@@ -29,9 +17,13 @@ def make_spark(config):
        .config('spark.sql.shuffle.partitions',str(config.get('shuffle_partitions',8)))
        .config('spark.databricks.delta.schema.autoMerge.enabled','false')
        .config('spark.databricks.delta.snapshotPartitions','2')
+       .config('spark.redaction.regex','(?i)secret|password|token|access[.]?key|credential')
        .config('spark.ui.enabled','true'))
     if config.get('event_log_dir'):
         b=b.config('spark.eventLog.enabled','true').config('spark.eventLog.dir',config['event_log_dir'])
+    if config.get('driver_host'):
+        b=(b.config('spark.driver.host',config['driver_host'])
+             .config('spark.driver.bindAddress','0.0.0.0'))
     if not master.startswith('local'):
         b=(b.config('spark.cores.max','4').config('spark.executor.cores','2')
              .config('spark.executor.memory','2g').config('spark.executor.instances','2'))

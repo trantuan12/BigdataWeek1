@@ -1,0 +1,22 @@
+{
+  "deployment": "Spark standalone; two worker containers; shared S3A object store",
+  "placement_limit": "Separate containers do not prove separate physical servers.",
+  "master": "spark://spark-master:7077",
+  "workers": [
+    {
+      "host": "spark-worker-1",
+      "state": "ALIVE",
+      "cores": 2,
+      "memory_mb": 2048
+    },
+    {
+      "host": "spark-worker-2",
+      "state": "ALIVE",
+      "cores": 2,
+      "memory_mb": 2048
+    }
+  ],
+  "object_endpoint": "http://objects:9000",
+  "bucket": "research-lakehouse",
+  "write_protocol": "One driver at a time; native Delta smoke/merge checks required."
+}

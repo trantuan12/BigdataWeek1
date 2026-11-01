@@ -1,0 +1,8 @@
+{
+  "original_dataset_zip": "Lab3-Student-Starter.zip",
+  "required_restore_directory": "data/",
+  "trusted_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "handoff_kind": "course_fallback_not_student_approval",
+  "data_files_omitted": true,
+  "manifest_source": "Separately supplied instructor manifest, mounted read-only by Compose."
+}

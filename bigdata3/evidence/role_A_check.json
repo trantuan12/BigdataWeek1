@@ -1,0 +1,253 @@
+{
+  "passed": true,
+  "member_id": "24022484",
+  "member_name": "Trần Anh Tuấn",
+  "role": "A",
+  "execution_mode": "AUTOMATED_LIVE_DELTA_READ",
+  "completed_at_utc": "2026-11-01T18:19:26.937991+00:00",
+  "code_sha256": "402d5aefc4261cccb1ac68a94f3fc8b42b8921ac0b191b69c12b4e68876f4cbe",
+  "checks": [
+    {
+      "check_id": "H01_trusted_input_bytes",
+      "passed": true,
+      "observed": {
+        "artifacts": 16,
+        "trusted_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2"
+      }
+    },
+    {
+      "check_id": "H02_fallback_identity",
+      "passed": true,
+      "observed": {
+        "rows": 9610,
+        "kind": "course_fallback_not_student_approval",
+        "logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d"
+      }
+    },
+    {
+      "check_id": "A_cross_E_snapshot_binding",
+      "passed": true,
+      "observed": {
+        "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+        "silver_version": 1,
+        "gold_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold",
+        "gold_version": 1,
+        "gold_source_silver_version": 1,
+        "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+        "code_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1"
+      }
+    },
+    {
+      "check_id": "A_cross_E_generating_code",
+      "passed": true,
+      "observed": {
+        "generating_code_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1"
+      }
+    },
+    {
+      "check_id": "A_cross_E_candidate_objects",
+      "passed": true,
+      "observed": {
+        "objects": 3,
+        "status": "CANDIDATE_NOT_OWNER_PUBLISHED"
+      }
+    },
+    {
+      "check_id": "H04_runtime_baseline",
+      "passed": true,
+      "observed": {
+        "python": "3.11.18",
+        "spark": "4.0.1",
+        "delta_spark": "4.0.1",
+        "java": "17.0.21",
+        "hadoop": "3.4.1",
+        "spark_master": "spark://spark-master:7077",
+        "application_id": "app-20261101181855-0009",
+        "timezone": "UTC",
+        "aqe": "true",
+        "shuffle_partitions": "8",
+        "group_id": "bd-g10",
+        "storage_mode": "s3a",
+        "warning": "local[*] is parallel local execution, NOT multi-node execution."
+      }
+    },
+    {
+      "check_id": "H04_worker_placement",
+      "passed": true,
+      "observed": {
+        "worker_containers": 2,
+        "partition_tasks": 24,
+        "limit": "Container placements; separate physical servers are not established."
+      }
+    },
+    {
+      "check_id": "H03_schema_probe_preserved",
+      "passed": true,
+      "observed": {
+        "native_rejection_evidence": "delta_schema_probe.json",
+        "live_probe_rows": 8
+      }
+    },
+    {
+      "check_id": "A_live_baseline_snapshot",
+      "passed": true,
+      "observed": {
+        "silver_version": 0,
+        "rows": 9610,
+        "logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d"
+      }
+    },
+    {
+      "check_id": "A_live_candidate_Silver",
+      "passed": true,
+      "observed": {
+        "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+        "silver_version": 1,
+        "rows": 9710,
+        "logical_sha256": "d0e76f8b3525282d09c71a2e813ec91abcad2440f6f3eeaf8b7cbc55d922162a"
+      }
+    },
+    {
+      "check_id": "A_source_to_snapshot_R000381",
+      "passed": true,
+      "observed": {
+        "record_id": "R000381",
+        "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+        "silver_version": 1,
+        "selected_release_row": {
+          "record_id": "R000381",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-02T03:10:30Z",
+          "ingest_time_utc": "2026-02-02T03:40:30Z",
+          "temperature_c": "26.10",
+          "is_late": true,
+          "source_object": "observations_a.csv",
+          "source_row": 381,
+          "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+        },
+        "source_projection": {
+          "record_id": "R000381",
+          "sensor_id": "S01",
+          "event_time_utc": "2026-02-02T03:10:30Z",
+          "ingest_time_utc": "2026-02-02T03:40:30Z",
+          "temperature_c": "26.10"
+        },
+        "source_file_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "arrival_lag_seconds": 1800,
+        "passed": true
+      }
+    },
+    {
+      "check_id": "A_source_to_snapshot_R005001",
+      "passed": true,
+      "observed": {
+        "record_id": "R005001",
+        "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+        "silver_version": 1,
+        "selected_release_row": {
+          "record_id": "R005001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-03T17:40:30Z",
+          "ingest_time_utc": "2026-02-03T17:41:30Z",
+          "temperature_c": "18.10",
+          "is_late": false,
+          "source_object": "observations_b.jsonl",
+          "source_row": 1,
+          "source_sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70"
+        },
+        "source_projection": {
+          "record_id": "R005001",
+          "sensor_id": "S01",
+          "event_time_utc": "2026-02-03T17:40:30Z",
+          "ingest_time_utc": "2026-02-03T17:41:30Z",
+          "temperature_c": "18.10"
+        },
+        "source_file_sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70",
+        "arrival_lag_seconds": 60,
+        "passed": true
+      }
+    },
+    {
+      "check_id": "A_source_to_snapshot_R010001",
+      "passed": true,
+      "observed": {
+        "record_id": "R010001",
+        "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+        "silver_version": 1,
+        "selected_release_row": {
+          "record_id": "R010001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-06T00:01:00Z",
+          "ingest_time_utc": "2026-02-06T00:31:00Z",
+          "temperature_c": "19.10",
+          "is_late": true,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 1,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        },
+        "source_projection": {
+          "record_id": "R010001",
+          "sensor_id": "S01",
+          "event_time_utc": "2026-02-06T00:01:00Z",
+          "ingest_time_utc": "2026-02-06T00:31:00Z",
+          "temperature_c": "19.10"
+        },
+        "source_file_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb",
+        "arrival_lag_seconds": 1800,
+        "passed": true
+      }
+    },
+    {
+      "check_id": "A_deterministic_tie_and_old_example",
+      "passed": true,
+      "observed": {
+        "incoming_revisions": [
+          {
+            "source_row": 1,
+            "ingest_time_utc": "2026-02-06T00:31:00Z",
+            "temperature_c": "19.10"
+          },
+          {
+            "source_row": 131,
+            "ingest_time_utc": "2026-02-06T00:31:00Z",
+            "temperature_c": "20.10"
+          }
+        ],
+        "winner_ordinal": 1,
+        "winner_temperature_c": "19.10",
+        "last_dictionary_ordinal": 131,
+        "last_dictionary_temperature_c": "20.10"
+      }
+    },
+    {
+      "check_id": "A_cross_E_live_Gold_export",
+      "passed": true,
+      "observed": {
+        "gold_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold",
+        "gold_version": 1,
+        "site_day_groups": 20
+      }
+    },
+    {
+      "check_id": "A_read_only_tables",
+      "passed": true,
+      "observed": {
+        "latest_versions_before": {
+          "silver": 2,
+          "gold": 1
+        },
+        "latest_versions_after": {
+          "silver": 2,
+          "gold": 1
+        }
+      }
+    }
+  ],
+  "silver_version": 1,
+  "gold_version": 1,
+  "writes_to_Delta_tables": 0,
+  "student_demonstration_attested": false
+}

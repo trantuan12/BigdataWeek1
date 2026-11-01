@@ -1,0 +1,196 @@
+{
+  "passed": true,
+  "member_id": "24022466",
+  "member_name": "Lê Toàn",
+  "role": "E",
+  "execution_mode": "AUTOMATED_LIVE_DELTA_READ",
+  "completed_at_utc": "2026-11-01T18:20:00.502954+00:00",
+  "run_id": "f7637837-296c-45b5-94cc-2aa9d27a3a5a",
+  "code_sha256": "03d92f0ea93fae6c6fa39ed0e002dacd884cb650c3895325f8f2409c7174d28d",
+  "checks": [
+    {
+      "check_id": "E_cross_A_trusted_inputs",
+      "passed": true,
+      "observed": {
+        "artifacts": 16,
+        "trusted_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2"
+      }
+    },
+    {
+      "check_id": "E_cross_A_logical_handoff",
+      "passed": true,
+      "observed": {
+        "rows": 9610,
+        "handoff_kind": "course_fallback_not_student_approval",
+        "logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d"
+      }
+    },
+    {
+      "check_id": "E_concrete_expected_paths",
+      "passed": true,
+      "observed": {
+        "silver": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+        "gold": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold"
+      }
+    },
+    {
+      "check_id": "E_R01_R05_required_gates",
+      "passed": true,
+      "observed": {
+        "cases": 5,
+        "expected_values_source": "state.json"
+      }
+    },
+    {
+      "check_id": "E_missing_keys_and_edge_cases",
+      "passed": true,
+      "observed": {
+        "cases": 35,
+        "arguments_unchanged": true
+      }
+    },
+    {
+      "check_id": "E_reviewer_assignment",
+      "passed": true,
+      "observed": {
+        "assigned_reviewer": "24022466 - Lê Toàn",
+        "transformation_author": "24022463 - Đàm Quang Tiến",
+        "steward": "24022466 - Lê Toàn"
+      }
+    },
+    {
+      "check_id": "E_generating_and_validator_code",
+      "passed": true,
+      "observed": {
+        "generating_code_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+        "validator_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1"
+      }
+    },
+    {
+      "check_id": "E_candidate_manifest_hashes",
+      "passed": true,
+      "observed": {
+        "objects": [
+          {
+            "key": "gold.json",
+            "bytes": 6421,
+            "sha256": "095c9b84ddcb2426f2a5cbbd7d46b0a35c579c7c609daba6021a7295cf5be8b4"
+          },
+          {
+            "key": "snapshot_binding.json",
+            "bytes": 1102,
+            "sha256": "90743b2a2baea42fa01586a988f9a924b87252571d41c4f324250806f915509b"
+          },
+          {
+            "key": "catalog.json",
+            "bytes": 5096,
+            "sha256": "0599d6eec22856e8beff26c869101709717fb3433d07f8a77c568dd038778538"
+          }
+        ],
+        "status": "CANDIDATE_NOT_OWNER_PUBLISHED"
+      }
+    },
+    {
+      "check_id": "E_official_lineage_and_snapshot_IO",
+      "passed": true,
+      "observed": {
+        "events": 14,
+        "runs": 7,
+        "completed_jobs": [
+          "analytics",
+          "benchmark",
+          "bootstrap",
+          "incremental",
+          "preflight",
+          "release"
+        ]
+      }
+    },
+    {
+      "check_id": "E_runtime_baseline",
+      "passed": true,
+      "observed": {
+        "python": "3.11.18",
+        "spark": "4.0.1",
+        "delta_spark": "4.0.1",
+        "java": "17.0.21",
+        "hadoop": "3.4.1",
+        "spark_master": "spark://spark-master:7077",
+        "application_id": "app-20261101181934-0010",
+        "timezone": "UTC",
+        "aqe": "true",
+        "shuffle_partitions": "8",
+        "group_id": "bd-g10",
+        "storage_mode": "s3a",
+        "warning": "local[*] is parallel local execution, NOT multi-node execution."
+      }
+    },
+    {
+      "check_id": "E_cross_A_actual_baseline",
+      "passed": true,
+      "observed": {
+        "silver_initial_version": 0,
+        "rows": 9610,
+        "logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d"
+      }
+    },
+    {
+      "check_id": "E_pinned_Silver_matches_update",
+      "passed": true,
+      "observed": {
+        "silver_version": 1,
+        "rows": 9710,
+        "logical_sha256": "d0e76f8b3525282d09c71a2e813ec91abcad2440f6f3eeaf8b7cbc55d922162a"
+      }
+    },
+    {
+      "check_id": "E_independent_Gold_recomputation",
+      "passed": true,
+      "observed": {
+        "silver_rows": 9710,
+        "gold_groups": 20,
+        "fields_compared_per_group": 11,
+        "method": "Independent Decimal/count/distinct computation from actual pinned Silver; no build_gold call."
+      }
+    },
+    {
+      "check_id": "E_actual_table_schema",
+      "passed": true,
+      "observed": {
+        "silver_columns": 11,
+        "gold_columns": 11
+      }
+    },
+    {
+      "check_id": "E_catalog_values_units_and_retention",
+      "passed": true,
+      "observed": {
+        "issues": [],
+        "allowed_use": "Synthetic teaching and assessment only",
+        "retention": {
+          "published_release_days": 90,
+          "time_basis": "actual publication time, not simulated AS_OF",
+          "dependency_rule": "Keep referenced table versions/data files while an approved release depends on them. No VACUUM in the core lab."
+        }
+      }
+    },
+    {
+      "check_id": "E_read_only_table_versions",
+      "passed": true,
+      "observed": {
+        "before": {
+          "silver": 2,
+          "gold": 1
+        },
+        "after": {
+          "silver": 2,
+          "gold": 1
+        }
+      }
+    }
+  ],
+  "silver_version": 1,
+  "gold_version": 1,
+  "writes_to_Delta_tables": 0,
+  "owner_publication_claimed": false
+}

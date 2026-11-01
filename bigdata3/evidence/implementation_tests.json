@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "tests_run": 20,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "tests": [
+    {
+      "test": "test_release_binding.ReleaseBindingTests.test_empty_or_wrong_identity_types",
+      "status": "PASS"
+    },
+    {
+      "test": "test_release_binding.ReleaseBindingTests.test_even_matching_mixed_pair_rejects",
+      "status": "PASS"
+    },
+    {
+      "test": "test_release_binding.ReleaseBindingTests.test_every_required_key_is_required",
+      "status": "PASS"
+    },
+    {
+      "test": "test_release_binding.ReleaseBindingTests.test_expected_keys_cannot_be_missing",
+      "status": "PASS"
+    },
+    {
+      "test": "test_release_binding.ReleaseBindingTests.test_malformed_containers_reject_cleanly",
+      "status": "PASS"
+    },
+    {
+      "test": "test_release_binding.ReleaseBindingTests.test_self_review_normalization",
+      "status": "PASS"
+    },
+    {
+      "test": "test_release_binding.ReleaseBindingTests.test_valid_and_input_not_mutated",
+      "status": "PASS"
+    },
+    {
+      "test": "test_release_binding.ReleaseBindingTests.test_versions_are_nonnegative_integers",
+      "status": "PASS"
+    },
+    {
+      "test": "test_release_binding.ReleaseBindingTests.test_wrong_or_malformed_hash",
+      "status": "PASS"
+    },
+    {
+      "test": "test_release_binding.ReleaseBindingTests.test_wrong_paths",
+      "status": "PASS"
+    },
+    {
+      "test": "test_role_a_trace.RoleATraceTests.test_invalid_source_and_ordinal_reject",
+      "status": "PASS"
+    },
+    {
+      "test": "test_role_a_trace.RoleATraceTests.test_last_dictionary_row_is_not_the_tied_winner",
+      "status": "PASS"
+    },
+    {
+      "test": "test_role_a_trace.RoleATraceTests.test_source_projection_matches_three_physical_ordinals",
+      "status": "PASS"
+    },
+    {
+      "test": "test_role_e_review.RoleEReviewTests.test_catalog_rejects_counts_units_boolean_versions_and_bad_retention",
+      "status": "PASS"
+    },
+    {
+      "test": "test_role_e_review.RoleEReviewTests.test_expected_values_are_derived_from_state_not_candidate",
+      "status": "PASS"
+    },
+    {
+      "test": "test_role_e_review.RoleEReviewTests.test_lineage_rejects_missing_terminal_and_wrong_release_snapshot",
+      "status": "PASS"
+    },
+    {
+      "test": "test_spark_semantics.SparkSemanticsTests.test_benchmark_uses_date_filter_and_counts_replicas",
+      "status": "PASS"
+    },
+    {
+      "test": "test_spark_semantics.SparkSemanticsTests.test_gold_exact_values_types_and_threshold",
+      "status": "PASS"
+    },
+    {
+      "test": "test_spark_semantics.SparkSemanticsTests.test_live_merge_stale_ties_inserts_and_equal_noop",
+      "status": "PASS"
+    },
+    {
+      "test": "test_spark_semantics.SparkSemanticsTests.test_winner_all_ordering_components_and_reordering",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Synthetic test rows use separate Delta paths; operational table snapshots remain unchanged."
+}

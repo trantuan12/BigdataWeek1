@@ -1,0 +1,467 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check_id": "LIVE_initial_handoff",
+      "passed": true
+    },
+    {
+      "check_id": "LIVE_final_Silver",
+      "passed": true
+    },
+    {
+      "check_id": "LIVE_replay_Silver",
+      "passed": true
+    },
+    {
+      "check_id": "LIVE_unique_physical_receipts",
+      "passed": true
+    },
+    {
+      "check_id": "LIVE_full_Bronze_replay",
+      "passed": true
+    },
+    {
+      "check_id": "LIVE_Silver_key_and_UTC_date",
+      "passed": true
+    },
+    {
+      "check_id": "LIVE_pinned_Gold_recomputation",
+      "passed": true
+    },
+    {
+      "check_id": "LIVE_Gold_exact_types",
+      "passed": true
+    },
+    {
+      "check_id": "LIVE_Silver_exact_types",
+      "passed": true
+    }
+  ],
+  "tables": {
+    "bronze": {
+      "path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze",
+      "pinned_version": 1,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "sensor_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "site",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_time_utc",
+            "type": "timestamp",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "ingest_time_utc",
+            "type": "timestamp",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "temperature_c",
+            "type": "decimal(8,2)",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "is_late",
+            "type": "boolean",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source_object",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source_row",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source_sha256",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_date",
+            "type": "date",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "receipt_batch_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "rows_at_pinned_version": 9750,
+      "latest_detail": {
+        "format": "delta",
+        "numFiles": 16,
+        "sizeInBytes": 344208,
+        "partitionColumns": []
+      },
+      "history": [
+        {
+          "version": 1,
+          "timestamp": "2026-11-01 16:28:46",
+          "operation": "MERGE",
+          "operationParameters": {
+            "matchedPredicates": "[]",
+            "predicate": "[\"(((source_object#19 = source_object#7) AND (source_row#20L = source_row#8L)) AND (source_sha256#21 = source_sha256#9))\"]",
+            "notMatchedBySourcePredicates": "[]",
+            "notMatchedPredicates": "[{\"actionType\":\"insert\"}]"
+          },
+          "operationMetrics": {
+            "numOutputRows": "140",
+            "numTargetBytesAdded": "38890",
+            "numTargetRowsInserted": "140",
+            "numTargetRowsMatchedDeleted": "0",
+            "numTargetFilesAdded": "8",
+            "materializeSourceTimeMs": "1",
+            "numTargetFilesRemoved": "0",
+            "numTargetRowsMatchedUpdated": "0",
+            "executionTimeMs": "30859",
+            "numTargetDeletionVectorsUpdated": "0",
+            "numTargetRowsCopied": "0",
+            "rewriteTimeMs": "30769",
+            "numTargetRowsUpdated": "0",
+            "numTargetDeletionVectorsRemoved": "0",
+            "numTargetRowsDeleted": "0",
+            "scanTimeMs": "0",
+            "numSourceRows": "140",
+            "numTargetDeletionVectorsAdded": "0",
+            "numTargetChangeFilesAdded": "0",
+            "numTargetRowsNotMatchedBySourceUpdated": "0",
+            "numTargetRowsNotMatchedBySourceDeleted": "0",
+            "numTargetBytesRemoved": "0"
+          }
+        },
+        {
+          "version": 0,
+          "timestamp": "2026-11-01 16:27:20",
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "ErrorIfExists",
+            "partitionBy": "[]"
+          },
+          "operationMetrics": {
+            "numOutputRows": "9610",
+            "numOutputBytes": "305318",
+            "numFiles": "8"
+          }
+        }
+      ]
+    },
+    "silver": {
+      "path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+      "pinned_version": 1,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "sensor_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "site",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_time_utc",
+            "type": "timestamp",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "ingest_time_utc",
+            "type": "timestamp",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "temperature_c",
+            "type": "decimal(8,2)",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "is_late",
+            "type": "boolean",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source_object",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source_row",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source_sha256",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_date",
+            "type": "date",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "rows_at_pinned_version": 9710,
+      "latest_detail": {
+        "format": "delta",
+        "numFiles": 1,
+        "sizeInBytes": 249157,
+        "partitionColumns": []
+      },
+      "history": [
+        {
+          "version": 2,
+          "timestamp": "2026-11-01 16:29:20",
+          "operation": "MERGE",
+          "operationParameters": {
+            "matchedPredicates": "[{\"predicate\":\"(((ingest_time_utc#694 > ingest_time_utc#3308) OR ((ingest_time_utc#694 = ingest_time_utc#3308) AND (source_object#697 < source_object#3311))) OR (((ingest_time_utc#694 = ingest_time_utc#3308) AND (source_object#697 = source_object#3311)) AND (source_row#698L < source_row#3312L)))\",\"actionType\":\"update\"}]",
+            "predicate": "[\"(record_id#3304 = record_id#690)\"]",
+            "notMatchedBySourcePredicates": "[]",
+            "notMatchedPredicates": "[{\"actionType\":\"insert\"}]"
+          },
+          "operationMetrics": {
+            "numOutputRows": "9710",
+            "numTargetBytesAdded": "249157",
+            "numTargetRowsInserted": "0",
+            "numTargetRowsMatchedDeleted": "0",
+            "numTargetFilesAdded": "1",
+            "materializeSourceTimeMs": "893",
+            "numTargetFilesRemoved": "1",
+            "numTargetRowsMatchedUpdated": "0",
+            "executionTimeMs": "3022",
+            "numTargetDeletionVectorsUpdated": "0",
+            "numTargetRowsCopied": "9710",
+            "rewriteTimeMs": "1298",
+            "numTargetRowsUpdated": "0",
+            "numTargetDeletionVectorsRemoved": "0",
+            "numTargetRowsDeleted": "0",
+            "scanTimeMs": "800",
+            "numSourceRows": "130",
+            "numTargetDeletionVectorsAdded": "0",
+            "numTargetChangeFilesAdded": "0",
+            "numTargetRowsNotMatchedBySourceUpdated": "0",
+            "numTargetRowsNotMatchedBySourceDeleted": "0",
+            "numTargetBytesRemoved": "249157"
+          }
+        },
+        {
+          "version": 1,
+          "timestamp": "2026-11-01 16:29:04",
+          "operation": "MERGE",
+          "operationParameters": {
+            "matchedPredicates": "[{\"predicate\":\"(((ingest_time_utc#694 > ingest_time_utc#1015) OR ((ingest_time_utc#694 = ingest_time_utc#1015) AND (source_object#697 < source_object#1018))) OR (((ingest_time_utc#694 = ingest_time_utc#1015) AND (source_object#697 = source_object#1018)) AND (source_row#698L < source_row#1019L)))\",\"actionType\":\"update\"}]",
+            "predicate": "[\"(record_id#1011 = record_id#690)\"]",
+            "notMatchedBySourcePredicates": "[]",
+            "notMatchedPredicates": "[{\"actionType\":\"insert\"}]"
+          },
+          "operationMetrics": {
+            "numOutputRows": "9710",
+            "numTargetBytesAdded": "249157",
+            "numTargetRowsInserted": "100",
+            "numTargetRowsMatchedDeleted": "0",
+            "numTargetFilesAdded": "1",
+            "materializeSourceTimeMs": "1208",
+            "numTargetFilesRemoved": "4",
+            "numTargetRowsMatchedUpdated": "20",
+            "executionTimeMs": "5945",
+            "numTargetDeletionVectorsUpdated": "0",
+            "numTargetRowsCopied": "9590",
+            "rewriteTimeMs": "1613",
+            "numTargetRowsUpdated": "20",
+            "numTargetDeletionVectorsRemoved": "0",
+            "numTargetRowsDeleted": "0",
+            "scanTimeMs": "3083",
+            "numSourceRows": "130",
+            "numTargetDeletionVectorsAdded": "0",
+            "numTargetChangeFilesAdded": "0",
+            "numTargetRowsNotMatchedBySourceUpdated": "0",
+            "numTargetRowsNotMatchedBySourceDeleted": "0",
+            "numTargetBytesRemoved": "282045"
+          }
+        },
+        {
+          "version": 0,
+          "timestamp": "2026-11-01 16:27:33",
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "ErrorIfExists",
+            "partitionBy": "[]"
+          },
+          "operationMetrics": {
+            "numOutputRows": "9610",
+            "numOutputBytes": "282045",
+            "numFiles": "4"
+          }
+        }
+      ]
+    },
+    "gold": {
+      "path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold",
+      "pinned_version": 1,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "site",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_date",
+            "type": "date",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "n_observations",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "sum_temperature_c",
+            "type": "decimal(18,2)",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "mean_temperature_c",
+            "type": "decimal(18,6)",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "min_temperature_c",
+            "type": "decimal(18,2)",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "max_temperature_c",
+            "type": "decimal(18,2)",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "n_late",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "late_rate",
+            "type": "decimal(18,6)",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "n_above_25",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "n_sensors",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "rows_at_pinned_version": 20,
+      "latest_detail": {
+        "format": "delta",
+        "numFiles": 1,
+        "sizeInBytes": 4251,
+        "partitionColumns": []
+      },
+      "history": [
+        {
+          "version": 1,
+          "timestamp": "2026-11-01 16:29:12",
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "Overwrite",
+            "partitionBy": "[]"
+          },
+          "operationMetrics": {
+            "numOutputRows": "20",
+            "numRemovedBytes": "4112",
+            "numRemovedFiles": "1",
+            "numOutputBytes": "4251",
+            "numFiles": "1"
+          }
+        },
+        {
+          "version": 0,
+          "timestamp": "2026-11-01 16:27:41",
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "ErrorIfExists",
+            "partitionBy": "[]"
+          },
+          "operationMetrics": {
+            "numOutputRows": "16",
+            "numOutputBytes": "4112",
+            "numFiles": "1"
+          }
+        }
+      ]
+    }
+  },
+  "source_silver_version_for_gold": 1,
+  "application_id": "app-20261101181729-0007",
+  "scope": "Additional technical verification; no assertion of a human review or owner publication."
+}

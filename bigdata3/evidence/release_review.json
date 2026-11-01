@@ -1,0 +1,29 @@
+{
+  "status": "TECHNICAL_CANDIDATE_REVIEW_PASSED",
+  "release_id": "lab3-bd-g10-roleD-20261101",
+  "assigned_reviewer": "24022466 - Lê Toàn",
+  "review_run_id": "f7637837-296c-45b5-94cc-2aa9d27a3a5a",
+  "review_completed_at_utc": "2026-11-01T18:20:00.494173+00:00",
+  "snapshot_binding": {
+    "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+    "code_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+    "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+    "silver_version": 1,
+    "gold_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold",
+    "gold_version": 1,
+    "gold_source_silver_version": 1
+  },
+  "rationale": [
+    "All mandatory refusal cases and missing-key cases behaved as required.",
+    "Pinned Gold matches every independent recomputed field from pinned Silver.",
+    "Trusted input bytes, baseline identity, archived code and candidate object hashes agree.",
+    "Catalog metadata and paired lineage describe the measured snapshots and their limits."
+  ],
+  "required_gate_cases": 5,
+  "additional_refusal_cases": 35,
+  "check_count": 16,
+  "writes_to_Delta_tables": 0,
+  "owner_publication_claimed": false,
+  "human_signature_claimed": false,
+  "student_demonstration_attested": false
+}

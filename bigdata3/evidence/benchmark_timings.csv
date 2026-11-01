@@ -1,0 +1,7 @@
+﻿measurement,round,layout,elapsed_seconds,sql_execution_id,actual_files_read,result_equal
+1,1,A,2.123606627,37,32,True
+2,1,B,0.878731415,39,1,True
+3,2,B,0.845056880,41,1,True
+4,2,A,1.871164200,43,32,True
+5,3,A,1.751632112,45,32,True
+6,3,B,0.859027120,47,1,True

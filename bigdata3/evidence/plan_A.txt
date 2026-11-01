@@ -1,0 +1,48 @@
+== Physical Plan ==
+AdaptiveSparkPlan (7)
++- HashAggregate (6)
+   +- Exchange (5)
+      +- HashAggregate (4)
+         +- Project (3)
+            +- Filter (2)
+               +- Scan parquet  (1)
+
+
+(1) Scan parquet 
+Output [4]: [site#1837, temperature_c#1840, is_late#1841, event_date#1845]
+Batched: true
+Location: PreparedDeltaFileIndex [s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned]
+PushedFilters: [IsNotNull(event_date), EqualTo(event_date,2026-02-06)]
+ReadSchema: struct<site:string,temperature_c:decimal(8,2),is_late:boolean,event_date:date>
+
+(2) Filter
+Input [4]: [site#1837, temperature_c#1840, is_late#1841, event_date#1845]
+Condition : (isnotnull(event_date#1845) AND (event_date#1845 = 2026-02-06))
+
+(3) Project
+Output [3]: [site#1837, temperature_c#1840, is_late#1841]
+Input [4]: [site#1837, temperature_c#1840, is_late#1841, event_date#1845]
+
+(4) HashAggregate
+Input [3]: [site#1837, temperature_c#1840, is_late#1841]
+Keys [1]: [site#1837]
+Functions [3]: [partial_count(1), partial_sum(UnscaledValue(temperature_c#1840)), partial_sum(CASE WHEN is_late#1841 THEN 1 ELSE 0 END)]
+Aggregate Attributes [3]: [count#2122L, sum#2123L, sum#2124L]
+Results [4]: [site#1837, count#2125L, sum#2126L, sum#2127L]
+
+(5) Exchange
+Input [4]: [site#1837, count#2125L, sum#2126L, sum#2127L]
+Arguments: hashpartitioning(site#1837, 8), ENSURE_REQUIREMENTS, [plan_id=853]
+
+(6) HashAggregate
+Input [4]: [site#1837, count#2125L, sum#2126L, sum#2127L]
+Keys [1]: [site#1837]
+Functions [3]: [count(1), sum(UnscaledValue(temperature_c#1840)), sum(CASE WHEN is_late#1841 THEN 1 ELSE 0 END)]
+Aggregate Attributes [3]: [count(1)#2053L, sum(UnscaledValue(temperature_c#1840))#2054L, sum(CASE WHEN is_late#1841 THEN 1 ELSE 0 END)#2055L]
+Results [4]: [site#1837, count(1)#2053L AS n_observations#2038L, MakeDecimal(sum(UnscaledValue(temperature_c#1840))#2054L,18,2) AS sum_temperature_c#2039, sum(CASE WHEN is_late#1841 THEN 1 ELSE 0 END)#2055L AS n_late#2040L]
+
+(7) AdaptiveSparkPlan
+Output [4]: [site#1837, n_observations#2038L, sum_temperature_c#2039, n_late#2040L]
+Arguments: isFinalPlan=false
+
+

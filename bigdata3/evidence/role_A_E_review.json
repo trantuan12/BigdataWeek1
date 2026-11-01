@@ -1,0 +1,95 @@
+{
+  "A": {
+    "passed": true,
+    "trusted_input_checks": 16,
+    "worker_containers": 2,
+    "handoff_kind": "course_fallback_not_student_approval",
+    "notes": "Current run revalidated original ZIP bytes and uses Java 17/21 baseline. Container placements do not establish separate physical servers."
+  },
+  "E": {
+    "passed": true,
+    "gate_cases": [
+      {
+        "case": "valid",
+        "expected_pass": true,
+        "observed_pass": true,
+        "reasons": [],
+        "test_passed": true
+      },
+      {
+        "case": "mixed_version",
+        "expected_pass": false,
+        "observed_pass": false,
+        "reasons": [
+          "VERSION_BINDING"
+        ],
+        "test_passed": true
+      },
+      {
+        "case": "self_review",
+        "expected_pass": false,
+        "observed_pass": false,
+        "reasons": [
+          "REVIEW"
+        ],
+        "test_passed": true
+      },
+      {
+        "case": "missing_steward",
+        "expected_pass": false,
+        "observed_pass": false,
+        "reasons": [
+          "METADATA"
+        ],
+        "test_passed": true
+      },
+      {
+        "case": "wrong_code",
+        "expected_pass": false,
+        "observed_pass": false,
+        "reasons": [
+          "CODE_BINDING"
+        ],
+        "test_passed": true
+      }
+    ],
+    "missing_key_rejections": {
+      "handoff_logical_sha256": [
+        "HANDOFF_BINDING"
+      ],
+      "code_sha256": [
+        "CODE_BINDING"
+      ],
+      "silver_path": [
+        "VERSION_BINDING"
+      ],
+      "silver_version": [
+        "VERSION_BINDING"
+      ],
+      "gold_path": [
+        "VERSION_BINDING"
+      ],
+      "gold_version": [
+        "VERSION_BINDING"
+      ],
+      "gold_source_silver_version": [
+        "VERSION_BINDING"
+      ],
+      "author": [
+        "METADATA"
+      ],
+      "reviewer": [
+        "METADATA"
+      ],
+      "steward": [
+        "METADATA"
+      ]
+    },
+    "snapshot_pair": {
+      "silver_version": 1,
+      "gold_version": 1,
+      "gold_source_silver_version": 1
+    },
+    "status": "CANDIDATE_NOT_OWNER_PUBLISHED"
+  }
+}

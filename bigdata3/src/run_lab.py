@@ -62,6 +62,14 @@ def append_receipts(spark,df,path,batch_id):
           't.source_object = s.source_object AND t.source_row = s.source_row AND t.source_sha256 = s.source_sha256')
          .whenNotMatchedInsertAll().execute())
 
+
+def receipt_digest(spark,path,v):
+    """Compare every bounded physical receipt, including its batch metadata."""
+    records=[serial(r) for r in small_records(snapshot(spark,path,v))]
+    text=''.join(json.dumps(r,sort_keys=True,separators=(',',':'))+'\n'
+                 for r in sorted(records,key=lambda r:(r['source_object'],r['source_row'],r['source_sha256'])))
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()
+
 def materialize_gold(spark,impl,silver_path,sv,gold_path,initial=False):
     df=impl.build_gold(snapshot(spark,silver_path,sv))
     if initial:write_initial(df,gold_path)
@@ -259,23 +267,31 @@ def main():
             after_v=version(spark,state['silver_path']);after=rows_from_silver(spark,state['silver_path'],after_v,registry)
             gold_v=materialize_gold(spark,impl,state['silver_path'],after_v,state['gold_path'])
             bc1=spark.read.format('delta').load(state['bronze_path']).count()
+            bronze_before_digest=receipt_digest(spark,state['bronze_path'],bv)
             # Actual replay, not just a claim or second output from the same DataFrame.
             append_receipts(spark,incoming_df,state['bronze_path'],'batch-02')
             impl.merge_silver(spark,state['silver_path'],winners)
             replay_v=version(spark,state['silver_path']);replay=rows_from_silver(spark,state['silver_path'],replay_v,registry)
             bc2=spark.read.format('delta').load(state['bronze_path']).count()
-            if bc1!=bc2 or logical_sha256(after)!=logical_sha256(replay):raise ContractError('REPLAY_NOT_IDEMPOTENT')
+            bronze_replay_v=version(spark,state['bronze_path'])
+            bronze_after_digest=receipt_digest(spark,state['bronze_path'],bronze_replay_v)
+            if (bc1!=bc2 or bronze_before_digest!=bronze_after_digest
+                or logical_sha256(after)!=logical_sha256(replay)):raise ContractError('REPLAY_NOT_IDEMPOTENT')
             historical=rows_from_silver(spark,state['silver_path'],state['silver_initial_version'],registry)
             if logical_sha256(historical)!=state['handoff_logical_sha256']:raise ContractError('TIME_TRAVEL_CHANGED')
             write_rows(ev/'silver_after_batch02.jsonl',after);write_rows(ev/'silver_replay.jsonl',replay)
             write_rows(ev/'silver_time_travel.jsonl',historical)
             save_gold(spark,state['gold_path'],gold_v,ev/'gold_after_batch02.json')
-            state.update(bronze_final_version=bv,silver_final_version=after_v,silver_replay_version=replay_v,
+            state.update(bronze_final_version=bv,bronze_replay_version=bronze_replay_v,
+                         silver_final_version=after_v,silver_replay_version=replay_v,
                          gold_final_version=gold_v,gold_source_silver_version=after_v,
                          final_implementation_sha256=impl_sha)
             state['run_ids']['incremental']=run_id;write_json(ev/'state.json',state)
             write_json(ev/'incremental.json',{'incoming_rows':len(incoming),'incoming_winners':len(winner_rows),
                 'bronze_before_replay':bc1,'bronze_after_replay':bc2,'silver_rows':len(after),
+                'bronze_receipt_sha256_before_replay':bronze_before_digest,
+                'bronze_receipt_sha256_after_replay':bronze_after_digest,
+                'bronze_after_version':bv,'bronze_replay_version':bronze_replay_v,
                 'logical_sha256_after':logical_sha256(after),'logical_sha256_replay':logical_sha256(replay),
                 'silver_after_version':after_v,'silver_replay_version':replay_v,
                 'time_travel_passed':True,'winner_reordering_passed':True,

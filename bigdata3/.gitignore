@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+_archive_before_roleD_20261101/
+_archive_previous_snapshots/
+lakehouse/
+spark-warehouse/
+artifacts/

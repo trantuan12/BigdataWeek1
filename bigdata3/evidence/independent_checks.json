@@ -1,0 +1,220 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check_id": "H01_trusted_input_bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "H02_baseline_logical_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "H03_schema_rejection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "H04_two_worker_placements",
+      "passed": true,
+      "detail": {
+        "hosts": [
+          "spark-worker-1",
+          "spark-worker-2"
+        ],
+        "limit": "Worker container placements; no claim about separate physical servers."
+      }
+    },
+    {
+      "check_id": "M01_incoming_winners",
+      "passed": true,
+      "detail": {
+        "physical_rows": 140,
+        "winners": 130,
+        "superseded": 10
+      }
+    },
+    {
+      "check_id": "M02_all_revision_decisions",
+      "passed": true,
+      "detail": {
+        "updated_newer": 20,
+        "unchanged_stale": 10,
+        "inserted": 100
+      }
+    },
+    {
+      "check_id": "M03_reordering",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "M04_receipt_replay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "M05_full_silver_replay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "M06_historical_snapshot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "M07_invalid_batches",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "B03_baseline_conservation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "M08_baseline_all_gold_values",
+      "passed": true,
+      "detail": {
+        "groups": 16
+      }
+    },
+    {
+      "check_id": "B03_after_batch02_conservation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "M08_after_batch02_all_gold_values",
+      "passed": true,
+      "detail": {
+        "groups": 20
+      }
+    },
+    {
+      "check_id": "Q1_site_day",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "Q2_weighted_day",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "Q3_above25_rate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "Q04_six_actual_timings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "Q05_benchmark_snapshot_and_size",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "Q06_equivalent_benchmark_values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "Q07_recorded_medians",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "Q08_date_partition_pruning",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "R01_R05_five_release_gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "R06_binding",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "R07_executed_code_archive",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "R08_candidate_object_hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "R09_candidate_gold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "L01_official_openlineage_schema",
+      "passed": true,
+      "detail": {
+        "source": "https://openlineage.io/spec/2-0-2/OpenLineage.json",
+        "sha256": "69f68bee00b9beac88a87059c0102410e7bb05f3f43c46d02a0409831eceb0d2",
+        "events": 14
+      }
+    },
+    {
+      "check_id": "L02_paired_run_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "L03_six_completed_tasks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "TRACE_all_batch_source_ordinals",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "TRACE_inserted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "TRACE_unchanged_stale",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check_id": "TRACE_updated_newer",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "summary": {
+    "baseline_rows": 9610,
+    "incoming_physical_rows": 140,
+    "incoming_winners": 130,
+    "superseded_incoming_rows": 10,
+    "decisions": {
+      "updated_newer": 20,
+      "unchanged_stale": 10,
+      "inserted": 100
+    },
+    "silver_rows": 9710,
+    "gold_groups": 20,
+    "temperature_sum_c": "222930.50",
+    "n_late": 220,
+    "n_above_25": 2818
+  },
+  "method": "Independent standard-library revision model and exact Decimal aggregates compared with actual Spark exports.",
+  "scope": "Technical checks only; individual hands-on review and exit responses require the assigned members."
+}

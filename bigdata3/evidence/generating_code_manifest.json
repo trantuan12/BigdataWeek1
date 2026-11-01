@@ -1,0 +1,81 @@
+{
+  "files": [
+    {
+      "file": "src/common.py",
+      "sha256": "6b3556df14c557a2047a6bed1a60b1e0a937a9648a87bb504e6430590be2eb04"
+    },
+    {
+      "file": "src/run_lab.py",
+      "sha256": "2020c5f17d0557fac6871b8fa06b5156abfe47f6c5d9eeaccf99fbaad33eb276"
+    },
+    {
+      "file": "src/session.py",
+      "sha256": "18aa0cce3141fb030f5a6f3779562b92b549c72498b333c78064db631358b056"
+    },
+    {
+      "file": "src/team_handoff.py",
+      "sha256": "b852c200194007d17fa06ee05867361205d06be91cf6f4aa81d2f4b02453b96b"
+    },
+    {
+      "file": "tools/analytics_and_dashboard.py",
+      "sha256": "dc37190ec48555a5487dbffe3318b9988e0b33b5a4257af2657f91e60a393f95"
+    },
+    {
+      "file": "tools/capture_benchmark_metrics.py",
+      "sha256": "d22835f508116c5b0060ac4a6c3fe0b12c372113cd3ebfcfd53eefb4ad06fcce"
+    },
+    {
+      "file": "tools/check_inputs.py",
+      "sha256": "36428344308fad518e4c4c457cd3b25365769a45482109f82fb5a8486bbcf939"
+    },
+    {
+      "file": "tools/check_role_a.py",
+      "sha256": "402d5aefc4261cccb1ac68a94f3fc8b42b8921ac0b191b69c12b4e68876f4cbe"
+    },
+    {
+      "file": "tools/check_role_d.py",
+      "sha256": "ab9cde134ab74eab81c0b9a5b8dd198a40cf84241b7c8720e7e3e78e3a020d01"
+    },
+    {
+      "file": "tools/check_role_e.py",
+      "sha256": "03d92f0ea93fae6c6fa39ed0e002dacd884cb650c3895325f8f2409c7174d28d"
+    },
+    {
+      "file": "tools/consumer_check.py",
+      "sha256": "cbe8ce53eb46278bd80fa729c84d3efb93d7ef516c7ca161bf1f1e6cdcb2b207"
+    },
+    {
+      "file": "tools/portable_delta.py",
+      "sha256": "08551669676df1df497cb495f3086ee7c4cf30835fd7e11890aa76098840cc2a"
+    },
+    {
+      "file": "tools/prepare_role_d_submission.py",
+      "sha256": "060254bdcc076d953f112b9940e02fc0be0f6d2fcbfb0a339d5ed92267794a68"
+    },
+    {
+      "file": "tools/publish_local_demo.py",
+      "sha256": "c0a16a78de55eda447966eeeec564970259ec9626c96dee1784258976bc71f94"
+    },
+    {
+      "file": "tools/role_a_report.py",
+      "sha256": "cfb1f7e765acc32568ee8e7e8cdcbf8f0c04d3d4747aff83c4981faa7d98d25c"
+    },
+    {
+      "file": "tools/role_d_report.py",
+      "sha256": "ab41e664d52031478d78e3c8a5cfcef0b36a34c530b518832f0c149262a44c0e"
+    },
+    {
+      "file": "tools/role_e_report.py",
+      "sha256": "84c16f79be357aff884bd6b520417de43f6b3c137712791ea8e454e341f539b3"
+    },
+    {
+      "file": "tools/verify_live_tables.py",
+      "sha256": "ff79ee979902be8bc2e3ec827632079243a329add6d36f958376b2cc9bf90fbd"
+    },
+    {
+      "file": "tools/verify_results.py",
+      "sha256": "132f836b1ed6616925a73e4c9b7a972a3be6d03783ba06c9372904ea50ec7ba7"
+    }
+  ],
+  "student_impl_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1"
+}

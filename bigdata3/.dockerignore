@@ -1,0 +1,6 @@
+**
+!infrastructure/
+!infrastructure/Dockerfile
+!infrastructure/Minio.Dockerfile
+!infrastructure/requirements.txt
+!infrastructure/cache_jars.py

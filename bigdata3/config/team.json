@@ -1,12 +1,16 @@
 {
   "group_id": "bd-g10",
-  "run_label": "run01",
-  "store_id": "local-course-fixture",
-  "spark_master": "local[2]",
-  "lakehouse_root": "d:/BigData/BigdataWeek1/bigdata3/lakehouse",
+  "run_label": "roleD-20261101",
+  "store_id": "lab3-object-store",
+  "spark_master": "spark://spark-master:7077",
+  "driver_host": "lab3-driver",
+  "lakehouse_root": "s3a://research-lakehouse/lab3",
+  "s3_endpoint": "http://objects:9000",
+  "s3_region": "us-east-1",
   "evidence_dir": "evidence",
+  "steward_role": "E",
+  "event_log_dir": "file:///eventlogs",
   "shuffle_partitions": 8,
   "benchmark_copies": 100,
   "extra_maven_packages": []
 }
-

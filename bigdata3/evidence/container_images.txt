@@ -1,0 +1,2 @@
+["lab3-spark-runtime:4.0.1"] "sha256:f9ad09ecea34cd8141c59df253c3f243b884fd969bef9da7f62968bfacaada49" ["lab3-spark-runtime@sha256:f9ad09ecea34cd8141c59df253c3f243b884fd969bef9da7f62968bfacaada49"]
+["lab3-minio:RELEASE.2025-04-22T22-12-26Z"] "sha256:6eacbe55b0f74a6c8099388f404ce55f913ee5e65ca03603b613904b77a4b2aa" ["lab3-minio@sha256:6eacbe55b0f74a6c8099388f404ce55f913ee5e65ca03603b613904b77a4b2aa"]

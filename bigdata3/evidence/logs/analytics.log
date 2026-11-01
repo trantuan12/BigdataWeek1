@@ -1,0 +1,30 @@
+Running analytics ...
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/01 16:31:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/11/01 16:31:25 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+26/11/01 16:31:32 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+
+[Stage 0:>                                                          (0 + 2) / 2]
+
+[Stage 0:===========================================================(2 + 0) / 2]
+
+[Stage 2:>                                                          (0 + 2) / 2]
+
+[Stage 5:>                                                          (0 + 1) / 1]
+
+                                                                                
+
+[Stage 8:>                                                          (0 + 1) / 1]
+
+                                                                                
+
+[Stage 24:>                                                         (0 + 1) / 1]
+
+                                                                                
+Saved 3 SQL results and 2 version-labelled plots.

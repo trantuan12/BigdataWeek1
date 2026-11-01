@@ -1,0 +1,15 @@
+{
+  "python": "3.11.18",
+  "spark": "4.0.1",
+  "delta_spark": "4.0.1",
+  "java": "17.0.21",
+  "hadoop": "3.4.1",
+  "spark_master": "spark://spark-master:7077",
+  "application_id": "app-20261101162649-0001",
+  "timezone": "UTC",
+  "aqe": "true",
+  "shuffle_partitions": "8",
+  "group_id": "bd-g10",
+  "storage_mode": "s3a",
+  "warning": "local[*] is parallel local execution, NOT multi-node execution."
+}

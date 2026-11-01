@@ -1,0 +1,89 @@
+{
+  "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+  "silver_version": 1,
+  "gold_version": 1,
+  "rows": [
+    {
+      "record_id": "R000381",
+      "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+      "silver_version": 1,
+      "selected_release_row": {
+        "record_id": "R000381",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-02T03:10:30Z",
+        "ingest_time_utc": "2026-02-02T03:40:30Z",
+        "temperature_c": "26.10",
+        "is_late": true,
+        "source_object": "observations_a.csv",
+        "source_row": 381,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "source_projection": {
+        "record_id": "R000381",
+        "sensor_id": "S01",
+        "event_time_utc": "2026-02-02T03:10:30Z",
+        "ingest_time_utc": "2026-02-02T03:40:30Z",
+        "temperature_c": "26.10"
+      },
+      "source_file_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+      "arrival_lag_seconds": 1800,
+      "passed": true
+    },
+    {
+      "record_id": "R005001",
+      "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+      "silver_version": 1,
+      "selected_release_row": {
+        "record_id": "R005001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T17:40:30Z",
+        "ingest_time_utc": "2026-02-03T17:41:30Z",
+        "temperature_c": "18.10",
+        "is_late": false,
+        "source_object": "observations_b.jsonl",
+        "source_row": 1,
+        "source_sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70"
+      },
+      "source_projection": {
+        "record_id": "R005001",
+        "sensor_id": "S01",
+        "event_time_utc": "2026-02-03T17:40:30Z",
+        "ingest_time_utc": "2026-02-03T17:41:30Z",
+        "temperature_c": "18.10"
+      },
+      "source_file_sha256": "3072ad0b725ea3763ad4d1a7c744465f997614892dd1460f9cd815094ec61b70",
+      "arrival_lag_seconds": 60,
+      "passed": true
+    },
+    {
+      "record_id": "R010001",
+      "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+      "silver_version": 1,
+      "selected_release_row": {
+        "record_id": "R010001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-06T00:01:00Z",
+        "ingest_time_utc": "2026-02-06T00:31:00Z",
+        "temperature_c": "19.10",
+        "is_late": true,
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 1,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+      },
+      "source_projection": {
+        "record_id": "R010001",
+        "sensor_id": "S01",
+        "event_time_utc": "2026-02-06T00:01:00Z",
+        "ingest_time_utc": "2026-02-06T00:31:00Z",
+        "temperature_c": "19.10"
+      },
+      "source_file_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb",
+      "arrival_lag_seconds": 1800,
+      "passed": true
+    }
+  ],
+  "projection_policy": "Only released measurement fields and source provenance; no raw payloads."
+}

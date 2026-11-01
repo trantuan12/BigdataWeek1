@@ -1,7 +1,4 @@
-check_id,operator,predicted_outcome,observed_outcome,evidence_location,explanation
-H02,A,PASS: Fallback curated.csv matches handoff manifest logical digest with 9610 rows and 10 transport columns,PASS: 9610 rows validated against sensors registry with canonical digest matching handoff_manifest.json,evidence/preflight.json|evidence/input_integrity.json,Course CSV fallback is used and explicitly recorded; verified byte-for-byte and row-for-row with preserved source provenance. No fabricated approval or unverified Parquet substitution.
-B03,B,,,,
-M06,C,,,,
-Q03,D,,,,
-R05,E,,,,
-
+﻿check_id,operator,predicted_outcome,observed_outcome,evidence_location,explanation
+A_CHECK_E,tools/check_role_a.py,Pinned Silver v1 traces to exact source ordinals/hashes; R010001 selects row 1 at 19.10 C,PASS: 16 live checks and three matching traces; zero Delta writes,evidence/role_A_prediction.json|evidence/role_A_check.json|evidence/role_A_source_trace.json,Prediction recorded before evaluation; actual pinned Delta reads; script execution only
+D_CHECK_B,tools/check_role_d.py,Gold count/sum agree with Silver; use observation-weighted mean,PASS: 10 checks,evidence/role_D_prediction.json|evidence/role_D_check.json,Prediction recorded before assertion evaluation; automated read-only execution; no personal attendance claim
+E_CHECK_A,tools/check_role_e.py,16 trusted inputs match; CSV fallback and actual Silver v0 have the same logical identity,PASS: 16 review checks; 5 required gates and 35 refusal cases; zero Delta writes,evidence/role_E_prediction.json|evidence/role_E_check.json|evidence/release_review.json,"Independent expected values and actual pinned Delta reads; program execution, no personal signature or publication claim"

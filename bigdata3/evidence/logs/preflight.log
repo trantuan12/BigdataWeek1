@@ -1,0 +1,42 @@
+Running preflight ...
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/01 16:25:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+[Stage 0:>                                                         (0 + 4) / 24]
+
+[Stage 0:>                                                         (0 + 8) / 24]
+
+[Stage 0:=========>                                                (4 + 4) / 24]
+
+[Stage 0:===================>                                      (8 + 4) / 24]
+
+[Stage 0:============================>                            (12 + 4) / 24]
+
+[Stage 0:======================================>                  (16 + 4) / 24]
+
+[Stage 0:==========================================>              (18 + 4) / 24]
+
+[Stage 0:===============================================>         (20 + 4) / 24]
+
+[Stage 0:=========================================================(24 + 0) / 24]
+
+                                                                                
+26/11/01 16:26:04 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+[Stage 1:>                                                          (0 + 4) / 4]
+
+                                                                                
+26/11/01 16:26:20 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+
+[Stage 2:>                                                          (0 + 1) / 1]
+
+[Stage 4:>                                                          (0 + 2) / 2]
+
+                                                                                
+preflight: COMPLETE; evidence: evidence

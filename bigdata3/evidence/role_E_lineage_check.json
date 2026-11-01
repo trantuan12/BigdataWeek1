@@ -1,0 +1,15 @@
+{
+  "events": 14,
+  "runs": 7,
+  "completed_jobs": [
+    "analytics",
+    "benchmark",
+    "bootstrap",
+    "incremental",
+    "preflight",
+    "release"
+  ],
+  "passed": true,
+  "issues": [],
+  "official_schema_sha256": "69f68bee00b9beac88a87059c0102410e7bb05f3f43c46d02a0409831eceb0d2"
+}

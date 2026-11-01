@@ -1,0 +1,320 @@
+[
+  {
+    "case": "missing_draft_handoff_logical_sha256",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "HANDOFF_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_draft_code_sha256",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "CODE_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_draft_silver_path",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_draft_silver_version",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_draft_gold_path",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_draft_gold_version",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_draft_gold_source_silver_version",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_draft_author",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "METADATA"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_draft_reviewer",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "METADATA"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_draft_steward",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "METADATA"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_expected_handoff_logical_sha256",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "HANDOFF_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_expected_code_sha256",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "CODE_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_expected_silver_path",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_expected_silver_version",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_expected_gold_path",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_expected_gold_version",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_expected_gold_source_silver_version",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_silver_version_bool",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_silver_version_int",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_silver_version_str",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_silver_version_float",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_gold_version_bool",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_gold_version_int",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_gold_version_str",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_gold_version_float",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_gold_source_silver_version_bool",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_gold_source_silver_version_int",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_gold_source_silver_version_str",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "invalid_gold_source_silver_version_float",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "wrong_silver_path",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "wrong_gold_path",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "wrong_handoff_digest",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "HANDOFF_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "normalized_self_review",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "REVIEW"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "matching_but_mixed_expected",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "malformed_draft",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "METADATA",
+      "VERSION_BINDING",
+      "CODE_BINDING",
+      "HANDOFF_BINDING"
+    ],
+    "test_passed": true
+  }
+]

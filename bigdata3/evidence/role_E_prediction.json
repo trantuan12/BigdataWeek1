@@ -1,0 +1,21 @@
+{
+  "member_id": "24022466",
+  "member_name": "Lê Toàn",
+  "role": "E",
+  "recorded_at_utc": "2026-11-01T18:19:29.263781+00:00",
+  "expected_binding": {
+    "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+    "code_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+    "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+    "silver_version": 1,
+    "gold_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold",
+    "gold_version": 1,
+    "gold_source_silver_version": 1
+  },
+  "predictions": [
+    "Valid binding accepts; mixed snapshots/self-review/missing steward/wrong code reject.",
+    "All 16 trusted inputs and the baseline logical digest match A handoff identity.",
+    "Every field of live pinned Gold equals an independent Decimal recomputation from pinned Silver."
+  ],
+  "execution_mode": "AUTOMATED_LIVE_DELTA_READ"
+}

@@ -1,0 +1,386 @@
+{
+  "application_id": "app-20261101163210-0004",
+  "executors": [
+    {
+      "id": "driver",
+      "hostPort": "lab3-driver:34855",
+      "isActive": true,
+      "totalCores": 0,
+      "maxTasks": 0,
+      "totalTasks": 0,
+      "failedTasks": 0,
+      "completedTasks": 0,
+      "totalDuration": 99980,
+      "totalGCTime": 0,
+      "maxMemory": 777623961
+    },
+    {
+      "id": "1",
+      "hostPort": "spark-worker-1:38169",
+      "isActive": true,
+      "totalCores": 2,
+      "maxTasks": 2,
+      "totalTasks": 36,
+      "failedTasks": 0,
+      "completedTasks": 36,
+      "totalDuration": 48289,
+      "totalGCTime": 686,
+      "maxMemory": 1099746508
+    },
+    {
+      "id": "0",
+      "hostPort": "spark-worker-2:43541",
+      "isActive": true,
+      "totalCores": 2,
+      "maxTasks": 2,
+      "totalTasks": 111,
+      "failedTasks": 0,
+      "completedTasks": 111,
+      "totalDuration": 74969,
+      "totalGCTime": 848,
+      "maxMemory": 1099746508
+    }
+  ],
+  "source": "Spark History Server SQL REST API backed by completed Spark event logs.",
+  "metric_note": "Scan-node metrics are separate from Delta total-table metadata. SQL UI duration is separate from driver wall time.",
+  "executions": [
+    {
+      "sql_execution_id": 28,
+      "layout": "A",
+      "status": "COMPLETED",
+      "sql_duration_ms": 4949,
+      "scan_nodes": [
+        {
+          "name": "Scan parquet",
+          "metrics": [
+            {
+              "name": "number of files read",
+              "value": "32"
+            },
+            {
+              "name": "scan time",
+              "value": "total (min, med, max (stageId: taskId))\n6.3 s (1.4 s, 1.7 s, 1.7 s (stage 46.0: task 84))"
+            },
+            {
+              "name": "metadata time",
+              "value": "2 ms"
+            },
+            {
+              "name": "size of files read",
+              "value": "15.6 MiB"
+            },
+            {
+              "name": "number of output rows",
+              "value": "971,000"
+            }
+          ]
+        }
+      ],
+      "partition_filter_lines": [],
+      "phase": "warmup"
+    },
+    {
+      "sql_execution_id": 34,
+      "layout": "B",
+      "status": "COMPLETED",
+      "sql_duration_ms": 1105,
+      "scan_nodes": [
+        {
+          "name": "Scan parquet",
+          "metrics": [
+            {
+              "name": "number of files read",
+              "value": "1"
+            },
+            {
+              "name": "scan time",
+              "value": "114 ms"
+            },
+            {
+              "name": "dynamic partition pruning time",
+              "value": "0 ms"
+            },
+            {
+              "name": "metadata time",
+              "value": "2 ms"
+            },
+            {
+              "name": "size of files read",
+              "value": "8.9 KiB"
+            },
+            {
+              "name": "number of output rows",
+              "value": "10,000"
+            },
+            {
+              "name": "number of partitions read",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "partition_filter_lines": [
+        "PartitionFilters: [isnotnull(event_date#2138), (event_date#2138 = 2026-02-06)]"
+      ],
+      "phase": "warmup"
+    },
+    {
+      "sql_execution_id": 37,
+      "layout": "A",
+      "status": "COMPLETED",
+      "sql_duration_ms": 1976,
+      "scan_nodes": [
+        {
+          "name": "Scan parquet",
+          "metrics": [
+            {
+              "name": "number of files read",
+              "value": "32"
+            },
+            {
+              "name": "scan time",
+              "value": "total (min, med, max (stageId: taskId))\n4.3 s (992 ms, 1.1 s, 1.2 s (stage 75.0: task 106))"
+            },
+            {
+              "name": "metadata time",
+              "value": "1 ms"
+            },
+            {
+              "name": "size of files read",
+              "value": "15.6 MiB"
+            },
+            {
+              "name": "number of output rows",
+              "value": "971,000"
+            }
+          ]
+        }
+      ],
+      "partition_filter_lines": [],
+      "phase": "measured",
+      "measurement_number": 1,
+      "round": 1,
+      "driver_elapsed_seconds": 2.123606627000072
+    },
+    {
+      "sql_execution_id": 39,
+      "layout": "B",
+      "status": "COMPLETED",
+      "sql_duration_ms": 734,
+      "scan_nodes": [
+        {
+          "name": "Scan parquet",
+          "metrics": [
+            {
+              "name": "number of files read",
+              "value": "1"
+            },
+            {
+              "name": "scan time",
+              "value": "92 ms"
+            },
+            {
+              "name": "dynamic partition pruning time",
+              "value": "0 ms"
+            },
+            {
+              "name": "metadata time",
+              "value": "0 ms"
+            },
+            {
+              "name": "size of files read",
+              "value": "8.9 KiB"
+            },
+            {
+              "name": "number of output rows",
+              "value": "10,000"
+            },
+            {
+              "name": "number of partitions read",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "partition_filter_lines": [
+        "PartitionFilters: [isnotnull(event_date#2546), (event_date#2546 = 2026-02-06)]"
+      ],
+      "phase": "measured",
+      "measurement_number": 2,
+      "round": 1,
+      "driver_elapsed_seconds": 0.8787314149999474
+    },
+    {
+      "sql_execution_id": 41,
+      "layout": "B",
+      "status": "COMPLETED",
+      "sql_duration_ms": 677,
+      "scan_nodes": [
+        {
+          "name": "Scan parquet",
+          "metrics": [
+            {
+              "name": "number of files read",
+              "value": "1"
+            },
+            {
+              "name": "scan time",
+              "value": "103 ms"
+            },
+            {
+              "name": "dynamic partition pruning time",
+              "value": "0 ms"
+            },
+            {
+              "name": "metadata time",
+              "value": "1 ms"
+            },
+            {
+              "name": "size of files read",
+              "value": "8.9 KiB"
+            },
+            {
+              "name": "number of output rows",
+              "value": "10,000"
+            },
+            {
+              "name": "number of partitions read",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "partition_filter_lines": [
+        "PartitionFilters: [isnotnull(event_date#2661), (event_date#2661 = 2026-02-06)]"
+      ],
+      "phase": "measured",
+      "measurement_number": 3,
+      "round": 2,
+      "driver_elapsed_seconds": 0.8450568800000156
+    },
+    {
+      "sql_execution_id": 43,
+      "layout": "A",
+      "status": "COMPLETED",
+      "sql_duration_ms": 1730,
+      "scan_nodes": [
+        {
+          "name": "Scan parquet",
+          "metrics": [
+            {
+              "name": "number of files read",
+              "value": "32"
+            },
+            {
+              "name": "scan time",
+              "value": "total (min, med, max (stageId: taskId))\n4.2 s (969 ms, 1.1 s, 1.1 s (stage 105.0: task 127))"
+            },
+            {
+              "name": "metadata time",
+              "value": "1 ms"
+            },
+            {
+              "name": "size of files read",
+              "value": "15.6 MiB"
+            },
+            {
+              "name": "number of output rows",
+              "value": "971,000"
+            }
+          ]
+        }
+      ],
+      "partition_filter_lines": [],
+      "phase": "measured",
+      "measurement_number": 4,
+      "round": 2,
+      "driver_elapsed_seconds": 1.8711641999999529
+    },
+    {
+      "sql_execution_id": 45,
+      "layout": "A",
+      "status": "COMPLETED",
+      "sql_duration_ms": 1606,
+      "scan_nodes": [
+        {
+          "name": "Scan parquet",
+          "metrics": [
+            {
+              "name": "number of files read",
+              "value": "32"
+            },
+            {
+              "name": "scan time",
+              "value": "total (min, med, max (stageId: taskId))\n3.9 s (955 ms, 972 ms, 972 ms (stage 115.0: task 136))"
+            },
+            {
+              "name": "metadata time",
+              "value": "1 ms"
+            },
+            {
+              "name": "size of files read",
+              "value": "15.6 MiB"
+            },
+            {
+              "name": "number of output rows",
+              "value": "971,000"
+            }
+          ]
+        }
+      ],
+      "partition_filter_lines": [],
+      "phase": "measured",
+      "measurement_number": 5,
+      "round": 3,
+      "driver_elapsed_seconds": 1.7516321120000384
+    },
+    {
+      "sql_execution_id": 47,
+      "layout": "B",
+      "status": "COMPLETED",
+      "sql_duration_ms": 680,
+      "scan_nodes": [
+        {
+          "name": "Scan parquet",
+          "metrics": [
+            {
+              "name": "number of files read",
+              "value": "1"
+            },
+            {
+              "name": "scan time",
+              "value": "94 ms"
+            },
+            {
+              "name": "dynamic partition pruning time",
+              "value": "0 ms"
+            },
+            {
+              "name": "metadata time",
+              "value": "1 ms"
+            },
+            {
+              "name": "size of files read",
+              "value": "8.9 KiB"
+            },
+            {
+              "name": "number of output rows",
+              "value": "10,000"
+            },
+            {
+              "name": "number of partitions read",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "partition_filter_lines": [
+        "PartitionFilters: [isnotnull(event_date#2998), (event_date#2998 = 2026-02-06)]"
+      ],
+      "phase": "measured",
+      "measurement_number": 6,
+      "round": 3,
+      "driver_elapsed_seconds": 0.8590271200000643
+    }
+  ]
+}

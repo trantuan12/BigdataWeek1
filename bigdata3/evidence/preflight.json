@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "delta_smoke_path": "d:/BigData/BigdataWeek1/bigdata3/lakehouse/bd-g10/run01/preflight-16188ad4-27ef-466c-847c-13ae8ad9f8c4",
+  "delta_smoke_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884",
   "fixture_rows": 9610,
   "new_batch_rows": 140,
   "implementation_file": "student_impl.py"

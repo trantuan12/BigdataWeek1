@@ -1,0 +1,27 @@
+{
+  "member_id": "24022484",
+  "member_name": "Trần Anh Tuấn",
+  "role": "A",
+  "recorded_at_utc": "2026-11-01T18:18:52.441222+00:00",
+  "execution_mode": "AUTOMATED_LIVE_DELTA_READ",
+  "predictions": {
+    "inputs": "All 16 byte/hash checks pass; baseline is the declared 9610-row course fallback.",
+    "snapshot": "The candidate binds Silver v1 and Gold v1; live reads match the declared versions.",
+    "R000381": {
+      "source_object": "observations_a.csv",
+      "source_row": 381,
+      "temperature_c": "26.10"
+    },
+    "R005001": {
+      "source_object": "observations_b.jsonl",
+      "source_row": 1,
+      "temperature_c": "18.10"
+    },
+    "R010001": {
+      "source_object": "lab3/source_batch02.csv",
+      "source_row": 1,
+      "temperature_c": "19.10"
+    },
+    "tie": "Same ingest/object for rows 1 and 131; row 1 wins regardless of file enumeration order."
+  }
+}

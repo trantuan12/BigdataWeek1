@@ -1,0 +1,749 @@
+{
+  "purpose": "Exact Delta logs and data files; historical versions preserved.",
+  "table_uris": {
+    "bronze": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze",
+    "silver": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+    "gold": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold",
+    "A": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned",
+    "B": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned",
+    "schema_probe": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884"
+  },
+  "objects": [
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/_delta_log/00000000000000000000.crc",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/_delta_log/00000000000000000000.crc",
+      "bytes": 11100,
+      "sha256": "e9985dd4ae15ea74e6c68dfd1988fe460f7a255fe00b386449340cf9975c6503"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/_delta_log/00000000000000000000.json",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/_delta_log/00000000000000000000.json",
+      "bytes": 11353,
+      "sha256": "7370d96c8920ec0bbdc304f81eeffa92f51a2957accca2f0ed3bb876a710bba3"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/_delta_log/00000000000000000001.crc",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/_delta_log/00000000000000000001.crc",
+      "bytes": 20734,
+      "sha256": "bf7dca0021c0a2d1df1097e9923511810ef4d793dce366f6914cbe2cd18f3f87"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/_delta_log/00000000000000000001.json",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/_delta_log/00000000000000000001.json",
+      "bytes": 10885,
+      "sha256": "53acd307bbc1d0dcd69059a9f65c4e37930324c483adf8544699f8f3fdbc593b"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/_delta_log/_staged_commits/",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/_delta_log/_staged_commits",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00000-3ce7f29e-6db5-4959-97dc-fd50a78074bb-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00000-3ce7f29e-6db5-4959-97dc-fd50a78074bb-c000.snappy.parquet",
+      "bytes": 38158,
+      "sha256": "5d8737a8c7d70ed24a69cc4ecc6b866605637dbd23c67aa27a75b1111cddb2dc"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00000-4e826234-4bd0-4381-a603-b371e2b7dc6b-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00000-4e826234-4bd0-4381-a603-b371e2b7dc6b-c000.snappy.parquet",
+      "bytes": 4855,
+      "sha256": "36f92e157f6d595fed27223db87c222212f951eb0c4aec432763be1d0cfb27b5"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00000-984be9d9-eb2d-4d5d-85ec-10662acfb3a3-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00000-984be9d9-eb2d-4d5d-85ec-10662acfb3a3-c000.snappy.parquet",
+      "bytes": 1374,
+      "sha256": "1fe122b6c3235268a3b031e0e180e09b4323c81109af78acc0115bccc67216ec"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00001-6a0841b0-099d-499a-b999-82043c859d82-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00001-6a0841b0-099d-499a-b999-82043c859d82-c000.snappy.parquet",
+      "bytes": 4857,
+      "sha256": "14972abd1a40336afb7687aa9139ed0f0c6c32a86d7eec124e2302e0680b0bf5"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00001-92bf1e2a-b7bc-4b79-b4d3-2d2b4930729a-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00001-92bf1e2a-b7bc-4b79-b4d3-2d2b4930729a-c000.snappy.parquet",
+      "bytes": 38185,
+      "sha256": "97c1eda98a1581efdbdafe8fbdbe7a8ba9d9e81de0ca51f83a4d3a04be32f779"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00002-547b49df-e46a-44c4-a4f0-42531c0ec46e-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00002-547b49df-e46a-44c4-a4f0-42531c0ec46e-c000.snappy.parquet",
+      "bytes": 4908,
+      "sha256": "0b26652a5b61f2aa1a938c9d1bf4a82be737d30b0baf4ace1f8255a519da52e4"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00002-6e1dbfab-1acd-4be3-9075-857c97d53156-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00002-6e1dbfab-1acd-4be3-9075-857c97d53156-c000.snappy.parquet",
+      "bytes": 38160,
+      "sha256": "7e2a617e7722b16b4f2086ec3e9e55d786d83671f3425a0ea57f13d445d7de56"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00003-c8f04a2d-ddfd-47cf-8099-e9854bf2019d-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00003-c8f04a2d-ddfd-47cf-8099-e9854bf2019d-c000.snappy.parquet",
+      "bytes": 4870,
+      "sha256": "bf5c5568659e5b64cfe43ad01f9d68873a06d3897c93f8f5edf7cf0d65b4ba04"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00003-c971dda3-2687-4776-b675-7672f3e92da8-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00003-c971dda3-2687-4776-b675-7672f3e92da8-c000.snappy.parquet",
+      "bytes": 38101,
+      "sha256": "88b6cf913c555f5c25713203a10348ede47a4960efd5ea857443545365e185b9"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00004-3192a955-2717-49ac-b51b-6b9c02587caa-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00004-3192a955-2717-49ac-b51b-6b9c02587caa-c000.snappy.parquet",
+      "bytes": 4894,
+      "sha256": "38fbcf6dd87196f3d554a9ab0e64333ed6838061afa6a3114f29e8150302bd19"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00004-f67f706a-40ec-4f81-b01a-a15fd98ffd9c-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00004-f67f706a-40ec-4f81-b01a-a15fd98ffd9c-c000.snappy.parquet",
+      "bytes": 38122,
+      "sha256": "d6c090a3058ba281c19db8f0b6a48d754f2252e1285e0a033d3be3b543c84ab8"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00005-aa269882-94c8-49d9-b6fc-c7848c330f53-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00005-aa269882-94c8-49d9-b6fc-c7848c330f53-c000.snappy.parquet",
+      "bytes": 4812,
+      "sha256": "7cc685b7e2dfc0897c841e27e744999a1c3af77ab1f9a356028dbdfc33260675"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00005-b3e6e314-d552-47be-9356-f5f7881e7e86-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00005-b3e6e314-d552-47be-9356-f5f7881e7e86-c000.snappy.parquet",
+      "bytes": 38227,
+      "sha256": "271d52c5da285a85227caabfb86a8cc9070513ef0a35859a6b94daec7a2a46e6"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00006-15c7a23d-03a6-4aee-ba8d-84c8b26ccb0f-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00006-15c7a23d-03a6-4aee-ba8d-84c8b26ccb0f-c000.snappy.parquet",
+      "bytes": 4846,
+      "sha256": "f9572ade9c5c97d44a70a134f95e5233a3df5bd5bbdd843aaa5b6d3ccfac0eb7"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00006-be766ecd-f091-47bb-839a-610e1c7555c7-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00006-be766ecd-f091-47bb-839a-610e1c7555c7-c000.snappy.parquet",
+      "bytes": 38225,
+      "sha256": "4a1c7c8b40728ecc2ce064f1b71d2bd7248b8d4835ea56da7dcddf7ed8de9be7"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00007-0245df58-6da1-4d65-bb44-48a79a05e3ba-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00007-0245df58-6da1-4d65-bb44-48a79a05e3ba-c000.snappy.parquet",
+      "bytes": 38140,
+      "sha256": "8ceddd87ff533f2f4d4b2205d13452d998dfd3977dd4f07540780a013e22fb43"
+    },
+    {
+      "table": "bronze",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/bronze/part-00007-44c26155-931d-4c6c-a7ca-52aed4169dda-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze/part-00007-44c26155-931d-4c6c-a7ca-52aed4169dda-c000.snappy.parquet",
+      "bytes": 4848,
+      "sha256": "380f2172a9f696bc1eeadb834fea1dbc1ff5fb4efb262508c85906f226035b43"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000000.crc",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000000.crc",
+      "bytes": 5783,
+      "sha256": "ace80812e813860abfdc086b0fcecb4dba4c6fe40b4621d7124129e9021d06bc"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000000.json",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000000.json",
+      "bytes": 6008,
+      "sha256": "cbc26a4c5d8cb6e0071bb64de8f8f11234e208081c22d6989c94eefcfa7fbdbe"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000001.crc",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000001.crc",
+      "bytes": 2461,
+      "sha256": "ece19eade107453551da1d97c634b94439f10ce12ad6faec667203568867d5e8"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000001.json",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000001.json",
+      "bytes": 3519,
+      "sha256": "e7e4fe604120d07870a1af63ba94bc4c3140481d87e11ca2bb4ffd61aa114f82"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000002.crc",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000002.crc",
+      "bytes": 2461,
+      "sha256": "cde0dc7c8c4836ea453a5ba02fe973abe74ad663e427469d6cbdb89a67659ad9"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000002.json",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/00000000000000000002.json",
+      "bytes": 2806,
+      "sha256": "43a9fda5fd264572b4a0136ac9071e724cef04b2dc7603085b48f4095424bbcc"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/_staged_commits/",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/_delta_log/_staged_commits",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/part-00000-65fc6c0e-8fdc-4c99-b74b-42e923ea8fa6-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/part-00000-65fc6c0e-8fdc-4c99-b74b-42e923ea8fa6-c000.snappy.parquet",
+      "bytes": 70648,
+      "sha256": "fbb07d773d0a2523d1b5994c5d43ddbbf27e8c393917692b677e49c90f1db6eb"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/part-00000-b5c1504c-3de2-483d-ae41-b09f7a821aaa-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/part-00000-b5c1504c-3de2-483d-ae41-b09f7a821aaa-c000.snappy.parquet",
+      "bytes": 249157,
+      "sha256": "04151c806372d49a6a0741dccdff3b0acc8bdee9c44bedae4bb3a89a59c5e01b"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/part-00000-cb313daa-20ab-45ef-8c69-09634b5d2820-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/part-00000-cb313daa-20ab-45ef-8c69-09634b5d2820-c000.snappy.parquet",
+      "bytes": 249157,
+      "sha256": "809e9ca1f80f36a6923fb1e2caa008734a8a63207c07ee995924e4ef1dfd459a"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/part-00001-20aed8bc-e792-4856-838d-886bc59b9fa3-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/part-00001-20aed8bc-e792-4856-838d-886bc59b9fa3-c000.snappy.parquet",
+      "bytes": 70498,
+      "sha256": "7f3063b868b65d1cde882322776abdb41ab84b2cde0718ad362cd2d8f9dc2eef"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/part-00002-a9cb748d-5d52-4800-aa25-4c4b367be34b-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/part-00002-a9cb748d-5d52-4800-aa25-4c4b367be34b-c000.snappy.parquet",
+      "bytes": 70505,
+      "sha256": "d59cbc1e7283f20076de3db0e6a59463aecae02493075e87874a32da37361838"
+    },
+    {
+      "table": "silver",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/silver/part-00003-d31f6841-487e-4363-bfae-c2faf971c47a-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver/part-00003-d31f6841-487e-4363-bfae-c2faf971c47a-c000.snappy.parquet",
+      "bytes": 70394,
+      "sha256": "69714ad32003d14aef3f1bbc5fb29aafad060ec3070ea1a819e5a056dba1cb36"
+    },
+    {
+      "table": "gold",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/gold/_delta_log/00000000000000000000.crc",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold/_delta_log/00000000000000000000.crc",
+      "bytes": 2351,
+      "sha256": "2f6cc4ad2d48221a78a68b2f41bfaa19df47789392664d04e4361672a7be8f19"
+    },
+    {
+      "table": "gold",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/gold/_delta_log/00000000000000000000.json",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold/_delta_log/00000000000000000000.json",
+      "bytes": 2553,
+      "sha256": "f25e8ed3df60c7fdf3f7ee8cf389b0d54e175335e13a998515d7c4a110d6dcbe"
+    },
+    {
+      "table": "gold",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/gold/_delta_log/00000000000000000001.crc",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold/_delta_log/00000000000000000001.crc",
+      "bytes": 2348,
+      "sha256": "bcfe22555ee2afa3eb8707677c4f05dcd56699b0cee7146af78b0a98df5d9056"
+    },
+    {
+      "table": "gold",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/gold/_delta_log/00000000000000000001.json",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold/_delta_log/00000000000000000001.json",
+      "bytes": 1605,
+      "sha256": "faa3be1635fa7f3a83817f2e6db33938de6bb9ca993967a28f0ff3a69355b510"
+    },
+    {
+      "table": "gold",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/gold/_delta_log/_staged_commits/",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold/_delta_log/_staged_commits",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "table": "gold",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/gold/part-00000-8a897142-d664-451a-a68f-78559f743930-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold/part-00000-8a897142-d664-451a-a68f-78559f743930-c000.snappy.parquet",
+      "bytes": 4251,
+      "sha256": "e60dc2f59799bb9d6221b981c373c8f9e5f4ddad862f4b839413e8fe98fc234a"
+    },
+    {
+      "table": "gold",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/tables/gold/part-00000-95978e09-fa9e-4790-8537-d2c5c7c3a639-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold/part-00000-95978e09-fa9e-4790-8537-d2c5c7c3a639-c000.snappy.parquet",
+      "bytes": 4112,
+      "sha256": "23cd476af331985e393daee9c43ee39c8b53a0a4c0a57b6da055309a200fbf72"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/_delta_log/00000000000000000000.crc",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/_delta_log/00000000000000000000.crc",
+      "bytes": 38803,
+      "sha256": "06f4201a563981a3c3d5c258e63718b0a05153d37f888dd0d0293e86b3d8c5b9"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/_delta_log/00000000000000000000.json",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/_delta_log/00000000000000000000.json",
+      "bytes": 39226,
+      "sha256": "9fcfc4122f16ac2f4f86e069a555d9672dfab066aa5266e1dc82d9bb9aa785f3"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/_delta_log/_staged_commits/",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/_delta_log/_staged_commits",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00000-4012e6e2-8c65-42ae-b145-0e57fc4557cc-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00000-4012e6e2-8c65-42ae-b145-0e57fc4557cc-c000.snappy.parquet",
+      "bytes": 513022,
+      "sha256": "88c7bb041df8992163985d7b501d58fbd129e549f4aa0737b97fea751357dc06"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00001-c3f3b896-1ab0-4334-9df7-a15af4b8f8f8-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00001-c3f3b896-1ab0-4334-9df7-a15af4b8f8f8-c000.snappy.parquet",
+      "bytes": 512816,
+      "sha256": "00378c2d8c57c68d844845b3862188de2995b8e3744ce51359b842b38e1824eb"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00002-2d2a3172-114a-49bc-925c-d9f0b6dc887b-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00002-2d2a3172-114a-49bc-925c-d9f0b6dc887b-c000.snappy.parquet",
+      "bytes": 512142,
+      "sha256": "472b911c946ff2ad257c4fb6dd4e92c3e213e494fbf7b07ca0ff8f984229cbaf"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00003-849953d5-67af-4494-b729-a8dc1db395c7-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00003-849953d5-67af-4494-b729-a8dc1db395c7-c000.snappy.parquet",
+      "bytes": 511874,
+      "sha256": "e17d516b76822ffee78a106c9749b7862df189a489a4858c030881f37d112e28"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00004-8a24ce21-6f20-4772-9a48-4ccf942164d4-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00004-8a24ce21-6f20-4772-9a48-4ccf942164d4-c000.snappy.parquet",
+      "bytes": 512110,
+      "sha256": "a9640c8ee35cc0909c1cac20943c335eb0d6b65d507731f6d0903512135e41a2"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00005-394f8b98-cf0a-4fff-a4cf-51a0720a25df-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00005-394f8b98-cf0a-4fff-a4cf-51a0720a25df-c000.snappy.parquet",
+      "bytes": 512043,
+      "sha256": "a2052a1f3bb2b884a6aa44a887c835cec456d470a24fddfa1b9ebce48c71ab28"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00006-203a0b12-3ff3-4bdb-8bbb-f7e18c4be967-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00006-203a0b12-3ff3-4bdb-8bbb-f7e18c4be967-c000.snappy.parquet",
+      "bytes": 512474,
+      "sha256": "f764442b95f9335c058ff418cdfff688296993e34129bb7ad396f7e6a26b05f8"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00007-92b4ebc3-abe9-4985-8db5-240bf2e02649-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00007-92b4ebc3-abe9-4985-8db5-240bf2e02649-c000.snappy.parquet",
+      "bytes": 512488,
+      "sha256": "0bf19caf28819b648e5c7307ddda35b518baa55a965dbb7837ffebfa4d883c40"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00008-b9f30a33-70e2-4167-b461-fb5384ad8658-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00008-b9f30a33-70e2-4167-b461-fb5384ad8658-c000.snappy.parquet",
+      "bytes": 512654,
+      "sha256": "7984536cdf046c83f89920ac8a95edda44d89177829d45508d905bea2a430429"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00009-fcca49cf-d9be-4828-b03c-e5cfeb8870b8-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00009-fcca49cf-d9be-4828-b03c-e5cfeb8870b8-c000.snappy.parquet",
+      "bytes": 512473,
+      "sha256": "9f96549c8d8f8eb52ff913110b9d05f6ff9e995b1bda9e270d53366098134e02"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00010-b34f6f76-dae2-437c-8a21-69cbe46ccdba-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00010-b34f6f76-dae2-437c-8a21-69cbe46ccdba-c000.snappy.parquet",
+      "bytes": 512255,
+      "sha256": "aa7493a099c2e901056f77b90644a98180db9bc1ef7373e8bcd1f274fa21974d"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00011-1b5429f3-7b04-4903-86ac-839e72eccd2d-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00011-1b5429f3-7b04-4903-86ac-839e72eccd2d-c000.snappy.parquet",
+      "bytes": 512109,
+      "sha256": "ab3a3ccdcf2e6b99ad24915ea96f6fd496b86572a2d0f5d9f0e094c28894be56"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00012-795c3754-8c86-4ae5-9d58-0d9dcac28d67-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00012-795c3754-8c86-4ae5-9d58-0d9dcac28d67-c000.snappy.parquet",
+      "bytes": 511758,
+      "sha256": "562564df3e766a559657c45f368798269c21eaafc2f1fbd8305dce23fb4695ad"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00013-3a73990a-6763-45dc-a1b7-ba7166bd9c44-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00013-3a73990a-6763-45dc-a1b7-ba7166bd9c44-c000.snappy.parquet",
+      "bytes": 512696,
+      "sha256": "736037ac6448e7599db2d664e305f35acd46629e20b85b11d506f7629d2d4a9f"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00014-cd8a72d2-d663-4d53-bc41-26c11a0f1309-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00014-cd8a72d2-d663-4d53-bc41-26c11a0f1309-c000.snappy.parquet",
+      "bytes": 512418,
+      "sha256": "3fb313679f3b55eebe56ac3d495203df468afc62a31c40a8efcc594d1e76449e"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00015-f6dde411-e3b0-4756-9c6a-91fb483ee248-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00015-f6dde411-e3b0-4756-9c6a-91fb483ee248-c000.snappy.parquet",
+      "bytes": 512717,
+      "sha256": "3896943df02998e6a391a6e0396f5bba8ddce27947e620037efdbf650b63ddae"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00016-55a5b06c-eb1b-4524-b95b-61e4a004c54d-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00016-55a5b06c-eb1b-4524-b95b-61e4a004c54d-c000.snappy.parquet",
+      "bytes": 511883,
+      "sha256": "a1382d6a89f0cf1a2f407ee7dcd89c7a92eb702e3004393cda17f508d679710d"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00017-6e901796-961b-43cd-b149-a68af541adf8-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00017-6e901796-961b-43cd-b149-a68af541adf8-c000.snappy.parquet",
+      "bytes": 512481,
+      "sha256": "b5217244e81e51f71b32af6ba40e010b1df6b5eb8ad8a6cc34534b3fb83b1778"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00018-5c56ed28-c378-4139-82fc-e33511967e13-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00018-5c56ed28-c378-4139-82fc-e33511967e13-c000.snappy.parquet",
+      "bytes": 512481,
+      "sha256": "37e81bff7e48e7cb0471c17df0f10001e39d397846490c20e1f1add8890ef25c"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00019-d8944347-d0c0-447d-b122-67fcfff2ca88-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00019-d8944347-d0c0-447d-b122-67fcfff2ca88-c000.snappy.parquet",
+      "bytes": 512172,
+      "sha256": "f502412ebc82afbe51ad16185a912c4a966a29988610ffe435982552dd19e11c"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00020-883774f3-5880-4942-9978-287456382feb-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00020-883774f3-5880-4942-9978-287456382feb-c000.snappy.parquet",
+      "bytes": 512696,
+      "sha256": "d938d05e7bdbbacf22f13cc5062a228a798df8b305b4006ed099ece64135098a"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00021-fa0c7a77-b07f-47c4-8033-5b8d738adff8-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00021-fa0c7a77-b07f-47c4-8033-5b8d738adff8-c000.snappy.parquet",
+      "bytes": 512733,
+      "sha256": "8df2e3d5448acb414ef543dfea64f14b26a64359d8259cb984756830ccc2015d"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00022-0ec9b529-bd89-4378-b645-b41fea15b3b4-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00022-0ec9b529-bd89-4378-b645-b41fea15b3b4-c000.snappy.parquet",
+      "bytes": 512295,
+      "sha256": "28f3705aa99966cb73d629fae9c0459f4c3d74b325f0a0a9ce1ff1174819932f"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00023-eba16595-b311-49ea-a8ba-9a200e429514-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00023-eba16595-b311-49ea-a8ba-9a200e429514-c000.snappy.parquet",
+      "bytes": 512430,
+      "sha256": "78ea80f690ec932a9f8973a44f694a1909f67829c6ab9a639f2f1dab1adac1ec"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00024-0b94d121-6dce-45ca-bbc2-02ee59cfe48a-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00024-0b94d121-6dce-45ca-bbc2-02ee59cfe48a-c000.snappy.parquet",
+      "bytes": 512815,
+      "sha256": "0d9e0de493931b41f2a9dfaec937220191f6b9447eaff9729b786c0641961eeb"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00025-1ea4532d-a3da-4ae3-b57a-0e1a86e84c81-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00025-1ea4532d-a3da-4ae3-b57a-0e1a86e84c81-c000.snappy.parquet",
+      "bytes": 512078,
+      "sha256": "6fc28ef9c65ee4619b083f0a877d55045fc4a3eddb172bdb6e8fe3457b9ba664"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00026-08b338b3-0365-40a3-8bf2-a65e60df8d9f-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00026-08b338b3-0365-40a3-8bf2-a65e60df8d9f-c000.snappy.parquet",
+      "bytes": 512731,
+      "sha256": "b104cc14fa975e21631ce2d48f90ff24a124cea26c85dace354a1c92735436b3"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00027-04feae1a-85b6-4c40-afc0-e0347513322d-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00027-04feae1a-85b6-4c40-afc0-e0347513322d-c000.snappy.parquet",
+      "bytes": 512585,
+      "sha256": "67b881ec5ba31fbc2df4df1f4485c8175a3a5f99c28de92ce779f0bd075f32d5"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00028-42dd87f0-1d40-45b2-ad90-46b2d2d1afbe-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00028-42dd87f0-1d40-45b2-ad90-46b2d2d1afbe-c000.snappy.parquet",
+      "bytes": 512001,
+      "sha256": "0dd584ea50f67c90030490cec9dc6dac3bdd856c08673fc5ecdd0775fc88665e"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00029-430b6371-9fa8-4c9f-b402-8ca8ae306f7b-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00029-430b6371-9fa8-4c9f-b402-8ca8ae306f7b-c000.snappy.parquet",
+      "bytes": 512181,
+      "sha256": "4353d2a8f3cfad0992df8d2dc1f894525b4fc3d38cf91311ac0d138a3d768b1d"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00030-6c2dcac1-60eb-4b83-9f69-58589b2a4aff-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00030-6c2dcac1-60eb-4b83-9f69-58589b2a4aff-c000.snappy.parquet",
+      "bytes": 512050,
+      "sha256": "947478fc2c235df71788dce0291528a417683a43f19e605a84d3b699b1c17d85"
+    },
+    {
+      "table": "A",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00031-f4c14733-466d-4e63-be15-522a60bfc0f2-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/unpartitioned/part-00031-f4c14733-466d-4e63-be15-522a60bfc0f2-c000.snappy.parquet",
+      "bytes": 512562,
+      "sha256": "ad231b7acb9f00ee44d78151d68fb7d0d3cddf2e19bd37072c26aafa778416cc"
+    },
+    {
+      "table": "B",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/_delta_log/00000000000000000000.crc",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/_delta_log/00000000000000000000.crc",
+      "bytes": 7125,
+      "sha256": "933200f2ca496e3f4c9655358dbcb8dbf8f2329cb0c7402c73dcf97e28d95c9b"
+    },
+    {
+      "table": "B",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/_delta_log/00000000000000000000.json",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/_delta_log/00000000000000000000.json",
+      "bytes": 7373,
+      "sha256": "a910aa1302fabe397b6b73b8bbb076672822108520f9de5579c250b15f0be633"
+    },
+    {
+      "table": "B",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/_delta_log/_staged_commits/",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/_delta_log/_staged_commits",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "table": "B",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/event_date=2026-02-02/part-00001-d605d8cc-2062-4dd2-9a8d-44db980da578.c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/event_date=2026-02-02/part-00001-d605d8cc-2062-4dd2-9a8d-44db980da578.c000.snappy.parquet",
+      "bytes": 133241,
+      "sha256": "790b5eff0f608f8a6e3cdefda28d721eab4fa2e33ca4148e2583c23095b83627"
+    },
+    {
+      "table": "B",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/event_date=2026-02-03/part-00000-be1aadd5-b416-4619-9676-af7bbac6abd5.c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/event_date=2026-02-03/part-00000-be1aadd5-b416-4619-9676-af7bbac6abd5.c000.snappy.parquet",
+      "bytes": 154244,
+      "sha256": "10dbead94e23471401b602ceca249e89277eb8b2759b28b8e1e95c996dabdfee"
+    },
+    {
+      "table": "B",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/event_date=2026-02-04/part-00002-5d2d6a1a-8c24-4ae7-a29f-ecef3b55e693.c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/event_date=2026-02-04/part-00002-5d2d6a1a-8c24-4ae7-a29f-ecef3b55e693.c000.snappy.parquet",
+      "bytes": 154395,
+      "sha256": "de2521ee5278556a6f530faf22c09e045ec7ce1edf42c1563cf68a39e6689e2e"
+    },
+    {
+      "table": "B",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/event_date=2026-02-05/part-00002-7b8f8c86-6b54-497b-831b-76dc98bc0c24.c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/event_date=2026-02-05/part-00002-7b8f8c86-6b54-497b-831b-76dc98bc0c24.c000.snappy.parquet",
+      "bytes": 74361,
+      "sha256": "d894e722f28f91b49830335eefc5e771a8c7bcbe357727fe9a3b08628c5b37a1"
+    },
+    {
+      "table": "B",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/event_date=2026-02-06/part-00004-eb953941-4593-4aa7-afb4-05f66c4b6cbd.c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/benchmarks/360202d2-1179-4dd4-b1cd-d5ae2cefbfab/date_partitioned/event_date=2026-02-06/part-00004-eb953941-4593-4aa7-afb4-05f66c4b6cbd.c000.snappy.parquet",
+      "bytes": 9156,
+      "sha256": "b8b2a6989556c473afcac429c76bcb916600dc6698ef5190229596dc9bc9b6fb"
+    },
+    {
+      "table": "schema_probe",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/_delta_log/00000000000000000000.crc",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/_delta_log/00000000000000000000.crc",
+      "bytes": 1586,
+      "sha256": "938c9363699ade066f36c6ac106179dcef7de6566c6661628d64e179c1f9e0b8"
+    },
+    {
+      "table": "schema_probe",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/_delta_log/00000000000000000000.json",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/_delta_log/00000000000000000000.json",
+      "bytes": 1808,
+      "sha256": "c9680176c52a75567d9ea60d3d5d0bc9ccebe0cb7f04c5c0970bbafd12e2ec24"
+    },
+    {
+      "table": "schema_probe",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/_delta_log/_staged_commits/",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/_delta_log/_staged_commits",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "table": "schema_probe",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/part-00000-c98be3a5-3a4b-4e3e-9428-ea706dde8ba3-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/part-00000-c98be3a5-3a4b-4e3e-9428-ea706dde8ba3-c000.snappy.parquet",
+      "bytes": 502,
+      "sha256": "c94f3633765c37476fed088327fe89f66c49140df56825c80de0407ccee33e5d"
+    },
+    {
+      "table": "schema_probe",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/part-00001-5b047d73-f5d2-4852-b807-c99fbcb48098-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/part-00001-5b047d73-f5d2-4852-b807-c99fbcb48098-c000.snappy.parquet",
+      "bytes": 501,
+      "sha256": "b3cdb6e4514a7d40ad86160c91d7bac35f7d5156c726ad28d0fe755ae5ec5fec"
+    },
+    {
+      "table": "schema_probe",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/part-00002-7e3e3b96-f10f-46ca-a4d6-35c907f43f13-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/part-00002-7e3e3b96-f10f-46ca-a4d6-35c907f43f13-c000.snappy.parquet",
+      "bytes": 502,
+      "sha256": "9ddd6d6433be7cf4cbb6ef4d3a745ca81b1bab9219df444e27e5e3c8bb0579f9"
+    },
+    {
+      "table": "schema_probe",
+      "bucket": "research-lakehouse",
+      "key": "lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/part-00003-8667d243-b38b-42c3-87c3-2f52c8b8c04e-c000.snappy.parquet",
+      "file": "research-lakehouse/lab3/bd-g10/roleD-20261101/preflight-cce95268-9679-47e0-892b-07a448e99884/part-00003-8667d243-b38b-42c3-87c3-2f52c8b8c04e-c000.snappy.parquet",
+      "bytes": 502,
+      "sha256": "a4404b572d242f514752cfa1da27476df73f9c43def7123205b1e467f38fa70c"
+    }
+  ]
+}

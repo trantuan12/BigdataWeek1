@@ -1,0 +1,25 @@
+{
+  "group_id": "bd-g10",
+  "run_label": "roleD-20261101",
+  "handoff_kind": "course_fallback_not_student_approval",
+  "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+  "trusted_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "bronze_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze",
+  "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+  "gold_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold",
+  "bronze_initial_version": 0,
+  "silver_initial_version": 0,
+  "gold_initial_version": 0,
+  "silver_final_version": 1,
+  "gold_final_version": 1,
+  "gold_source_silver_version": 1,
+  "initial_implementation_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+  "run_ids": {
+    "bootstrap": "d7081829-f064-4358-a548-462201a6fcca",
+    "incremental": "4590b8c3-2e1a-4bd1-9c53-9ce05704e579"
+  },
+  "bronze_final_version": 1,
+  "bronze_replay_version": 1,
+  "silver_replay_version": 2,
+  "final_implementation_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1"
+}

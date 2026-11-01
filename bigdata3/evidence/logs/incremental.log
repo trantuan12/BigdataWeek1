@@ -1,0 +1,70 @@
+Running incremental ...
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/01 16:28:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/11/01 16:28:11 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+26/11/01 16:28:16 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+
+[Stage 0:>                                                          (0 + 1) / 1]
+
+[Stage 2:>                                                          (0 + 2) / 2]
+
+                                                                                
+
+[Stage 8:>                                                          (0 + 4) / 4]
+
+[Stage 8:>                  (0 + 4) / 4][Stage 9:>                  (0 + 0) / 4]
+
+[Stage 8:=========>         (2 + 2) / 4][Stage 9:>                  (0 + 2) / 4]
+
+[Stage 9:=============================>                             (2 + 2) / 4]
+
+                                                                                
+
+[Stage 11:>                                                         (0 + 4) / 8]
+
+[Stage 11:==============>                                           (2 + 4) / 8]
+
+[Stage 11:=============================>                            (4 + 4) / 8]
+
+[Stage 11:===========================================>              (6 + 2) / 8]
+
+                                                                                
+
+[Stage 12:===========================================>              (3 + 1) / 4]
+
+                                                                                
+
+[Stage 13:=============================>                            (1 + 1) / 2]
+
+[Stage 15:>                                                         (0 + 2) / 2]
+
+[Stage 15:=============================>                            (1 + 1) / 2]
+
+                                                                                
+
+[Stage 16:>                                                         (0 + 4) / 4]
+
+[Stage 16:=============================>                            (2 + 2) / 4]
+
+                                                                                
+
+[Stage 52:>                                                         (0 + 1) / 1]
+
+                                                                                
+26/11/01 16:29:05 WARN MapPartitionsRDD: RDD 99 was locally checkpointed, its lineage has been truncated and cannot be recomputed after unpersisting
+
+[Stage 97:==============>                                           (1 + 3) / 4]
+
+                                                                                
+
+[Stage 118:>                                                        (0 + 1) / 1]
+
+                                                                                
+26/11/01 16:29:20 WARN MapPartitionsRDD: RDD 260 was locally checkpointed, its lineage has been truncated and cannot be recomputed after unpersisting
+incremental: COMPLETE; evidence: evidence

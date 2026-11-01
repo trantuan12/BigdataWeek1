@@ -1,0 +1,23 @@
+{
+  "release_id": "lab3-bd-g10-roleD-20261101",
+  "author": "24022463 - Đàm Quang Tiến",
+  "reviewer": "24022466 - Lê Toàn",
+  "steward": "24022466 - Lê Toàn",
+  "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+  "handoff_kind": "course_fallback_not_student_approval",
+  "trusted_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "code_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+  "silver_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+  "silver_version": 1,
+  "gold_path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold",
+  "gold_version": 1,
+  "gold_source_silver_version": 1,
+  "as_of": "2026-02-09T00:00:00Z",
+  "timezone": "UTC",
+  "known_limitations": [
+    "Synthetic fixture only.",
+    "Inherited QA sample disagreements are not repaired.",
+    "A version tuple is a release protocol, not a cross-table transaction."
+  ],
+  "release_validator_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1"
+}

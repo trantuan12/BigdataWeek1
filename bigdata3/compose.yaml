@@ -1,0 +1,86 @@
+name: lab3-bdg10-roled
+
+x-runtime: &runtime
+  image: lab3-spark-runtime:4.0.1
+  build:
+    context: .
+    dockerfile: infrastructure/Dockerfile
+  environment: &runtime-env
+    AWS_ACCESS_KEY_ID: ${LAB3_ACCESS_KEY:?Run Setup-Lab3.ps1 first}
+    AWS_SECRET_ACCESS_KEY: ${LAB3_SECRET_KEY:?Run Setup-Lab3.ps1 first}
+    AWS_DEFAULT_REGION: us-east-1
+    SPARK_DAEMON_MEMORY: 256m
+    SPARK_LOCAL_DIRS: /tmp/spark
+
+services:
+  objects:
+    image: lab3-minio:RELEASE.2025-04-22T22-12-26Z
+    build:
+      context: .
+      dockerfile: infrastructure/Minio.Dockerfile
+    hostname: objects
+    command: [server, /data, --console-address, ':9001']
+    environment:
+      MINIO_ROOT_USER: ${LAB3_ACCESS_KEY:?Run Setup-Lab3.ps1 first}
+      MINIO_ROOT_PASSWORD: ${LAB3_SECRET_KEY:?Run Setup-Lab3.ps1 first}
+    volumes:
+      - object-data:/data
+    ports:
+      - '127.0.0.1:19000:9000'
+      - '127.0.0.1:19001:9001'
+  spark-master:
+    <<: *runtime
+    hostname: spark-master
+    command: [spark-class, org.apache.spark.deploy.master.Master, --host, spark-master, --port, '7077', --webui-port, '8080']
+    ports:
+      - '127.0.0.1:18080:8080'
+  spark-worker-1:
+    <<: *runtime
+    hostname: spark-worker-1
+    command: [spark-class, org.apache.spark.deploy.worker.Worker, --host, spark-worker-1, --cores, '2', --memory, 2g, --webui-port, '8081', 'spark://spark-master:7077']
+    depends_on:
+      - spark-master
+    volumes:
+      - event-logs:/eventlogs
+    ports:
+      - '127.0.0.1:18081:8081'
+  spark-worker-2:
+    <<: *runtime
+    hostname: spark-worker-2
+    command: [spark-class, org.apache.spark.deploy.worker.Worker, --host, spark-worker-2, --cores, '2', --memory, 2g, --webui-port, '8081', 'spark://spark-master:7077']
+    depends_on:
+      - spark-master
+    volumes:
+      - event-logs:/eventlogs
+    ports:
+      - '127.0.0.1:18082:8081'
+  driver:
+    <<: *runtime
+    hostname: lab3-driver
+    working_dir: /workspace
+    depends_on:
+      - objects
+      - spark-master
+      - spark-worker-1
+      - spark-worker-2
+    volumes:
+      - .:/workspace
+      - ../trusted_lab3_inputs.json:/instructor/trusted_lab3_inputs.json:ro
+      - event-logs:/eventlogs
+    ports:
+      - '127.0.0.1:14040:4040'
+  history:
+    <<: *runtime
+    hostname: spark-history
+    environment:
+      <<: *runtime-env
+      SPARK_HISTORY_OPTS: '-Dspark.history.fs.logDirectory=file:///eventlogs'
+    command: [spark-class, org.apache.spark.deploy.history.HistoryServer]
+    volumes:
+      - event-logs:/eventlogs
+    ports:
+      - '127.0.0.1:18088:18080'
+
+volumes:
+  object-data:
+  event-logs:

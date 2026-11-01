@@ -1,6 +1,4 @@
-member_id,role,authored_file,change_description,test_evidence,independent_cross_check,exit_response_file
-A,Data ingress,,,,,
-B,Lakehouse modeling,,,,,
-C,Incremental engineer,,,,,
-D,Analytics and measurement,,,,,
-E,Reproducibility reviewer,,,,,
+﻿member_id,role,authored_file,change_description,test_evidence,independent_cross_check,exit_response_file
+24022484,A,tools/check_role_a.py|config/team.json|src/session.py,"Input integrity, handoff/runtime verification; exact source-to-pinned-snapshot trace for role E",evidence/role_A_check.json|evidence/role_A_source_trace.json|evidence/role_A_worker_probe.json,"Role E source-to-snapshot trace, candidate versions and object hashes",individual/24022484_TranAnhTuan_RoleA.md
+24022463,D,templates/student_impl.py:benchmark_query|tools/analytics_and_dashboard.py|sql/|tools/check_role_d.py,SQL analytics; two version-labelled plots; six measured layout evaluations; weighted-denominator check,evidence/role_D_check.json|evidence/benchmark_report.json|evidence/implementation_tests.json,Gold weighted daily mean and observation denominator,individual/24022463_DamQuangTien_RoleD.md
+24022466,E,templates/student_impl.py:validate_release_binding|tools/check_role_e.py,"Release binding, five required gates, refusal edge cases, independent pinned-data review, catalog and lineage checks",evidence/role_E_check.json|evidence/release_review.json|evidence/role_E_gate_tests.json,"Role A trusted input bytes, handoff identity and actual baseline snapshot",individual/24022466_LeToan_RoleE.md

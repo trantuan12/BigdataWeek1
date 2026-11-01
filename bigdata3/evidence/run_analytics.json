@@ -1,0 +1,15 @@
+{
+  "run_id": "8c436323-f11e-4f49-b632-0039d0f58937",
+  "job": "analytics",
+  "status": "COMPLETE",
+  "gold_version": 1,
+  "source_silver_version": 1,
+  "code_sha256": "dc37190ec48555a5487dbffe3318b9988e0b33b5a4257af2657f91e60a393f95",
+  "outputs": [
+    "evidence/Q1_site_day.json",
+    "evidence/Q2_weighted_day.json",
+    "evidence/Q3_above25_rate.json",
+    "evidence/daily_mean.png",
+    "evidence/late_fraction.png"
+  ]
+}

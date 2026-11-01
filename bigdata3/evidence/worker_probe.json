@@ -1,0 +1,126 @@
+{
+  "partition_tasks": [
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 32688,
+      "partition": 0
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 39540,
+      "partition": 1
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 13876,
+      "partition": 2
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 3048,
+      "partition": 3
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 31168,
+      "partition": 4
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 45708,
+      "partition": 5
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 43580,
+      "partition": 6
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 4844,
+      "partition": 7
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 44880,
+      "partition": 8
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 29904,
+      "partition": 9
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 8028,
+      "partition": 10
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 42116,
+      "partition": 11
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 22596,
+      "partition": 12
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 45204,
+      "partition": 13
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 15488,
+      "partition": 14
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 42932,
+      "partition": 15
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 4824,
+      "partition": 16
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 37232,
+      "partition": 17
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 44448,
+      "partition": 18
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 44224,
+      "partition": 19
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 43136,
+      "partition": 20
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 27340,
+      "partition": 21
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 4668,
+      "partition": 22
+    },
+    {
+      "host": "LAPTOPSIEUCAPVIPPRO",
+      "pid": 36700,
+      "partition": 23
+    }
+  ],
+  "distinct_hosts": 1,
+  "interpretation": "Distinct hosts demonstrate placements, not distinct physical servers. Keep Spark UI/event-log evidence too."
+}

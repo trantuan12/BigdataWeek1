@@ -1,0 +1,7 @@
+check_id,operator,predicted_outcome,observed_outcome,evidence_location,explanation
+H02,A,PASS: Fallback curated.csv matches handoff manifest logical digest with 9610 rows and 10 transport columns,PASS: 9610 rows validated against sensors registry with canonical digest matching handoff_manifest.json,evidence/preflight.json|evidence/input_integrity.json,Course CSV fallback is used and explicitly recorded; verified byte-for-byte and row-for-row with preserved source provenance. No fabricated approval or unverified Parquet substitution.
+B03,B,,,,
+M06,C,,,,
+Q03,D,,,,
+R05,E,,,,
+

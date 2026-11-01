@@ -1,0 +1,37 @@
+[
+  {
+    "student_id": "24022484",
+    "name": "Trần Anh Tuấn",
+    "role": "A",
+    "responsibility": "Task 1: Input acceptance, trust evidence, runtime configuration",
+    "review_role": "E"
+  },
+  {
+    "student_id": "24022466",
+    "name": "Lê Toàn",
+    "role": "B",
+    "responsibility": "Task 2: Silver/Gold modeling, build_gold aggregation",
+    "review_role": "C"
+  },
+  {
+    "student_id": "24022463",
+    "name": "Đàm Quang Tiến",
+    "role": "C",
+    "responsibility": "Task 3: Incremental revisions (choose_revisions, merge_silver), replay",
+    "review_role": "D"
+  },
+  {
+    "student_id": "24022277",
+    "name": "Lê Ngọc Minh Cường",
+    "role": "D",
+    "responsibility": "Task 4: SQL analytics, dashboard, benchmark_query, layout experiment",
+    "review_role": "B"
+  },
+  {
+    "student_id": "24022306",
+    "name": "Nguyễn Tùng Dương",
+    "role": "E",
+    "responsibility": "Task 5: Release binding validator (validate_release_binding), catalog, release review",
+    "review_role": "A"
+  }
+]

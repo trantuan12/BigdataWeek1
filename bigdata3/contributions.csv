@@ -1,0 +1,7 @@
+member_id,role,authored_file,change_description,test_evidence,independent_cross_check,exit_response_file
+A,Data ingress,tools/check_inputs.py|config/team.json|src/session.py,Validate 16 input artifacts against trusted SHA-256; enforce 10-column transport schema; probe native Delta schema rejection; capture local Spark/Delta runtime placement,evidence/input_integrity.json|evidence/delta_schema_probe.json|evidence/worker_probe.json|evidence/runtime_preflight.json,Reproduce E source-to-snapshot trace from original source ordinal to Silver snapshot,individual/24022484_TranAnhTuan_RoleA.md
+B,Lakehouse modeling,,,,,
+C,Incremental engineer,,,,,
+D,Analytics and measurement,,,,,
+E,Reproducibility reviewer,,,,,
+

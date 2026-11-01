@@ -1,0 +1,12 @@
+{
+  "group_id": "bd-g10",
+  "run_label": "run01",
+  "store_id": "local-course-fixture",
+  "spark_master": "local[2]",
+  "lakehouse_root": "d:/BigData/BigdataWeek1/bigdata3/lakehouse",
+  "evidence_dir": "evidence",
+  "shuffle_partitions": 8,
+  "benchmark_copies": 100,
+  "extra_maven_packages": []
+}
+

@@ -1,0 +1,15 @@
+{
+  "member_id": "24022306",
+  "member_name": "Nguyễn Tùng Dương",
+  "role": "C",
+  "recorded_at_utc": "2026-11-08T15:13:09.728014+00:00",
+  "execution_mode": "AUTOMATED_READ_ONLY",
+  "predictions": {
+    "M01_cardinality": "140 physical revisions reduce to 130 winners and 10 superseded same-key rows.",
+    "M02_decisions": "100 inserted, 20 updated_newer, 10 unchanged_stale; R010001 picks row 1 (19.10 C) over row 131 (20.10 C); R003001 keeps baseline row 3001 (18.10 C) over stale row 121 (17.10 C); R002001 updates from row 2001 (18.10 C) to row 101 (20.10 C).",
+    "M03_determinism": "Winner values and provenance are invariant to row order; last-row dictionary lookup fails on all 10 tied keys.",
+    "M04_M05_replay": "Bronze replay keeps 9750 receipts; Silver replay v2 adds a no-op commit with 0 inserts/updates and identical logical digest d0e76f8b... to Silver v1.",
+    "M06_M07_M08": "Silver versionAsOf=0 equals the 9610-row handoff; 3 invalid batch probes reject with 0 writes; Gold v1 matches all 20 recomputed site/day groups.",
+    "C_CHECK_D": "All 6 A/B benchmark evaluations in A-B-B-A-A-B order return identical 4-site aggregates equal to 100x operational Gold on 2026-02-06, while operational Gold retains 9710 observations."
+  }
+}

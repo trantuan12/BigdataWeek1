@@ -1,12 +1,12 @@
 # Lab 3 — Lakehouse Processing & Analytics
 
-Nhóm: `bd-g10`. Lượt chạy: `roleD-20261101`. Phần phụ trách: **Role D — 24022463 — Đàm Quang Tiến**.
+Nhóm: `bd-g10`. Lượt chạy: `roleD-20261101`. Các thành viên hoàn thiện: **Role A — 24022484 — Trần Anh Tuấn**, **Role C — 24022306 — Nguyễn Tùng Dương**, **Role D — 24022463 — Đàm Quang Tiến**, **Role E — 24022466 — Lê Toàn**.
 
 ## 1. Phạm vi và kết quả kiểm tra
 
-Phần D gồm hàm `benchmark_query`, Q1/Q2/Q3, hai biểu đồ có phiên bản nguồn, thí nghiệm A/B và đối chiếu mẫu số của build_gold. Hồ sơ A của Trần Anh Tuấn (24022484) gồm kiểm tra đầu vào/runtime và truy vết snapshot đã ghim. Hồ sơ E của Lê Toàn (24022466) gồm release binding, catalog, lineage, review dữ liệu thực và kiểm tra chéo A. Ba hồ sơ dùng cùng bố cục đánh giá cá nhân. Các hàm mô hình và merge được tích hợp để tạo dữ liệu nguồn và kiểm tra tính tái lập của toàn bộ pipeline.
+Hồ sơ A của Trần Anh Tuấn (24022484) gồm kiểm tra đầu vào/runtime và truy vết snapshot đã ghim. Hồ sơ C của Nguyễn Tùng Dương (24022306) gồm hàm `choose_revisions`, `merge_silver`, kiểm định `M01`–`M08` (khử trùng lặp 140 dòng xuống 130 winners, hợp nhất có điều kiện, phát lại Bronze/Silver, time travel, từ chối batch lỗi) và kiểm tra chéo tính tương đương kết quả A/B của D (`C_CHECK_D`). Phần D của Đàm Quang Tiến (24022463) gồm hàm `benchmark_query`, Q1/Q2/Q3, hai biểu đồ có phiên bản nguồn, thí nghiệm A/B và đối chiếu mẫu số của `build_gold`. Hồ sơ E của Lê Toàn (24022466) gồm release binding, catalog, lineage, review dữ liệu thực và kiểm tra chéo A. Bốn hồ sơ dùng cùng bố cục đánh giá cá nhân.
 
-Đã chạy 35 kiểm tra giá trị xuất, 9 kiểm tra trực tiếp bảng Delta, 20 kiểm thử không bỏ qua ca nào, 10 kiểm tra D, 16 kiểm tra A và 16 kiểm tra E. Review E chạy năm gate bắt buộc và 35 ca từ chối bổ sung. Chi tiết nằm trong `evidence/independent_checks.json`, `live_table_verification.json`, `implementation_tests.json`, `role_D_check.json`, `role_A_check.json`, `role_E_check.json`, `release_review.json`. Các kết quả này xác nhận kiểm tra kỹ thuật bằng chương trình; phần trình bày cá nhân do thành viên thực hiện khi bảo vệ.
+Đã chạy 35 kiểm tra giá trị xuất, 9 kiểm tra trực tiếp bảng Delta, 20 kiểm thử không bỏ qua ca nào, 16 kiểm tra A, 13 kiểm tra C, 10 kiểm tra D và 16 kiểm tra E. Review E chạy năm gate bắt buộc và 35 ca từ chối bổ sung. Chi tiết nằm trong `evidence/independent_checks.json`, `live_table_verification.json`, `implementation_tests.json`, `role_A_check.json`, `role_C_check.json`, `role_D_check.json`, `role_E_check.json`, `release_review.json`. Các kết quả này xác nhận kiểm tra kỹ thuật bằng chương trình; phần trình bày cá nhân do thành viên thực hiện khi bảo vệ.
 
 ## 2. Đầu vào, runtime và snapshot
 
@@ -22,7 +22,7 @@ Runtime: Python 3.11.18, Spark 4.0.1, Delta 4.0.1, Java 17.0.21, Hadoop 3.4.1; U
 
 Bronze là biên nhận vật lý theo `(source_object, source_row, source_sha256)`. Silver chọn một bản ghi theo `record_id`, giữ mười cột và thêm ngày UTC. Gold chứa 20 nhóm site/ngày từ 9,710 quan sát; tổng nhiệt độ 222930.50 °C. Trường nguồn gốc được giữ để truy vết; dữ liệu thô và trường hạn chế nằm ngoài gói nộp.
 
-Batch 02 có 140 dòng vật lý, 130 winner và 10 phiên bản bị thay thế trong batch. Quy tắc chọn là ingest giảm dần, object tăng dần, ordinal tăng dần. Quyết định: `{'updated_newer': 20, 'unchanged_stale': 10, 'inserted': 100}`. Bronze replay không nhân biên nhận; Silver replay v2 bằng nội dung Silver v1; đọc lịch sử v0 vẫn bằng handoff. Ba batch sai bị từ chối trước ghi. Minh chứng đầy đủ ở `incremental.json`, bốn bản xuất Silver, `row_trace.json` và `input_contract_tests.json`.
+Batch 02 có 140 dòng vật lý, 130 winner và 10 phiên bản bị thay thế trong batch. Quy tắc chọn là ingest giảm dần, object tăng dần, ordinal tăng dần. Quyết định: `{'updated_newer': 20, 'unchanged_stale': 10, 'inserted': 100}`. Bronze replay không nhân biên nhận; Silver replay v2 bằng nội dung Silver v1; đọc lịch sử v0 vẫn bằng handoff. Ba batch sai bị từ chối trước ghi. Minh chứng đầy đủ ở `incremental.json`, `role_C_check.json`, bốn bản xuất Silver, `row_trace.json` và `input_contract_tests.json`.
 
 ## 3. Q1 — KPI theo site/ngày
 
@@ -90,17 +90,17 @@ Mỗi layout warm-up một lần, sau đó đo A–B, B–A, A–B. Runner tạo
 | 5 | 3 | A | 1.751632112 | 45 | 32 | True |
 | 6 | 3 | B | 0.859027120 | 47 | 1 | True |
 
-Median A = **1.871164200 s**, median B = **0.859027120 s**, tỷ số median(A)/median(B) = **2.178236**. Sáu kết quả bằng nhau và bằng kết quả dựng từ Gold ngày tương ứng nhân hệ số 100. Tổng đáp án là 10.000 dòng workload, 2.500 cho mỗi site; không diễn giải thành 10.000 phép đo độc lập.
+Median A = **1.871164200 s**, median B = **0.859027120 s**, tỷ số median(A)/median(B) = **2.178236**. Sáu kết quả bằng nhau và bằng kết quả dựng từ Gold ngày tương ứng nhân hệ số 100 (được kiểm tra chéo độc lập bởi Role C trong `role_C_check.json`). Tổng đáp án là 10.000 dòng workload, 2.500 cho mỗi site; không diễn giải thành 10.000 phép đo độc lập.
 
 Plan A không có mục `PartitionFilters`; điều kiện ngày xuất hiện ở `PushedFilters` và node `Filter`. Plan B có `PartitionFilters` chứa `isnotnull(event_date)` và `event_date = 2026-02-06`, cho phép bỏ qua partition ngày khác; `event_date` không cần nằm trong ReadSchema của dữ liệu Parquet ở B. **Tổng file của bảng** từ Delta metadata khác **file thực đọc** từ scan-node metrics của Spark History Server. `benchmark_scan_metrics.json` gắn metric với tám execution: hai warm-up và sáu lần đo. Không suy số file đọc từ tổng file.
 
 Các plan lưu bằng formatted explain có `isFinalPlan=false`, mô tả kế hoạch trước kết quả AQE cuối; scan metrics được lấy riêng từ SQL execution đã hoàn tất. `clearCache()` không xóa cache hệ điều hành/object store/JVM: đây là đọc lặp sau warm-up. Độ nén, kích thước file và chi phí scheduling cũng khác giữa A/B; kết quả không tách riêng tác động của partition pruning. Tỷ số chỉ mô tả fixture và lượt chạy này; không suy rộng hiệu năng production. Không có yêu cầu speedup tối thiểu.
 
-Minh chứng: [report](evidence/benchmark_report.json), [sáu thời gian](evidence/benchmark_timings.csv), [plan A](evidence/plan_A.txt), [plan B](evidence/plan_B.txt), [metric thực đọc](evidence/benchmark_scan_metrics.json).
+Minh chứng: [report](evidence/benchmark_report.json), [sáu thời gian](evidence/benchmark_timings.csv), [plan A](evidence/plan_A.txt), [plan B](evidence/plan_B.txt), [metric thực đọc](evidence/benchmark_scan_metrics.json), [kiểm tra chéo C](evidence/role_C_check.json).
 
-## 7. Kiểm tra A/E và release candidate
+## 7. Kiểm tra A/C/E và release candidate
 
-A: 16/16 tệp, handoff logic, probe schema tám dòng và placement worker đều đạt trong lượt chạy hiện tại. Hồ sơ A được bổ sung bằng 16 kiểm tra, trong đó ba mẫu được lấy từ Silver v1 thật, đối chiếu đúng source object/ordinal/hash và liên kết với binding Silver v1/Gold v1. R010001 chọn source row 1 ở 19,10°C; dictionary giữ dòng gặp cuối sẽ lấy row 131 ở 20,10°C nên không được dùng làm quy tắc winner. Các lỗi byte và Java ngoài baseline của bản báo cáo cũ đã được xử lý trong cấu hình/bằng chứng mới. E: một candidate hợp lệ được nhận; mixed snapshot, tự review, thiếu steward và sai code hash bị từ chối. Kiểm tra bổ sung xác nhận từng khóa bắt buộc bị thiếu đều từ chối.
+A: 16/16 tệp, handoff logic, probe schema tám dòng và placement worker đều đạt trong lượt chạy hiện tại. Hồ sơ A được bổ sung bằng 16 kiểm tra, trong đó ba mẫu được lấy từ Silver v1 thật, đối chiếu đúng source object/ordinal/hash và liên kết với binding Silver v1/Gold v1. R010001 chọn source row 1 ở 19,10°C; dictionary giữ dòng gặp cuối sẽ lấy row 131 ở 20,10°C nên không được dùng làm quy tắc winner. C: 13 kiểm tra xác nhận 140 dòng vật lý thu gọn về 130 winners (loại 10 dòng đồng hạng), merge tạo 100 inserted / 20 updated_newer / 10 unchanged_stale, Bronze/Silver replay lũy đẳng, time travel v0 khớp handoff, 3 batch lỗi bị từ chối với 0 lần ghi, và kiểm tra chéo 6 lần chạy A/B của D khớp tuyệt đối với 100x Gold ngày 2026-02-06. E: một candidate hợp lệ được nhận; mixed snapshot, tự review, thiếu steward và sai code hash bị từ chối. Kiểm tra bổ sung xác nhận từng khóa bắt buộc bị thiếu đều từ chối.
 
 Candidate ghim Silver v1, Gold v1, nguồn Gold là Silver v1. Gold được tính lại từ bảng Silver đã ghim rồi so toàn bộ trường. SHA-256 implementation: `739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1`; bản đã thực thi nằm trong `code_versions/`. Catalog, manifest và lineage đi kèm candidate. Trạng thái là **CANDIDATE_NOT_OWNER_PUBLISHED**; nhãn reviewer trong metadata không thay chữ ký hoặc phần bảo vệ của thành viên.
 
@@ -110,7 +110,7 @@ Mỗi lần ghi Delta là một giao dịch của một bảng. Cặp version v�
 
 ## 8. Danh mục nộp và tái lập
 
-- [Hồ sơ role A](individual/24022484_TranAnhTuan_RoleA.md), [hồ sơ role D](individual/24022463_DamQuangTien_RoleD.md), [hồ sơ role E](individual/24022466_LeToan_RoleE.md), [kiểm tra A/E](KIEM_TRA_ROLE_A_E.md).
+- [Hồ sơ role A](individual/24022484_TranAnhTuan_RoleA.md), [hồ sơ role C](individual/24022306_NguyenTungDuong_RoleC.md), [hồ sơ role D](individual/24022463_DamQuangTien_RoleD.md), [hồ sơ role E](individual/24022466_LeToan_RoleE.md), [kiểm tra A/E](KIEM_TRA_ROLE_A_E.md).
 - `templates/student_impl.py`, `sql/`, `contributions.csv`, `manual_checks.csv`.
 - `evidence/`: phiên bản, snapshot, SQL, biểu đồ, timing, plan, metric, lineage, catalog, candidate và kiểm tra.
 - `portable_delta/`: bản sao đúng byte của các object Delta được tham chiếu.

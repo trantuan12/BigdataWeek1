@@ -1,4 +1,4 @@
-"""Freeze the verified pipeline with individual records for roles A, D and E."""
+"""Freeze the verified pipeline with individual records for roles A, C, D and E."""
 import csv
 from datetime import datetime, timezone
 from decimal import Decimal
@@ -32,7 +32,7 @@ def main():
     config = read_json(ROOT / 'config/team.json')
     reports = (ROOT / config.get('reports_dir', '.')).resolve()
     output_root = (ROOT / config.get('submission_dir', 'submission')).resolve()
-    destination = output_root / 'LAB3_24022463_DamQuangTien_RoleD'
+    destination = output_root / 'LAB3_24022306_NguyenTungDuong_RoleC'
     if destination.exists() or destination.with_suffix('.zip').exists():
         raise ValueError('FROZEN_SUBMISSION_ALREADY_EXISTS')
     reports.mkdir(parents=True, exist_ok=True)
@@ -56,10 +56,11 @@ def main():
     tests = read_json(ev / 'implementation_tests.json')
     role = read_json(ev / 'role_D_check.json')
     role_a = read_json(ev / 'role_A_check.json')
+    role_c = read_json(ev / 'role_C_check.json')
     role_e = read_json(ev / 'role_E_check.json')
     release_review = read_json(ev / 'release_review.json')
     review = read_json(ev / 'role_A_E_review.json')
-    if not all(item['passed'] for item in (independent, live, tests, role, role_a, role_e, review['A'], review['E'])):
+    if not all(item['passed'] for item in (independent, live, tests, role, role_a, role_c, role_e, review['A'], review['E'])):
         raise ValueError('PASSING_VERIFICATION_REQUIRED')
     if release_review['status'] != 'TECHNICAL_CANDIDATE_REVIEW_PASSED':
         raise ValueError('ROLE_E_RELEASE_REVIEW_REQUIRED')
@@ -106,13 +107,13 @@ GROUP BY site;
                           min(Decimal(r['above25_rate']) for r in rows), max(Decimal(r['above25_rate']) for r in rows)])
     report = f'''# Lab 3 — Lakehouse Processing & Analytics
 
-Nhóm: `{state['group_id']}`. Lượt chạy: `{state['run_label']}`. Phần phụ trách: **Role D — 24022463 — Đàm Quang Tiến**.
+Nhóm: `{state['group_id']}`. Lượt chạy: `{state['run_label']}`. Các thành viên hoàn thiện: **Role A — 24022484 — Trần Anh Tuấn**, **Role C — {role_c['member_id']} — {role_c['member_name']}**, **Role D — 24022463 — Đàm Quang Tiến**, **Role E — {role_e['member_id']} — {role_e['member_name']}**.
 
 ## 1. Phạm vi và kết quả kiểm tra
 
-Phần D gồm hàm `benchmark_query`, Q1/Q2/Q3, hai biểu đồ có phiên bản nguồn, thí nghiệm A/B và đối chiếu mẫu số của build_gold. Hồ sơ A của Trần Anh Tuấn (24022484) gồm kiểm tra đầu vào/runtime và truy vết snapshot đã ghim. Hồ sơ E của {role_e['member_name']} ({role_e['member_id']}) gồm release binding, catalog, lineage, review dữ liệu thực và kiểm tra chéo A. Ba hồ sơ dùng cùng bố cục đánh giá cá nhân. Các hàm mô hình và merge được tích hợp để tạo dữ liệu nguồn và kiểm tra tính tái lập của toàn bộ pipeline.
+Hồ sơ A của Trần Anh Tuấn (24022484) gồm kiểm tra đầu vào/runtime và truy vết snapshot đã ghim. Hồ sơ C của {role_c['member_name']} ({role_c['member_id']}) gồm hàm `choose_revisions`, `merge_silver`, kiểm định `M01`–`M08` (khử trùng lặp 140 dòng xuống 130 winners, hợp nhất có điều kiện, phát lại Bronze/Silver, time travel, từ chối batch lỗi) và kiểm tra chéo tính tương đương kết quả A/B của D (`C_CHECK_D`). Phần D của Đàm Quang Tiến (24022463) gồm hàm `benchmark_query`, Q1/Q2/Q3, hai biểu đồ có phiên bản nguồn, thí nghiệm A/B và đối chiếu mẫu số của `build_gold`. Hồ sơ E của {role_e['member_name']} ({role_e['member_id']}) gồm release binding, catalog, lineage, review dữ liệu thực và kiểm tra chéo A. Bốn hồ sơ dùng cùng bố cục đánh giá cá nhân.
 
-Đã chạy {len(independent['checks'])} kiểm tra giá trị xuất, {len(live['checks'])} kiểm tra trực tiếp bảng Delta, {tests['tests_run']} kiểm thử không bỏ qua ca nào, {len(role['checks'])} kiểm tra D, {len(role_a['checks'])} kiểm tra A và {len(role_e['checks'])} kiểm tra E. Review E chạy năm gate bắt buộc và {release_review['additional_refusal_cases']} ca từ chối bổ sung. Chi tiết nằm trong `evidence/independent_checks.json`, `live_table_verification.json`, `implementation_tests.json`, `role_D_check.json`, `role_A_check.json`, `role_E_check.json`, `release_review.json`. Các kết quả này xác nhận kiểm tra kỹ thuật bằng chương trình; phần trình bày cá nhân do thành viên thực hiện khi bảo vệ.
+Đã chạy {len(independent['checks'])} kiểm tra giá trị xuất, {len(live['checks'])} kiểm tra trực tiếp bảng Delta, {tests['tests_run']} kiểm thử không bỏ qua ca nào, {len(role_a['checks'])} kiểm tra A, {len(role_c['checks'])} kiểm tra C, {len(role['checks'])} kiểm tra D và {len(role_e['checks'])} kiểm tra E. Review E chạy năm gate bắt buộc và {release_review['additional_refusal_cases']} ca từ chối bổ sung. Chi tiết nằm trong `evidence/independent_checks.json`, `live_table_verification.json`, `implementation_tests.json`, `role_A_check.json`, `role_C_check.json`, `role_D_check.json`, `role_E_check.json`, `release_review.json`. Các kết quả này xác nhận kiểm tra kỹ thuật bằng chương trình; phần trình bày cá nhân do thành viên thực hiện khi bảo vệ.
 
 ## 2. Đầu vào, runtime và snapshot
 
@@ -123,7 +124,7 @@ Runtime: Python {runtime['python']}, Spark {runtime['spark']}, Delta {runtime['d
 {table(['Lớp', 'URI cụ thể', 'Phiên bản đầu', 'Phiên bản sau cập nhật'], version_rows)}
 Bronze là biên nhận vật lý theo `(source_object, source_row, source_sha256)`. Silver chọn một bản ghi theo `record_id`, giữ mười cột và thêm ngày UTC. Gold chứa {summary['gold_groups']} nhóm site/ngày từ {summary['silver_rows']:,} quan sát; tổng nhiệt độ {summary['temperature_sum_c']} °C. Trường nguồn gốc được giữ để truy vết; dữ liệu thô và trường hạn chế nằm ngoài gói nộp.
 
-Batch 02 có {summary['incoming_physical_rows']} dòng vật lý, {summary['incoming_winners']} winner và {summary['superseded_incoming_rows']} phiên bản bị thay thế trong batch. Quy tắc chọn là ingest giảm dần, object tăng dần, ordinal tăng dần. Quyết định: `{summary['decisions']}`. Bronze replay không nhân biên nhận; Silver replay v{state['silver_replay_version']} bằng nội dung Silver v{state['silver_final_version']}; đọc lịch sử v0 vẫn bằng handoff. Ba batch sai bị từ chối trước ghi. Minh chứng đầy đủ ở `incremental.json`, bốn bản xuất Silver, `row_trace.json` và `input_contract_tests.json`.
+Batch 02 có {summary['incoming_physical_rows']} dòng vật lý, {summary['incoming_winners']} winner và {summary['superseded_incoming_rows']} phiên bản bị thay thế trong batch. Quy tắc chọn là ingest giảm dần, object tăng dần, ordinal tăng dần. Quyết định: `{summary['decisions']}`. Bronze replay không nhân biên nhận; Silver replay v{state['silver_replay_version']} bằng nội dung Silver v{state['silver_final_version']}; đọc lịch sử v0 vẫn bằng handoff. Ba batch sai bị từ chối trước ghi. Minh chứng đầy đủ ở `incremental.json`, `role_C_check.json`, bốn bản xuất Silver, `row_trace.json` và `input_contract_tests.json`.
 
 ## 3. Q1 — KPI theo site/ngày
 
@@ -165,17 +166,17 @@ A không partition, ghi bằng `repartition(32)`. B ghi bằng `repartition(5, e
 Mỗi layout warm-up một lần, sau đó đo A–B, B–A, A–B. Runner tạo DataFrame đọc snapshot trước mốc đồng hồ; khoảng đo bắt đầu khi dựng aggregate và kết thúc sau `collect()` của kết quả nhỏ, không chỉ đo dựng DataFrame. Thời gian ghi/chuẩn bị bảng nằm ngoài sáu phép đo.
 
 {table(['Lần', 'Vòng', 'Layout', 'Thời gian driver (s)', 'SQL execution ID', 'File thực đọc', 'Kết quả bằng nhau'], timing_rows)}
-Median A = **{bench['median_seconds']['A']:.9f} s**, median B = **{bench['median_seconds']['B']:.9f} s**, tỷ số median(A)/median(B) = **{bench['A_median_over_B_median']:.6f}**. Sáu kết quả bằng nhau và bằng kết quả dựng từ Gold ngày tương ứng nhân hệ số 100. Tổng đáp án là 10.000 dòng workload, 2.500 cho mỗi site; không diễn giải thành 10.000 phép đo độc lập.
+Median A = **{bench['median_seconds']['A']:.9f} s**, median B = **{bench['median_seconds']['B']:.9f} s**, tỷ số median(A)/median(B) = **{bench['A_median_over_B_median']:.6f}**. Sáu kết quả bằng nhau và bằng kết quả dựng từ Gold ngày tương ứng nhân hệ số 100 (được kiểm tra chéo độc lập bởi Role C trong `role_C_check.json`). Tổng đáp án là 10.000 dòng workload, 2.500 cho mỗi site; không diễn giải thành 10.000 phép đo độc lập.
 
 Plan A không có mục `PartitionFilters`; điều kiện ngày xuất hiện ở `PushedFilters` và node `Filter`. Plan B có `PartitionFilters` chứa `isnotnull(event_date)` và `event_date = 2026-02-06`, cho phép bỏ qua partition ngày khác; `event_date` không cần nằm trong ReadSchema của dữ liệu Parquet ở B. **Tổng file của bảng** từ Delta metadata khác **file thực đọc** từ scan-node metrics của Spark History Server. `benchmark_scan_metrics.json` gắn metric với tám execution: hai warm-up và sáu lần đo. Không suy số file đọc từ tổng file.
 
 Các plan lưu bằng formatted explain có `isFinalPlan=false`, mô tả kế hoạch trước kết quả AQE cuối; scan metrics được lấy riêng từ SQL execution đã hoàn tất. `clearCache()` không xóa cache hệ điều hành/object store/JVM: đây là đọc lặp sau warm-up. Độ nén, kích thước file và chi phí scheduling cũng khác giữa A/B; kết quả không tách riêng tác động của partition pruning. Tỷ số chỉ mô tả fixture và lượt chạy này; không suy rộng hiệu năng production. Không có yêu cầu speedup tối thiểu.
 
-Minh chứng: [report](evidence/benchmark_report.json), [sáu thời gian](evidence/benchmark_timings.csv), [plan A](evidence/plan_A.txt), [plan B](evidence/plan_B.txt), [metric thực đọc](evidence/benchmark_scan_metrics.json).
+Minh chứng: [report](evidence/benchmark_report.json), [sáu thời gian](evidence/benchmark_timings.csv), [plan A](evidence/plan_A.txt), [plan B](evidence/plan_B.txt), [metric thực đọc](evidence/benchmark_scan_metrics.json), [kiểm tra chéo C](evidence/role_C_check.json).
 
-## 7. Kiểm tra A/E và release candidate
+## 7. Kiểm tra A/C/E và release candidate
 
-A: 16/16 tệp, handoff logic, probe schema tám dòng và placement worker đều đạt trong lượt chạy hiện tại. Hồ sơ A được bổ sung bằng {len(role_a['checks'])} kiểm tra, trong đó ba mẫu được lấy từ Silver v1 thật, đối chiếu đúng source object/ordinal/hash và liên kết với binding Silver v1/Gold v1. R010001 chọn source row 1 ở 19,10°C; dictionary giữ dòng gặp cuối sẽ lấy row 131 ở 20,10°C nên không được dùng làm quy tắc winner. Các lỗi byte và Java ngoài baseline của bản báo cáo cũ đã được xử lý trong cấu hình/bằng chứng mới. E: một candidate hợp lệ được nhận; mixed snapshot, tự review, thiếu steward và sai code hash bị từ chối. Kiểm tra bổ sung xác nhận từng khóa bắt buộc bị thiếu đều từ chối.
+A: 16/16 tệp, handoff logic, probe schema tám dòng và placement worker đều đạt trong lượt chạy hiện tại. Hồ sơ A được bổ sung bằng {len(role_a['checks'])} kiểm tra, trong đó ba mẫu được lấy từ Silver v1 thật, đối chiếu đúng source object/ordinal/hash và liên kết với binding Silver v1/Gold v1. R010001 chọn source row 1 ở 19,10°C; dictionary giữ dòng gặp cuối sẽ lấy row 131 ở 20,10°C nên không được dùng làm quy tắc winner. C: {len(role_c['checks'])} kiểm tra xác nhận 140 dòng vật lý thu gọn về 130 winners (loại 10 dòng đồng hạng), merge tạo 100 inserted / 20 updated_newer / 10 unchanged_stale, Bronze/Silver replay lũy đẳng, time travel v0 khớp handoff, 3 batch lỗi bị từ chối với 0 lần ghi, và kiểm tra chéo 6 lần chạy A/B của D khớp tuyệt đối với 100x Gold ngày 2026-02-06. E: một candidate hợp lệ được nhận; mixed snapshot, tự review, thiếu steward và sai code hash bị từ chối. Kiểm tra bổ sung xác nhận từng khóa bắt buộc bị thiếu đều từ chối.
 
 Candidate ghim Silver v{binding['silver_version']}, Gold v{binding['gold_version']}, nguồn Gold là Silver v{binding['gold_source_silver_version']}. Gold được tính lại từ bảng Silver đã ghim rồi so toàn bộ trường. SHA-256 implementation: `{binding['code_sha256']}`; bản đã thực thi nằm trong `code_versions/`. Catalog, manifest và lineage đi kèm candidate. Trạng thái là **CANDIDATE_NOT_OWNER_PUBLISHED**; nhãn reviewer trong metadata không thay chữ ký hoặc phần bảo vệ của thành viên.
 
@@ -185,7 +186,7 @@ Mỗi lần ghi Delta là một giao dịch của một bảng. Cặp version v�
 
 ## 8. Danh mục nộp và tái lập
 
-- [Hồ sơ role A](individual/24022484_TranAnhTuan_RoleA.md), [hồ sơ role D](individual/24022463_DamQuangTien_RoleD.md), [hồ sơ role E](individual/24022466_LeToan_RoleE.md), [kiểm tra A/E](KIEM_TRA_ROLE_A_E.md).
+- [Hồ sơ role A](individual/24022484_TranAnhTuan_RoleA.md), [hồ sơ role C](individual/24022306_NguyenTungDuong_RoleC.md), [hồ sơ role D](individual/24022463_DamQuangTien_RoleD.md), [hồ sơ role E](individual/24022466_LeToan_RoleE.md), [kiểm tra A/E](KIEM_TRA_ROLE_A_E.md).
 - `templates/student_impl.py`, `sql/`, `contributions.csv`, `manual_checks.csv`.
 - `evidence/`: phiên bản, snapshot, SQL, biểu đồ, timing, plan, metric, lineage, catalog, candidate và kiểm tra.
 - `portable_delta/`: bản sao đúng byte của các object Delta được tham chiếu.
@@ -196,13 +197,17 @@ Tài liệu kỹ thuật: [Spark 4.0.1 performance tuning](https://spark.apache.
     (reports / 'experiment_report.md').write_text(report_text(report), encoding='utf-8')
     from role_d_report import build_role_d_record
     role_d_filename = build_role_d_record(ROOT, reports, ev)
-    ae = '''# Kiểm tra kỹ thuật role A và E
+    ae = '''# Kiểm tra kỹ thuật role A, C và E
 
 ## Role A
 
 Bản hiện có đã có bằng chứng preflight, nhưng báo cáo cũ dùng Java 23 ngoài baseline Java 17/21 và chứa cấu hình đường dẫn không dùng chung với executor. Các tệp đầu vào hiện tại cũng bị đổi xuống dòng làm sai hash. Đã giữ bản trước, khôi phục 11 tệp đúng byte từ ZIP gốc, giữ nguyên manifest tin cậy và chạy lại toàn bộ kiểm tra.
 
 Lượt chạy mới: 16/16 hash đạt; fallback được khai báo đúng, digest logic khớp; Delta từ chối cột lạ và giữ tám dòng; runtime đúng Spark/Delta 4.0.1, Java 17; task chạy trên hai worker container, bảng dùng S3A chung. Container không xác nhận nhiều máy vật lý. Hồ sơ `individual/24022484_TranAnhTuan_RoleA.md` đã được cập nhật bằng kiểm tra trực tiếp Silver v1 và Gold v1. Ba mẫu truy được về đúng object/ordinal/hash; R010001 chọn row 1 ở 19,10°C, không dùng dòng cuối của dictionary. Bằng chứng bổ sung nằm trong `role_A_check.json`, `role_A_source_trace.json`, `runtime_role_A_check.json`, `role_A_worker_probe.json`.
+
+## Role C
+
+Đã bổ sung công cụ kiểm tra độc lập `tools/check_role_c.py`, bộ kiểm thử `tests/test_role_c_revisions.py` và hồ sơ cá nhân `individual/24022306_NguyenTungDuong_RoleC.md` cho Nguyễn Tùng Dương (24022306). Chương trình xác nhận đầy đủ tám tiêu chí `M01`–`M08` trên các bản xuất thực tế và lịch sử giao dịch Delta (`live_table_verification.json`): 140 dòng sửa đổi đầu vào thu gọn về đúng 130 winners và loại 10 dòng đồng hạng; hợp nhất vào Silver tạo đúng 100 inserted, 20 updated_newer, 10 unchanged_stale; phát lại Bronze giữ nguyên 9.750 biên nhận; phát lại Silver tạo commit no-op v2 (`0` insert, `0` update) có cùng mã băm chính quy `d0e76f8b...` với v1; time travel v0 khớp 9.610 dòng handoff; ba ca đột biến lô lỗi bị từ chối trước khi ghi (`writes_performed = 0`); kiểm tra chéo `C_CHECK_D` xác nhận cả 6 lần đo A/B của Role D khớp tuyệt đối với 100x dữ liệu Gold ngày 2026-02-06. Bằng chứng được lưu tại `role_C_prediction.json` và `role_C_check.json`.
 
 ## Role E
 
@@ -225,11 +230,13 @@ Gold được tái tính từ snapshot Silver ghim và so toàn bộ trường, 
                'Prediction recorded before assertion evaluation; automated read-only execution; no personal attendance claim']])
     from role_a_report import build_role_a_record
     role_a_filename = build_role_a_record(ROOT, reports, ev)
+    from role_c_report import build_role_c_record
+    role_c_filename = build_role_c_record(ROOT, reports, ev)
     from role_e_report import build_role_e_record
     role_e_filename = build_role_e_record(ROOT, reports, ev)
-    readme = '''# Lab 3 — Hồ sơ role A, D và E
+    readme = r'''# Lab 3 — Hồ sơ role A, C, D và E
 
-Gói gồm ba hồ sơ cá nhân cùng bố cục: A — Trần Anh Tuấn (24022484), D — Đàm Quang Tiến (24022463), E — {{MEMBER_E_NAME}} ({{MEMBER_E_ID}}). Mở `experiment_report.md` và `individual/` để xem nội dung, kiểm tra chéo và hướng dẫn bảo vệ. Nhóm không phân công thành viên B; việc kiểm tra trung bình/mẫu số được thực hiện trực tiếp trên build_gold. Phần E có năm gate bắt buộc, các ca thiếu khóa, review Gold độc lập từ bảng Delta thật, catalog, lineage và biên bản `release_review.json`. Các hàm mô hình/merge và bằng chứng pipeline được giữ để tái lập; gói gồm hồ sơ A/D/E, không tạo hồ sơ cho một thành viên B. `evidence/` chứa các đầu ra thật; `portable_delta/` giữ log và dữ liệu của các bảng Delta vận hành, A/B benchmark và schema probe. Bảng benchmark tách khỏi Gold.
+Gói gồm bốn hồ sơ cá nhân cùng bố cục: A — Trần Anh Tuấn (24022484), C — {{MEMBER_C_NAME}} ({{MEMBER_C_ID}}), D — Đàm Quang Tiến (24022463), E — {{MEMBER_E_NAME}} ({{MEMBER_E_ID}}). Mở `experiment_report.md` và `individual/` để xem nội dung, kiểm tra chéo và hướng dẫn bảo vệ. Nhóm không phân công thành viên B; việc kiểm tra trung bình/mẫu số được thực hiện trực tiếp trên build_gold. Phần C xác minh đầy đủ `M01`–`M08` và kiểm tra chéo tính tương đương kết quả A/B của D (`C_CHECK_D`). Phần E có năm gate bắt buộc, các ca thiếu khóa, review Gold độc lập từ bảng Delta thật, catalog, lineage và biên bản `release_review.json`. `evidence/` chứa các đầu ra thật; `portable_delta/` giữ log và dữ liệu của các bảng Delta vận hành, A/B benchmark và schema probe. Bảng benchmark tách khỏi Gold.
 
 ## Tái lập từ đầu
 
@@ -255,6 +262,7 @@ Trên object store mới, giữ config và evidence bản nộp, khởi động 
 docker compose exec -T driver python tools/portable_delta.py verify
 docker compose exec -T driver python tools/portable_delta.py restore
 docker compose exec -T driver python tools/verify_live_tables.py --config config/team.json
+docker compose exec -T driver python tools/check_role_c.py --config config/team.json
 docker compose exec -T driver python tools/check_role_e.py --config config/team.json --trusted-manifest /instructor/trusted_lab3_inputs.json
 ```
 
@@ -262,8 +270,12 @@ Restore chỉ nhận các prefix bảng trống. File timings giữ nguyên kế
 
 `.env` được setup tạo riêng và bị loại khỏi gói nộp. Không cần cài Python/Java/Spark trực tiếp trên Windows; image dựng môi trường Linux và ghim thư viện/JAR. Bản nộp là technical release candidate; công bố owner và trình bày cá nhân là các hoạt động riêng.
 '''
-    readme = readme.replace('{{MEMBER_E_NAME}}', role_e['member_name']).replace('{{MEMBER_E_ID}}', role_e['member_id'])
-    (reports / 'README_SUBMISSION.md').write_text(readme, encoding='utf-8')
+    readme = (readme
+              .replace('{{MEMBER_C_NAME}}', role_c['member_name'])
+              .replace('{{MEMBER_C_ID}}', role_c['member_id'])
+              .replace('{{MEMBER_E_NAME}}', role_e['member_name'])
+              .replace('{{MEMBER_E_ID}}', role_e['member_id']))
+    (reports / 'README.md').write_text(readme, encoding='utf-8')
     for name in ('experiment_report.md', 'contributions.csv', 'manual_checks.csv'):
         if name.endswith('.md'):
             template = packaged_text((reports / name).read_text(encoding='utf-8'))
@@ -288,7 +300,7 @@ Restore chỉ nhận các prefix bảng trống. File timings giữ nguyên kế
     shutil.copytree(ev, destination / 'evidence', ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
     (destination / 'individual').mkdir()
     individual_prefix = Path(os.path.relpath(ROOT, reports / 'individual')).as_posix()
-    for individual_filename in (role_a_filename, role_d_filename, role_e_filename):
+    for individual_filename in (role_a_filename, role_c_filename, role_d_filename, role_e_filename):
         text = (reports / 'individual' / individual_filename).read_text(encoding='utf-8')
         text = text.replace('](' + individual_prefix + '/', '](../')
         (destination / 'individual' / individual_filename).write_text(text, encoding='utf-8')
@@ -307,7 +319,7 @@ Restore chỉ nhận các prefix bảng trống. File timings giữ nguyên kế
     compose = compose.replace('- ..:/workspace', '- .:/workspace')
     compose = compose.replace('- ../../trusted_lab3_inputs.json:', '- ../trusted_lab3_inputs.json:')
     (destination / 'compose.yaml').write_text(compose, encoding='utf-8')
-    shutil.copyfile(reports / 'README_SUBMISSION.md', destination / 'README.md')
+    shutil.copyfile(reports / 'README.md', destination / 'README.md')
     shutil.copyfile(ROOT / 'templates/student_impl.py', destination / 'student_impl.py')
     write_json(destination / 'source_references.json', {'original_dataset_zip': 'Lab3-Student-Starter.zip',
         'required_restore_directory': 'data/', 'trusted_manifest_sha256': state['trusted_manifest_sha256'],
@@ -315,13 +327,17 @@ Restore chỉ nhận các prefix bảng trống. File timings giữ nguyên kế
         'manifest_source': 'Separately supplied instructor manifest, mounted read-only by Compose.'})
     inventory = [{'file': p.relative_to(destination).as_posix(), 'bytes': p.stat().st_size, 'sha256': sha256_file(p)}
                  for p in sorted(destination.rglob('*')) if p.is_file()]
-    write_json(destination / 'submission_manifest.json', {'created_at_utc': datetime.now(timezone.utc).isoformat(),
-        'member_id': '24022463', 'role': 'D', 'group_id': state['group_id'], 'run_label': state['run_label'],
-        'roles_with_individual_records': ['A', 'D', 'E'],
-        'individual_members': [{'role': 'A', 'member_id': '24022484'}, {'role': 'D', 'member_id': '24022463'},
+    manifest_payload = {'created_at_utc': datetime.now(timezone.utc).isoformat(),
+        'member_id': role_c['member_id'], 'role': 'C', 'group_id': state['group_id'], 'run_label': state['run_label'],
+        'roles_with_individual_records': ['A', 'C', 'D', 'E'],
+        'individual_members': [{'role': 'A', 'member_id': '24022484'},
+                               {'role': 'C', 'member_id': role_c['member_id']},
+                               {'role': 'D', 'member_id': '24022463'},
                                {'role': 'E', 'member_id': role_e['member_id']}],
         'files': inventory, 'technical_checks_passed': True, 'release_status': 'CANDIDATE_NOT_OWNER_PUBLISHED',
-        'excluded': ['credentials/.env','raw payloads and source data/','previous-run archive','Python caches']})
+        'excluded': ['credentials/.env','raw payloads and source data/','previous-run archive','Python caches']}
+    write_json(destination / 'submission_manifest.json', manifest_payload)
+    write_json(ROOT / 'submission_manifest.json', manifest_payload)
     archive = destination.with_suffix('.zip')
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as package:
         for path in sorted(destination.rglob('*')):
@@ -329,7 +345,8 @@ Restore chỉ nhận các prefix bảng trống. File timings giữ nguyên kế
                 package.write(path, path.relative_to(destination.parent).as_posix())
     digest = sha256_file(archive)
     archive.with_suffix('.zip.sha256').write_text(digest + '  ' + archive.name + '\n', encoding='ascii')
-    print('Prepared', archive.name, 'SHA256', digest)
+    shutil.rmtree(output_root, ignore_errors=True)
+    print('Updated reports and manifests; package SHA256', digest)
 
 
 if __name__ == '__main__':

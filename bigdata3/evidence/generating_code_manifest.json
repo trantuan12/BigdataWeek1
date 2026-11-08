@@ -33,6 +33,10 @@
       "sha256": "402d5aefc4261cccb1ac68a94f3fc8b42b8921ac0b191b69c12b4e68876f4cbe"
     },
     {
+      "file": "tools/check_role_c.py",
+      "sha256": "925dbc508445d05791ff49a82b6866f0032f1dda269604659a434b05b9898f79"
+    },
+    {
       "file": "tools/check_role_d.py",
       "sha256": "ab9cde134ab74eab81c0b9a5b8dd198a40cf84241b7c8720e7e3e78e3a020d01"
     },
@@ -50,7 +54,7 @@
     },
     {
       "file": "tools/prepare_role_d_submission.py",
-      "sha256": "060254bdcc076d953f112b9940e02fc0be0f6d2fcbfb0a339d5ed92267794a68"
+      "sha256": "36b955a992398354ef3ef314e2cbabd32f122828753d712f1e071603d8813557"
     },
     {
       "file": "tools/publish_local_demo.py",
@@ -59,6 +63,10 @@
     {
       "file": "tools/role_a_report.py",
       "sha256": "cfb1f7e765acc32568ee8e7e8cdcbf8f0c04d3d4747aff83c4981faa7d98d25c"
+    },
+    {
+      "file": "tools/role_c_report.py",
+      "sha256": "0ff2df46f2b2425df2539dde9973a537d2dc51c3ccd3842a2f368848ebebf769"
     },
     {
       "file": "tools/role_d_report.py",

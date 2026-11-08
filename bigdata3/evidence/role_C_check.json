@@ -1,0 +1,662 @@
+{
+  "passed": true,
+  "member_id": "24022306",
+  "member_name": "Nguyễn Tùng Dương",
+  "role": "C",
+  "execution_mode": "AUTOMATED_READ_ONLY",
+  "completed_at_utc": "2026-11-08T15:13:10.670842+00:00",
+  "code_sha256": "925dbc508445d05791ff49a82b6866f0032f1dda269604659a434b05b9898f79",
+  "silver_initial_version": 0,
+  "silver_final_version": 1,
+  "silver_replay_version": 2,
+  "gold_final_version": 1,
+  "decision_counts": {
+    "updated_newer": 20,
+    "unchanged_stale": 10,
+    "inserted": 100
+  },
+  "superseded_rows": [
+    {
+      "record_id": "R002001",
+      "superseded_row": 136,
+      "superseded_temp_c": "21.10",
+      "winner_row": 101,
+      "winner_temp_c": "20.10",
+      "ingest_time_utc": "2026-02-02T16:50:30Z"
+    },
+    {
+      "record_id": "R002002",
+      "superseded_row": 137,
+      "superseded_temp_c": "21.20",
+      "winner_row": 102,
+      "winner_temp_c": "20.20",
+      "ingest_time_utc": "2026-02-02T16:51:00Z"
+    },
+    {
+      "record_id": "R002003",
+      "superseded_row": 138,
+      "superseded_temp_c": "21.30",
+      "winner_row": 103,
+      "winner_temp_c": "20.30",
+      "ingest_time_utc": "2026-02-02T16:51:30Z"
+    },
+    {
+      "record_id": "R002004",
+      "superseded_row": 139,
+      "superseded_temp_c": "21.40",
+      "winner_row": 104,
+      "winner_temp_c": "20.40",
+      "ingest_time_utc": "2026-02-02T16:52:00Z"
+    },
+    {
+      "record_id": "R002005",
+      "superseded_row": 140,
+      "superseded_temp_c": "21.50",
+      "winner_row": 105,
+      "winner_temp_c": "20.50",
+      "ingest_time_utc": "2026-02-02T16:52:30Z"
+    },
+    {
+      "record_id": "R010001",
+      "superseded_row": 131,
+      "superseded_temp_c": "20.10",
+      "winner_row": 1,
+      "winner_temp_c": "19.10",
+      "ingest_time_utc": "2026-02-06T00:31:00Z"
+    },
+    {
+      "record_id": "R010002",
+      "superseded_row": 132,
+      "superseded_temp_c": "20.20",
+      "winner_row": 2,
+      "winner_temp_c": "19.20",
+      "ingest_time_utc": "2026-02-06T00:32:00Z"
+    },
+    {
+      "record_id": "R010003",
+      "superseded_row": 133,
+      "superseded_temp_c": "20.30",
+      "winner_row": 3,
+      "winner_temp_c": "19.30",
+      "ingest_time_utc": "2026-02-06T00:33:00Z"
+    },
+    {
+      "record_id": "R010004",
+      "superseded_row": 134,
+      "superseded_temp_c": "20.40",
+      "winner_row": 4,
+      "winner_temp_c": "19.40",
+      "ingest_time_utc": "2026-02-06T00:34:00Z"
+    },
+    {
+      "record_id": "R010005",
+      "superseded_row": 135,
+      "superseded_temp_c": "20.50",
+      "winner_row": 5,
+      "winner_temp_c": "19.50",
+      "ingest_time_utc": "2026-02-06T00:35:00Z"
+    }
+  ],
+  "representative_traces": {
+    "R010001": {
+      "decision": "inserted",
+      "previous": null,
+      "incoming_winner": {
+        "record_id": "R010001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-06T00:01:00Z",
+        "ingest_time_utc": "2026-02-06T00:31:00Z",
+        "temperature_c": "19.10",
+        "is_late": true,
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 1,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+      },
+      "selected": {
+        "event_time_utc": "2026-02-06T00:01:00Z",
+        "ingest_time_utc": "2026-02-06T00:31:00Z",
+        "is_late": true,
+        "record_id": "R010001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 1,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb",
+        "temperature_c": "19.10"
+      },
+      "source_projection": {
+        "record_id": "R010001",
+        "sensor_id": "S01",
+        "event_time_utc": "2026-02-06T00:01:00Z",
+        "ingest_time_utc": "2026-02-06T00:31:00Z",
+        "temperature_c": "19.10"
+      }
+    },
+    "R003001": {
+      "decision": "unchanged_stale",
+      "previous": {
+        "record_id": "R003001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T01:00:30Z",
+        "ingest_time_utc": "2026-02-03T01:01:30Z",
+        "temperature_c": "18.10",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3001,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_winner": {
+        "record_id": "R003001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T01:00:30Z",
+        "ingest_time_utc": "2026-02-03T01:01:00Z",
+        "temperature_c": "17.10",
+        "is_late": false,
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 121,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+      },
+      "selected": {
+        "event_time_utc": "2026-02-03T01:00:30Z",
+        "ingest_time_utc": "2026-02-03T01:01:30Z",
+        "is_late": false,
+        "record_id": "R003001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "source_object": "observations_a.csv",
+        "source_row": 3001,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "18.10"
+      },
+      "source_projection": {
+        "record_id": "R003001",
+        "sensor_id": "S01",
+        "event_time_utc": "2026-02-03T01:00:30Z",
+        "ingest_time_utc": "2026-02-03T01:01:30Z",
+        "temperature_c": "18.10"
+      }
+    },
+    "R002001": {
+      "decision": "updated_newer",
+      "previous": {
+        "record_id": "R002001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-02T16:40:30Z",
+        "ingest_time_utc": "2026-02-02T16:41:30Z",
+        "temperature_c": "18.10",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 2001,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_winner": {
+        "record_id": "R002001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-02T16:40:30Z",
+        "ingest_time_utc": "2026-02-02T16:50:30Z",
+        "temperature_c": "20.10",
+        "is_late": false,
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 101,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+      },
+      "selected": {
+        "event_time_utc": "2026-02-02T16:40:30Z",
+        "ingest_time_utc": "2026-02-02T16:50:30Z",
+        "is_late": false,
+        "record_id": "R002001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "source_object": "lab3/source_batch02.csv",
+        "source_row": 101,
+        "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb",
+        "temperature_c": "20.10"
+      },
+      "source_projection": {
+        "record_id": "R002001",
+        "sensor_id": "S01",
+        "event_time_utc": "2026-02-02T16:40:30Z",
+        "ingest_time_utc": "2026-02-02T16:50:30Z",
+        "temperature_c": "20.10"
+      }
+    }
+  },
+  "cross_check_d_query_result": [
+    {
+      "site": "zone-1",
+      "n_observations": 2500,
+      "sum_temperature_c": "53250.00",
+      "n_late": 500
+    },
+    {
+      "site": "zone-2",
+      "n_observations": 2500,
+      "sum_temperature_c": "54000.00",
+      "n_late": 500
+    },
+    {
+      "site": "zone-3",
+      "n_observations": 2500,
+      "sum_temperature_c": "53250.00",
+      "n_late": 500
+    },
+    {
+      "site": "zone-4",
+      "n_observations": 2500,
+      "sum_temperature_c": "54000.00",
+      "n_late": 500
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "C_M01_incoming_winner_cardinality",
+      "passed": true,
+      "observed": {
+        "incoming_physical_rows": 140,
+        "incoming_winners": 130,
+        "superseded_rows": 10,
+        "superseded_details": [
+          {
+            "record_id": "R002001",
+            "superseded_row": 136,
+            "superseded_temp_c": "21.10",
+            "winner_row": 101,
+            "winner_temp_c": "20.10",
+            "ingest_time_utc": "2026-02-02T16:50:30Z"
+          },
+          {
+            "record_id": "R002002",
+            "superseded_row": 137,
+            "superseded_temp_c": "21.20",
+            "winner_row": 102,
+            "winner_temp_c": "20.20",
+            "ingest_time_utc": "2026-02-02T16:51:00Z"
+          },
+          {
+            "record_id": "R002003",
+            "superseded_row": 138,
+            "superseded_temp_c": "21.30",
+            "winner_row": 103,
+            "winner_temp_c": "20.30",
+            "ingest_time_utc": "2026-02-02T16:51:30Z"
+          },
+          {
+            "record_id": "R002004",
+            "superseded_row": 139,
+            "superseded_temp_c": "21.40",
+            "winner_row": 104,
+            "winner_temp_c": "20.40",
+            "ingest_time_utc": "2026-02-02T16:52:00Z"
+          },
+          {
+            "record_id": "R002005",
+            "superseded_row": 140,
+            "superseded_temp_c": "21.50",
+            "winner_row": 105,
+            "winner_temp_c": "20.50",
+            "ingest_time_utc": "2026-02-02T16:52:30Z"
+          },
+          {
+            "record_id": "R010001",
+            "superseded_row": 131,
+            "superseded_temp_c": "20.10",
+            "winner_row": 1,
+            "winner_temp_c": "19.10",
+            "ingest_time_utc": "2026-02-06T00:31:00Z"
+          },
+          {
+            "record_id": "R010002",
+            "superseded_row": 132,
+            "superseded_temp_c": "20.20",
+            "winner_row": 2,
+            "winner_temp_c": "19.20",
+            "ingest_time_utc": "2026-02-06T00:32:00Z"
+          },
+          {
+            "record_id": "R010003",
+            "superseded_row": 133,
+            "superseded_temp_c": "20.30",
+            "winner_row": 3,
+            "winner_temp_c": "19.30",
+            "ingest_time_utc": "2026-02-06T00:33:00Z"
+          },
+          {
+            "record_id": "R010004",
+            "superseded_row": 134,
+            "superseded_temp_c": "20.40",
+            "winner_row": 4,
+            "winner_temp_c": "19.40",
+            "ingest_time_utc": "2026-02-06T00:34:00Z"
+          },
+          {
+            "record_id": "R010005",
+            "superseded_row": 135,
+            "superseded_temp_c": "20.50",
+            "winner_row": 5,
+            "winner_temp_c": "19.50",
+            "ingest_time_utc": "2026-02-06T00:35:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "C_M02_all_revision_decisions",
+      "passed": true,
+      "observed": {
+        "baseline_rows": 9610,
+        "post_merge_rows": 9710,
+        "decisions": {
+          "updated_newer": 20,
+          "unchanged_stale": 10,
+          "inserted": 100
+        }
+      }
+    },
+    {
+      "check_id": "C_M02_trace_R010001",
+      "passed": true,
+      "observed": {
+        "decision": "inserted",
+        "previous": null,
+        "incoming_winner": {
+          "record_id": "R010001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-06T00:01:00Z",
+          "ingest_time_utc": "2026-02-06T00:31:00Z",
+          "temperature_c": "19.10",
+          "is_late": true,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 1,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        },
+        "selected": {
+          "event_time_utc": "2026-02-06T00:01:00Z",
+          "ingest_time_utc": "2026-02-06T00:31:00Z",
+          "is_late": true,
+          "record_id": "R010001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 1,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb",
+          "temperature_c": "19.10"
+        },
+        "source_projection": {
+          "record_id": "R010001",
+          "sensor_id": "S01",
+          "event_time_utc": "2026-02-06T00:01:00Z",
+          "ingest_time_utc": "2026-02-06T00:31:00Z",
+          "temperature_c": "19.10"
+        }
+      }
+    },
+    {
+      "check_id": "C_M02_trace_R003001",
+      "passed": true,
+      "observed": {
+        "decision": "unchanged_stale",
+        "previous": {
+          "record_id": "R003001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-03T01:00:30Z",
+          "ingest_time_utc": "2026-02-03T01:01:30Z",
+          "temperature_c": "18.10",
+          "is_late": false,
+          "source_object": "observations_a.csv",
+          "source_row": 3001,
+          "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+        },
+        "incoming_winner": {
+          "record_id": "R003001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-03T01:00:30Z",
+          "ingest_time_utc": "2026-02-03T01:01:00Z",
+          "temperature_c": "17.10",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 121,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        },
+        "selected": {
+          "event_time_utc": "2026-02-03T01:00:30Z",
+          "ingest_time_utc": "2026-02-03T01:01:30Z",
+          "is_late": false,
+          "record_id": "R003001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "source_object": "observations_a.csv",
+          "source_row": 3001,
+          "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+          "temperature_c": "18.10"
+        },
+        "source_projection": {
+          "record_id": "R003001",
+          "sensor_id": "S01",
+          "event_time_utc": "2026-02-03T01:00:30Z",
+          "ingest_time_utc": "2026-02-03T01:01:30Z",
+          "temperature_c": "18.10"
+        }
+      }
+    },
+    {
+      "check_id": "C_M02_trace_R002001",
+      "passed": true,
+      "observed": {
+        "decision": "updated_newer",
+        "previous": {
+          "record_id": "R002001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-02T16:40:30Z",
+          "ingest_time_utc": "2026-02-02T16:41:30Z",
+          "temperature_c": "18.10",
+          "is_late": false,
+          "source_object": "observations_a.csv",
+          "source_row": 2001,
+          "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+        },
+        "incoming_winner": {
+          "record_id": "R002001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-02T16:40:30Z",
+          "ingest_time_utc": "2026-02-02T16:50:30Z",
+          "temperature_c": "20.10",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 101,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        },
+        "selected": {
+          "event_time_utc": "2026-02-02T16:40:30Z",
+          "ingest_time_utc": "2026-02-02T16:50:30Z",
+          "is_late": false,
+          "record_id": "R002001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 101,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb",
+          "temperature_c": "20.10"
+        },
+        "source_projection": {
+          "record_id": "R002001",
+          "sensor_id": "S01",
+          "event_time_utc": "2026-02-02T16:40:30Z",
+          "ingest_time_utc": "2026-02-02T16:50:30Z",
+          "temperature_c": "20.10"
+        }
+      }
+    },
+    {
+      "check_id": "C_M03_deterministic_ties_and_reordering",
+      "passed": true,
+      "observed": {
+        "forward_equals_reversed": true,
+        "forward_equals_shuffled": true,
+        "tied_keys_count": 10,
+        "naive_last_row_wrong_keys": [
+          "R002001",
+          "R002002",
+          "R002003",
+          "R002004",
+          "R002005",
+          "R010001",
+          "R010002",
+          "R010003",
+          "R010004",
+          "R010005"
+        ]
+      }
+    },
+    {
+      "check_id": "C_M04_bronze_receipt_replay",
+      "passed": true,
+      "observed": {
+        "bronze_receipts": 9750,
+        "bronze_receipt_sha256": "80205e70830edc987216977a4d78bbc26315946edf1f2b8beefd91843612609b",
+        "bronze_version_after": 1,
+        "bronze_version_replay": 1
+      }
+    },
+    {
+      "check_id": "C_M05_silver_merge_replay_idempotence",
+      "passed": true,
+      "observed": {
+        "logical_sha256": "d0e76f8b3525282d09c71a2e813ec91abcad2440f6f3eeaf8b7cbc55d922162a",
+        "silver_v1_metrics": {
+          "numSourceRows": "130",
+          "numTargetRowsInserted": "100",
+          "numTargetRowsMatchedUpdated": "20",
+          "numTargetRowsCopied": "9590",
+          "numOutputRows": "9710"
+        },
+        "silver_v2_replay_metrics": {
+          "numSourceRows": "130",
+          "numTargetRowsInserted": "0",
+          "numTargetRowsMatchedUpdated": "0",
+          "numTargetRowsCopied": "9710",
+          "numOutputRows": "9710"
+        },
+        "second_application_decisions": {
+          "unchanged_equal": 120,
+          "unchanged_stale": 10
+        }
+      }
+    },
+    {
+      "check_id": "C_M06_historical_time_travel",
+      "passed": true,
+      "observed": {
+        "historical_version": 0,
+        "rows": 9610,
+        "logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d"
+      }
+    },
+    {
+      "check_id": "C_M07_invalid_batch_refusal_probes",
+      "passed": true,
+      "observed": {
+        "probes": [
+          {
+            "case": "VALUE",
+            "passed": true,
+            "observed": "VALUE",
+            "writes_performed": 0
+          },
+          {
+            "case": "REQUIRED_VALUE",
+            "passed": true,
+            "observed": "VALUE",
+            "writes_performed": 0
+          },
+          {
+            "case": "SCHEMA_ALLOWLIST",
+            "passed": true,
+            "observed": "SCHEMA_ALLOWLIST",
+            "writes_performed": 0
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "C_M08_gold_post_merge_consistency",
+      "passed": true,
+      "observed": {
+        "baseline_groups": 16,
+        "post_merge_groups": 20,
+        "post_merge_observations": 9710,
+        "post_merge_temperature_sum_c": "222930.50"
+      }
+    },
+    {
+      "check_id": "C_cross_D_benchmark_result_equivalence",
+      "passed": true,
+      "observed": {
+        "source_silver_version": 1,
+        "run_sequence": "ABBAAB",
+        "six_runs_equal": true,
+        "query_result": [
+          {
+            "site": "zone-1",
+            "n_observations": 2500,
+            "sum_temperature_c": "53250.00",
+            "n_late": 500
+          },
+          {
+            "site": "zone-2",
+            "n_observations": 2500,
+            "sum_temperature_c": "54000.00",
+            "n_late": 500
+          },
+          {
+            "site": "zone-3",
+            "n_observations": 2500,
+            "sum_temperature_c": "53250.00",
+            "n_late": 500
+          },
+          {
+            "site": "zone-4",
+            "n_observations": 2500,
+            "sum_temperature_c": "54000.00",
+            "n_late": 500
+          }
+        ],
+        "operational_feb06_rows": 100,
+        "expanded_feb06_workload_rows": 10000
+      }
+    },
+    {
+      "check_id": "C_cross_D_plan_metrics_and_gold_isolation",
+      "passed": true,
+      "observed": {
+        "layout_A_table_files": 32,
+        "layout_B_table_files": 5,
+        "measured_files_read": {
+          "A": [
+            32,
+            32,
+            32
+          ],
+          "B": [
+            1,
+            1,
+            1
+          ]
+        },
+        "median_A_s": 1.8711641999999529,
+        "median_B_s": 0.8590271200000643,
+        "A_over_B_ratio": 2.1782364682500512,
+        "operational_gold_observations": 9710
+      }
+    }
+  ]
+}

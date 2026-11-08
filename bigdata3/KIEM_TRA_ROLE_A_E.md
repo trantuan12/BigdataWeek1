@@ -1,10 +1,14 @@
-# Kiểm tra kỹ thuật role A và E
+# Kiểm tra kỹ thuật role A, C và E
 
 ## Role A
 
 Bản hiện có đã có bằng chứng preflight, nhưng báo cáo cũ dùng Java 23 ngoài baseline Java 17/21 và chứa cấu hình đường dẫn không dùng chung với executor. Các tệp đầu vào hiện tại cũng bị đổi xuống dòng làm sai hash. Đã giữ bản trước, khôi phục 11 tệp đúng byte từ ZIP gốc, giữ nguyên manifest tin cậy và chạy lại toàn bộ kiểm tra.
 
 Lượt chạy mới: 16/16 hash đạt; fallback được khai báo đúng, digest logic khớp; Delta từ chối cột lạ và giữ tám dòng; runtime đúng Spark/Delta 4.0.1, Java 17; task chạy trên hai worker container, bảng dùng S3A chung. Container không xác nhận nhiều máy vật lý. Hồ sơ `individual/24022484_TranAnhTuan_RoleA.md` đã được cập nhật bằng kiểm tra trực tiếp Silver v1 và Gold v1. Ba mẫu truy được về đúng object/ordinal/hash; R010001 chọn row 1 ở 19,10°C, không dùng dòng cuối của dictionary. Bằng chứng bổ sung nằm trong `role_A_check.json`, `role_A_source_trace.json`, `runtime_role_A_check.json`, `role_A_worker_probe.json`.
+
+## Role C
+
+Đã bổ sung công cụ kiểm tra độc lập `tools/check_role_c.py`, bộ kiểm thử `tests/test_role_c_revisions.py` và hồ sơ cá nhân `individual/24022306_NguyenTungDuong_RoleC.md` cho Nguyễn Tùng Dương (24022306). Chương trình xác nhận đầy đủ tám tiêu chí `M01`–`M08` trên các bản xuất thực tế và lịch sử giao dịch Delta (`live_table_verification.json`): 140 dòng sửa đổi đầu vào thu gọn về đúng 130 winners và loại 10 dòng đồng hạng; hợp nhất vào Silver tạo đúng 100 inserted, 20 updated_newer, 10 unchanged_stale; phát lại Bronze giữ nguyên 9.750 biên nhận; phát lại Silver tạo commit no-op v2 (`0` insert, `0` update) có cùng mã băm chính quy `d0e76f8b...` với v1; time travel v0 khớp 9.610 dòng handoff; ba ca đột biến lô lỗi bị từ chối trước khi ghi (`writes_performed = 0`); kiểm tra chéo `C_CHECK_D` xác nhận cả 6 lần đo A/B của Role D khớp tuyệt đối với 100x dữ liệu Gold ngày 2026-02-06. Bằng chứng được lưu tại `role_C_prediction.json` và `role_C_check.json`.
 
 ## Role E
 

@@ -1,0 +1,2728 @@
+{
+  "passed": true,
+  "member_id": "24022277",
+  "member_name": "Lê Ngọc Minh Cường",
+  "role": "B",
+  "reviewed_role": "C",
+  "execution_mode": "AUTOMATED_READ_ONLY",
+  "completed_at_utc": "2026-11-14T08:13:18.726650+00:00",
+  "code_sha256": "fb50d66cf929cc2ba51452f801694ce0fc7ee70aa6afeb4cd4503e720f384dfb",
+  "implementation_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+  "silver_initial_version": 0,
+  "silver_final_version": 1,
+  "silver_replay_version": 2,
+  "gold_final_version": 1,
+  "gold_source_silver_version": 1,
+  "writes_performed": 0,
+  "daily_weighted_vs_naive": [
+    {
+      "event_date": "2026-02-02",
+      "site_counts": {
+        "zone-1": 625,
+        "zone-2": 625,
+        "zone-3": 620,
+        "zone-4": 619
+      },
+      "sum_temperature_c": "57283.50",
+      "n_observations": 2489,
+      "weighted_mean_c": "23.014665",
+      "naive_mean_of_means_c": "23.016459",
+      "difference_c": "0.001794",
+      "equal_site_counts": false
+    },
+    {
+      "event_date": "2026-02-03",
+      "site_counts": {
+        "zone-1": 720,
+        "zone-2": 720,
+        "zone-3": 720,
+        "zone-4": 720
+      },
+      "sum_temperature_c": "66056.00",
+      "n_observations": 2880,
+      "weighted_mean_c": "22.936111",
+      "naive_mean_of_means_c": "22.936111",
+      "difference_c": "0.000000",
+      "equal_site_counts": true
+    },
+    {
+      "event_date": "2026-02-04",
+      "site_counts": {
+        "zone-1": 720,
+        "zone-2": 720,
+        "zone-3": 720,
+        "zone-4": 720
+      },
+      "sum_temperature_c": "66096.00",
+      "n_observations": 2880,
+      "weighted_mean_c": "22.950000",
+      "naive_mean_of_means_c": "22.950000",
+      "difference_c": "0.000000",
+      "equal_site_counts": true
+    },
+    {
+      "event_date": "2026-02-05",
+      "site_counts": {
+        "zone-1": 340,
+        "zone-2": 340,
+        "zone-3": 340,
+        "zone-4": 341
+      },
+      "sum_temperature_c": "31350.00",
+      "n_observations": 1361,
+      "weighted_mean_c": "23.034533",
+      "naive_mean_of_means_c": "23.034212",
+      "difference_c": "-0.000321",
+      "equal_site_counts": false
+    },
+    {
+      "event_date": "2026-02-06",
+      "site_counts": {
+        "zone-1": 25,
+        "zone-2": 25,
+        "zone-3": 25,
+        "zone-4": 25
+      },
+      "sum_temperature_c": "2145.00",
+      "n_observations": 100,
+      "weighted_mean_c": "21.450000",
+      "naive_mean_of_means_c": "21.450000",
+      "difference_c": "0.000000",
+      "equal_site_counts": true
+    }
+  ],
+  "stale_revisions": {
+    "R003001": {
+      "current_silver_v0": {
+        "record_id": "R003001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T01:00:30Z",
+        "ingest_time_utc": "2026-02-03T01:01:30Z",
+        "temperature_c": "18.10",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3001,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_candidates": [
+        {
+          "record_id": "R003001",
+          "sensor_id": "S01",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-03T01:00:30Z",
+          "ingest_time_utc": "2026-02-03T01:01:00Z",
+          "temperature_c": "17.10",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 121,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "silver_v1": {
+        "event_time_utc": "2026-02-03T01:00:30Z",
+        "ingest_time_utc": "2026-02-03T01:01:30Z",
+        "is_late": false,
+        "record_id": "R003001",
+        "sensor_id": "S01",
+        "site": "zone-1",
+        "source_object": "observations_a.csv",
+        "source_row": 3001,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "18.10"
+      },
+      "all_incoming_older": true,
+      "v1_equals_baseline": true,
+      "incoming_identity_absent_from_silver": true
+    },
+    "R003002": {
+      "current_silver_v0": {
+        "record_id": "R003002",
+        "sensor_id": "S02",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T01:01:00Z",
+        "ingest_time_utc": "2026-02-03T01:02:00Z",
+        "temperature_c": "18.20",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3002,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_candidates": [
+        {
+          "record_id": "R003002",
+          "sensor_id": "S02",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-03T01:01:00Z",
+          "ingest_time_utc": "2026-02-03T01:01:30Z",
+          "temperature_c": "17.20",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 122,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "silver_v1": {
+        "event_time_utc": "2026-02-03T01:01:00Z",
+        "ingest_time_utc": "2026-02-03T01:02:00Z",
+        "is_late": false,
+        "record_id": "R003002",
+        "sensor_id": "S02",
+        "site": "zone-1",
+        "source_object": "observations_a.csv",
+        "source_row": 3002,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "18.20"
+      },
+      "all_incoming_older": true,
+      "v1_equals_baseline": true,
+      "incoming_identity_absent_from_silver": true
+    },
+    "R003003": {
+      "current_silver_v0": {
+        "record_id": "R003003",
+        "sensor_id": "S03",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T01:01:30Z",
+        "ingest_time_utc": "2026-02-03T01:02:30Z",
+        "temperature_c": "18.30",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3003,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_candidates": [
+        {
+          "record_id": "R003003",
+          "sensor_id": "S03",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-03T01:01:30Z",
+          "ingest_time_utc": "2026-02-03T01:02:00Z",
+          "temperature_c": "17.30",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 123,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "silver_v1": {
+        "event_time_utc": "2026-02-03T01:01:30Z",
+        "ingest_time_utc": "2026-02-03T01:02:30Z",
+        "is_late": false,
+        "record_id": "R003003",
+        "sensor_id": "S03",
+        "site": "zone-1",
+        "source_object": "observations_a.csv",
+        "source_row": 3003,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "18.30"
+      },
+      "all_incoming_older": true,
+      "v1_equals_baseline": true,
+      "incoming_identity_absent_from_silver": true
+    },
+    "R003004": {
+      "current_silver_v0": {
+        "record_id": "R003004",
+        "sensor_id": "S04",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T01:02:00Z",
+        "ingest_time_utc": "2026-02-03T01:03:00Z",
+        "temperature_c": "18.40",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3004,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_candidates": [
+        {
+          "record_id": "R003004",
+          "sensor_id": "S04",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-03T01:02:00Z",
+          "ingest_time_utc": "2026-02-03T01:02:30Z",
+          "temperature_c": "17.40",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 124,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "silver_v1": {
+        "event_time_utc": "2026-02-03T01:02:00Z",
+        "ingest_time_utc": "2026-02-03T01:03:00Z",
+        "is_late": false,
+        "record_id": "R003004",
+        "sensor_id": "S04",
+        "site": "zone-1",
+        "source_object": "observations_a.csv",
+        "source_row": 3004,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "18.40"
+      },
+      "all_incoming_older": true,
+      "v1_equals_baseline": true,
+      "incoming_identity_absent_from_silver": true
+    },
+    "R003005": {
+      "current_silver_v0": {
+        "record_id": "R003005",
+        "sensor_id": "S05",
+        "site": "zone-1",
+        "event_time_utc": "2026-02-03T01:02:30Z",
+        "ingest_time_utc": "2026-02-03T01:03:30Z",
+        "temperature_c": "18.50",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3005,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_candidates": [
+        {
+          "record_id": "R003005",
+          "sensor_id": "S05",
+          "site": "zone-1",
+          "event_time_utc": "2026-02-03T01:02:30Z",
+          "ingest_time_utc": "2026-02-03T01:03:00Z",
+          "temperature_c": "17.50",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 125,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "silver_v1": {
+        "event_time_utc": "2026-02-03T01:02:30Z",
+        "ingest_time_utc": "2026-02-03T01:03:30Z",
+        "is_late": false,
+        "record_id": "R003005",
+        "sensor_id": "S05",
+        "site": "zone-1",
+        "source_object": "observations_a.csv",
+        "source_row": 3005,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "18.50"
+      },
+      "all_incoming_older": true,
+      "v1_equals_baseline": true,
+      "incoming_identity_absent_from_silver": true
+    },
+    "R003006": {
+      "current_silver_v0": {
+        "record_id": "R003006",
+        "sensor_id": "S06",
+        "site": "zone-2",
+        "event_time_utc": "2026-02-03T01:03:00Z",
+        "ingest_time_utc": "2026-02-03T01:04:00Z",
+        "temperature_c": "18.60",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3006,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_candidates": [
+        {
+          "record_id": "R003006",
+          "sensor_id": "S06",
+          "site": "zone-2",
+          "event_time_utc": "2026-02-03T01:03:00Z",
+          "ingest_time_utc": "2026-02-03T01:03:30Z",
+          "temperature_c": "17.60",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 126,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "silver_v1": {
+        "event_time_utc": "2026-02-03T01:03:00Z",
+        "ingest_time_utc": "2026-02-03T01:04:00Z",
+        "is_late": false,
+        "record_id": "R003006",
+        "sensor_id": "S06",
+        "site": "zone-2",
+        "source_object": "observations_a.csv",
+        "source_row": 3006,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "18.60"
+      },
+      "all_incoming_older": true,
+      "v1_equals_baseline": true,
+      "incoming_identity_absent_from_silver": true
+    },
+    "R003007": {
+      "current_silver_v0": {
+        "record_id": "R003007",
+        "sensor_id": "S07",
+        "site": "zone-2",
+        "event_time_utc": "2026-02-03T01:03:30Z",
+        "ingest_time_utc": "2026-02-03T01:04:30Z",
+        "temperature_c": "18.70",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3007,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_candidates": [
+        {
+          "record_id": "R003007",
+          "sensor_id": "S07",
+          "site": "zone-2",
+          "event_time_utc": "2026-02-03T01:03:30Z",
+          "ingest_time_utc": "2026-02-03T01:04:00Z",
+          "temperature_c": "17.70",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 127,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "silver_v1": {
+        "event_time_utc": "2026-02-03T01:03:30Z",
+        "ingest_time_utc": "2026-02-03T01:04:30Z",
+        "is_late": false,
+        "record_id": "R003007",
+        "sensor_id": "S07",
+        "site": "zone-2",
+        "source_object": "observations_a.csv",
+        "source_row": 3007,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "18.70"
+      },
+      "all_incoming_older": true,
+      "v1_equals_baseline": true,
+      "incoming_identity_absent_from_silver": true
+    },
+    "R003008": {
+      "current_silver_v0": {
+        "record_id": "R003008",
+        "sensor_id": "S08",
+        "site": "zone-2",
+        "event_time_utc": "2026-02-03T01:04:00Z",
+        "ingest_time_utc": "2026-02-03T01:05:00Z",
+        "temperature_c": "18.80",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3008,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_candidates": [
+        {
+          "record_id": "R003008",
+          "sensor_id": "S08",
+          "site": "zone-2",
+          "event_time_utc": "2026-02-03T01:04:00Z",
+          "ingest_time_utc": "2026-02-03T01:04:30Z",
+          "temperature_c": "17.80",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 128,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "silver_v1": {
+        "event_time_utc": "2026-02-03T01:04:00Z",
+        "ingest_time_utc": "2026-02-03T01:05:00Z",
+        "is_late": false,
+        "record_id": "R003008",
+        "sensor_id": "S08",
+        "site": "zone-2",
+        "source_object": "observations_a.csv",
+        "source_row": 3008,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "18.80"
+      },
+      "all_incoming_older": true,
+      "v1_equals_baseline": true,
+      "incoming_identity_absent_from_silver": true
+    },
+    "R003009": {
+      "current_silver_v0": {
+        "record_id": "R003009",
+        "sensor_id": "S09",
+        "site": "zone-2",
+        "event_time_utc": "2026-02-03T01:04:30Z",
+        "ingest_time_utc": "2026-02-03T01:05:30Z",
+        "temperature_c": "18.90",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3009,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_candidates": [
+        {
+          "record_id": "R003009",
+          "sensor_id": "S09",
+          "site": "zone-2",
+          "event_time_utc": "2026-02-03T01:04:30Z",
+          "ingest_time_utc": "2026-02-03T01:05:00Z",
+          "temperature_c": "17.90",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 129,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "silver_v1": {
+        "event_time_utc": "2026-02-03T01:04:30Z",
+        "ingest_time_utc": "2026-02-03T01:05:30Z",
+        "is_late": false,
+        "record_id": "R003009",
+        "sensor_id": "S09",
+        "site": "zone-2",
+        "source_object": "observations_a.csv",
+        "source_row": 3009,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "18.90"
+      },
+      "all_incoming_older": true,
+      "v1_equals_baseline": true,
+      "incoming_identity_absent_from_silver": true
+    },
+    "R003010": {
+      "current_silver_v0": {
+        "record_id": "R003010",
+        "sensor_id": "S10",
+        "site": "zone-2",
+        "event_time_utc": "2026-02-03T01:05:00Z",
+        "ingest_time_utc": "2026-02-03T01:06:00Z",
+        "temperature_c": "19.00",
+        "is_late": false,
+        "source_object": "observations_a.csv",
+        "source_row": 3010,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+      },
+      "incoming_candidates": [
+        {
+          "record_id": "R003010",
+          "sensor_id": "S10",
+          "site": "zone-2",
+          "event_time_utc": "2026-02-03T01:05:00Z",
+          "ingest_time_utc": "2026-02-03T01:05:30Z",
+          "temperature_c": "18.00",
+          "is_late": false,
+          "source_object": "lab3/source_batch02.csv",
+          "source_row": 130,
+          "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+        }
+      ],
+      "silver_v1": {
+        "event_time_utc": "2026-02-03T01:05:00Z",
+        "ingest_time_utc": "2026-02-03T01:06:00Z",
+        "is_late": false,
+        "record_id": "R003010",
+        "sensor_id": "S10",
+        "site": "zone-2",
+        "source_object": "observations_a.csv",
+        "source_row": 3010,
+        "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+        "temperature_c": "19.00"
+      },
+      "all_incoming_older": true,
+      "v1_equals_baseline": true,
+      "incoming_identity_absent_from_silver": true
+    }
+  },
+  "tied_revisions": {
+    "R002001": {
+      "candidates": [
+        [
+          101,
+          "20.10"
+        ],
+        [
+          136,
+          "21.10"
+        ]
+      ],
+      "same_ingest_and_object": true,
+      "expected_winner_row": 101,
+      "expected_winner_temp": "20.10",
+      "superseded_row": 136,
+      "previous_silver": [
+        "observations_a.csv",
+        2001,
+        "18.10"
+      ],
+      "decision": "updated",
+      "silver_v1": [
+        "lab3/source_batch02.csv",
+        101,
+        "20.10"
+      ],
+      "ok": true
+    },
+    "R002002": {
+      "candidates": [
+        [
+          102,
+          "20.20"
+        ],
+        [
+          137,
+          "21.20"
+        ]
+      ],
+      "same_ingest_and_object": true,
+      "expected_winner_row": 102,
+      "expected_winner_temp": "20.20",
+      "superseded_row": 137,
+      "previous_silver": [
+        "observations_a.csv",
+        2002,
+        "18.20"
+      ],
+      "decision": "updated",
+      "silver_v1": [
+        "lab3/source_batch02.csv",
+        102,
+        "20.20"
+      ],
+      "ok": true
+    },
+    "R002003": {
+      "candidates": [
+        [
+          103,
+          "20.30"
+        ],
+        [
+          138,
+          "21.30"
+        ]
+      ],
+      "same_ingest_and_object": true,
+      "expected_winner_row": 103,
+      "expected_winner_temp": "20.30",
+      "superseded_row": 138,
+      "previous_silver": [
+        "observations_a.csv",
+        2003,
+        "18.30"
+      ],
+      "decision": "updated",
+      "silver_v1": [
+        "lab3/source_batch02.csv",
+        103,
+        "20.30"
+      ],
+      "ok": true
+    },
+    "R002004": {
+      "candidates": [
+        [
+          104,
+          "20.40"
+        ],
+        [
+          139,
+          "21.40"
+        ]
+      ],
+      "same_ingest_and_object": true,
+      "expected_winner_row": 104,
+      "expected_winner_temp": "20.40",
+      "superseded_row": 139,
+      "previous_silver": [
+        "observations_a.csv",
+        2004,
+        "18.40"
+      ],
+      "decision": "updated",
+      "silver_v1": [
+        "lab3/source_batch02.csv",
+        104,
+        "20.40"
+      ],
+      "ok": true
+    },
+    "R002005": {
+      "candidates": [
+        [
+          105,
+          "20.50"
+        ],
+        [
+          140,
+          "21.50"
+        ]
+      ],
+      "same_ingest_and_object": true,
+      "expected_winner_row": 105,
+      "expected_winner_temp": "20.50",
+      "superseded_row": 140,
+      "previous_silver": [
+        "observations_a.csv",
+        2005,
+        "18.50"
+      ],
+      "decision": "updated",
+      "silver_v1": [
+        "lab3/source_batch02.csv",
+        105,
+        "20.50"
+      ],
+      "ok": true
+    },
+    "R010001": {
+      "candidates": [
+        [
+          1,
+          "19.10"
+        ],
+        [
+          131,
+          "20.10"
+        ]
+      ],
+      "same_ingest_and_object": true,
+      "expected_winner_row": 1,
+      "expected_winner_temp": "19.10",
+      "superseded_row": 131,
+      "previous_silver": null,
+      "decision": "inserted",
+      "silver_v1": [
+        "lab3/source_batch02.csv",
+        1,
+        "19.10"
+      ],
+      "ok": true
+    },
+    "R010002": {
+      "candidates": [
+        [
+          2,
+          "19.20"
+        ],
+        [
+          132,
+          "20.20"
+        ]
+      ],
+      "same_ingest_and_object": true,
+      "expected_winner_row": 2,
+      "expected_winner_temp": "19.20",
+      "superseded_row": 132,
+      "previous_silver": null,
+      "decision": "inserted",
+      "silver_v1": [
+        "lab3/source_batch02.csv",
+        2,
+        "19.20"
+      ],
+      "ok": true
+    },
+    "R010003": {
+      "candidates": [
+        [
+          3,
+          "19.30"
+        ],
+        [
+          133,
+          "20.30"
+        ]
+      ],
+      "same_ingest_and_object": true,
+      "expected_winner_row": 3,
+      "expected_winner_temp": "19.30",
+      "superseded_row": 133,
+      "previous_silver": null,
+      "decision": "inserted",
+      "silver_v1": [
+        "lab3/source_batch02.csv",
+        3,
+        "19.30"
+      ],
+      "ok": true
+    },
+    "R010004": {
+      "candidates": [
+        [
+          4,
+          "19.40"
+        ],
+        [
+          134,
+          "20.40"
+        ]
+      ],
+      "same_ingest_and_object": true,
+      "expected_winner_row": 4,
+      "expected_winner_temp": "19.40",
+      "superseded_row": 134,
+      "previous_silver": null,
+      "decision": "inserted",
+      "silver_v1": [
+        "lab3/source_batch02.csv",
+        4,
+        "19.40"
+      ],
+      "ok": true
+    },
+    "R010005": {
+      "candidates": [
+        [
+          5,
+          "19.50"
+        ],
+        [
+          135,
+          "20.50"
+        ]
+      ],
+      "same_ingest_and_object": true,
+      "expected_winner_row": 5,
+      "expected_winner_temp": "19.50",
+      "superseded_row": 135,
+      "previous_silver": null,
+      "decision": "inserted",
+      "silver_v1": [
+        "lab3/source_batch02.csv",
+        5,
+        "19.50"
+      ],
+      "ok": true
+    }
+  },
+  "predicate_truth_table": [
+    {
+      "case": "newer_ingest_even_with_larger_object_and_row",
+      "expected_update": true,
+      "merge_silver_sql_update": true,
+      "independent_model_update": true
+    },
+    {
+      "case": "stale_ingest_even_with_smaller_object_and_row",
+      "expected_update": false,
+      "merge_silver_sql_update": false,
+      "independent_model_update": false
+    },
+    {
+      "case": "tie_time_smaller_object_larger_row",
+      "expected_update": true,
+      "merge_silver_sql_update": true,
+      "independent_model_update": true
+    },
+    {
+      "case": "tie_time_larger_object_smaller_row",
+      "expected_update": false,
+      "merge_silver_sql_update": false,
+      "independent_model_update": false
+    },
+    {
+      "case": "tie_time_object_smaller_row",
+      "expected_update": true,
+      "merge_silver_sql_update": true,
+      "independent_model_update": true
+    },
+    {
+      "case": "tie_time_object_larger_row",
+      "expected_update": false,
+      "merge_silver_sql_update": false,
+      "independent_model_update": false
+    },
+    {
+      "case": "equal_identity_noop",
+      "expected_update": false,
+      "merge_silver_sql_update": false,
+      "independent_model_update": false
+    },
+    {
+      "case": "lexicographic_object_not_numeric",
+      "expected_update": false,
+      "merge_silver_sql_update": false,
+      "independent_model_update": false
+    }
+  ],
+  "gold_sensitivity": {
+    "if_stale_rows_overwrote_silver": {
+      "zone-1/2026-02-03": {
+        "sum_temperature_c": [
+          "16046.00",
+          "16041.00"
+        ],
+        "mean_temperature_c": [
+          "22.286111",
+          "22.279167"
+        ],
+        "min_temperature_c": [
+          "18.10",
+          "17.10"
+        ]
+      },
+      "zone-2/2026-02-03": {
+        "sum_temperature_c": [
+          "16406.00",
+          "16401.00"
+        ],
+        "mean_temperature_c": [
+          "22.786111",
+          "22.779167"
+        ],
+        "min_temperature_c": [
+          "18.60",
+          "17.60"
+        ]
+      }
+    },
+    "if_last_tied_row_won": {
+      "zone-1/2026-02-02": {
+        "sum_temperature_c": [
+          "13972.50",
+          "13977.50"
+        ],
+        "mean_temperature_c": [
+          "22.356000",
+          "22.364000"
+        ]
+      },
+      "zone-1/2026-02-06": {
+        "sum_temperature_c": [
+          "532.50",
+          "537.50"
+        ],
+        "mean_temperature_c": [
+          "21.300000",
+          "21.500000"
+        ],
+        "min_temperature_c": [
+          "19.10",
+          "20.10"
+        ]
+      }
+    }
+  },
+  "model_checks": [
+    {
+      "check_id": "B01_three_delta_tables_and_versions",
+      "passed": true,
+      "observed": {
+        "bronze": {
+          "path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze",
+          "pinned_version": 1,
+          "rows_at_pinned_version": 9750,
+          "history": [
+            [
+              1,
+              "MERGE"
+            ],
+            [
+              0,
+              "WRITE"
+            ]
+          ]
+        },
+        "silver": {
+          "path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+          "pinned_version": 1,
+          "rows_at_pinned_version": 9710,
+          "history": [
+            [
+              2,
+              "MERGE"
+            ],
+            [
+              1,
+              "MERGE"
+            ],
+            [
+              0,
+              "WRITE"
+            ]
+          ]
+        },
+        "gold": {
+          "path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold",
+          "pinned_version": 1,
+          "rows_at_pinned_version": 20,
+          "history": [
+            [
+              1,
+              "WRITE"
+            ],
+            [
+              0,
+              "WRITE"
+            ]
+          ]
+        },
+        "gold_source_silver_version": 1
+      }
+    },
+    {
+      "check_id": "B01_exact_schema_types",
+      "passed": true,
+      "observed": {
+        "gold": [
+          [
+            "site",
+            "string"
+          ],
+          [
+            "event_date",
+            "date"
+          ],
+          [
+            "n_observations",
+            "long"
+          ],
+          [
+            "sum_temperature_c",
+            "decimal(18,2)"
+          ],
+          [
+            "mean_temperature_c",
+            "decimal(18,6)"
+          ],
+          [
+            "min_temperature_c",
+            "decimal(18,2)"
+          ],
+          [
+            "max_temperature_c",
+            "decimal(18,2)"
+          ],
+          [
+            "n_late",
+            "long"
+          ],
+          [
+            "late_rate",
+            "decimal(18,6)"
+          ],
+          [
+            "n_above_25",
+            "long"
+          ],
+          [
+            "n_sensors",
+            "long"
+          ]
+        ],
+        "silver": [
+          [
+            "record_id",
+            "string"
+          ],
+          [
+            "sensor_id",
+            "string"
+          ],
+          [
+            "site",
+            "string"
+          ],
+          [
+            "event_time_utc",
+            "timestamp"
+          ],
+          [
+            "ingest_time_utc",
+            "timestamp"
+          ],
+          [
+            "temperature_c",
+            "decimal(8,2)"
+          ],
+          [
+            "is_late",
+            "boolean"
+          ],
+          [
+            "source_object",
+            "string"
+          ],
+          [
+            "source_row",
+            "long"
+          ],
+          [
+            "source_sha256",
+            "string"
+          ],
+          [
+            "event_date",
+            "date"
+          ]
+        ]
+      }
+    },
+    {
+      "check_id": "B01_executed_build_gold_code_binding",
+      "passed": true,
+      "observed": {
+        "executed_implementation_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+        "working_copy_raw_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+        "working_copy_lf_normalized_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+        "crlf_lines_in_working_copy": 0,
+        "note": "Raw hash differs only by CRLF line endings introduced by checkout; LF-normalized bytes equal the executed implementation."
+      }
+    },
+    {
+      "check_id": "B02_silver_equals_handoff_and_utc_event_date",
+      "passed": true,
+      "observed": {
+        "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+        "silver_v0_rows": 9610,
+        "late_rows_retained_v0": 200,
+        "utc_event_dates": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ],
+        "rows_whose_date_would_change_under_UTC+7": 2520,
+        "gold_groups_if_wrongly_computed_in_UTC+7": 20,
+        "gold_groups_whose_values_would_differ_in_UTC+7": 16,
+        "gold_dates_if_UTC+7": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ],
+        "gold_groups_utc": 20
+      }
+    },
+    {
+      "check_id": "B03_conservation_counts_and_sums",
+      "passed": true,
+      "observed": {
+        "v0": {
+          "silver_rows": 9610,
+          "gold_n_observations": 9610,
+          "silver_temp_sum": "220745.50",
+          "gold_temp_sum": "220745.50",
+          "silver_late": 200,
+          "gold_n_late": 200,
+          "silver_above_25": 2818,
+          "gold_n_above_25": 2818,
+          "groups": 16,
+          "gold_equals_independent_recompute": true
+        },
+        "v1": {
+          "silver_rows": 9710,
+          "gold_n_observations": 9710,
+          "silver_temp_sum": "222930.50",
+          "gold_temp_sum": "222930.50",
+          "silver_late": 220,
+          "gold_n_late": 220,
+          "silver_above_25": 2818,
+          "gold_n_above_25": 2818,
+          "groups": 20,
+          "gold_equals_independent_recompute": true
+        }
+      }
+    },
+    {
+      "check_id": "B03_gold_internal_formulas_and_static_audit",
+      "passed": true,
+      "observed": {
+        "mean_equals_sum_over_count_all_groups": true,
+        "static_audit": {
+          "calls": [
+            "agg",
+            "alias",
+            "cast",
+            "col",
+            "count",
+            "countDistinct",
+            "groupBy",
+            "lit",
+            "max",
+            "min",
+            "otherwise",
+            "select",
+            "sum",
+            "when"
+          ],
+          "forbidden_calls_found": [],
+          "groupBy_keys_site_event_date": true,
+          "strict_threshold_gt_25": true,
+          "count_distinct_sensor": true
+        }
+      }
+    },
+    {
+      "check_id": "B04_weighted_vs_naive_from_gold_components",
+      "passed": true,
+      "observed": {
+        "daily": [
+          {
+            "event_date": "2026-02-02",
+            "site_counts": {
+              "zone-1": 625,
+              "zone-2": 625,
+              "zone-3": 620,
+              "zone-4": 619
+            },
+            "sum_temperature_c": "57283.50",
+            "n_observations": 2489,
+            "weighted_mean_c": "23.014665",
+            "naive_mean_of_means_c": "23.016459",
+            "difference_c": "0.001794",
+            "equal_site_counts": false
+          },
+          {
+            "event_date": "2026-02-03",
+            "site_counts": {
+              "zone-1": 720,
+              "zone-2": 720,
+              "zone-3": 720,
+              "zone-4": 720
+            },
+            "sum_temperature_c": "66056.00",
+            "n_observations": 2880,
+            "weighted_mean_c": "22.936111",
+            "naive_mean_of_means_c": "22.936111",
+            "difference_c": "0.000000",
+            "equal_site_counts": true
+          },
+          {
+            "event_date": "2026-02-04",
+            "site_counts": {
+              "zone-1": 720,
+              "zone-2": 720,
+              "zone-3": 720,
+              "zone-4": 720
+            },
+            "sum_temperature_c": "66096.00",
+            "n_observations": 2880,
+            "weighted_mean_c": "22.950000",
+            "naive_mean_of_means_c": "22.950000",
+            "difference_c": "0.000000",
+            "equal_site_counts": true
+          },
+          {
+            "event_date": "2026-02-05",
+            "site_counts": {
+              "zone-1": 340,
+              "zone-2": 340,
+              "zone-3": 340,
+              "zone-4": 341
+            },
+            "sum_temperature_c": "31350.00",
+            "n_observations": 1361,
+            "weighted_mean_c": "23.034533",
+            "naive_mean_of_means_c": "23.034212",
+            "difference_c": "-0.000321",
+            "equal_site_counts": false
+          },
+          {
+            "event_date": "2026-02-06",
+            "site_counts": {
+              "zone-1": 25,
+              "zone-2": 25,
+              "zone-3": 25,
+              "zone-4": 25
+            },
+            "sum_temperature_c": "2145.00",
+            "n_observations": 100,
+            "weighted_mean_c": "21.450000",
+            "naive_mean_of_means_c": "21.450000",
+            "difference_c": "0.000000",
+            "equal_site_counts": true
+          }
+        ],
+        "whole_period_weighted_c": "22.958857",
+        "whole_period_avg_of_20_site_day_means_c": "22.677356"
+      }
+    }
+  ],
+  "cross_checks": [
+    {
+      "check_id": "B_C01_stale_revisions_never_overwrite",
+      "passed": true,
+      "observed": {
+        "stale_keys": [
+          "R003001",
+          "R003002",
+          "R003003",
+          "R003004",
+          "R003005",
+          "R003006",
+          "R003007",
+          "R003008",
+          "R003009",
+          "R003010"
+        ],
+        "example_R003005": {
+          "current_silver_v0": {
+            "record_id": "R003005",
+            "sensor_id": "S05",
+            "site": "zone-1",
+            "event_time_utc": "2026-02-03T01:02:30Z",
+            "ingest_time_utc": "2026-02-03T01:03:30Z",
+            "temperature_c": "18.50",
+            "is_late": false,
+            "source_object": "observations_a.csv",
+            "source_row": 3005,
+            "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+          },
+          "incoming_candidates": [
+            {
+              "record_id": "R003005",
+              "sensor_id": "S05",
+              "site": "zone-1",
+              "event_time_utc": "2026-02-03T01:02:30Z",
+              "ingest_time_utc": "2026-02-03T01:03:00Z",
+              "temperature_c": "17.50",
+              "is_late": false,
+              "source_object": "lab3/source_batch02.csv",
+              "source_row": 125,
+              "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+            }
+          ],
+          "silver_v1": {
+            "event_time_utc": "2026-02-03T01:02:30Z",
+            "ingest_time_utc": "2026-02-03T01:03:30Z",
+            "is_late": false,
+            "record_id": "R003005",
+            "sensor_id": "S05",
+            "site": "zone-1",
+            "source_object": "observations_a.csv",
+            "source_row": 3005,
+            "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+            "temperature_c": "18.50"
+          },
+          "all_incoming_older": true,
+          "v1_equals_baseline": true,
+          "incoming_identity_absent_from_silver": true
+        },
+        "bronze_keeps_stale_receipts": {
+          "bronze_rows": 9750,
+          "inserted_by_batch02": "140"
+        }
+      }
+    },
+    {
+      "check_id": "B_C02_same_time_ties_smaller_source_row_wins",
+      "passed": true,
+      "observed": {
+        "tied_keys": {
+          "R002001": {
+            "candidates": [
+              [
+                101,
+                "20.10"
+              ],
+              [
+                136,
+                "21.10"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 101,
+            "expected_winner_temp": "20.10",
+            "superseded_row": 136,
+            "previous_silver": [
+              "observations_a.csv",
+              2001,
+              "18.10"
+            ],
+            "decision": "updated",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              101,
+              "20.10"
+            ],
+            "ok": true
+          },
+          "R002002": {
+            "candidates": [
+              [
+                102,
+                "20.20"
+              ],
+              [
+                137,
+                "21.20"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 102,
+            "expected_winner_temp": "20.20",
+            "superseded_row": 137,
+            "previous_silver": [
+              "observations_a.csv",
+              2002,
+              "18.20"
+            ],
+            "decision": "updated",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              102,
+              "20.20"
+            ],
+            "ok": true
+          },
+          "R002003": {
+            "candidates": [
+              [
+                103,
+                "20.30"
+              ],
+              [
+                138,
+                "21.30"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 103,
+            "expected_winner_temp": "20.30",
+            "superseded_row": 138,
+            "previous_silver": [
+              "observations_a.csv",
+              2003,
+              "18.30"
+            ],
+            "decision": "updated",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              103,
+              "20.30"
+            ],
+            "ok": true
+          },
+          "R002004": {
+            "candidates": [
+              [
+                104,
+                "20.40"
+              ],
+              [
+                139,
+                "21.40"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 104,
+            "expected_winner_temp": "20.40",
+            "superseded_row": 139,
+            "previous_silver": [
+              "observations_a.csv",
+              2004,
+              "18.40"
+            ],
+            "decision": "updated",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              104,
+              "20.40"
+            ],
+            "ok": true
+          },
+          "R002005": {
+            "candidates": [
+              [
+                105,
+                "20.50"
+              ],
+              [
+                140,
+                "21.50"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 105,
+            "expected_winner_temp": "20.50",
+            "superseded_row": 140,
+            "previous_silver": [
+              "observations_a.csv",
+              2005,
+              "18.50"
+            ],
+            "decision": "updated",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              105,
+              "20.50"
+            ],
+            "ok": true
+          },
+          "R010001": {
+            "candidates": [
+              [
+                1,
+                "19.10"
+              ],
+              [
+                131,
+                "20.10"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 1,
+            "expected_winner_temp": "19.10",
+            "superseded_row": 131,
+            "previous_silver": null,
+            "decision": "inserted",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              1,
+              "19.10"
+            ],
+            "ok": true
+          },
+          "R010002": {
+            "candidates": [
+              [
+                2,
+                "19.20"
+              ],
+              [
+                132,
+                "20.20"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 2,
+            "expected_winner_temp": "19.20",
+            "superseded_row": 132,
+            "previous_silver": null,
+            "decision": "inserted",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              2,
+              "19.20"
+            ],
+            "ok": true
+          },
+          "R010003": {
+            "candidates": [
+              [
+                3,
+                "19.30"
+              ],
+              [
+                133,
+                "20.30"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 3,
+            "expected_winner_temp": "19.30",
+            "superseded_row": 133,
+            "previous_silver": null,
+            "decision": "inserted",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              3,
+              "19.30"
+            ],
+            "ok": true
+          },
+          "R010004": {
+            "candidates": [
+              [
+                4,
+                "19.40"
+              ],
+              [
+                134,
+                "20.40"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 4,
+            "expected_winner_temp": "19.40",
+            "superseded_row": 134,
+            "previous_silver": null,
+            "decision": "inserted",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              4,
+              "19.40"
+            ],
+            "ok": true
+          },
+          "R010005": {
+            "candidates": [
+              [
+                5,
+                "19.50"
+              ],
+              [
+                135,
+                "20.50"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 5,
+            "expected_winner_temp": "19.50",
+            "superseded_row": 135,
+            "previous_silver": null,
+            "decision": "inserted",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              5,
+              "19.50"
+            ],
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "check_id": "B_C03_order_invariance_independent_comparator",
+      "passed": true,
+      "observed": {
+        "winners": 130,
+        "random_shuffles_checked": 200,
+        "pairwise_both_orders": 10,
+        "naive_last_row_policy_wrong_on": [
+          "R002001",
+          "R002002",
+          "R002003",
+          "R002004",
+          "R002005",
+          "R010001",
+          "R010002",
+          "R010003",
+          "R010004",
+          "R010005"
+        ]
+      }
+    },
+    {
+      "check_id": "B_C04_actual_merge_predicate_truth_table",
+      "passed": true,
+      "observed": {
+        "predicate_sql": "s.ingest_time_utc > t.ingest_time_utc OR (s.ingest_time_utc = t.ingest_time_utc AND s.source_object < t.source_object) OR (s.ingest_time_utc = t.ingest_time_utc AND s.source_object = t.source_object AND s.source_row < t.source_row)",
+        "engine": "sqlite3 (predicate text executed verbatim)",
+        "note": "changes_batch02 has 0 incoming-vs-current equal-ingest cases; this table covers that branch.",
+        "cases": [
+          {
+            "case": "newer_ingest_even_with_larger_object_and_row",
+            "expected_update": true,
+            "merge_silver_sql_update": true,
+            "independent_model_update": true
+          },
+          {
+            "case": "stale_ingest_even_with_smaller_object_and_row",
+            "expected_update": false,
+            "merge_silver_sql_update": false,
+            "independent_model_update": false
+          },
+          {
+            "case": "tie_time_smaller_object_larger_row",
+            "expected_update": true,
+            "merge_silver_sql_update": true,
+            "independent_model_update": true
+          },
+          {
+            "case": "tie_time_larger_object_smaller_row",
+            "expected_update": false,
+            "merge_silver_sql_update": false,
+            "independent_model_update": false
+          },
+          {
+            "case": "tie_time_object_smaller_row",
+            "expected_update": true,
+            "merge_silver_sql_update": true,
+            "independent_model_update": true
+          },
+          {
+            "case": "tie_time_object_larger_row",
+            "expected_update": false,
+            "merge_silver_sql_update": false,
+            "independent_model_update": false
+          },
+          {
+            "case": "equal_identity_noop",
+            "expected_update": false,
+            "merge_silver_sql_update": false,
+            "independent_model_update": false
+          },
+          {
+            "case": "lexicographic_object_not_numeric",
+            "expected_update": false,
+            "merge_silver_sql_update": false,
+            "independent_model_update": false
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "B_C05_replay_keeps_stale_and_tied_results",
+      "passed": true,
+      "observed": {
+        "per_key": {
+          "R003001": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003002": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003003": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003004": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003005": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003006": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003007": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003008": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003009": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003010": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R002001": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R002002": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R002003": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R002004": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R002005": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R010001": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R010002": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R010003": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R010004": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R010005": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          }
+        },
+        "silver_v1_v2_logical_sha256": "d0e76f8b3525282d09c71a2e813ec91abcad2440f6f3eeaf8b7cbc55d922162a",
+        "gold_still_bound_to_silver_version": 1,
+        "replay_version": 2
+      }
+    },
+    {
+      "check_id": "B_C06_gold_reflects_correct_stale_and_tie_decisions",
+      "passed": true,
+      "observed": {
+        "if_stale_rows_overwrote_silver": {
+          "zone-1/2026-02-03": {
+            "sum_temperature_c": [
+              "16046.00",
+              "16041.00"
+            ],
+            "mean_temperature_c": [
+              "22.286111",
+              "22.279167"
+            ],
+            "min_temperature_c": [
+              "18.10",
+              "17.10"
+            ]
+          },
+          "zone-2/2026-02-03": {
+            "sum_temperature_c": [
+              "16406.00",
+              "16401.00"
+            ],
+            "mean_temperature_c": [
+              "22.786111",
+              "22.779167"
+            ],
+            "min_temperature_c": [
+              "18.60",
+              "17.60"
+            ]
+          }
+        },
+        "if_last_tied_row_won": {
+          "zone-1/2026-02-02": {
+            "sum_temperature_c": [
+              "13972.50",
+              "13977.50"
+            ],
+            "mean_temperature_c": [
+              "22.356000",
+              "22.364000"
+            ]
+          },
+          "zone-1/2026-02-06": {
+            "sum_temperature_c": [
+              "532.50",
+              "537.50"
+            ],
+            "mean_temperature_c": [
+              "21.300000",
+              "21.500000"
+            ],
+            "min_temperature_c": [
+              "19.10",
+              "20.10"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "check_id": "B_C07_role_C_decision_record_consistent",
+      "passed": true,
+      "observed": {
+        "stale": "unchanged_stale x10",
+        "tied_existing": "updated_newer x5",
+        "tied_new": "inserted x5",
+        "updated_tied_count": 0,
+        "interpretation": "Ties in this batch occur among incoming rows only; no incoming winner ties the current Silver ingest time, so no updated_tied decision is expected."
+      }
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "B01_three_delta_tables_and_versions",
+      "passed": true,
+      "observed": {
+        "bronze": {
+          "path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/bronze",
+          "pinned_version": 1,
+          "rows_at_pinned_version": 9750,
+          "history": [
+            [
+              1,
+              "MERGE"
+            ],
+            [
+              0,
+              "WRITE"
+            ]
+          ]
+        },
+        "silver": {
+          "path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/silver",
+          "pinned_version": 1,
+          "rows_at_pinned_version": 9710,
+          "history": [
+            [
+              2,
+              "MERGE"
+            ],
+            [
+              1,
+              "MERGE"
+            ],
+            [
+              0,
+              "WRITE"
+            ]
+          ]
+        },
+        "gold": {
+          "path": "s3a://research-lakehouse/lab3/bd-g10/roleD-20261101/tables/gold",
+          "pinned_version": 1,
+          "rows_at_pinned_version": 20,
+          "history": [
+            [
+              1,
+              "WRITE"
+            ],
+            [
+              0,
+              "WRITE"
+            ]
+          ]
+        },
+        "gold_source_silver_version": 1
+      }
+    },
+    {
+      "check_id": "B01_exact_schema_types",
+      "passed": true,
+      "observed": {
+        "gold": [
+          [
+            "site",
+            "string"
+          ],
+          [
+            "event_date",
+            "date"
+          ],
+          [
+            "n_observations",
+            "long"
+          ],
+          [
+            "sum_temperature_c",
+            "decimal(18,2)"
+          ],
+          [
+            "mean_temperature_c",
+            "decimal(18,6)"
+          ],
+          [
+            "min_temperature_c",
+            "decimal(18,2)"
+          ],
+          [
+            "max_temperature_c",
+            "decimal(18,2)"
+          ],
+          [
+            "n_late",
+            "long"
+          ],
+          [
+            "late_rate",
+            "decimal(18,6)"
+          ],
+          [
+            "n_above_25",
+            "long"
+          ],
+          [
+            "n_sensors",
+            "long"
+          ]
+        ],
+        "silver": [
+          [
+            "record_id",
+            "string"
+          ],
+          [
+            "sensor_id",
+            "string"
+          ],
+          [
+            "site",
+            "string"
+          ],
+          [
+            "event_time_utc",
+            "timestamp"
+          ],
+          [
+            "ingest_time_utc",
+            "timestamp"
+          ],
+          [
+            "temperature_c",
+            "decimal(8,2)"
+          ],
+          [
+            "is_late",
+            "boolean"
+          ],
+          [
+            "source_object",
+            "string"
+          ],
+          [
+            "source_row",
+            "long"
+          ],
+          [
+            "source_sha256",
+            "string"
+          ],
+          [
+            "event_date",
+            "date"
+          ]
+        ]
+      }
+    },
+    {
+      "check_id": "B01_executed_build_gold_code_binding",
+      "passed": true,
+      "observed": {
+        "executed_implementation_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+        "working_copy_raw_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+        "working_copy_lf_normalized_sha256": "739d95ff27e0e85e8549b46d4b66d2c0f790bfab6873aa62dea490fa3f2b19e1",
+        "crlf_lines_in_working_copy": 0,
+        "note": "Raw hash differs only by CRLF line endings introduced by checkout; LF-normalized bytes equal the executed implementation."
+      }
+    },
+    {
+      "check_id": "B02_silver_equals_handoff_and_utc_event_date",
+      "passed": true,
+      "observed": {
+        "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+        "silver_v0_rows": 9610,
+        "late_rows_retained_v0": 200,
+        "utc_event_dates": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ],
+        "rows_whose_date_would_change_under_UTC+7": 2520,
+        "gold_groups_if_wrongly_computed_in_UTC+7": 20,
+        "gold_groups_whose_values_would_differ_in_UTC+7": 16,
+        "gold_dates_if_UTC+7": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ],
+        "gold_groups_utc": 20
+      }
+    },
+    {
+      "check_id": "B03_conservation_counts_and_sums",
+      "passed": true,
+      "observed": {
+        "v0": {
+          "silver_rows": 9610,
+          "gold_n_observations": 9610,
+          "silver_temp_sum": "220745.50",
+          "gold_temp_sum": "220745.50",
+          "silver_late": 200,
+          "gold_n_late": 200,
+          "silver_above_25": 2818,
+          "gold_n_above_25": 2818,
+          "groups": 16,
+          "gold_equals_independent_recompute": true
+        },
+        "v1": {
+          "silver_rows": 9710,
+          "gold_n_observations": 9710,
+          "silver_temp_sum": "222930.50",
+          "gold_temp_sum": "222930.50",
+          "silver_late": 220,
+          "gold_n_late": 220,
+          "silver_above_25": 2818,
+          "gold_n_above_25": 2818,
+          "groups": 20,
+          "gold_equals_independent_recompute": true
+        }
+      }
+    },
+    {
+      "check_id": "B03_gold_internal_formulas_and_static_audit",
+      "passed": true,
+      "observed": {
+        "mean_equals_sum_over_count_all_groups": true,
+        "static_audit": {
+          "calls": [
+            "agg",
+            "alias",
+            "cast",
+            "col",
+            "count",
+            "countDistinct",
+            "groupBy",
+            "lit",
+            "max",
+            "min",
+            "otherwise",
+            "select",
+            "sum",
+            "when"
+          ],
+          "forbidden_calls_found": [],
+          "groupBy_keys_site_event_date": true,
+          "strict_threshold_gt_25": true,
+          "count_distinct_sensor": true
+        }
+      }
+    },
+    {
+      "check_id": "B04_weighted_vs_naive_from_gold_components",
+      "passed": true,
+      "observed": {
+        "daily": [
+          {
+            "event_date": "2026-02-02",
+            "site_counts": {
+              "zone-1": 625,
+              "zone-2": 625,
+              "zone-3": 620,
+              "zone-4": 619
+            },
+            "sum_temperature_c": "57283.50",
+            "n_observations": 2489,
+            "weighted_mean_c": "23.014665",
+            "naive_mean_of_means_c": "23.016459",
+            "difference_c": "0.001794",
+            "equal_site_counts": false
+          },
+          {
+            "event_date": "2026-02-03",
+            "site_counts": {
+              "zone-1": 720,
+              "zone-2": 720,
+              "zone-3": 720,
+              "zone-4": 720
+            },
+            "sum_temperature_c": "66056.00",
+            "n_observations": 2880,
+            "weighted_mean_c": "22.936111",
+            "naive_mean_of_means_c": "22.936111",
+            "difference_c": "0.000000",
+            "equal_site_counts": true
+          },
+          {
+            "event_date": "2026-02-04",
+            "site_counts": {
+              "zone-1": 720,
+              "zone-2": 720,
+              "zone-3": 720,
+              "zone-4": 720
+            },
+            "sum_temperature_c": "66096.00",
+            "n_observations": 2880,
+            "weighted_mean_c": "22.950000",
+            "naive_mean_of_means_c": "22.950000",
+            "difference_c": "0.000000",
+            "equal_site_counts": true
+          },
+          {
+            "event_date": "2026-02-05",
+            "site_counts": {
+              "zone-1": 340,
+              "zone-2": 340,
+              "zone-3": 340,
+              "zone-4": 341
+            },
+            "sum_temperature_c": "31350.00",
+            "n_observations": 1361,
+            "weighted_mean_c": "23.034533",
+            "naive_mean_of_means_c": "23.034212",
+            "difference_c": "-0.000321",
+            "equal_site_counts": false
+          },
+          {
+            "event_date": "2026-02-06",
+            "site_counts": {
+              "zone-1": 25,
+              "zone-2": 25,
+              "zone-3": 25,
+              "zone-4": 25
+            },
+            "sum_temperature_c": "2145.00",
+            "n_observations": 100,
+            "weighted_mean_c": "21.450000",
+            "naive_mean_of_means_c": "21.450000",
+            "difference_c": "0.000000",
+            "equal_site_counts": true
+          }
+        ],
+        "whole_period_weighted_c": "22.958857",
+        "whole_period_avg_of_20_site_day_means_c": "22.677356"
+      }
+    },
+    {
+      "check_id": "B_C01_stale_revisions_never_overwrite",
+      "passed": true,
+      "observed": {
+        "stale_keys": [
+          "R003001",
+          "R003002",
+          "R003003",
+          "R003004",
+          "R003005",
+          "R003006",
+          "R003007",
+          "R003008",
+          "R003009",
+          "R003010"
+        ],
+        "example_R003005": {
+          "current_silver_v0": {
+            "record_id": "R003005",
+            "sensor_id": "S05",
+            "site": "zone-1",
+            "event_time_utc": "2026-02-03T01:02:30Z",
+            "ingest_time_utc": "2026-02-03T01:03:30Z",
+            "temperature_c": "18.50",
+            "is_late": false,
+            "source_object": "observations_a.csv",
+            "source_row": 3005,
+            "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea"
+          },
+          "incoming_candidates": [
+            {
+              "record_id": "R003005",
+              "sensor_id": "S05",
+              "site": "zone-1",
+              "event_time_utc": "2026-02-03T01:02:30Z",
+              "ingest_time_utc": "2026-02-03T01:03:00Z",
+              "temperature_c": "17.50",
+              "is_late": false,
+              "source_object": "lab3/source_batch02.csv",
+              "source_row": 125,
+              "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb"
+            }
+          ],
+          "silver_v1": {
+            "event_time_utc": "2026-02-03T01:02:30Z",
+            "ingest_time_utc": "2026-02-03T01:03:30Z",
+            "is_late": false,
+            "record_id": "R003005",
+            "sensor_id": "S05",
+            "site": "zone-1",
+            "source_object": "observations_a.csv",
+            "source_row": 3005,
+            "source_sha256": "5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea",
+            "temperature_c": "18.50"
+          },
+          "all_incoming_older": true,
+          "v1_equals_baseline": true,
+          "incoming_identity_absent_from_silver": true
+        },
+        "bronze_keeps_stale_receipts": {
+          "bronze_rows": 9750,
+          "inserted_by_batch02": "140"
+        }
+      }
+    },
+    {
+      "check_id": "B_C02_same_time_ties_smaller_source_row_wins",
+      "passed": true,
+      "observed": {
+        "tied_keys": {
+          "R002001": {
+            "candidates": [
+              [
+                101,
+                "20.10"
+              ],
+              [
+                136,
+                "21.10"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 101,
+            "expected_winner_temp": "20.10",
+            "superseded_row": 136,
+            "previous_silver": [
+              "observations_a.csv",
+              2001,
+              "18.10"
+            ],
+            "decision": "updated",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              101,
+              "20.10"
+            ],
+            "ok": true
+          },
+          "R002002": {
+            "candidates": [
+              [
+                102,
+                "20.20"
+              ],
+              [
+                137,
+                "21.20"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 102,
+            "expected_winner_temp": "20.20",
+            "superseded_row": 137,
+            "previous_silver": [
+              "observations_a.csv",
+              2002,
+              "18.20"
+            ],
+            "decision": "updated",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              102,
+              "20.20"
+            ],
+            "ok": true
+          },
+          "R002003": {
+            "candidates": [
+              [
+                103,
+                "20.30"
+              ],
+              [
+                138,
+                "21.30"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 103,
+            "expected_winner_temp": "20.30",
+            "superseded_row": 138,
+            "previous_silver": [
+              "observations_a.csv",
+              2003,
+              "18.30"
+            ],
+            "decision": "updated",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              103,
+              "20.30"
+            ],
+            "ok": true
+          },
+          "R002004": {
+            "candidates": [
+              [
+                104,
+                "20.40"
+              ],
+              [
+                139,
+                "21.40"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 104,
+            "expected_winner_temp": "20.40",
+            "superseded_row": 139,
+            "previous_silver": [
+              "observations_a.csv",
+              2004,
+              "18.40"
+            ],
+            "decision": "updated",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              104,
+              "20.40"
+            ],
+            "ok": true
+          },
+          "R002005": {
+            "candidates": [
+              [
+                105,
+                "20.50"
+              ],
+              [
+                140,
+                "21.50"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 105,
+            "expected_winner_temp": "20.50",
+            "superseded_row": 140,
+            "previous_silver": [
+              "observations_a.csv",
+              2005,
+              "18.50"
+            ],
+            "decision": "updated",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              105,
+              "20.50"
+            ],
+            "ok": true
+          },
+          "R010001": {
+            "candidates": [
+              [
+                1,
+                "19.10"
+              ],
+              [
+                131,
+                "20.10"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 1,
+            "expected_winner_temp": "19.10",
+            "superseded_row": 131,
+            "previous_silver": null,
+            "decision": "inserted",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              1,
+              "19.10"
+            ],
+            "ok": true
+          },
+          "R010002": {
+            "candidates": [
+              [
+                2,
+                "19.20"
+              ],
+              [
+                132,
+                "20.20"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 2,
+            "expected_winner_temp": "19.20",
+            "superseded_row": 132,
+            "previous_silver": null,
+            "decision": "inserted",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              2,
+              "19.20"
+            ],
+            "ok": true
+          },
+          "R010003": {
+            "candidates": [
+              [
+                3,
+                "19.30"
+              ],
+              [
+                133,
+                "20.30"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 3,
+            "expected_winner_temp": "19.30",
+            "superseded_row": 133,
+            "previous_silver": null,
+            "decision": "inserted",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              3,
+              "19.30"
+            ],
+            "ok": true
+          },
+          "R010004": {
+            "candidates": [
+              [
+                4,
+                "19.40"
+              ],
+              [
+                134,
+                "20.40"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 4,
+            "expected_winner_temp": "19.40",
+            "superseded_row": 134,
+            "previous_silver": null,
+            "decision": "inserted",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              4,
+              "19.40"
+            ],
+            "ok": true
+          },
+          "R010005": {
+            "candidates": [
+              [
+                5,
+                "19.50"
+              ],
+              [
+                135,
+                "20.50"
+              ]
+            ],
+            "same_ingest_and_object": true,
+            "expected_winner_row": 5,
+            "expected_winner_temp": "19.50",
+            "superseded_row": 135,
+            "previous_silver": null,
+            "decision": "inserted",
+            "silver_v1": [
+              "lab3/source_batch02.csv",
+              5,
+              "19.50"
+            ],
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "check_id": "B_C03_order_invariance_independent_comparator",
+      "passed": true,
+      "observed": {
+        "winners": 130,
+        "random_shuffles_checked": 200,
+        "pairwise_both_orders": 10,
+        "naive_last_row_policy_wrong_on": [
+          "R002001",
+          "R002002",
+          "R002003",
+          "R002004",
+          "R002005",
+          "R010001",
+          "R010002",
+          "R010003",
+          "R010004",
+          "R010005"
+        ]
+      }
+    },
+    {
+      "check_id": "B_C04_actual_merge_predicate_truth_table",
+      "passed": true,
+      "observed": {
+        "predicate_sql": "s.ingest_time_utc > t.ingest_time_utc OR (s.ingest_time_utc = t.ingest_time_utc AND s.source_object < t.source_object) OR (s.ingest_time_utc = t.ingest_time_utc AND s.source_object = t.source_object AND s.source_row < t.source_row)",
+        "engine": "sqlite3 (predicate text executed verbatim)",
+        "note": "changes_batch02 has 0 incoming-vs-current equal-ingest cases; this table covers that branch.",
+        "cases": [
+          {
+            "case": "newer_ingest_even_with_larger_object_and_row",
+            "expected_update": true,
+            "merge_silver_sql_update": true,
+            "independent_model_update": true
+          },
+          {
+            "case": "stale_ingest_even_with_smaller_object_and_row",
+            "expected_update": false,
+            "merge_silver_sql_update": false,
+            "independent_model_update": false
+          },
+          {
+            "case": "tie_time_smaller_object_larger_row",
+            "expected_update": true,
+            "merge_silver_sql_update": true,
+            "independent_model_update": true
+          },
+          {
+            "case": "tie_time_larger_object_smaller_row",
+            "expected_update": false,
+            "merge_silver_sql_update": false,
+            "independent_model_update": false
+          },
+          {
+            "case": "tie_time_object_smaller_row",
+            "expected_update": true,
+            "merge_silver_sql_update": true,
+            "independent_model_update": true
+          },
+          {
+            "case": "tie_time_object_larger_row",
+            "expected_update": false,
+            "merge_silver_sql_update": false,
+            "independent_model_update": false
+          },
+          {
+            "case": "equal_identity_noop",
+            "expected_update": false,
+            "merge_silver_sql_update": false,
+            "independent_model_update": false
+          },
+          {
+            "case": "lexicographic_object_not_numeric",
+            "expected_update": false,
+            "merge_silver_sql_update": false,
+            "independent_model_update": false
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "B_C05_replay_keeps_stale_and_tied_results",
+      "passed": true,
+      "observed": {
+        "per_key": {
+          "R003001": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003002": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003003": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003004": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003005": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003006": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003007": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003008": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003009": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R003010": {
+            "second_application_decision": "unchanged_stale",
+            "v2_equals_v1": true
+          },
+          "R002001": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R002002": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R002003": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R002004": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R002005": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R010001": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R010002": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R010003": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R010004": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          },
+          "R010005": {
+            "second_application_decision": "unchanged_equal",
+            "v2_equals_v1": true
+          }
+        },
+        "silver_v1_v2_logical_sha256": "d0e76f8b3525282d09c71a2e813ec91abcad2440f6f3eeaf8b7cbc55d922162a",
+        "gold_still_bound_to_silver_version": 1,
+        "replay_version": 2
+      }
+    },
+    {
+      "check_id": "B_C06_gold_reflects_correct_stale_and_tie_decisions",
+      "passed": true,
+      "observed": {
+        "if_stale_rows_overwrote_silver": {
+          "zone-1/2026-02-03": {
+            "sum_temperature_c": [
+              "16046.00",
+              "16041.00"
+            ],
+            "mean_temperature_c": [
+              "22.286111",
+              "22.279167"
+            ],
+            "min_temperature_c": [
+              "18.10",
+              "17.10"
+            ]
+          },
+          "zone-2/2026-02-03": {
+            "sum_temperature_c": [
+              "16406.00",
+              "16401.00"
+            ],
+            "mean_temperature_c": [
+              "22.786111",
+              "22.779167"
+            ],
+            "min_temperature_c": [
+              "18.60",
+              "17.60"
+            ]
+          }
+        },
+        "if_last_tied_row_won": {
+          "zone-1/2026-02-02": {
+            "sum_temperature_c": [
+              "13972.50",
+              "13977.50"
+            ],
+            "mean_temperature_c": [
+              "22.356000",
+              "22.364000"
+            ]
+          },
+          "zone-1/2026-02-06": {
+            "sum_temperature_c": [
+              "532.50",
+              "537.50"
+            ],
+            "mean_temperature_c": [
+              "21.300000",
+              "21.500000"
+            ],
+            "min_temperature_c": [
+              "19.10",
+              "20.10"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "check_id": "B_C07_role_C_decision_record_consistent",
+      "passed": true,
+      "observed": {
+        "stale": "unchanged_stale x10",
+        "tied_existing": "updated_newer x5",
+        "tied_new": "inserted x5",
+        "updated_tied_count": 0,
+        "interpretation": "Ties in this batch occur among incoming rows only; no incoming winner ties the current Silver ingest time, so no updated_tied decision is expected."
+      }
+    }
+  ]
+}

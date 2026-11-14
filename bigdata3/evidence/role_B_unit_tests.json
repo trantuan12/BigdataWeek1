@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "tests_run": 5,
+  "failures": 0,
+  "errors": 0,
+  "tests": [
+    {
+      "test": "test_role_b_gold.RoleBGoldTests.test_actual_merge_predicate_text_executes",
+      "status": "PASS"
+    },
+    {
+      "test": "test_role_b_gold.RoleBGoldTests.test_build_gold_static_audit",
+      "status": "PASS"
+    },
+    {
+      "test": "test_role_b_gold.RoleBGoldTests.test_strict_threshold_excludes_exactly_25",
+      "status": "PASS"
+    },
+    {
+      "test": "test_role_b_gold.RoleBGoldTests.test_tie_and_stale_ordering",
+      "status": "PASS"
+    },
+    {
+      "test": "test_role_b_gold.RoleBGoldTests.test_weighted_rollup_differs_from_mean_of_means_when_counts_differ",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Standard-library Role B tests; no Delta table written."
+}

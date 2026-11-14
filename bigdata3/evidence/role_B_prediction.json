@@ -1,0 +1,17 @@
+{
+  "member_id": "24022277",
+  "member_name": "Lê Ngọc Minh Cường",
+  "role": "B",
+  "recorded_at_utc": "2026-11-14T08:13:14.832481+00:00",
+  "execution_mode": "AUTOMATED_READ_ONLY",
+  "basis": "Derived from the handout ordering rule and the raw changes_batch02.csv / curated.csv rows, before reading Role C Silver exports.",
+  "predictions": {
+    "B_C01_stale": "All 10 keys R003001-R003010 arrive with an OLDER ingest time than the current Silver row; Silver v1 keeps the baseline observations_a.csv rows unchanged. Example R003005: keep row 3005 (18.50 C, ingest 01:03:30Z), reject batch row 125 (17.50 C, 01:03:00Z).",
+    "B_C02_tied": "10 keys carry two batch revisions with identical ingest time and source_object; the smaller source_row wins. R002005: row 105 (20.50 C) beats row 140 (21.50 C) and, being newer than baseline row 2005 (18.50 C), updates Silver. R010005: new key, row 5 wins over 135.",
+    "B_C03_order": "Winners are identical for every input order (both orders of every tied pair, reversed and 200 random shuffles).",
+    "B_C04_predicate": "The actual merge_silver SQL predicate updates only on newer ingest, or equal ingest with smaller source_object, or equal ingest+object with smaller source_row; equal identity and stale rows (even with smaller object/row) are no-ops.",
+    "B_C05_replay": "Second application: stale keys stay unchanged_stale, tied winners become unchanged_equal; Silver v2 rows for these 20 keys are identical to v1.",
+    "B_C06_gold": "Each stale batch value is 1.00 C below the kept value and each superseded tied value is 1.00 C above its winner. Stale-overwrite would therefore lower 2026-02-03 sums by 5.00 for zone-1 (S01-S05) and zone-2 (S06-S10): 16046.00->16041.00, 16406.00->16401.00. Last-row-wins would raise zone-1 2026-02-02 by 5.00 (13972.50->13977.50) and zone-1 2026-02-06 by 5.00 (532.50->537.50). Actual Gold v1 shows neither.",
+    "B_DEMO_weighted_2026_02_02": "Gold components: 57283.50 / 2489 = 23.014665 C; naive AVG(site means) = 23.016459 C."
+  }
+}

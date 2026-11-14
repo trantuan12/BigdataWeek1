@@ -7,6 +7,14 @@
     "review_role": "E"
   },
   {
+    "student_id": "24022277",
+    "name": "Lê Ngọc Minh Cường",
+    "role": "B",
+    "responsibility": "Task 2: Silver/Gold modeling; build_gold",
+    "review_role": "C",
+    "review_artifact": "choose_revisions/merge_silver stale and tied revision results"
+  },
+  {
     "student_id": "24022306",
     "name": "Nguyễn Tùng Dương",
     "role": "C",
@@ -18,7 +26,7 @@
     "name": "Đàm Quang Tiến",
     "role": "D",
     "responsibility": "Task 4: SQL analytics, dashboard, benchmark_query, layout experiment",
-    "review_role": null,
+    "review_role": "B",
     "review_artifact": "build_gold weighted mean and observation denominator"
   },
   {

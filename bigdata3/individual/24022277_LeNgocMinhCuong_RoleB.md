@@ -216,7 +216,7 @@ Mục tiêu kiểm tra chéo của tôi (Role B) là thiết lập một bộ đ
 
 #### 2.2 Kịch bản và Dự đoán
 
-Trước khi đọc các tệp xuất Silver của Role C, tôi ghi nhận dự đoán định lượng tại [`evidence/role_B_prediction.json`](../evidence/role_B_prediction.json) (lúc `2026-11-14T08:13:14.832481+00:00`) dựa trên việc phân tích trực tiếp tệp gốc `curated.csv` và `changes_batch02.csv`:
+Trước khi đọc các tệp xuất Silver của Role C, tôi ghi nhận dự đoán định lượng tại [`evidence/role_B_prediction.json`](../evidence/role_B_prediction.json) (lúc `2026-11-14T08:43:45.001586+00:00`) dựa trên việc phân tích trực tiếp tệp gốc `curated.csv` và `changes_batch02.csv`:
 1. **Dự đoán cho 10 khóa Stale (`R003001`–`R003010`):** Trong `changes_batch02.csv` (dòng `121`–`130`), cả 10 khóa này đều có `ingest_time_utc` sớm hơn **30 giây** và nhiệt độ thấp hơn **`1.00 °C`** so với bản ghi đang lưu trong `curated.csv` (dòng `3001`–`3010`). Ví dụ với khóa `R003005` (`sensor_id = S05`, `site = zone-1`, ngày `2026-02-03`): bản ghi đến ở dòng `125` có `ingest_time_utc = 2026-02-03T01:03:00Z` và `temperature_c = 17.50 °C`, cũ hơn bản ghi Silver `v0` ở dòng `3005` (`ingest_time_utc = 2026-02-03T01:03:30Z`, `temperature_c = 18.50 °C`). Dự đoán: Silver `v1` giữ nguyên dòng `3005` (`18.50 °C`) cho `R003005` và giữ nguyên toàn bộ 10 khóa `R003001`–`R003010`.
 2. **Dự đoán cho 10 khóa Tied (`R002001`–`R002005` và `R010001`–`R010005`):**
    - Nhóm 5 khóa đã tồn tại `R002001`–`R002005` (`site = zone-1`, ngày `2026-02-02`): mỗi khóa xuất hiện 2 lần trong `changes_batch02.csv` (một dòng ở `101`–`105` và một dòng ở `136`–`140`) với cùng `ingest_time_utc` và cùng `source_object = 'lab3/source_batch02.csv'`. Ví dụ `R002005` có dòng `105` (`20.50 °C`) và dòng `140` (`21.50 °C`) cùng ở `2026-02-02T16:52:30Z`. Dự đoán: `choose_revisions` chọn dòng `105` (`105 < 140`), sau đó `merge_silver` so sánh dòng `105` (`ingest = 16:52:30Z`) với bản ghi cũ trong Silver `v0` (`observations_a.csv` dòng `2005`, `ingest = 16:43:30Z`, `18.50 °C`) và quyết định `updated_newer` thành `20.50 °C`.
@@ -330,7 +330,7 @@ print('PASS Role B Demo & B_CHECK_C:', weighted_mean, 'vs', naive_mean, '| R0030
 | Nếu Tied lấy dòng cuối (`R002001`–`R002005`, `R010001`–`R010005`) | `zone-1/2026-02-06` | `532.50` → `537.50` (`+5.00 °C`) | `21.300000` → `21.500000` | `19.10` → `20.10` |
 
 
-Quá trình kiểm tra hoàn tất lúc `2026-11-14T08:13:18.726650+00:00`, vượt qua tuyệt đối **14/14 kiểm tra tự động** (gồm 7 kiểm tra mô hình `B01`–`B04` và 7 kiểm tra chéo `B_C01`–`B_C07`), cùng **5/5 unit tests** của Role B và **20/20 integration tests** của toàn nhóm:
+Quá trình kiểm tra hoàn tất lúc `2026-11-14T08:43:49.399855+00:00`, vượt qua tuyệt đối **14/14 kiểm tra tự động** (gồm 7 kiểm tra mô hình `B01`–`B04` và 7 kiểm tra chéo `B_C01`–`B_C07`), cùng **5/5 unit tests** của Role B và **20/20 integration tests** của toàn nhóm:
 - Cả 10 khóa stale (`R003001`–`R003010`) đều được giữ nguyên ở phiên bản `observations_a.csv` (`source_row` `3001`–`3010`), trong khi tầng Bronze vẫn ghi nhận đủ 140 biên nhận mới (`9,610 + 140 = 9,750` dòng).
 - Cả 10 khóa tied đều chọn đúng dòng có `source_row` nhỏ hơn (`101`–`105` cho `R002001`–`R002005` và `1`–`5` cho `R010001`–`R010005`), bất biến tuyệt đối qua 200 lần xáo trộn ngẫu nhiên.
 - Khi phát lại lần hai (`Silver v2`), 10 khóa stale giữ nguyên trạng thái `unchanged_stale`, 10 khóa tied chuyển sang trạng thái `unchanged_equal` (no-op), và bảng Gold `v1` vẫn được ghim chặt vào `gold_source_silver_version = 1`.

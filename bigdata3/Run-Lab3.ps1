@@ -36,6 +36,7 @@ try {
             Invoke-Docker -Arguments @('compose','exec','-T','driver','python','tools/verify_live_tables.py','--config','config/team.json')
             Invoke-Docker -Arguments @('compose','exec','-T','driver','python','tests/run_tests.py')
             Invoke-Docker -Arguments @('compose','exec','-T','driver','python','tools/capture_benchmark_metrics.py','--config','config/team.json')
+            Invoke-Docker -Arguments @('compose','exec','-T','driver','python','tools/check_role_b.py','--config','config/team.json')
             Invoke-Docker -Arguments @('compose','exec','-T','driver','python','tools/check_role_c.py','--config','config/team.json')
             Invoke-Docker -Arguments @('compose','exec','-T','driver','python','tools/check_role_d.py','--config','config/team.json')
             Invoke-Docker -Arguments @('compose','exec','-T','driver','python','tools/check_role_a.py','--config','config/team.json','--trusted-manifest','/instructor/trusted_lab3_inputs.json')

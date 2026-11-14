@@ -21,6 +21,20 @@ Three release-review regressions reject candidate-derived expected values,
 tampered catalog counts/units/retention and incomplete or mismatched lineage.
 The executed result and any failures/skips are recorded in `evidence/implementation_tests.json`.
 
+`tools/check_role_b.py --config config/team.json` records predictions, verifies
+Silver/Gold modeling (`B01`–`B04`), conservation of counts/sums, observation-weighted
+daily means versus naive site-mean averages, and cross-checks role C's stale and
+same-time tied revision outcomes (`B_CHECK_C`). Its results are in
+`evidence/role_B_prediction.json`, `role_B_gold_model.json`, and `role_B_check.json`.
+`python -m unittest discover -s tests -p "test_role_b_*.py"` runs the standard-library
+unit tests for Role B (`evidence/role_B_unit_tests.json`).
+
+`tools/check_role_c.py --config config/team.json` records predictions, verifies
+`M01`–`M08` incoming winner selection, conditional Silver merge, Bronze/Silver
+replay idempotence, time travel, invalid-batch rejection, and cross-checks role D's
+six A/B evaluations (`C_CHECK_D`). Its results are in `evidence/role_C_prediction.json`
+and `role_C_check.json`.
+
 `tools/check_role_d.py --config config/team.json` records a prediction, then checks
 build_gold's weighted mean and observation denominator, the measured A/B answer,
 scan metrics and operational/benchmark separation. It also reviews the technical

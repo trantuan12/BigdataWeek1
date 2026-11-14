@@ -2,7 +2,7 @@
   "member_id": "24022277",
   "member_name": "Lê Ngọc Minh Cường",
   "role": "B",
-  "recorded_at_utc": "2026-11-14T08:13:14.832481+00:00",
+  "recorded_at_utc": "2026-11-14T08:43:45.001586+00:00",
   "execution_mode": "AUTOMATED_READ_ONLY",
   "basis": "Derived from the handout ordering rule and the raw changes_batch02.csv / curated.csv rows, before reading Role C Silver exports.",
   "predictions": {

@@ -1,4 +1,4 @@
-"""Freeze the verified pipeline with individual records for roles A, C, D and E."""
+"""Freeze the verified pipeline with individual records for roles A, B, C, D and E."""
 import csv
 from datetime import datetime, timezone
 from decimal import Decimal
@@ -32,7 +32,9 @@ def main():
     config = read_json(ROOT / 'config/team.json')
     reports = (ROOT / config.get('reports_dir', '.')).resolve()
     output_root = (ROOT / config.get('submission_dir', 'submission')).resolve()
-    destination = output_root / 'LAB3_24022306_NguyenTungDuong_RoleC'
+    if os.name == 'nt' and not str(output_root).startswith('\\\\?\\'):
+        output_root = Path('\\\\?\\' + str(output_root))
+    destination = output_root / 'LAB3_24022277_LeNgocMinhCuong_RoleB'
     if destination.exists() or destination.with_suffix('.zip').exists():
         raise ValueError('FROZEN_SUBMISSION_ALREADY_EXISTS')
     reports.mkdir(parents=True, exist_ok=True)
@@ -56,11 +58,13 @@ def main():
     tests = read_json(ev / 'implementation_tests.json')
     role = read_json(ev / 'role_D_check.json')
     role_a = read_json(ev / 'role_A_check.json')
+    role_b = read_json(ev / 'role_B_check.json')
+    role_b_model = read_json(ev / 'role_B_gold_model.json')
     role_c = read_json(ev / 'role_C_check.json')
     role_e = read_json(ev / 'role_E_check.json')
     release_review = read_json(ev / 'release_review.json')
     review = read_json(ev / 'role_A_E_review.json')
-    if not all(item['passed'] for item in (independent, live, tests, role, role_a, role_c, role_e, review['A'], review['E'])):
+    if not all(item['passed'] for item in (independent, live, tests, role, role_a, role_b, role_b_model, role_c, role_e, review['A'], review['E'])):
         raise ValueError('PASSING_VERIFICATION_REQUIRED')
     if release_review['status'] != 'TECHNICAL_CANDIDATE_REVIEW_PASSED':
         raise ValueError('ROLE_E_RELEASE_REVIEW_REQUIRED')
@@ -107,13 +111,13 @@ GROUP BY site;
                           min(Decimal(r['above25_rate']) for r in rows), max(Decimal(r['above25_rate']) for r in rows)])
     report = f'''# Lab 3 — Lakehouse Processing & Analytics
 
-Nhóm: `{state['group_id']}`. Lượt chạy: `{state['run_label']}`. Các thành viên hoàn thiện: **Role A — 24022484 — Trần Anh Tuấn**, **Role C — {role_c['member_id']} — {role_c['member_name']}**, **Role D — 24022463 — Đàm Quang Tiến**, **Role E — {role_e['member_id']} — {role_e['member_name']}**.
+Nhóm: `{state['group_id']}`. Lượt chạy: `{state['run_label']}`. Các thành viên hoàn thiện: **Role A — 24022484 — Trần Anh Tuấn**, **Role B — {role_b['member_id']} — {role_b['member_name']}**, **Role C — {role_c['member_id']} — {role_c['member_name']}**, **Role D — 24022463 — Đàm Quang Tiến**, **Role E — {role_e['member_id']} — {role_e['member_name']}**.
 
 ## 1. Phạm vi và kết quả kiểm tra
 
-Hồ sơ A của Trần Anh Tuấn (24022484) gồm kiểm tra đầu vào/runtime và truy vết snapshot đã ghim. Hồ sơ C của {role_c['member_name']} ({role_c['member_id']}) gồm hàm `choose_revisions`, `merge_silver`, kiểm định `M01`–`M08` (khử trùng lặp 140 dòng xuống 130 winners, hợp nhất có điều kiện, phát lại Bronze/Silver, time travel, từ chối batch lỗi) và kiểm tra chéo tính tương đương kết quả A/B của D (`C_CHECK_D`). Phần D của Đàm Quang Tiến (24022463) gồm hàm `benchmark_query`, Q1/Q2/Q3, hai biểu đồ có phiên bản nguồn, thí nghiệm A/B và đối chiếu mẫu số của `build_gold`. Hồ sơ E của {role_e['member_name']} ({role_e['member_id']}) gồm release binding, catalog, lineage, review dữ liệu thực và kiểm tra chéo A. Bốn hồ sơ dùng cùng bố cục đánh giá cá nhân.
+Hồ sơ A của Trần Anh Tuấn (24022484) gồm kiểm tra đầu vào/runtime và truy vết snapshot đã ghim. Hồ sơ B của {role_b['member_name']} ({role_b['member_id']}) gồm mô hình hóa Silver/Gold, hàm `build_gold`, kiểm định `B01`–`B04` (lược đồ 11 cột, ngày lịch UTC, bảo toàn thành phần cộng tính, trung bình ngày có trọng số so với trung bình các trung bình site) và kiểm tra chéo quyết định bản ghi cũ/đồng hạng của C (`B_CHECK_C`). Hồ sơ C của {role_c['member_name']} ({role_c['member_id']}) gồm hàm `choose_revisions`, `merge_silver`, kiểm định `M01`–`M08` (khử trùng lặp 140 dòng xuống 130 winners, hợp nhất có điều kiện, phát lại Bronze/Silver, time travel, từ chối batch lỗi) và kiểm tra chéo tính tương đương kết quả A/B của D (`C_CHECK_D`). Phần D của Đàm Quang Tiến (24022463) gồm hàm `benchmark_query`, Q1/Q2/Q3, hai biểu đồ có phiên bản nguồn, thí nghiệm A/B và đối chiếu mẫu số của `build_gold` (`D_CHECK_B`). Hồ sơ E của {role_e['member_name']} ({role_e['member_id']}) gồm release binding, catalog, lineage, review dữ liệu thực và kiểm tra chéo A. Năm hồ sơ dùng cùng bố cục đánh giá cá nhân.
 
-Đã chạy {len(independent['checks'])} kiểm tra giá trị xuất, {len(live['checks'])} kiểm tra trực tiếp bảng Delta, {tests['tests_run']} kiểm thử không bỏ qua ca nào, {len(role_a['checks'])} kiểm tra A, {len(role_c['checks'])} kiểm tra C, {len(role['checks'])} kiểm tra D và {len(role_e['checks'])} kiểm tra E. Review E chạy năm gate bắt buộc và {release_review['additional_refusal_cases']} ca từ chối bổ sung. Chi tiết nằm trong `evidence/independent_checks.json`, `live_table_verification.json`, `implementation_tests.json`, `role_A_check.json`, `role_C_check.json`, `role_D_check.json`, `role_E_check.json`, `release_review.json`. Các kết quả này xác nhận kiểm tra kỹ thuật bằng chương trình; phần trình bày cá nhân do thành viên thực hiện khi bảo vệ.
+Đã chạy {len(independent['checks'])} kiểm tra giá trị xuất, {len(live['checks'])} kiểm tra trực tiếp bảng Delta, {tests['tests_run']} kiểm thử không bỏ qua ca nào, {len(role_a['checks'])} kiểm tra A, {len(role_b['checks'])} kiểm tra B, {len(role_c['checks'])} kiểm tra C, {len(role['checks'])} kiểm tra D và {len(role_e['checks'])} kiểm tra E. Review E chạy năm gate bắt buộc và {release_review['additional_refusal_cases']} ca từ chối bổ sung. Chi tiết nằm trong `evidence/independent_checks.json`, `live_table_verification.json`, `implementation_tests.json`, `role_A_check.json`, `role_B_check.json`, `role_B_gold_model.json`, `role_B_unit_tests.json`, `role_C_check.json`, `role_D_check.json`, `role_E_check.json`, `release_review.json`. Các kết quả này xác nhận kiểm tra kỹ thuật bằng chương trình; phần trình bày cá nhân do thành viên thực hiện khi bảo vệ.
 
 ## 2. Đầu vào, runtime và snapshot
 
@@ -124,7 +128,7 @@ Runtime: Python {runtime['python']}, Spark {runtime['spark']}, Delta {runtime['d
 {table(['Lớp', 'URI cụ thể', 'Phiên bản đầu', 'Phiên bản sau cập nhật'], version_rows)}
 Bronze là biên nhận vật lý theo `(source_object, source_row, source_sha256)`. Silver chọn một bản ghi theo `record_id`, giữ mười cột và thêm ngày UTC. Gold chứa {summary['gold_groups']} nhóm site/ngày từ {summary['silver_rows']:,} quan sát; tổng nhiệt độ {summary['temperature_sum_c']} °C. Trường nguồn gốc được giữ để truy vết; dữ liệu thô và trường hạn chế nằm ngoài gói nộp.
 
-Batch 02 có {summary['incoming_physical_rows']} dòng vật lý, {summary['incoming_winners']} winner và {summary['superseded_incoming_rows']} phiên bản bị thay thế trong batch. Quy tắc chọn là ingest giảm dần, object tăng dần, ordinal tăng dần. Quyết định: `{summary['decisions']}`. Bronze replay không nhân biên nhận; Silver replay v{state['silver_replay_version']} bằng nội dung Silver v{state['silver_final_version']}; đọc lịch sử v0 vẫn bằng handoff. Ba batch sai bị từ chối trước ghi. Minh chứng đầy đủ ở `incremental.json`, `role_C_check.json`, bốn bản xuất Silver, `row_trace.json` và `input_contract_tests.json`.
+Batch 02 có {summary['incoming_physical_rows']} dòng vật lý, {summary['incoming_winners']} winner và {summary['superseded_incoming_rows']} phiên bản bị thay thế trong batch. Quy tắc chọn là ingest giảm dần, object tăng dần, ordinal tăng dần. Quyết định: `{summary['decisions']}`. Bronze replay không nhân biên nhận; Silver replay v{state['silver_replay_version']} bằng nội dung Silver v{state['silver_final_version']}; đọc lịch sử v0 vẫn bằng handoff. Ba batch sai bị từ chối trước ghi. Minh chứng đầy đủ ở `incremental.json`, `role_B_gold_model.json`, `role_B_check.json`, `role_C_check.json`, bốn bản xuất Silver, `row_trace.json` và `input_contract_tests.json`.
 
 ## 3. Q1 — KPI theo site/ngày
 
@@ -134,12 +138,12 @@ Truy vấn: [Q1](sql/Q1_site_day.sql). Kết quả: [JSON](evidence/Q1_site_day.
 
 ## 4. Q2 — Trung bình có trọng số và kiểm tra build_gold
 
-Trung bình ngày = `SUM(sum_temperature_c) / SUM(n_observations)`. `AVG(mean_temperature_c)` cho mỗi site cùng trọng số dù số quan sát khác nhau. Kiểm tra D tính lại tử số/mẫu số trực tiếp từ toàn bộ bản ghi Silver đã xuất bằng Decimal rồi so với Gold và Q2.
+Trung bình ngày = `SUM(sum_temperature_c) / SUM(n_observations)`. `AVG(mean_temperature_c)` cho mỗi site cùng trọng số dù số quan sát khác nhau. Kiểm tra B (`B03`–`B04`) và kiểm tra D (`D_CHECK_B`) tính lại tử số/mẫu số trực tiếp từ toàn bộ bản ghi Silver/Gold đã xuất bằng Decimal rồi so với Gold và Q2.
 
 {table(['Ngày UTC', 'Tổng nhiệt độ (°C)', 'Số quan sát', 'Trung bình có trọng số (°C)', 'Trung bình các trung bình (°C)'], denominator_rows)}
 Ngày 2026-02-02 minh họa rõ: 57283.50 / 2489 = 23.014665 °C; trung bình các site là 23.016459 °C. Sự khác nhau do số quan sát theo site không bằng nhau. Mẫu số gồm cả quan sát đến muộn. Số sensor phân biệt trong một site/ngày không cộng dồn thành số sensor phân biệt của toàn kỳ.
 
-Truy vấn: [Q2](sql/Q2_weighted_day.sql). Kết quả: [JSON](evidence/Q2_weighted_day.json), [CSV](evidence/Q2_weighted_day.csv). Đối chiếu: [role D](evidence/role_D_check.json).
+Truy vấn: [Q2](sql/Q2_weighted_day.sql). Kết quả: [JSON](evidence/Q2_weighted_day.json), [CSV](evidence/Q2_weighted_day.csv). Đối chiếu: [role B](evidence/role_B_gold_model.json), [role D](evidence/role_D_check.json).
 
 ![Trung bình nhiệt độ có trọng số](evidence/daily_mean.png)
 
@@ -174,9 +178,9 @@ Các plan lưu bằng formatted explain có `isFinalPlan=false`, mô tả kế h
 
 Minh chứng: [report](evidence/benchmark_report.json), [sáu thời gian](evidence/benchmark_timings.csv), [plan A](evidence/plan_A.txt), [plan B](evidence/plan_B.txt), [metric thực đọc](evidence/benchmark_scan_metrics.json), [kiểm tra chéo C](evidence/role_C_check.json).
 
-## 7. Kiểm tra A/C/E và release candidate
+## 7. Kiểm tra A/B/C/E và release candidate
 
-A: 16/16 tệp, handoff logic, probe schema tám dòng và placement worker đều đạt trong lượt chạy hiện tại. Hồ sơ A được bổ sung bằng {len(role_a['checks'])} kiểm tra, trong đó ba mẫu được lấy từ Silver v1 thật, đối chiếu đúng source object/ordinal/hash và liên kết với binding Silver v1/Gold v1. R010001 chọn source row 1 ở 19,10°C; dictionary giữ dòng gặp cuối sẽ lấy row 131 ở 20,10°C nên không được dùng làm quy tắc winner. C: {len(role_c['checks'])} kiểm tra xác nhận 140 dòng vật lý thu gọn về 130 winners (loại 10 dòng đồng hạng), merge tạo 100 inserted / 20 updated_newer / 10 unchanged_stale, Bronze/Silver replay lũy đẳng, time travel v0 khớp handoff, 3 batch lỗi bị từ chối với 0 lần ghi, và kiểm tra chéo 6 lần chạy A/B của D khớp tuyệt đối với 100x Gold ngày 2026-02-06. E: một candidate hợp lệ được nhận; mixed snapshot, tự review, thiếu steward và sai code hash bị từ chối. Kiểm tra bổ sung xác nhận từng khóa bắt buộc bị thiếu đều từ chối.
+A: 16/16 tệp, handoff logic, probe schema tám dòng và placement worker đều đạt trong lượt chạy hiện tại. Hồ sơ A được bổ sung bằng {len(role_a['checks'])} kiểm tra, trong đó ba mẫu được lấy từ Silver v1 thật, đối chiếu đúng source object/ordinal/hash và liên kết với binding Silver v1/Gold v1. R010001 chọn source row 1 ở 19,10°C; dictionary giữ dòng gặp cuối sẽ lấy row 131 ở 20,10°C nên không được dùng làm quy tắc winner. B: {len(role_b['checks'])} kiểm tra (7 kiểm tra mô hình `B01`–`B04` và 7 kiểm tra chéo `B_C01`–`B_C07`) xác nhận 3 bảng Delta và lược đồ 11 cột Gold, kiểm toán tĩnh AST `build_gold`, độ nhạy múi giờ UTC so với UTC+7, bảo toàn tuyệt đối số quan sát và tổng nhiệt độ giữa Silver/Gold ở cả v0 và v1, trung bình ngày có trọng số từ thành phần Gold khớp Q2, đồng thời kiểm tra chéo 10 khóa stale (`R003001`–`R003010`) giữ nguyên Silver v0, 10 khóa tied chọn `source_row` nhỏ hơn, bảng chân trị SQLite của vị từ SQL `merge_silver` và độ nhạy Gold nếu sai chính sách. C: {len(role_c['checks'])} kiểm tra xác nhận 140 dòng vật lý thu gọn về 130 winners (loại 10 dòng đồng hạng), merge tạo 100 inserted / 20 updated_newer / 10 unchanged_stale, Bronze/Silver replay lũy đẳng, time travel v0 khớp handoff, 3 batch lỗi bị từ chối với 0 lần ghi, và kiểm tra chéo 6 lần chạy A/B của D khớp tuyệt đối với 100x Gold ngày 2026-02-06. E: một candidate hợp lệ được nhận; mixed snapshot, tự review, thiếu steward và sai code hash bị từ chối. Kiểm tra bổ sung xác nhận từng khóa bắt buộc bị thiếu đều từ chối.
 
 Candidate ghim Silver v{binding['silver_version']}, Gold v{binding['gold_version']}, nguồn Gold là Silver v{binding['gold_source_silver_version']}. Gold được tính lại từ bảng Silver đã ghim rồi so toàn bộ trường. SHA-256 implementation: `{binding['code_sha256']}`; bản đã thực thi nằm trong `code_versions/`. Catalog, manifest và lineage đi kèm candidate. Trạng thái là **CANDIDATE_NOT_OWNER_PUBLISHED**; nhãn reviewer trong metadata không thay chữ ký hoặc phần bảo vệ của thành viên.
 
@@ -186,7 +190,7 @@ Mỗi lần ghi Delta là một giao dịch của một bảng. Cặp version v�
 
 ## 8. Danh mục nộp và tái lập
 
-- [Hồ sơ role A](individual/24022484_TranAnhTuan_RoleA.md), [hồ sơ role C](individual/24022306_NguyenTungDuong_RoleC.md), [hồ sơ role D](individual/24022463_DamQuangTien_RoleD.md), [hồ sơ role E](individual/24022466_LeToan_RoleE.md), [kiểm tra A/E](KIEM_TRA_ROLE_A_E.md).
+- [Hồ sơ role A](individual/24022484_TranAnhTuan_RoleA.md), [hồ sơ role B](individual/24022277_LeNgocMinhCuong_RoleB.md), [hồ sơ role C](individual/24022306_NguyenTungDuong_RoleC.md), [hồ sơ role D](individual/24022463_DamQuangTien_RoleD.md), [hồ sơ role E](individual/24022466_LeToan_RoleE.md), [kiểm tra A/E](KIEM_TRA_ROLE_A_E.md).
 - `templates/student_impl.py`, `sql/`, `contributions.csv`, `manual_checks.csv`.
 - `evidence/`: phiên bản, snapshot, SQL, biểu đồ, timing, plan, metric, lineage, catalog, candidate và kiểm tra.
 - `portable_delta/`: bản sao đúng byte của các object Delta được tham chiếu.
@@ -197,13 +201,17 @@ Tài liệu kỹ thuật: [Spark 4.0.1 performance tuning](https://spark.apache.
     (reports / 'experiment_report.md').write_text(report_text(report), encoding='utf-8')
     from role_d_report import build_role_d_record
     role_d_filename = build_role_d_record(ROOT, reports, ev)
-    ae = '''# Kiểm tra kỹ thuật role A, C và E
+    ae = '''# Kiểm tra kỹ thuật role A, B, C và E
 
 ## Role A
 
 Bản hiện có đã có bằng chứng preflight, nhưng báo cáo cũ dùng Java 23 ngoài baseline Java 17/21 và chứa cấu hình đường dẫn không dùng chung với executor. Các tệp đầu vào hiện tại cũng bị đổi xuống dòng làm sai hash. Đã giữ bản trước, khôi phục 11 tệp đúng byte từ ZIP gốc, giữ nguyên manifest tin cậy và chạy lại toàn bộ kiểm tra.
 
 Lượt chạy mới: 16/16 hash đạt; fallback được khai báo đúng, digest logic khớp; Delta từ chối cột lạ và giữ tám dòng; runtime đúng Spark/Delta 4.0.1, Java 17; task chạy trên hai worker container, bảng dùng S3A chung. Container không xác nhận nhiều máy vật lý. Hồ sơ `individual/24022484_TranAnhTuan_RoleA.md` đã được cập nhật bằng kiểm tra trực tiếp Silver v1 và Gold v1. Ba mẫu truy được về đúng object/ordinal/hash; R010001 chọn row 1 ở 19,10°C, không dùng dòng cuối của dictionary. Bằng chứng bổ sung nằm trong `role_A_check.json`, `role_A_source_trace.json`, `runtime_role_A_check.json`, `role_A_worker_probe.json`.
+
+## Role B
+
+Đã bổ sung công cụ kiểm tra độc lập `tools/check_role_b.py`, bộ kiểm thử `tests/test_role_b_gold.py` và hồ sơ cá nhân `individual/24022277_LeNgocMinhCuong_RoleB.md` cho Lê Ngọc Minh Cường (24022277). Chương trình xác nhận đầy đủ 14 kiểm tra gồm 7 kiểm tra mô hình Silver/Gold (`B01`–`B04`) và 7 kiểm tra chéo kết quả xử lý bản ghi cũ/đồng hạng của Role C (`B_C01`–`B_C07`, `B_CHECK_C`) với `writes_performed = 0`: xác thực 3 bảng Delta và lược đồ 11 cột Gold, kiểm toán tĩnh AST hàm `build_gold` và đối chiếu mã băm LF-normalized với bản thực thi; chứng minh `Silver v0` khớp 9.610 dòng handoff và độ nhạy múi giờ UTC so với UTC+7 (2.520 dòng đổi ngày, 16/20 nhóm Gold thay đổi); bảo toàn tuyệt đối tổng số quan sát, tổng nhiệt độ, `n_late`, `n_above_25` giữa Silver và Gold ở cả `v0` (9.610 dòng, `220923.50 °C`) và `v1` (9.710 dòng, `222930.50 °C`); tính lại trung bình ngày có trọng số từ thành phần cộng tính của Gold so với trung bình các trung bình site (`2026-02-02`: `57283.50 / 2489 = 23.014665 °C` khác `23.016459 °C`); kiểm tra chéo 10 khóa stale (`R003001`–`R003010`) giữ nguyên dòng `Silver v0`, 10 khóa tied (`R002001`–`R002005`, `R010001`–`R010005`) chọn `source_row` nhỏ hơn bất biến qua 200 phép xáo trộn ngẫu nhiên, kiểm chứng bảng chân trị 8 trường hợp của vị từ SQL `merge_silver` trên SQLite in-memory và phân tích độ nhạy phản thực tế trên Gold (`±5.00 °C`). Bằng chứng được lưu tại `role_B_prediction.json`, `role_B_gold_model.json`, `role_B_check.json` và `role_B_unit_tests.json`.
 
 ## Role C
 
@@ -230,13 +238,15 @@ Gold được tái tính từ snapshot Silver ghim và so toàn bộ trường, 
                'Prediction recorded before assertion evaluation; automated read-only execution; no personal attendance claim']])
     from role_a_report import build_role_a_record
     role_a_filename = build_role_a_record(ROOT, reports, ev)
+    from role_b_report import build_role_b_record
+    role_b_filename = build_role_b_record(ROOT, reports, ev)
     from role_c_report import build_role_c_record
     role_c_filename = build_role_c_record(ROOT, reports, ev)
     from role_e_report import build_role_e_record
     role_e_filename = build_role_e_record(ROOT, reports, ev)
-    readme = r'''# Lab 3 — Hồ sơ role A, C, D và E
+    readme = r'''# Lab 3 — Hồ sơ role A, B, C, D và E
 
-Gói gồm bốn hồ sơ cá nhân cùng bố cục: A — Trần Anh Tuấn (24022484), C — {{MEMBER_C_NAME}} ({{MEMBER_C_ID}}), D — Đàm Quang Tiến (24022463), E — {{MEMBER_E_NAME}} ({{MEMBER_E_ID}}). Mở `experiment_report.md` và `individual/` để xem nội dung, kiểm tra chéo và hướng dẫn bảo vệ. Nhóm không phân công thành viên B; việc kiểm tra trung bình/mẫu số được thực hiện trực tiếp trên build_gold. Phần C xác minh đầy đủ `M01`–`M08` và kiểm tra chéo tính tương đương kết quả A/B của D (`C_CHECK_D`). Phần E có năm gate bắt buộc, các ca thiếu khóa, review Gold độc lập từ bảng Delta thật, catalog, lineage và biên bản `release_review.json`. `evidence/` chứa các đầu ra thật; `portable_delta/` giữ log và dữ liệu của các bảng Delta vận hành, A/B benchmark và schema probe. Bảng benchmark tách khỏi Gold.
+Gói gồm năm hồ sơ cá nhân cùng bố cục: A — Trần Anh Tuấn (24022484), B — {{MEMBER_B_NAME}} ({{MEMBER_B_ID}}), C — {{MEMBER_C_NAME}} ({{MEMBER_C_ID}}), D — Đàm Quang Tiến (24022463), E — {{MEMBER_E_NAME}} ({{MEMBER_E_ID}}). Mở `experiment_report.md` và `individual/` để xem nội dung, kiểm tra chéo và hướng dẫn bảo vệ. Phần B xác minh mô hình Silver/Gold `B01`–`B04` (bảo toàn thành phần cộng tính, công thức 11 cột của `build_gold`, trung bình ngày có trọng số so với trung bình các trung bình site) và kiểm tra chéo quyết định bản ghi cũ/đồng hạng của C (`B_CHECK_C`). Phần C xác minh đầy đủ `M01`–`M08` và kiểm tra chéo tính tương đương kết quả A/B của D (`C_CHECK_D`). Phần D thực hiện truy vấn Q1–Q3, biểu đồ có phiên bản, thí nghiệm layout A/B và kiểm tra chéo trung bình có trọng số/mẫu số của B (`D_CHECK_B`). Phần E có năm gate bắt buộc, các ca thiếu khóa, review Gold độc lập từ bảng Delta thật, catalog, lineage và biên bản `release_review.json`. `evidence/` chứa các đầu ra thật; `portable_delta/` giữ log và dữ liệu của các bảng Delta vận hành, A/B benchmark và schema probe. Bảng benchmark tách khỏi Gold.
 
 ## Tái lập từ đầu
 
@@ -262,7 +272,10 @@ Trên object store mới, giữ config và evidence bản nộp, khởi động 
 docker compose exec -T driver python tools/portable_delta.py verify
 docker compose exec -T driver python tools/portable_delta.py restore
 docker compose exec -T driver python tools/verify_live_tables.py --config config/team.json
+docker compose exec -T driver python tools/check_role_b.py --config config/team.json
 docker compose exec -T driver python tools/check_role_c.py --config config/team.json
+docker compose exec -T driver python tools/check_role_d.py --config config/team.json
+docker compose exec -T driver python tools/check_role_a.py --config config/team.json --trusted-manifest /instructor/trusted_lab3_inputs.json
 docker compose exec -T driver python tools/check_role_e.py --config config/team.json --trusted-manifest /instructor/trusted_lab3_inputs.json
 ```
 
@@ -271,6 +284,8 @@ Restore chỉ nhận các prefix bảng trống. File timings giữ nguyên kế
 `.env` được setup tạo riêng và bị loại khỏi gói nộp. Không cần cài Python/Java/Spark trực tiếp trên Windows; image dựng môi trường Linux và ghim thư viện/JAR. Bản nộp là technical release candidate; công bố owner và trình bày cá nhân là các hoạt động riêng.
 '''
     readme = (readme
+              .replace('{{MEMBER_B_NAME}}', role_b['member_name'])
+              .replace('{{MEMBER_B_ID}}', role_b['member_id'])
               .replace('{{MEMBER_C_NAME}}', role_c['member_name'])
               .replace('{{MEMBER_C_ID}}', role_c['member_id'])
               .replace('{{MEMBER_E_NAME}}', role_e['member_name'])
@@ -295,12 +310,13 @@ Restore chỉ nhận các prefix bảng trống. File timings giữ nguyên kế
     write_json(ev / 'generating_code_manifest.json', {'files': code_inventory,
         'student_impl_sha256': binding['code_sha256']})
     destination.mkdir(parents=True)
+    src_root = Path('\\\\?\\' + str(ROOT.resolve())) if os.name == 'nt' and not str(ROOT).startswith('\\\\?\\') else ROOT
     for folder in ('src','templates','tools','tests','config','schemas','manifests','infrastructure','sql','portable_delta'):
-        shutil.copytree(ROOT / folder, destination / folder, ignore=shutil.ignore_patterns('__pycache__','*.pyc','.env'))
-    shutil.copytree(ev, destination / 'evidence', ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
+        shutil.copytree(src_root / folder, destination / folder, ignore=shutil.ignore_patterns('__pycache__','*.pyc','.env'))
+    shutil.copytree(src_root / config['evidence_dir'], destination / 'evidence', ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
     (destination / 'individual').mkdir()
     individual_prefix = Path(os.path.relpath(ROOT, reports / 'individual')).as_posix()
-    for individual_filename in (role_a_filename, role_c_filename, role_d_filename, role_e_filename):
+    for individual_filename in (role_a_filename, role_b_filename, role_c_filename, role_d_filename, role_e_filename):
         text = (reports / 'individual' / individual_filename).read_text(encoding='utf-8')
         text = text.replace('](' + individual_prefix + '/', '](../')
         (destination / 'individual' / individual_filename).write_text(text, encoding='utf-8')
@@ -328,9 +344,10 @@ Restore chỉ nhận các prefix bảng trống. File timings giữ nguyên kế
     inventory = [{'file': p.relative_to(destination).as_posix(), 'bytes': p.stat().st_size, 'sha256': sha256_file(p)}
                  for p in sorted(destination.rglob('*')) if p.is_file()]
     manifest_payload = {'created_at_utc': datetime.now(timezone.utc).isoformat(),
-        'member_id': role_c['member_id'], 'role': 'C', 'group_id': state['group_id'], 'run_label': state['run_label'],
-        'roles_with_individual_records': ['A', 'C', 'D', 'E'],
+        'member_id': role_b['member_id'], 'role': 'B', 'group_id': state['group_id'], 'run_label': state['run_label'],
+        'roles_with_individual_records': ['A', 'B', 'C', 'D', 'E'],
         'individual_members': [{'role': 'A', 'member_id': '24022484'},
+                               {'role': 'B', 'member_id': role_b['member_id']},
                                {'role': 'C', 'member_id': role_c['member_id']},
                                {'role': 'D', 'member_id': '24022463'},
                                {'role': 'E', 'member_id': role_e['member_id']}],

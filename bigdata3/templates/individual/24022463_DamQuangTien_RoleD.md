@@ -154,7 +154,7 @@ Các plan formatted lưu `isFinalPlan=false`, thể hiện kế hoạch trước
 
 #### 2.1 Mục tiêu kiểm tra
 
-`build_gold` thuộc hạng mục mô hình Silver/Gold trong đề. Nhóm không phân công thành viên role B, nên phần đối chiếu này kiểm tra trực tiếp artifact `build_gold` và Gold đã tạo, không gán phần việc cho một người B. Một giá trị mean trông hợp lý chưa chứng minh dùng đúng mẫu số: count có thể vô tình trở thành số sensor, hoặc rollup lấy AVG các mean theo site.
+`build_gold` thuộc hạng mục mô hình Silver/Gold của Role B (Lê Ngọc Minh Cường — 24022277). Phần đối chiếu độc lập của Role D kiểm tra trực tiếp artifact `build_gold` và bảng Gold đã tạo để xác nhận bảo toàn tử số/mẫu số (`D_CHECK_B`). Một giá trị mean trông hợp lý chưa chứng minh dùng đúng mẫu số: count có thể vô tình trở thành số sensor, hoặc rollup lấy AVG các mean theo site.
 
 Phần kiểm tra của Role D tính lại bằng Decimal từ các bản ghi Silver đã xuất của snapshot v{{SILVER_VERSION}}, đối chiếu với Gold và Q2. Bản xuất có nguồn phiên bản được giữ trong `state.json`; các bảng Delta đã được kiểm tra trực tiếp bằng `live_table_verification.json`.
 

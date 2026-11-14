@@ -1,10 +1,14 @@
-# Kiểm tra kỹ thuật role A, C và E
+# Kiểm tra kỹ thuật role A, B, C và E
 
 ## Role A
 
 Bản hiện có đã có bằng chứng preflight, nhưng báo cáo cũ dùng Java 23 ngoài baseline Java 17/21 và chứa cấu hình đường dẫn không dùng chung với executor. Các tệp đầu vào hiện tại cũng bị đổi xuống dòng làm sai hash. Đã giữ bản trước, khôi phục 11 tệp đúng byte từ ZIP gốc, giữ nguyên manifest tin cậy và chạy lại toàn bộ kiểm tra.
 
 Lượt chạy mới: 16/16 hash đạt; fallback được khai báo đúng, digest logic khớp; Delta từ chối cột lạ và giữ tám dòng; runtime đúng Spark/Delta 4.0.1, Java 17; task chạy trên hai worker container, bảng dùng S3A chung. Container không xác nhận nhiều máy vật lý. Hồ sơ `individual/24022484_TranAnhTuan_RoleA.md` đã được cập nhật bằng kiểm tra trực tiếp Silver v1 và Gold v1. Ba mẫu truy được về đúng object/ordinal/hash; R010001 chọn row 1 ở 19,10°C, không dùng dòng cuối của dictionary. Bằng chứng bổ sung nằm trong `role_A_check.json`, `role_A_source_trace.json`, `runtime_role_A_check.json`, `role_A_worker_probe.json`.
+
+## Role B
+
+Đã bổ sung công cụ kiểm tra độc lập `tools/check_role_b.py`, bộ kiểm thử `tests/test_role_b_gold.py` và hồ sơ cá nhân `individual/24022277_LeNgocMinhCuong_RoleB.md` cho Lê Ngọc Minh Cường (24022277). Chương trình xác nhận đầy đủ 14 kiểm tra gồm 7 kiểm tra mô hình Silver/Gold (`B01`–`B04`) và 7 kiểm tra chéo kết quả xử lý bản ghi cũ/đồng hạng của Role C (`B_C01`–`B_C07`, `B_CHECK_C`) với `writes_performed = 0`: xác thực 3 bảng Delta và lược đồ 11 cột Gold, kiểm toán tĩnh AST hàm `build_gold` và đối chiếu mã băm LF-normalized với bản thực thi; chứng minh `Silver v0` khớp 9.610 dòng handoff và độ nhạy múi giờ UTC so với UTC+7 (2.520 dòng đổi ngày, 16/20 nhóm Gold thay đổi); bảo toàn tuyệt đối tổng số quan sát, tổng nhiệt độ, `n_late`, `n_above_25` giữa Silver và Gold ở cả `v0` (9.610 dòng, `220923.50 °C`) và `v1` (9.710 dòng, `222930.50 °C`); tính lại trung bình ngày có trọng số từ thành phần cộng tính của Gold so với trung bình các trung bình site (`2026-02-02`: `57283.50 / 2489 = 23.014665 °C` khác `23.016459 °C`); kiểm tra chéo 10 khóa stale (`R003001`–`R003010`) giữ nguyên dòng `Silver v0`, 10 khóa tied (`R002001`–`R002005`, `R010001`–`R010005`) chọn `source_row` nhỏ hơn bất biến qua 200 phép xáo trộn ngẫu nhiên, kiểm chứng bảng chân trị 8 trường hợp của vị từ SQL `merge_silver` trên SQLite in-memory và phân tích độ nhạy phản thực tế trên Gold (`±5.00 °C`). Bằng chứng được lưu tại `role_B_prediction.json`, `role_B_gold_model.json`, `role_B_check.json` và `role_B_unit_tests.json`.
 
 ## Role C
 
